@@ -1,14 +1,23 @@
 # VisteteDePoder
 ¿ Que productos y servicios vendera nuestro sitio?
-Es una empresa de serigrafia que  imprime  distintos productos con diseños originales basados en literatura.Tales productos son: Remeras, tazas ,barbijos,botellas,viseras y otros productos a pedido.
+
+Es una empresa de impresion en serigrafía de forma artesanal.
+Tiene distintos productos impresos: remeras, tazas, cubrebocas, botellas, viseras, cartucheras, termos, mates, chops, tazas termicas, bolsas de tela y otros productos a pedido.
+Trabaja con diseños originales basados en literatura,  fotos de autores reconocidos, frases celebres, personajes de cuentos y novelas, etc...
+
 ¿Quien sera nuestra audiciencia objetivo?
- Apunta a un publico adulto a partir de los 25 años de edad,con inclinaciones literarias.
+
+ Apunta a un publico amante de las libros y las historias, al que le gusta llevar algo del mundo literario en sus objetos personales.
+
  ¿Como ajustaremos nuestra oferta a ese publico?
- Por medio del diseño de la pagina  transportar al cliente al mundo literario y  de la serigrafia . Tantos es sus aspenctos esteticos como en la funcionalidad de la pagina.
+
+ Por medio del diseño estetico de la pagina intentaremos transportar al cliente al mundo de las letras y la serigrafia (letras cursivas, imagenes de distintos textos, textura de papeles, sellos, etc...)
+ En cuanto a la funcionalidad de la pagina deberiamos organizar los productos para que el usuario tenga mas en claro lo que puede comprar.
+
  Integrantes:
  Xiomara Ocampo-conocimientos en ingles.
  Laura Loreiro-conocimientos contables.
- Florencia Cadelli -conocimientosde diseño e imagen.
+ Florencia Cadelli -conocimientos de diseño e imagen.
  Las tres coincidimos en ser madres y dar nuestros primeros pasos en programacion.
  
  
