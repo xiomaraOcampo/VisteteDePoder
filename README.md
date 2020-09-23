@@ -20,4 +20,9 @@ Trabaja con diseños originales basados en literatura,  fotos de autores reconoc
  Florencia Cadelli -conocimientos de diseño e imagen.
  Las tres coincidimos en ser madres y dar nuestros primeros pasos en programacion.
  
- 
+ REFERENCIAS
+1- https://malditopaparazzo.com.ar/
+2- https://www.nordicalibros.com/product/taza-autores-clasicos/
+3- http://www.libreriaeltiempoperdido.com/producto/taza-grandes-comienzos-de-la-literatura/
+4- https://www.levi.com.ar/
+5- https://sukremeras.com/categoria-producto/barbijos/
