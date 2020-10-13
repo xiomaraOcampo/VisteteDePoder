@@ -9,5 +9,12 @@ router.get('/Home', function(req, res, next) {
   res.render('home');
 });
 
+router.get('/login', function(req, res, next) {
+  res.render('login');
+});
+
+router.get('/ingreso', function(req, res, next) {
+  res.render('ingreso');
+});
 
 module.exports = router;
