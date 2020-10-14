@@ -1,0 +1,57 @@
+
+
+/*estos estilos son para ver el formato de cajas*/
+main{
+    background: #F75311;
+    margin:10px 10px;
+    padding:10px 10px;
+}
+
+.aside1{
+    background: #F78711;
+    padding:auto;
+    margin:10px 350px 10px 350px;
+    display: inline-block;  
+}
+
+section.aside1 article{
+    width:150px;
+    height: 150px;
+    border: 1px solid black;
+    display: inline-block;
+    margin:25px;
+    padding:10px;
+}
+
+.container-small{
+    background: #F78711;
+    margin:10px 450px 10px 450px;
+    display: inline-block;
+}
+section.container-small article{
+    width:130px;
+    height: 150px;
+    border: 1px solid black;
+    display: inline-block;
+    margin:25px;
+    padding:10px;
+}
+
+.aside2{
+    background: #F78711;
+    padding:10px 10px;
+    margin:10px 250px 10px 250px;
+
+    display: inline-block;
+
+}
+section.aside2 article{
+    width:10%;
+    height: 100px;
+    border: 1px solid black;
+    display: inline-block;
+    margin:auto;
+    padding: auto;
+ 
+
+}
