@@ -1,47 +1,58 @@
 
 
 /*estos estilos son para ver el formato de cajas*/
-main{
-    background: #F75311;
-    margin:10px 10px;
-    padding:10px 10px;
+body{
+    background-image: url("/images/fotosVisteteDePoder/papelFondo.pgn");
+    margin:0;
+    padding:0;
+    background-repeat: no-repeat;
+    background-size: cover;
 }
 
 .aside1{
-    background: #F78711;
+  /*  background: #F78711;*/
     padding:auto;
     margin:10px 350px 10px 350px;
     display: inline-block;  
+    /*position: absolute;*/
 }
 
 section.aside1 article{
-    width:150px;
-    height: 150px;
-    border: 1px solid black;
+    width:auto;
+    height: auto;
+/*    border: 1px solid black;*/
     display: inline-block;
-    margin:25px;
-    padding:10px;
+    margin:auto;
+    padding:auto;
 }
 
-.container-small{
-    background: #F78711;
-    margin:10px 450px 10px 450px;
+.container-small div{
+    /*background: #F78711;*/
     display: inline-block;
+    margin: auto;
+
 }
+.container-small {
+    position: relative;
+
+}
+
+
 section.container-small article{
-    width:130px;
-    height: 150px;
+    width:auto;
+    height: 100%;
     border: 1px solid black;
     display: inline-block;
-    margin:25px;
-    padding:10px;
+    margin:auto;
+    padding:auto;
+
 }
+
 
 .aside2{
-    background: #F78711;
-    padding:10px 10px;
-    margin:10px 250px 10px 250px;
-
+    /*background: #F78711;*/
+    /*padding:auto;*/
+    margin:auto;
     display: inline-block;
 
 }
