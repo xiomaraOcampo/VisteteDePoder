@@ -1,0 +1,97 @@
+header{
+    display:inline-block;
+    box-sizing: border-box;
+    width: 100%;
+    font-family : 'Josefin Sans', sans-serif; 
+    font-weight: 600; 
+    font-size: 20px;
+}
+header .header1{ 
+   width: 100%;
+}
+header .header1 .encabezadoGris{
+    width: 99%;
+    position: absolute;
+}
+
+header .header1 .envios{
+    display:inline-block;
+    box-sizing: border-box;
+    position: absolute;
+    width: 20%;
+    margin: 2%;
+    margin-left: 5%; 
+    margin-right: 70%; 
+    color: #dfdfe6; 
+}
+header .header1 .redes{
+    display:inline-block;
+    box-sizing: border-box;
+    width: 50%;
+    margin: 1%;
+    margin-left: 80%;
+    position: absolute;   
+}
+
+header .header1 .redes .f{
+    display:inline-block;
+    box-sizing: border-box;
+    width: 7%;     
+}
+header .header1 .redes .f img{
+    width: 100%;
+}
+
+header .header1 .redes .i{
+    display:inline-block;
+    box-sizing: border-box;
+    width: 7%;
+}
+header .header1 .redes .i img{
+    width: 100%;
+}
+header .header1 .redes .w{
+    display:inline-block;
+    width: 7%;
+}
+header .header1 .redes .w img{
+    width: 100%;
+}
+header .header2{
+    margin-top: 5.5%;
+    color:#4c4c49;
+}
+header .header2 .logo{
+    display:inline-block;
+    box-sizing: border-box;
+    margin-left: 7%; 
+    width: 12%;
+    vertical-align: top;
+    padding-top: 0.5%;   
+}
+
+header .header2 .logo img{
+    width: 100%;
+}
+header .header2 .menuHorizontal{
+    display:inline-block;
+    width: 50%;
+    margin-left: 5%;
+    vertical-align: top;
+    padding-top: 5%; 
+}
+header .header2 .menuHorizontal div{
+    display:inline-block;
+    box-sizing: border-box;   
+}
+header .header2 .valija{
+    display:inline-block;
+    font-size: 25px;
+    padding-top: 4.5%; 
+}
+header .header2 .buscador{
+    display:inline-block;
+    margin-left: 4%;
+    font-size: 25px; 
+    padding-top: 4.5%; 
+}
