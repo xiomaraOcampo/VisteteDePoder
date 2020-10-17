@@ -1,12 +1,13 @@
 
 
 /*estos estilos son para ver el formato de cajas*/
-body{
+div.container{
     background-image: url("/images/fotosVisteteDePoder/papelFondo.jpg");
     margin:0;
     padding:0;
     background-repeat: no-repeat;
     background-size: cover;
+    margin-left: 15%;
 }
 
 
@@ -37,7 +38,7 @@ section.aside1 article{
 .container-small div{
     text-align: center;
     margin: auto;
-    padding: 3% 10%;
+    padding: 1% 5%;
 
 
 }
@@ -46,7 +47,7 @@ section.container-small article{
     width:auto;
     display: inline-block;
     margin:auto;
-    padding: 0 5%;
+    padding: 0 1%;
     
 }
 
@@ -64,7 +65,7 @@ section.aside2 article{
   
     display: inline-block;
     margin:auto;
-    padding: 0 1.5%;
+    padding: 0 1%;
  
 
 }

@@ -1,25 +1,24 @@
 header{
-    display:inline-block;
+    /*display:inline-block;*/
     box-sizing: border-box;
     width: 100%;
     font-family : 'Josefin Sans', sans-serif; 
     font-weight: 600; 
     font-size: 20px;
-}
+
+   }
 header .header1{ 
-   width: 100%;
+    width: 100%;
+    background-image:url("/images/fotosVisteteDePoder/encabezadoGris.jpg");
 }
-header .header1 .encabezadoGris{
-    width: 99%;
-    position: absolute;
-}
+
 
 header .header1 .envios{
     display:inline-block;
     box-sizing: border-box;
     position: absolute;
     width: 20%;
-    margin: 2%;
+    margin: 0;
     margin-left: 5%; 
     margin-right: 70%; 
     color: #dfdfe6; 
@@ -30,16 +29,19 @@ header .header1 .redes{
     width: 50%;
     margin: 1%;
     margin-left: 80%;
-    position: absolute;   
+
+    /*position: absolute;*/   
 }
 
 header .header1 .redes .f{
     display:inline-block;
     box-sizing: border-box;
     width: 7%;     
+    
 }
-header .header1 .redes .f img{
+header .header1 .redes .f {
     width: 100%;
+    background-image: url("https://camaradellibro.cl/wp-content/uploads/2018/10/facebook-logo-png-5a35528eaa4f08.7998622015134439826976-300x173.jpg");
 }
 
 header .header1 .redes .i{
@@ -58,7 +60,7 @@ header .header1 .redes .w img{
     width: 100%;
 }
 header .header2{
-    margin-top: 5.5%;
+    margin-top: 1%;
     color:#4c4c49;
 }
 header .header2 .logo{
