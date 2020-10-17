@@ -19,4 +19,7 @@ router.get('/ingreso', function(req, res, next) {
 router.get('/Producto', function(req, res, next) {
   res.render('Producto');
 });
+router.get('/carrito', function(req, res, next) {
+  res.render('carrito');
+});
 module.exports = router;
