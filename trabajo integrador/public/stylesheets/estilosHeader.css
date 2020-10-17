@@ -9,7 +9,7 @@ header{
    }
 header .header1{ 
     width: 100%;
-    background-image:url("/images/fotosVisteteDePoder/encabezadoGris.jpg");
+    background-image:url("/images/fotosVisteteDePoder/papelHeaderAlta.jpg");
 }
 
 
@@ -18,10 +18,10 @@ header .header1 .envios{
     box-sizing: border-box;
     position: absolute;
     width: 20%;
-    margin: 0;
-    margin-left: 5%; 
+    margin: 1%;
+    margin-left: 4%; 
     margin-right: 70%; 
-    color: #dfdfe6; 
+    color: #efeff8; 
 }
 header .header1 .redes{
     display:inline-block;
@@ -36,12 +36,13 @@ header .header1 .redes{
 header .header1 .redes .f{
     display:inline-block;
     box-sizing: border-box;
-    width: 7%;     
+    width: 7%; 
+    border-radius: 50%;    
     
 }
-header .header1 .redes .f {
-    width: 100%;
-    background-image: url("https://camaradellibro.cl/wp-content/uploads/2018/10/facebook-logo-png-5a35528eaa4f08.7998622015134439826976-300x173.jpg");
+header .header1 .redes .f img{
+    width: 100%; 
+    border-radius: 50%;
 }
 
 header .header1 .redes .i{
@@ -50,7 +51,7 @@ header .header1 .redes .i{
     width: 7%;
 }
 header .header1 .redes .i img{
-    width: 100%;
+        width: 100%;    
 }
 header .header1 .redes .w{
     display:inline-block;
@@ -74,17 +75,19 @@ header .header2 .logo{
 
 header .header2 .logo img{
     width: 100%;
+    border-radius: 50%;
 }
 header .header2 .menuHorizontal{
     display:inline-block;
-    width: 50%;
+    width: 60%;
     margin-left: 5%;
     vertical-align: top;
     padding-top: 5%; 
 }
 header .header2 .menuHorizontal div{
     display:inline-block;
-    box-sizing: border-box;   
+    box-sizing: border-box;
+    margin-left: 2%;  
 }
 header .header2 .valija{
     display:inline-block;

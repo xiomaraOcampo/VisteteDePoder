@@ -2,7 +2,7 @@
 
 /*estos estilos son para ver el formato de cajas*/
 div.container{
-    background-image: url("/images/fotosVisteteDePoder/papelFondo.jpg");
+    background-image: url("/images/fotosVisteteDePoder/papelFondoAlta.jpg");
     margin:0;
     padding:0;
     background-repeat: no-repeat;
@@ -17,11 +17,9 @@ main {
 main .rectanguloNaranja {
     width:100%;
     padding: 0;
- 
 }
 
 .aside1{
- 
     padding:auto;
     margin: 0;
 }
