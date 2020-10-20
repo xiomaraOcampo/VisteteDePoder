@@ -1,102 +1,88 @@
 header{
-    /*display:inline-block;*/
+    display:flex;
+    flex-direction: column;
     box-sizing: border-box;
-    width: 100%;
     font-family : 'Josefin Sans', sans-serif; 
     font-weight: 600; 
     font-size: 20px;
 
-   }
-header .header1{ 
-    width: 100%;
-    background-image:url("/images/fotosVisteteDePoder/papelHeaderAlta.jpg");
 }
-
+/*HEDAER 1*/
+header .header1{
+    width: 100%; 
+    background-image:url("/images/fotosVisteteDePoder/papelHeaderAlta.jpg");
+    display:flex;
+    align-items: center;
+}
 
 header .header1 .envios{
-    display:inline-block;
-    box-sizing: border-box;
-    position: absolute;
-    width: 20%;
+    width: 75%;
+    padding: 10px;
+    padding-left: 30px;
+    color: #dfdfe6; 
     margin: 1%;
-    margin-left: 4%; 
-    margin-right: 70%; 
-    color: #efeff8; 
 }
 header .header1 .redes{
-    display:inline-block;
-    box-sizing: border-box;
-    width: 50%;
+    width: 20%;
+    display:flex;
+    justify-content: space-around;
+    align-items:center;
     margin: 1%;
-    margin-left: 80%;
-
-    /*position: absolute;*/   
 }
 
-header .header1 .redes .f{
-    display:inline-block;
-    box-sizing: border-box;
-    width: 7%; 
-    border-radius: 50%;    
-    
-}
-header .header1 .redes .f img{
-    width: 100%; 
-    border-radius: 50%;
+header .header1 .redes div{
+    width: 40px;
 }
 
-header .header1 .redes .i{
-    display:inline-block;
-    box-sizing: border-box;
-    width: 7%;
-}
-header .header1 .redes .i img{
-        width: 100%;    
-}
-header .header1 .redes .w{
-    display:inline-block;
-    width: 7%;
-}
-header .header1 .redes .w img{
+header .header1 .redes div img{
     width: 100%;
 }
-header .header2{
-    margin-top: 1%;
-    color:#4c4c49;
+header .header1 .redes div .f{
+    border-radius: 50%;
+    width: 37px;
 }
+
+
+
+/*HEDAER 2*/
+header .header2{ 
+    width: 100%;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+}
+
 header .header2 .logo{
-    display:inline-block;
-    box-sizing: border-box;
-    margin-left: 7%; 
-    width: 12%;
-    vertical-align: top;
-    padding-top: 0.5%;   
+    width: 20%;
+    display:flex;
+    justify-content: center;
+}
+header .header2 .logo img{
+    width: 70%;
 }
 
-header .header2 .logo img{
-    width: 100%;
-    border-radius: 50%;
-}
 header .header2 .menuHorizontal{
-    display:inline-block;
-    width: 60%;
-    margin-left: 5%;
-    vertical-align: top;
-    padding-top: 5%; 
+    width: 55%;
+    display:flex; 
+    justify-content: space-around;
+    align-items: center;
 }
-header .header2 .menuHorizontal div{
-    display:inline-block;
-    box-sizing: border-box;
-    margin-left: 2%;  
+
+header .header2 .menuHorizontal li{
+    list-style:none;
+    text-decoration: none;
 }
-header .header2 .valija{
-    display:inline-block;
+
+header .header2 .buscadores{
+    width: 15%;
+    display:flex;
+    justify-content: space-around;
+
+}
+header .header2 .buscadores div{
+    width: 49%;
+    display:flex;
+    justify-content: center;
     font-size: 25px;
-    padding-top: 4.5%; 
-}
-header .header2 .buscador{
-    display:inline-block;
-    margin-left: 4%;
-    font-size: 25px; 
-    padding-top: 4.5%; 
+    
 }

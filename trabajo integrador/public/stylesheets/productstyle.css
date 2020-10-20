@@ -1,0 +1,9 @@
+.fondo-detalle-producto{
+   /* background-image: url("/images/fotosVisteteDePoder/papelFondoAlta.jpg");*/
+    margin:0;
+    padding:0;
+    /*background-repeat: no-repeat;
+    background-size: cover;
+    margin-left: 15%;*/
+    background-color: red;
+}
