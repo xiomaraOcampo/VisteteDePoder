@@ -1,15 +1,19 @@
 
 
 /*estos estilos son para ver el formato de cajas*/
-div.container{
+body{
     background-image: url("/images/fotosVisteteDePoder/papelFondoAlta.jpg");
     margin:0;
     padding:0;
     background-repeat: no-repeat;
     background-size: cover;
-    margin-left: 15%;
+    /*margin-left: 15%;*/
 }
 
+.container{
+    width:100%;
+
+}
 
 main {
     height: 900px;
@@ -37,33 +41,106 @@ section.aside1 article{
     text-align: center;
     margin: auto;
     padding: 1% 5%;
+    display:flex;
+    justify-content: center;
 
 
 }
 
 section.container-small article{
     width:auto;
-    display: inline-block;
-    margin:auto;
-    padding: 0 1%;
+    /*display: inline-block;*/
+    margin: 50px;
+    /*padding: 0 1%;*/
+    box-shadow: 10px 10px 10px grey;
     
 }
 
-
-.aside2{
- 
-    margin:auto;
-    text-align: center;
-    padding: 0 10%;
+section.container-small article:hover{
+    box-shadow: inset 1px 1px 5px grey;
 
 }
-section.aside2 article{
-    width:auto;
-    height: 200px;
-  
-    display: inline-block;
-    margin:auto;
-    padding: 0 1%;
- 
+
+
+.slider{
+    width: 100%;
+    display:flex; 
+    /*margin:auto;*/
+    /*text-align: center;*/
+    padding: auto;    
+    animation: cambio 10s infinite;
+}
+section.slider article{
+    justify-content: center;
+    /*overflow: hidden;*/
+    margin:0 10%;
+    padding:auto;
+    box-shadow: 10px 10px 10px grey;
+}
+
+section.slider article:hover{
+    box-shadow: inset 1px 1px 5px grey;
+
+
+}
+
+@keyframes cambio{
+    
+    0% {margin-left: 0;}
+    5% {margin-left: -5%;}
+
+    5% {margin-left: -5%;}
+    10% {margin-left: -10%;}
+
+    10% {margin-left: -10%;}
+    15% {margin-left: -15%;}
+    
+    15% {margin-left: -15%;}
+    20% {margin-left: -20%;}
+    
+    20% {margin-left: -20%;}
+    25% {margin-left: -25%;}
+    
+    25% {margin-left: -25%;}
+    30% {margin-left: -30%;}
+    
+    30% {margin-left: -30%;}
+    35% {margin-left: -35%;}
+
+    35% {margin-left: -35%;}
+    40% {margin-left: -40%;}
+
+    40% {margin-left: -40%;}
+    45% {margin-left: -45%;}
+
+    45% {margin-left: -45%;}
+    50% {margin-left: -50%;}
+
+    50% {margin-left: -50%;}
+    55% {margin-left: -55%;}
+
+    55% {margin-left: -55%;}
+    60% {margin-left: -60%;}
+    60% {margin-left: -60%;}
+    65% {margin-left: -65%;}
+
+    65% {margin-left: -65%;}
+    70% {margin-left: -70%;}
+    70% {margin-left: -70%;}
+    75% {margin-left: -75%;}
+
+    75% {margin-left: -75%;}
+    80% {margin-left: -80%;}
+
+    80% {margin-left: -80%;}
+    85% {margin-left: -85%;}
+
+    85% {margin-left: -85%;}
+    90% {margin-left: -90%;}
+
+    90% {margin-left: -90%;}
+    95% {margin-left: -95%;}
+    95% {margin-left: -95%;}
+    100% {margin-left: -100%;}
 
 }
