@@ -12,6 +12,8 @@
     <link rel="stylesheet" href="/stylesheets/estilosHeader.css">
     <link rel="stylesheet" href="/stylesheets/Footerstyle.css">
     <link href = "https://fonts.googleapis.com/css2? family = Josefin + Sans & display = swap" rel = "stylesheet">
+    <link href = "/stylesheets/estilosCarrito.css" rel = "stylesheet">
+    
 
 </head>
 <body>
@@ -61,18 +63,74 @@
 
     <div class=rectanguloPrinpipal>
         <div class=tituloMiCarrito>Mi carrito</div>
+        
         <div class=detalleCompra>
+            
             <div class=compra1>
-                <div class=articulo1><img scr="/images/fotosVisteteDePoder/indumentaria.jpg"></div>
+                
+                <div class=articulo1><img src="\images\fotosVisteteDePoder\indumentaria.jpg" alt="imagen    indumentaria">
+                </div>
+                
                 <div class=detalleArticulo>
                     <p> Detalle del producto </p>
-                    
-                </div>
+                    <p> Precio </p> 
+                    <div class="descripcion"> <!-- esta caja debería traer la información que se selecciona en productos-->
+                        <p>Descripcion del producto </p>
+                         <p>Precio $00.00</p>
+                          <select name="talle">
+                                <option value="S">Small</option>
+                                <option value="M">Medium</option>
+                                <option value="L">Large</option>
+                                <option value="XL">Extra-Large</option>
+                           </select>
+
+                            <select name="Cantidad">
+                                <option value="1">1</option>
+                                <option value="2">2</option>
+                                <option value="3">3</option>
+                                <option value="4">4</option>
+                                <option value="5">5</option>
+                                <option value="6">6</option>
+                                <option value="7">7</option>
+                                <option value="8">8</option>
+                                <option value="9">9</option>
+                                <option value="10">10</option>
+                            </select>
+                    </div>
+                
             </div>
-            <div clss=detalleSubtotal></div>
+            <!-- esta caja debería conectarse con las cajas compra1 y compra2-->
+            <div class=detalleSubtotal>
+                <div>Subtotal $$$</div>
+                <div>Total General $$$</div>
+                <div><button type="submit">Completar Compra</button> </div>
+            </div>
+
             <div class=compra2>
-                <div class=articulo2></div>
-                <div class=detalleArticulo></div>
+                <div class=articulo2><img src="\images\fotosVisteteDePoder\masProductos1.jpg" alt="imagen indumentaria"></div>
+                </div>
+                <div class=detalleArticulo>
+                    <p> Detalle del producto </p>
+                    <p> Precio $$$</p> 
+                    <div class="descripcion"> <!-- esta caja debería traer la información que se selecciona en productos-->
+                        <p>Descripcion del producto </p>
+                         <p>Precio $00.00</p>
+                      
+                            <select name="Cantidad">
+                                <option value="1">1</option>
+                                <option value="2">2</option>
+                                <option value="3">3</option>
+                                <option value="4">4</option>
+                                <option value="5">5</option>
+                                <option value="6">6</option>
+                                <option value="7">7</option>
+                                <option value="8">8</option>
+                                <option value="9">9</option>
+                                <option value="10">10</option>
+                            </select>
+                    </div>
+                 
+                </div>
             </div>
         </div>
    </div>
