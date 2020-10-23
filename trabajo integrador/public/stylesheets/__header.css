@@ -7,6 +7,8 @@
     font-size: 20px;
     color:#4c4c49;
     background-size: cover;
+    border: 2px solid red;
+    
 
 }
 /*HEDAER 1*/
@@ -15,6 +17,7 @@ header .header1{
     background-image:url("/images/fotosVisteteDePoder/papelHeaderAlta.jpg");
     display:flex;
     align-items: center;
+    border: 2px solid red;
 }
 
 
@@ -24,6 +27,7 @@ header .header1 .envios{
     padding-left: 30px;
     color: #dfdfe6; 
     margin: 1%;
+    border: 2px solid red;
 }
 header .header1 .redes{
     width: 20%;
@@ -31,10 +35,12 @@ header .header1 .redes{
     justify-content: space-around;
     align-items:center;
     margin: 1%;
+    border: 2px solid red;
 }
 
 header .header1 .redes div{
     width: 40px;
+    border: 2px solid red;
 }
 
 header .header1 .redes div img{
@@ -81,21 +87,65 @@ header .header2 .menuHorizontal .palabras{
 }
 header .header2 .menuHorizontal li{
     list-style:none;
-    text-decoration: none;
     border: 2px solid red;
 }
+header .header2 .menuHorizontal a{
+    color: grey;
+    font-weight: 500;
+}
+header .header2 .menuHorizontal a:hover{
+    text-decoration: none; 
+    color:#4c4c49;
+}
+header .header2 .menuHorizontal a:focus{
+    color: #bebd6d;
+}
 
+header .header2 .menuHorizontal .home{
+    color:#4c4c49;
+    font-weight: 600;
+}
+header .header2 .menuHorizontal  a .palabras{
+    color: red;
+}
 header .header2 .buscadores{
     width: 15%;
     display:flex;
     justify-content: space-around;
     border: 2px solid red;
-
 }
 header .header2 .buscadores div{
     width: 49%;
     display:flex;
-    justify-content: center;
+    justify-content: flex-start;
+    align-items: flex-end;
+    flex-direction: column;
     font-size: 25px;
-    border: 2px solid red;   
+    border: 2px solid green; 
+    color:#4c4c49; 
+    position:relative;
+    bottom:7px;
 }
+header .header2 .buscadores a{
+    color:#4c4c49;
+}
+header .header2 .buscadores a:hover{
+    color:grey;
+}
+header .header2 .buscadores a:focus{
+    color:#bebd6d;
+}
+
+header .header2 .buscadores .buscador input{
+    color:red;
+    border:none;
+    box-shadow: 3px 3px 3px grey;
+    border-radius: 5px;
+}
+header .header2 .buscadores .buscador input:focus{
+    /*border:none;
+    background-color: #c1e0a2;
+    */
+    box-shadow: inset 5px 5px 5px grey;
+}
+

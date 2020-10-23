@@ -2,6 +2,7 @@ main{
     box-sizing: inline-block;
     display:flex;
     justify-content: center;
+    align-items: flex-start;
     font-family : 'Josefin Sans', sans-serif; 
     font-weight: 600; 
     font-size: 20px;
@@ -11,10 +12,17 @@ main input{
     text-decoration: none;
     border:none;
     width: 100%;
+    /*border:2px solid grey;*/
+    border-radius:5px;
+    box-shadow: 2px 2px 5px grey;
 }
-main button.iniciarSesion{
+main input:focus{
+    border:none;
+}
+main button.iniciarSesion,{
     text-decoration: none;
     border:none;
+    border-radius:5px;
     width: 100%;
     background-color: #d9c65f;
     box-shadow: 3px 3px 3px grey;
@@ -30,5 +38,29 @@ main .separacion{
 }
 main .textoContraseña{
     color:grey;
-
 }
+main form .preguntas{
+    color: grey;
+}
+main .preguntas:hover{
+    color:#4c4c49;
+    text-decoration: none;
+}
+main .preguntas:focus{
+    color:#d9c65f;
+}
+
+/*main form button .boton2,{
+    text-decoration: none;
+    border:none;
+    border-radius:5px;
+    width: 100%;
+    background-color: #d9c65f;
+    box-shadow: 3px 3px 3px grey;
+    color:#4c4c49;
+}*/
+
+/*main button .iniciarSesion:hover{
+    box-shadow: inset 1px 1px 5px grey;
+    color:#4c4c49;
+}*/
