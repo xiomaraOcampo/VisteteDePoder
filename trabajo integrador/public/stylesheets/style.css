@@ -1,8 +1,7 @@
-body {
-  padding: 50px;
-  font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
-}
 
-a {
-  color: #00B7FF;
-}
+@import "__header.css";
+@import "__home.css";
+@import "__footer.css";
+@import "__formularios.css";
+@import "__detalle_producto.css";
+@import "__carrito.css";

@@ -11,16 +11,18 @@ body{
 }
 
 .container{
-    width:100%;
+    /*width:100%;*/
 
 }
 
 main {
-    height: 900px;
+   /* height: 900px;*/
+   margin:15%;
 }
 main .rectanguloNaranja {
     width:100%;
     padding: 0;
+
 }
 
 .aside1{
@@ -39,7 +41,6 @@ section.aside1 article{
 
 .container-small div{
     text-align: center;
-    margin: auto;
     padding: 1% 5%;
     display:flex;
     justify-content: center;
@@ -52,11 +53,23 @@ section.container-small article{
     /*display: inline-block;*/
     margin: 50px;
     /*padding: 0 1%;*/
-    box-shadow: 10px 10px 10px grey;
+    box-shadow: 5px 5px 30px grey;
+    background: #efeff3;
     
 }
 
-section.container-small article:hover{
+
+/*article a , article img{
+
+width:80%;
+
+}*/
+/*
+.img-container-small {
+    background-color: #efeff3;
+
+}*/
+section.container-small article :hover{
     box-shadow: inset 1px 1px 5px grey;
 
 }
@@ -75,7 +88,7 @@ section.slider article{
     /*overflow: hidden;*/
     margin:0 10%;
     padding:auto;
-    box-shadow: 10px 10px 10px grey;
+    box-shadow: 5px 5px 30px grey;
 }
 
 section.slider article:hover{
