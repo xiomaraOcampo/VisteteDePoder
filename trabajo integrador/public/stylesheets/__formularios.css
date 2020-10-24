@@ -8,46 +8,101 @@ main{
     font-size: 20px;
     color:#4c4c49;
 }
-main input{
+/*caja padre*/
+form{
+    background-image:url("/images/fotosVisteteDePoder/fondoFormularios.jpg");
+    width: 50%;
+    margin:20px;
+    border-radius: 5px;
+}
+
+form .ingreso{
+    border-radius: 5px;
+    width: 100%;
+    display:flex;
+    flex-direction: column;
+    justify-content:center;
+}
+form .ingreso h3{
+    padding-left: 35px;
+    margin:10px;
+    border: 1px solid red;
+}
+form .ingreso i{
+    margin: 10px;
+    border: 1px solid red;
+}
+form .nombre, form .contraseña{
+    display:flex;
+    margin: 10px  10px  10px 0px;
+    border: 1px solid red;
+}
+
+.nombre input, .contraseña input{
     text-decoration: none;
     border:none;
     width: 100%;
-    /*border:2px solid grey;*/
     border-radius:5px;
-    box-shadow: 2px 2px 5px grey;
+    box-shadow: 1px 3px 5px grey;
 }
-main input:focus{
-    border:none;
-}
-main button.iniciarSesion,{
+/*
+.nombre input:focus, .contraseña input:hover{
+    quiero sacarle el borde negro al input
+}*/
+
+.iniciarSesion{
+    margin-left: 40px;
+    margin-top:10px;
+    margin-bottom:10px;
     text-decoration: none;
     border:none;
     border-radius:5px;
-    width: 100%;
+    width: 90%;
     background-color: #d9c65f;
     box-shadow: 3px 3px 3px grey;
     color:#4c4c49;
+    font-weight: 600; 
 }
 
-main button .iniciarSesion:hover{
+main button .iniciarSesion:focus{
     box-shadow: inset 1px 1px 5px grey;
     color:#4c4c49;
+     /*quiero sacarle el borde negro al buttom*/ 
 }
-main .separacion{
-    height: 20px;
-}
+
 main .textoContraseña{
     color:grey;
 }
+/*====INGRESO2======*/
+main form .ingreso2{
+    border:1px solid green;
+}
 main form .preguntas{
-    color: grey;
+    margin-left:40px;
+    margin-top:10px;
+    margin-bottom:10px;
+    padding-left: 10px;
+    padding-right: 10px;
+    font-weight: 500;
+    display:block;
+    width: 90%;
+    background-color: rgb(127, 196, 127);
+    border-radius: 5px;
+    box-shadow: 1px 1px 5px grey;
+    color:#4c4c49;
 }
 main .preguntas:hover{
     color:#4c4c49;
     text-decoration: none;
+    background-color:rgb(107, 173, 107);
+    
 }
 main .preguntas:focus{
-    color:#d9c65f;
+    box-shadow: inset 5px 5px 5px grey;
+    color:#61615d;
+}
+form .preguntita{
+    padding-left: 50px;
 }
 
 /*main form button .boton2,{

@@ -51,7 +51,7 @@ section.container-small {
 section.container-small article{
     
     margin: 10%;
-    box-shadow: 5px 5px 30px grey;
+    box-shadow: 1px 3px 5px grey;
     background: #efeff3;
     display: flex;
     flex-direction: column;
@@ -60,7 +60,7 @@ section.container-small article{
 }
 
 section.container-small article:hover{
-    box-shadow: inset 5px 5px 30px grey;
+    box-shadow: inset 1px 3px 5px grey;
 
 }
 
@@ -96,11 +96,11 @@ section.slider article{
     /*overflow: hidden;*/
     margin:0 10%;
     padding:auto;
-    box-shadow: 5px 5px 30px grey;
+    box-shadow: 1px 3px 5px grey;
 }
 
 section.slider article:hover{
-    box-shadow: inset 1px 1px 5px grey;
+    box-shadow: inset 1px 3px 5px grey;
 
 
 }
