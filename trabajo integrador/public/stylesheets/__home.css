@@ -7,12 +7,12 @@ body{
     padding:0;
     background-repeat: no-repeat;
     background-size: cover;
-    /*margin-left: 15%;*/
+   
 }
 
 .container{
-    /*width:100%;*/
-
+    width:100vw;
+   
 }
 
 main {
@@ -64,6 +64,15 @@ section.container-small article:hover{
 
 }
 
+.indumentariaLetras{
+    color: #5c5b3f;
+}
+.accesorioLetras{
+    color: #374258;
+}
+.merchanidingLetras{
+    color: #5f7546;
+}
 
 .imagenMenu{
 
