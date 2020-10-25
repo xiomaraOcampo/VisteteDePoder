@@ -67,6 +67,8 @@ header .header2 .logo{
     display:flex;
     justify-content: center;
     border: 2px solid red;
+    margin-top:15px;
+    margin-bottom:15px;
 }
 header .header2 .logo img{
     width: 70%;
@@ -75,8 +77,8 @@ header .header2 .logo img{
 }
 
 header .header2 .menuHorizontal{
-    width: 85%;
-    margin-top: 3%;
+    width: 60%;
+    margin-top: 5%;
     display:flex; 
     justify-content: space-around;
     align-items: flex-start;
@@ -118,14 +120,14 @@ header .header2 .menuHorizontal .palabras .desplegable a{
 header .header2 .buscadores{
     width: 20%;
     display:flex;
-    justify-content: space-around;
     border: 2px solid red;
+    margin-top: 5.15%;
 }
 header .header2 .buscadores div{
     width: 49%;
     display:flex;
     justify-content: flex-start;
-    align-items: flex-end;
+    align-items: center;
     flex-direction: column;
     font-size: 25px;
     border: 2px solid green; 
@@ -143,17 +145,39 @@ header .header2 .buscadores a:hover{
     color:#bebd6d;
 }*/
 
+
+/*===DESPLEGABLE====*/
+
+header .header2 .menuHorizontal .palabras ul{
+    display:none;
+    /*position:absolute;
+    min-width:140px;*/
+    border:1px solid violet;
+    position: absolute;
+}
+header .header2 .menuHorizontal .palabras ul a{
+    color:#4c4c49;
+}
+header .header2 .menuHorizontal .palabras:hover ul{
+    display:block;
+}
+
 header .header2 .buscadores .buscador input{
-    color:red;
-    border:none;
+    display:none;
     box-shadow: 3px 3px 3px grey;
     border-radius: 5px;
-    width:33%;
+    width:100%;
+    height: 30px;
+    position: absolute;
+    margin-top: 40px;
 }
+header .header2 .buscadores .buscador:hover input{
+    display:block;
+}
+
 header .header2 .buscadores .buscador input:focus{
     /*border:none;
     background-color: #c1e0a2;
     */
     box-shadow: inset 5px 5px 5px grey;
 }
-
