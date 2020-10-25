@@ -97,7 +97,7 @@ header .header2 .menuHorizontal a:hover{
     text-decoration: none; 
     color:#4c4c49;
 }
-header .header2 .menuHorizontal a:focus{
+header .header2 .menuHorizontal .palabras .desplegable a:focus{
     color: #bebd6d;
 }
 
@@ -105,11 +105,18 @@ header .header2 .menuHorizontal .home{
     color:#4c4c49;
     font-weight: 600;
 }
-header .header2 .menuHorizontal  a .palabras{
-    color: red;
+header .header2 .menuHorizontal .palabras a:hover{
+    color:grey;
+}
+header .header2 .menuHorizontal .palabras a{
+    text-decoration: none;;
+}
+
+header .header2 .menuHorizontal .palabras .desplegable a{
+    text-decoration: none;;
 }
 header .header2 .buscadores{
-    width: 15%;
+    width: 20%;
     display:flex;
     justify-content: space-around;
     border: 2px solid red;
@@ -132,15 +139,16 @@ header .header2 .buscadores a{
 header .header2 .buscadores a:hover{
     color:grey;
 }
-header .header2 .buscadores a:focus{
+/*header .header2 .buscadores a:focus{
     color:#bebd6d;
-}
+}*/
 
 header .header2 .buscadores .buscador input{
     color:red;
     border:none;
     box-shadow: 3px 3px 3px grey;
     border-radius: 5px;
+    width:33%;
 }
 header .header2 .buscadores .buscador input:focus{
     /*border:none;
