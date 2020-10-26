@@ -1,5 +1,35 @@
+.Nombre-Producto{
+    width: 50%;
+    display:flex;
+    justify-content: center;
+    background-color: yellow;
+    
+}
 
 
 .fondo-detalle-producto{
+ width:100%;
+ display: flex;
+ background-color: sandybrown;
+ justify-content: center;
+}
+.producto{
+    background-color:green;
 
 }
+.descripcion{
+    background-color: indianred;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    justify-content: space-around;
+    width:30%;
+    justify-content: center;
+}
+.descripcion button{
+ width:130px;
+
+
+}
+
+  
