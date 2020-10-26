@@ -1,0 +1,47 @@
+
+/*Características*/
+
+body{
+    background-image: url("/images/fotosVisteteDePoder/papelFondoAlta.jpg");
+    margin:0;
+    padding:0;
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: flex;
+ 
+}
+
+
+/*Tipografías  (Estilo y medidas)*/
+
+html{
+    font-family : 'Josefin Sans', sans-serif; 
+    font-weight: 600; 
+    font-size: 20px;
+    color:#4c4c49;
+
+}
+
+
+/*Viewport*/
+
+    /*@media (max-width: 1680px)*/
+
+
+    @media (max-width: 768px){
+
+
+        }
+    
+
+
+    /*@media (max-width: 360px ){
+
+    }*/
+
+
+
+/*inputs*/
+
+
+

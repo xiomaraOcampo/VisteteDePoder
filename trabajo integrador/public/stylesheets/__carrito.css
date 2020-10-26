@@ -2,11 +2,23 @@ main .rectanguloPrinpipal {
     width:100%;
 
     display: flex;
+    justify-content: center;
  
 }
 
 .tituloMiCarrito{
- 
+   
+    
+  
     padding:auto;
     margin: 0;
+}
+
+.detalleArticulo{
+    display: flex;
+
+}
+.compra1{
+    display: flex;
+    width: 50%;
 }
