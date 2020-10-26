@@ -6,12 +6,9 @@
     <title>Document</title>
    
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css">
-    <link rel="stylesheet" href="/stylesheets/estilosHome.css">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
-    <link rel="stylesheet" href="/stylesheets/estilosHeader.css">
-    <link rel="stylesheet" href="/stylesheets/Footerstyle.css">
     <link href = "https://fonts.googleapis.com/css2? family = Josefin + Sans & display = swap" rel = "stylesheet">
-    <link rel="stylesheet" href="/stylesheets\formularios.css">
+    <link rel="stylesheet" href="/stylesheets/style.css">
 </head>
 <body>
     <div class="container">
@@ -52,31 +49,38 @@
             <!--FIN HEADER-->
             <main>
 
-                <!--MAIN-->   
-                <form action="/home" method=get>
-            
-                    <h3>Crear cuenta</h3>
-                    <p><label for="nombre"></label></p>
-                    <p><input type="text" placeholder="Tu nombre" id="nombre" name="NyP"></p>
+                <!--MAIN-->  
+                
+<form  action="/home" method=get>
+    <div class="registro1">
+        <label for="nombre"><i class="fas fa-user"></i></label>
+        <label for="email"><i class="fas fa-envelope"></i></label>
+        <label for="contraseña"><i class="fas fa-lock"></i></i></label>
+        <label class="ultimoLabel" for="confirmaciónContraseña"><i class="fas fa-lock"></i></label>
+    </div>
+
+    <div class="registro2">
+        <h3>Crear cuenta</h3>
+
+        <input class=inputsRegistro type="text" placeholder="Tu nombre" id="nombre" name="NyP">
                  
-                    
-                    <p><label for="email"></label></p>
-                    <p><input type="email" placeholder="Correo electrónico"id="email" name="email"></p>
+        <input class="inputsRegistro" type="email" placeholder="Correo electrónico"id="email" name="email">
                   
-        
-                    <p><label for="contraseña"></label></p>
-                    <p><input type="password" placeholder="Contraseña" id="contraseña" name="contraseña"></p>
-                    <p class="textoContraseña">! La contraseña debe tener al menos seis caracteres</p> 
-                    <p><label for="confirmaciónContraseña"></label></p>
-                    <p><input type="password" placeholder="Vuelve a escribir la contraseña" id="confirmaciónContraseña" name="confirmaciónContraseña"></p>
-                    <div class="separacion"></div>
+        <input class="inputsRegistro" type="password" placeholder="Contraseña" id="contraseña" name="contraseña">
+         
+        <p class="textoContraseña">!La contraseña debe tener al menos seis caracteres</p> 
+         
+        <input class="inputsRegistro" type="password" placeholder="Vuelve a escribir la contraseña" id="confirmaciónContraseña" name="confirmaciónContraseña"></p>
+      
                      <!--Envían al home-->
-                   <button type="submit">Crear tu cuenta en Vistete de Poder</button>
-                   <div class="separacion"></div>
-                   <p>¿Ya tenés una cuenta? <a href="\ingreso">Iniciar sesión</a></p>
-            
-                </form>
-            
+        <button class="enviar" type="submit">Crea tu cuenta en Vistete de Poder</button>
+    
+        ¿Ya tenés una cuenta? 
+     
+        <a class="aIngreso"href="\ingreso">Iniciar sesión</a>
+   </div>
+</form>
+          
             </main>
 
             <!--footer-->

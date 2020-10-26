@@ -47,35 +47,39 @@
                 
             </header>
             <!--FIN HEADER-->
-            <main>
+<!--MAIN--> 
+<main>
+  
+<form action="/home" method=get>
+    <!--iconos-->  
 
-                <!--MAIN-->   
-                <form action="/home" method=get>
-            
-                    <h3>Crear cuenta</h3>
-                    <label for="nombre"></label>
-                    <p><i class="fas fa-user"></i><input type="text" placeholder="Nombre de usuario" id="nombre" name="NyP"></p>
-                 
-                    <label for="contraseña"></label>
-                    <p><i class="fas fa-lock"></i><input type="password" placeholder="Contraseña" id="contraseña" name="contraseña"></p>
-                    
-                    <div class="separacion"></div>
-                    
-                     <!--Envían al home-->
-                   <button class="iniciarSesion"type="submit">Iniciar sesion</button>
-                   <div class="separacion"></div>
+    <div class="ingreso1">
+        <label for="nombre"><i class="fas fa-user"></i></label>
+        <label for="contraseña"><i class="fas fa-lock"></i></label>
+    </div>
+
+    <div class="ingreso2">
+        <h3>Ingresar cuenta</h3>
+        <!--inputs-->      
+        <div class="nombre">
+            <input type="text" placeholder="Nombre de usuario" id="nombre" name="NyP">
+        </div>
+        <div class="contraseña">
+            <input type="password" placeholder="Contraseña" id="contraseña" name="contraseña">
+        </div>   
+        <!--button-->                
+         <button class="iniciarSesion"type="submit">Iniciar sesion</button>
+         <!--textos-->    
+         <a class="preguntas" href="#">Me olvide mi contraseña</a>
+         <div class= "preguntita">¿No tenés cuenta?</div>
+        <a class="preguntas" href="\registro"> Crear una cuenta nueva</a>
+</div>
+</form>
         
-                   <p><a href="">Me olvide mi contraseña</a></p>
-                   <p><a href="\registro">¿No tenés cuenta? Crear una cuenta nueva</a></p>
-            
-                </form>
-        
-              
+</main>
 
-            </main>
-
-            <!--footer-->
-            <footer>
+<!--footer-->
+    <footer>
                 <section class="Medios-de-pagos">
                     <p> Medios de pago </p>                    
                     <img width=50px src="/images/logo-mercadopago.jpg" alt="Mercado pago"></article>

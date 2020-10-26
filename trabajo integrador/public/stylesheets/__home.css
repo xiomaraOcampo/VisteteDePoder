@@ -7,17 +7,17 @@ body{
     padding:0;
     background-repeat: no-repeat;
     background-size: cover;
-    /*margin-left: 15%;*/
+   
 }
 
 .container{
-    /*width:100%;*/
-
+    width:100vw;
+   
 }
 
 main {
    /* height: 900px;*/
-   margin:15%;
+  /* margin:15%;*/
 }
 main .rectanguloNaranja {
     width:100%;
@@ -30,7 +30,7 @@ main .rectanguloNaranja {
     margin: 0;
 }
 
-section.aside1 article{
+section .aside1 article{
     width:auto;
     height: 100%;
 
@@ -39,7 +39,7 @@ section.aside1 article{
     padding:auto;
 }
 
-.container-small div{
+section.container-small {
     text-align: center;
     padding: 1% 5%;
     display:flex;
@@ -49,32 +49,40 @@ section.aside1 article{
 }
 
 section.container-small article{
-    width:auto;
-    /*display: inline-block;*/
-    margin: 50px;
-    /*padding: 0 1%;*/
-    box-shadow: 5px 5px 30px grey;
+    
+    margin: 10%;
+    box-shadow: 1px 3px 5px grey;
     background: #efeff3;
+    display: flex;
+    flex-direction: column;
+    
     
 }
 
-
-/*article a , article img{
-
-width:80%;
-
-}*/
-/*
-.img-container-small {
-    background-color: #efeff3;
-
-}*/
-section.container-small article :hover{
-    box-shadow: inset 1px 1px 5px grey;
+section.container-small article:hover{
+    box-shadow: inset 1px 3px 5px grey;
 
 }
 
+.indumentariaLetras{
+    color: #5c5b3f;
+}
+.accesorioLetras{
+    color: #374258;
+}
+.merchanidingLetras{
+    color: #5f7546;
+}
 
+.imagenMenu{
+
+width:80%;
+margin:10%;
+
+}
+section.container-small article p{
+    align-self: flex-end;
+}
 .slider{
     width: 100%;
     display:flex; 
@@ -88,11 +96,11 @@ section.slider article{
     /*overflow: hidden;*/
     margin:0 10%;
     padding:auto;
-    box-shadow: 5px 5px 30px grey;
+    box-shadow: 1px 3px 5px grey;
 }
 
 section.slider article:hover{
-    box-shadow: inset 1px 1px 5px grey;
+    box-shadow: inset 1px 3px 5px grey;
 
 
 }

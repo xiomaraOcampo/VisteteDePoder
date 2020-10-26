@@ -2,33 +2,195 @@ main{
     box-sizing: inline-block;
     display:flex;
     justify-content: center;
+    align-items: flex-start;
     font-family : 'Josefin Sans', sans-serif; 
     font-weight: 600; 
     font-size: 20px;
     color:#4c4c49;
 }
-main input{
+/*caja padre*/
+form{
+    background-image:url("/images/fotosVisteteDePoder/fondoFormularios.jpg");
+    width: 50%;
+    margin:30px;
+    border-radius: 5px;
+    display:flex;
+    justify-content:center;
+    border-radius: 5px;
+}
+form .ingreso1{
+    margin-top: 52px;
+    /*border: 1px solid red;*/
+    width: 8%;
+    justify-content: center;
+}
+form .ingreso1 i{
+    padding:10px;
+    margin-top: 20px;
+}
+
+.nombre input, .contraseña input{
     text-decoration: none;
     border:none;
     width: 100%;
+    border-radius:5px;
+    box-shadow: 1px 3px 5px grey;
+    margin-top:15px;
+    margin-bottom:20px;
 }
-main button.iniciarSesion{
+/*
+.nombre input:focus, .contraseña input:hover{
+    quiero sacarle el borde negro al input
+}*/
+
+
+/*====INGRESO2======*/
+main form .ingreso2{
+    /*border:1px solid green;*/
+    flex-direction:column;
+    width: 80%;
+    margin: 20px;
+}
+
+.ingreso2 .iniciarSesion{
+    margin-top:15px;
+    margin-bottom:45px;
     text-decoration: none;
     border:none;
+    border-radius:5px;
     width: 100%;
     background-color: #d9c65f;
     box-shadow: 3px 3px 3px grey;
     color:#4c4c49;
+    font-weight: 600; 
+}
+.ingreso2 .iniciarSesion:hover{
+    background-color: #cabb61;
 }
 
-main button .iniciarSesion:hover{
+.ingreso2 .iniciarSesion:focus{
     box-shadow: inset 1px 1px 5px grey;
     color:#4c4c49;
-}
-main .separacion{
-    height: 20px;
+     /*quiero sacarle el borde negro al buttom*/ 
 }
 main .textoContraseña{
     color:grey;
+}
 
+main form .preguntas{
+    margin-top:10px;
+    margin-bottom:10px;
+    padding-left: 10px;
+    padding-right: 10px;
+    font-weight: 500;
+    display:block;
+    width: 100%;
+    background-color: rgba(148, 211, 148, 0.8);;
+    /*background-color: #eeeef7;*/ 
+    border-radius: 5px;
+    box-shadow: 1px 1px 5px grey;
+    color:#4c4c49;
+}
+main .preguntas:hover{
+    color:#4c4c49;
+    text-decoration: none;
+    background-color:rgb(148, 211, 148);
+    
+}
+main .preguntas:focus{
+    box-shadow: inset 1px 3px 5px rgb(80, 79, 79);
+    color:#61615d;
+}
+form .preguntita{
+    padding-left: 10px;
+}
+
+
+
+/*=======REGISTRO======*/
+
+/*=======registro1======*/
+
+form .registro1{
+    /*border:1px solid green;*/
+    display:flex;
+    flex-direction:column;
+    width: 10%;
+    padding-top:62px;
+}
+form .registro1 i{
+    margin:20px;
+}
+form .registro1 .ultimoLabel{
+    margin-top: 35px;
+}
+
+
+/*=======registro2======*/
+
+form .registro2{
+    flex-direction:column;
+    width: 80%;
+    margin: 20px;
+    /*border: 1px solid red;*/
+}
+
+form .registro2{
+    display:flex;
+    flex-direction: column;  
+}
+/*======INPUTS====*/
+.registro2 .inputsRegistro{
+    /*border:1px solid red;*/
+    text-decoration: none;
+    border:none;
+    width: 100%;
+    border-radius:5px;
+    box-shadow: 1px 3px 5px grey;
+    margin-top:15px;
+    margin-bottom:20px;
+}
+.textoContraseña{
+    font-weight: 500;
+    font-size: 18px;;
+}
+/*======ENVIAR====*/
+.registro2 .enviar{
+    margin-top:15px;
+    margin-bottom:45px;
+    text-decoration: none;
+    border:none;
+    border-radius:5px;
+    width: 100%;
+    background-color: #d9c65f;
+    box-shadow: 3px 3px 3px grey;
+    color:#4c4c49;
+    font-weight: 600; 
+}
+.registro2 .enviar:hover{
+    background-color: #cabb61;
+}
+/*======A-INGRESO====*/
+.registro2 .aIngreso{
+    margin-top:10px;
+    margin-bottom:10px;
+    padding-left: 10px;
+    padding-right: 10px;
+    font-weight: 500;
+    display:block;
+    width: 100%;
+    background-color: rgba(148, 211, 148, 0.8);;
+    /*background-color: #eeeef7;*/ 
+    border-radius: 5px;
+    box-shadow: 1px 1px 5px grey;
+    color:#4c4c49;
+}
+.registro2 .aIngreso:hover{
+    color:#4c4c49;
+    text-decoration: none;
+    background-color:rgb(148, 211, 148);  
+}
+.registro2 .aIngreso:focus{
+    box-shadow: inset 1px 3px 5px rgb(80, 79, 79);
+    color:#61615d;
 }

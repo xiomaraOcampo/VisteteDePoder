@@ -4,12 +4,12 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-   
+  
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css">
-     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
-     <link rel="stylesheet" href="/stylesheets/style.css">
     <link href = "https://fonts.googleapis.com/css2? family = Josefin + Sans & display = swap" rel = "stylesheet">
-
+<!--<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+--> <link rel="stylesheet" href="/stylesheets/style.css">
+   
 </head>
 <body>
     <div class="container">
@@ -23,9 +23,9 @@
                         </div>
 
                         <div class="redes">
-                            <div class="f"><a href=""><img class="f" src="/images/facebook.jpg" alt="facebook"></a></div>
-                            <div class="i"><a href=""><img src="/images/instagram.png" alt="instagram"></a></div>
-                            <div class="w"><a href=""><img src="/images/whatsapp.png" alt="whatsapp"></a></div> 
+                            <div class="f"><a href="https://www.facebook.com/vistetedepoderclothingdesign/"><img class="f" src="/images/facebook.jpg" alt="facebook"></a></div>
+                            <div class="i"><a href="https://www.instagram.com/remerasliterarias_vp/"><img src="/images/instagram.png" alt="instagram"></a></div>
+                            <div class="w"><a href="https://web.whatsapp.com/"><img src="/images/whatsapp.png" alt="whatsapp"></a></div> 
                     
                         </div>    
                 </section>
@@ -33,34 +33,38 @@
                 <section class=header2>
                     <article class="logo"><img src="/images\logo.jpg" alt="logo"></article>   
 
-                    <div class="menuHorizontal">
-                        <div class="palabras"><a href="#">HOME</a></div>
-                        <div class="palabras">INDUMENTARIA <i class="fas fa-sort-down"></i> 
+                    <ul class="menuHorizontal">
+                        <li class="palabras"><a class="home" href="/home">HOME</a></li>
+                        <li class="palabras"><a class="home" href="/producto">INDUMENTARIA<i class="fas fa-sort-down"></i></a> 
                            <ul class="desplegable">
-                            <li><a href="#">Remeras</a></li>
-                            <li><a href="#">Barbijos</a></li>
-                            <li><a href="#">Gorras</a></li>
+                            <li><a href="/producto">Remeras</a></li>
+                            <li><a href="/producto">Barbijos</a></li>
+                            <li><a href="/producto">Gorras</a></li>
                            </ul>  
-                        </div> 
-                        <div class="palabras">MERCHANDISIGN <i class="fas fa-sort-down"></i> 
+                        </li> 
+                        <li class="palabras"><a class="home" href="/producto">MERCHANDISIGN<i class="fas fa-sort-down"></i></a> 
                             <ul class="desplegable">
-                            <li><a href="#">Tazas</a></li>
-                            <li><a href="#">Termosos</a></li>
-                            <li><a href="#">Botellas</a></li>
+                            <li><a href="/producto">Tazas</a></li>
+                            <li><a href="/producto">Termos</a></li>
+                            <li><a href="/producto">Botellas</a></li>
                             </ul>  
-                         </div>  
-                         <div class="palabras">ACCESORIOS <i class="fas fa-sort-down"></i> 
+                        </li>  
+                         <li class="palabras"><a class="home" href="/producto">ACCESORIOS<i class="fas fa-sort-down"></i></a>
                             <ul class="desplegable">
-                              <li><a href="#">Bolsos</a></li>
-                              <li><a href="#">Cartucheras</a></li>
-                              <li><a href="#">Mochilas</a></li>
-                            </ul>  
-                         </div> 
+                              <li><a href="/producto">Bolsos</a></li>
+                              <li><a href="/producto">Cartucheras</a></li>
+                              <li><a href="/producto">Mochilas</a></li>
+                            </ul>
+                        </li>     
+                    </ul> 
                         
 
                     <div class="buscadores">
-                       <div class="valija"><a href=""></a><i class="fas fa-shopping-bag"></i></a></div>
-                       <div class="buscador"><a href=""></a><i class="fas fa-search"></i></a></div>
+                       <div class="valija"><a href="/carrito"><i class="fas fa-shopping-bag"></i></a></div>
+                       <div class="buscador"><a href="#"><label for="busqueda"><i class="fas fa-search"></label></i></a>
+                         <input type="search" placeholder="Buscar productos" id="busqueda" name="busqueda">
+                       </div>
+                       <div class="ingreso"><a href="/ingreso"><i class="fas fa-user"></i></a></div>
                     </div>
                 </section>
                 
@@ -72,14 +76,14 @@
 
             
                     
-                    <div class="rectanguloNaranja">
+                   <div class="rectanguloNaranja">
                         <section class="aside1">
-                            <div id="carouselExampleSlidesOnly" class="carousel slide" data-ride="carousel">
-                                <div class="carousel-inner">
+                             <!--<div id="carouselExampleSlidesOnly" class="carousel slide" data-ride="carousel">
+                                <div class="carousel-inner">-->
                                     <div class="carousel-item active">
                                         <img class="d-block w-100" src="\images\carrusel1\1Alicia.jpg" alt="First slide">
                                     </div>
-                                    <div class="carousel-item">
+                                <!--     <div class="carousel-item">
                                         <img class="d-block w-100" src="\images\carrusel1\2cortazar.jpg" alt="Second slide">
                                     </div>
                                     <div class="carousel-item">
@@ -91,16 +95,19 @@
                                 </div>
                             </div>
                             
-                        
+                        -->
                         </section>
                 
                         <section class="container-small">
-                            <div>
-                                <article class="img-container-small"><a href=""><img src="\images\fotosVisteteDePoder\indumentaria.jpg" alt="Menú con Imagen de Indumentaria" ><br>Indumentaria</a></article>
-                                <article class="img-container-small"><a href=""><img src="\images\fotosVisteteDePoder\accesorios.jpg" alt="Menú con Imagen de Accesorios" > <br>Accesorios</a></article>
-                                <article class="img-container-small"><a href=""><img src="\images\fotosVisteteDePoder\merchandising.jpg" alt="Menú con Imagen de Merchandising" ><br> Merchandising</a></article>
+                          
+                                <article class="img-container-small"><a href=""><img class="imagenMenu" src="\images\fotosVisteteDePoder\indumentaria.jpg" alt="Menú con Imagen de Indumentaria" >
+                                    <p class="indumentariaLetras">Indumentaria</p></a></article>
+                                <article class="img-container-small"><a href=""><img class="imagenMenu" src="\images\fotosVisteteDePoder\accesorios.jpg" alt="Menú con Imagen de Accesorios" >
+                                    <p class="accesorioLetras">Accesorios</p></a></article>
+                                <article class="img-container-small"><a href=""><img class="imagenMenu" src="\images\fotosVisteteDePoder\merchandising.jpg" alt="Menú con Imagen de Merchandising" >
+                                    <p class="merchanidingLetras">Merchandising</p></a></article>
                             
-                            </div>
+                          
                         </section>
                         
                         <section class="slider">
@@ -147,13 +154,13 @@
 
                         
                     </div>
-            
+            <!--
 
                     <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
                     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
                     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
                     
-
+                    -->
                 <!--FIN MAIN-->    
 
             </main>
