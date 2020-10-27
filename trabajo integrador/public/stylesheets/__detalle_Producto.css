@@ -50,11 +50,16 @@
     flex-wrap: wrap;
     width: 400px; 
     height: 350px;   
+    flex-direction: column;
+    margin-left: 30px;
+    justify-content: space-around;
+}
+.talle-catidad{
+    margin-bottom: 10px;
 }
 
-
 .descripcion button{
- width:400px;
+ width:375px;
  text-decoration: none;
  border: none;
  border-radius: 5px;
@@ -63,6 +68,7 @@
  color: #4c4c49;
  font-weight: 600;
  height:45px;
+ font-size:20px;
 }
 
 
