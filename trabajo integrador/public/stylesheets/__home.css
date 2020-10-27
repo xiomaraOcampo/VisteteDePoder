@@ -1,14 +1,6 @@
 
 
 /*estos estilos son para ver el formato de cajas*/
-body{
-    background-image: url("/images/fotosVisteteDePoder/papelFondoAlta.jpg");
-    margin:0;
-    padding:0;
-    background-repeat: no-repeat;
-    background-size: cover;
-   
-}
 
 .container{
     width:100vw;
