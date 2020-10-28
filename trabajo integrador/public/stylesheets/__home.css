@@ -4,6 +4,7 @@
 
 .container{
     width:100vw;
+    box-sizing: inline-block;
     
 }
 
@@ -11,90 +12,101 @@
    height: 900px;*/
   /* margin:15%;
 }*/
-main .rectanguloNaranja {
-    width:100%;
-    padding: 0;
-
-}
-
-.aside1{
-    padding:auto;
-    margin: 0;
-}
-
-section .aside1 article{
-    width:auto;
-    height: 100%;
-
-    display: inline-block;
-    margin:auto;
-    padding:auto;
-}
-
-section.container-small {
-    text-align: center;
-    padding: 1% 5%;
+main .mainHome {
     display:flex;
-    justify-content: center;
-
-
+    flex-direction:column;
+    align-items: center;
+    width:100%;
 }
 
-section.container-small article{
-    
-    margin: 10%;
-    box-shadow: 1px 3px 5px grey;
-    background: #efeff3;
+.aside1 .carru1{
+    width: 100vw;
+}
+
+.mainHome .menuFotos{
+    width: 55%;
+    display:flex;
+    justify-content: space-around;
+   /* border: 1px solid red;*/
+}
+
+section .img-container-small {
     display: flex;
-    flex-direction: column;
-    
-    
+    width: 30%;
+    margin: 10px;
+    box-shadow: 1px 3px 5px grey;
+    background: #efeff3;       
 }
 
-section.container-small article:hover{
+section .img-container-small:hover{
     box-shadow: inset 1px 3px 5px grey;
-
 }
-
+section .img-container-small .imagenMenu{
+    width:92.5%;
+    margin:10px 10px 0px 10px;
+    }
+ section .img-container-small a{
+     display: block;
+     width: 100%;
+     text-decoration: none;
+ }
 .indumentariaLetras{
-    color: #5c5b3f;
+    color: #797637;
+    display:block;
+    width: 20%;
+    font-size: 1.2rem;
+    padding:0px 10px;
+    font-weight: 600; 
 }
 .accesorioLetras{
     color: #374258;
+    display:block;
+    width: 20%;
+    font-size: 1.2rem;
+    padding:0px 10px;
+    font-weight: 600; 
 }
-.merchanidingLetras{
-    color: #5f7546;
+.merchanidingLetras {
+    display:block;
+    width: 20%;
+    color: #577535;
+    font-size: 1.2rem;
+    padding:0px 10px;
+    font-weight: 600; 
+   
 }
 
-.imagenMenu{
 
-width:80%;
-margin:10%;
-
-}
-section.container-small article p{
-    align-self: flex-end;
-}
 .slider{
+    margin: 50px 0px;
     width: 100%;
     display:flex; 
     /*margin:auto;*/
     /*text-align: center;*/
-    padding: auto;    
+    /*padding: auto;*/    
     animation: cambio 10s infinite;
+    /*border:1px solid red;*/
 }
 section.slider article{
+    width: 15%;
     justify-content: center;
     /*overflow: hidden;*/
-    margin:0 10%;
-    padding:auto;
-    box-shadow: 1px 3px 5px grey;
+    margin:0 5%;
+    /*padding:auto;*/
+    /*border:1px solid green;*/
+    /*background-color: tomato;*/
 }
 
-section.slider article:hover{
+section.slider article a{
+    display: block;
+    width: 100%;
+}
+section.slider article img{
+    /*width: 100%;*/
+    box-shadow: 1px 3px 5px grey;
+}
+section.slider article img:hover{
     box-shadow: inset 1px 3px 5px grey;
-
-
 }
 
 @keyframes cambio{

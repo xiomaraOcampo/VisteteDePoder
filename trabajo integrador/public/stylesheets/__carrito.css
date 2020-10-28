@@ -61,7 +61,7 @@
   
 }*/
 .compra1 .articulo1, .compra2 .articulo2{
-    border: 1px solid red;
+    /*border: 1px solid red;*/
     margin: 5% 0px;
     box-shadow: 1px 3px 5px grey;
     background: #efeff3;
@@ -74,13 +74,13 @@
 }
 
 .detalleArticulo{
-    border:1px solid green;
+   /* border:1px solid green;*/
     display:flex;
     flex-direction: column;
     justify-content: center;
 }
 .descripcionCompra{
-    border:1px solid red;
+    /*border:1px solid red;*/
 }
 
 
@@ -97,7 +97,7 @@
     align-items: center;
     border-radius: 5px;  
     box-shadow: 1px 3px 5px grey;
-    border: 1px solid red; 
+    /*border: 1px solid red; */
 }
 
 .detalleSubtotal div{

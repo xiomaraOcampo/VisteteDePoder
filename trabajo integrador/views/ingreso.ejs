@@ -21,9 +21,9 @@
                         </div>
 
                         <div class="redes">
-                            <div class="f"><a href=""></a><img class="f" src="/images/facebook.jpg" alt="facebook"></a></div>
-                            <div class="i"><a href=""></a><img src="/images/instagram.png" alt="instagram"></a></div>
-                            <div class="w"><a href=""></a><img src="/images/whatsapp.png" alt="whatsapp"></a></div> 
+                            <div class="f"><a href="https://www.facebook.com/vistetedepoderclothingdesign/"><img class="f" src="/images/facebook.jpg" alt="facebook"></a></div>
+                            <div class="i"><a href="https://www.instagram.com/remerasliterarias_vp/"><img src="/images/instagram.png" alt="instagram"></a></div>
+                            <div class="w"><a href="https://web.whatsapp.com/"><img src="/images/whatsapp.png" alt="whatsapp"></a></div> 
                     
                         </div>    
                 </section>
@@ -31,16 +31,38 @@
                 <section class=header2>
                     <article class="logo"><img src="/images\logo.jpg" alt="logo"></article>   
 
-                    <div class="menuHorizontal">
-                        <div><a href="#"></a>HOME</div>
-                        <div><a href="#"></a>INDUMENTARIA <i class="fas fa-sort-down"></i></a> </div>
-                        <div><a href="#"></a>ACCESORIOS<i class="fas fa-sort-down"></i></a></div>
-                        <div><a href="#"></a>MERCHANDISING<i class="fas fa-sort-down"></a></i></div> 
-                    </div>
+                    <ul class="menuHorizontal">
+                        <li class="palabras"><a class="home" href="/home">HOME</a></li>
+                        <li class="palabras"><a class="home" href="/producto">INDUMENTARIA<i class="fas fa-sort-down"></i></a> 
+                           <ul class="desplegable">
+                            <li><a href="/producto">Remeras</a></li>
+                            <li><a href="/producto">Barbijos</a></li>
+                            <li><a href="/producto">Gorras</a></li>
+                           </ul>  
+                        </li> 
+                        <li class="palabras"><a class="home" href="/producto">MERCHANDISIGN<i class="fas fa-sort-down"></i></a> 
+                            <ul class="desplegable">
+                            <li><a href="/producto">Tazas</a></li>
+                            <li><a href="/producto">Termos</a></li>
+                            <li><a href="/producto">Botellas</a></li>
+                            </ul>  
+                        </li>  
+                         <li class="palabras"><a class="home" href="/producto">ACCESORIOS<i class="fas fa-sort-down"></i></a>
+                            <ul class="desplegable">
+                              <li><a href="/producto">Bolsos</a></li>
+                              <li><a href="/producto">Cartucheras</a></li>
+                              <li><a href="/producto">Mochilas</a></li>
+                            </ul>
+                        </li>     
+                    </ul> 
+                        
 
                     <div class="buscadores">
-                       <div class="valija"><a href=""></a><i class="fas fa-shopping-bag"></i></a></div>
-                       <div class="buscador"><a href=""></a><i class="fas fa-search"></i></a></div>
+                       <div class="valija"><a href="/carrito"><i class="fas fa-shopping-bag"></i></a></div>
+                       <div class="buscador"><a href="#"><label for="busqueda"><i class="fas fa-search"></label></i></a>
+                         <input type="search" placeholder="Buscar productos" id="busqueda" name="busqueda">
+                       </div>
+                       <div class="ingreso"><a href="/ingreso"><i class="fas fa-user"></i></a></div>
                     </div>
                 </section>
                 
@@ -78,24 +100,25 @@
 </main>
 
 <!--footer-->
-    <footer>
-                <section class="Medios-de-pagos">
-                    <p> Medios de pago </p>                    
-                    <img width=50px src="/images/logo-mercadopago.jpg" alt="Mercado pago"></article>
-                </section>
-                
-                <section class="Forma-de-envio">
-                    <p> Forma de Envio <p>
-                    <img width=60px src="/images/Correo-Argentino-Logo.jpg" alt="Correo Argentino">
-                </section>
-
-                <section class="Menu-del-footer">
-                    <div><a href="">Contacto </a></div>
-                    <div> <a href="">Como comprar </a></div>
-                    <div> <a href="">Politica de cambio </a></div>
-                    <div> <a href="">Nosotros</a></div>
-                </section>      
-            </footer>
+<footer>
+    <div class="tarjetas">
+        <section class="Medios-de-pagos">
+            <p> Medios de pago </p>                    
+            <img width=50px src="/images/logo-mercadopago.jpg" alt="Mercado pago"></article>
+        </section>
+    
+        <section class="Forma-de-envio">
+            <p> Forma de Envio <p>
+            <img width=60px src="/images/Correo-Argentino-Logo.jpg" alt="Correo Argentino">
+        </section>
+    </div>
+        <section class="Menu-del-footer">
+            <div><a href="">Contacto </a></div>
+            <div> <a href="">Como comprar </a></div>
+            <div> <a href="">Politica de cambio </a></div>
+            <div> <a href="">Nosotros</a></div>
+        </section>      
+    </footer>
 
             <!--FIN footer-->
 

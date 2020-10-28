@@ -1,27 +1,30 @@
 footer{
     background-image:url("/images/fotosVisteteDePoder/zocaloAlta.jpg");
-    display:inline-block;
+    display:flex;
+    justify-content: space-around;
+    align-items: center;
     box-sizing: border-box;
     width: 100%;
     font-family : 'Josefin Sans', sans-serif; 
-    font-weight: 600; 
+    font-weight: 500; 
+    color:#dfdfe6;
     font-size: 20px;
-    /*height: 150px;*/
-  
+    /*height: 150px;*/  
+    /*border: 1px solid red;*/
 }
-
-
-
+.tarjetas{
+    display:flex;
+    /*border:1px solid violet;*/
+}
 .Medios-de-pagos{
     display: inline-block;
     box-sizing: border-box;
     margin-left: 10px;
     margin-top: 10px;
-    margin-bottom: 10px;
-      
+    margin-bottom: 10px;   
     text-align: center;
-    color:white;
-    font-family: serif;
+    /*border: 1px solid red;*/
+   
 }
 .Forma-de-envio{
     display: inline-block;
@@ -30,19 +33,22 @@ footer{
     margin-top: 10px;
     margin-bottom: 10px;
     text-align: center;
-    color:white;
-    font-family: serif;
-
-
+    /*border: 1px solid red;*/
 }
+.tarjetas  img{
+    border:2px solid grey;
+}
+
 .Menu-del-footer{       
 display: inline-block;
 box-sizing: border-box;
 margin-top:2px;
 height: 30px;
 margin-left:90px;
-
-
+/*border: 1px solid red;*/
+}
+.Menu-del-footer a{
+    text-decoration: none;
 }
 
 .Menu-del-footer div{
@@ -50,11 +56,11 @@ display:inline-block;
 box-sizing: border-box; 
 margin-left:30px;
 margin-top: 2px;
+/*border: 1px solid red;*/
 }
 
 .Menu-del-footer a {
-color:white;
-
-
+color:#dfdfe6;
+/*border: 1px solid red;*/
 }
  

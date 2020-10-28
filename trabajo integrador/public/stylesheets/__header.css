@@ -3,7 +3,7 @@
     flex-direction: column;
     box-sizing: border-box;
     background-size: cover;
-    border: 2px solid red;
+    /*border: 2px solid red;*/
     
     
 
@@ -14,7 +14,7 @@ header .header1{
     background-image:url("/images/fotosVisteteDePoder/papelHeaderAlta.jpg");
     display:flex;
     align-items: center;
-    border: 2px solid red;
+    /*border: 2px solid red;*/
 }
 
 
@@ -24,7 +24,7 @@ header .header1 .envios{
     padding-left: 30px;
     color: #dfdfe6; 
     margin: 1%;
-    border: 2px solid red;
+    /*border: 2px solid red;*/
 }
 header .header1 .redes{
     width: 20%;
@@ -32,12 +32,12 @@ header .header1 .redes{
     justify-content: space-around;
     align-items:center;
     margin: 1%;
-    border: 2px solid red;
+   /* border: 2px solid red;*/
 }
 
 header .header1 .redes div{
     width: 40px;
-    border: 2px solid red;
+   /* border: 2px solid red;*/
 }
 
 header .header1 .redes div img{
@@ -56,21 +56,21 @@ header .header2{
     display:flex;
     justify-content: center;
     align-items: flex-start;
-    border: 2px solid red;
+    /*border: 2px solid red;*/
 }
 
 header .header2 .logo{
     width: 15%;
     display:flex;
     justify-content: center;
-    border: 2px solid red;
+    /*border: 2px solid red;*/
     margin-top:15px;
     margin-bottom:15px;
 }
 header .header2 .logo img{
     width: 70%;
     border-radius: 50%;
-    border: 2px solid red;
+    /*border: 2px solid red;*/
 }
 
 header .header2 .menuHorizontal{
@@ -79,14 +79,14 @@ header .header2 .menuHorizontal{
     display:flex; 
     justify-content: space-around;
     align-items: flex-start;
-    border: 2px solid red;
+    /*border: 2px solid red;*/
 }
 header .header2 .menuHorizontal .palabras{
-    border: 2px solid green;
+    /*border: 2px solid green;*/
 }
 header .header2 .menuHorizontal li{
     list-style:none;
-    border: 2px solid red;
+    /*border: 2px solid red;*/
 }
 header .header2 .menuHorizontal a{
     color: grey;
@@ -117,7 +117,7 @@ header .header2 .menuHorizontal .palabras .desplegable a{
 header .header2 .buscadores{
     width: 20%;
     display:flex;
-    border: 2px solid red;
+    /*border: 2px solid red;*/
     margin-top: 5.15%;
 }
 header .header2 .buscadores div{
@@ -127,7 +127,7 @@ header .header2 .buscadores div{
     align-items: center;
     flex-direction: column;
     font-size: 1.25rem;
-    border: 2px solid green; 
+    /*border: 2px solid green; */
     color:#4c4c49; 
     position:relative;
     bottom:7px;
@@ -149,7 +149,7 @@ header .header2 .menuHorizontal .palabras ul{
     display:none;
     /*position:absolute;
     min-width:140px;*/
-    border:1px solid violet;
+    /*border:1px solid violet;*/
     position: absolute;
 }
 header .header2 .menuHorizontal .palabras ul a{
@@ -178,3 +178,76 @@ header .header2 .buscadores .buscador input:focus{
     */
     box-shadow: inset 5px 5px 5px grey;
 }
+
+/*=======TABLET header========*/
+
+@media (max-width: 768px){
+   
+    .header2{
+        flex-direction: column;
+    }
+    .menuHorizontal{
+       /* background-color: violet;*/
+        text-align: center;
+        font-size: 0.7rem;
+         }
+    
+    .buscadores{
+      /*background-color: violet;*/
+      font-size: 0.8rem;
+     }
+     form .ingreso2 .preguntas{
+        
+        font-size: 0.7rem;
+        height: 32px;;
+       }   
+    }
+
+/*=======TABLET header========*/
+
+@media (max-width: 480px){
+   
+    .header2{
+        flex-direction: column;
+    }
+    .menuHorizontal{
+        /*background-color: violet;*/
+        text-align: center;
+        font-size: 0.7rem;
+         }
+    
+    .buscadores{
+     /* background-color: violet;*/
+      font-size: 0.8rem;
+     }
+     form .ingreso2 .preguntas{
+        
+        font-size: 0.7rem;
+        height: 32px;;
+       }   
+    }
+
+
+/*=======CELULAR header========*/
+/*
+@media (max-width: 360px){
+  
+    .header2{
+        flex-direction: column;
+    }
+    .menuHorizontal{
+        background-color: violet;
+        text-align: center;
+        font-size: 0.7rem;
+         }
+    
+    .buscadores{
+      background-color: violet;
+      font-size: 0.8rem;
+     }
+     form .ingreso2 .preguntas{
+        
+        font-size: 0.7rem;
+        height: 32px;;
+       }   
+    }*/
