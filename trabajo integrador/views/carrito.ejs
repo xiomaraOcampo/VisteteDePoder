@@ -14,75 +14,127 @@
 </head>
 <body>
 <div class="container">
-                <!--HEADER-->
-                <header>
-                    <section class="header1">
-                        <!--<img class="encabezadoGris"src="/images\fotosVisteteDePoder\encabezadoGris.jpg" alt="encabezadoGris">
-                        -->
-                            <div class="envios">
-                                <i class="fas fa-shipping-fast"></i>
-                                Envios a todo el país
-                            </div>
+   <!--HEADER-->
+   <header>
+    <section class="header1">
+       
+            <div class="envios">
+                <i class="fas fa-shipping-fast"></i>
+                Envios a todo el país
+            </div>
 
-                            <div class="redes">
-                                <div class=f><a href=""></a><img src="/images\facebook.jpg" alt="facebook"></a></div>
-                                <div class=i><a href=""></a><img src="/images\instagram.jpg" alt="instagram"></a></div>
-                                <div class=w><a href=""></a><img src="/images\whatsapp.jpg" alt="whatsapp"></a></div> 
-                                    <!--no funciono cambiar el formato a PNG-->
-                            </div>    
-                    </section>
+            <div class="redes">
+                <div class="f"><a href="https://www.facebook.com/vistetedepoderclothingdesign/"><img class="f" src="/images/facebook.jpg" alt="facebook"></a></div>
+                <div class="i"><a href="https://www.instagram.com/remerasliterarias_vp/"><img src="/images/instagram.png" alt="instagram"></a></div>
+                <div class="w"><a href="https://web.whatsapp.com/"><img src="/images/whatsapp.png" alt="whatsapp"></a></div> 
+        
+            </div>    
+    </section>
 
-                    <section class=header2>
-                        <article class="logo"><img src="/images\logo.jpg" alt="logo">
-                        </article>   
+    <section class=header2>
+        <article class="logo"><img src="/images\logo.jpg" alt="logo"></article>   
 
-                        <div class="menuHorizontal">
-                            <div><a href=""></a>HOME</div>
-                            <div><a href=""></a>INDUMENTARIA <i class="fas fa-sort-down"></i></a> </div>
-                            <div><a href=""></a>ACCESORIOS<i class="fas fa-sort-down"></i></a></div>
-                            <div><a href=""></a>MERCHANDISING<i class="fas fa-sort-down"></a></i></div>    
-                        </div>
+        <ul class="menuHorizontal">
+            <li class="palabras"><a class="home" href="/home">HOME</a></li>
+            <li class="palabras"><a class="home" href="/producto">INDUMENTARIA<i class="fas fa-sort-down"></i></a> 
+               <ul class="desplegable">
+                <li><a href="/producto">Remeras</a></li>
+                <li><a href="/producto">Barbijos</a></li>
+                <li><a href="/producto">Gorras</a></li>
+               </ul>  
+            </li> 
+            <li class="palabras"><a class="home" href="/producto">MERCHANDISIGN<i class="fas fa-sort-down"></i></a> 
+                <ul class="desplegable">
+                <li><a href="/producto">Tazas</a></li>
+                <li><a href="/producto">Termos</a></li>
+                <li><a href="/producto">Botellas</a></li>
+                </ul>  
+            </li>  
+             <li class="palabras"><a class="home" href="/producto">ACCESORIOS<i class="fas fa-sort-down"></i></a>
+                <ul class="desplegable">
+                  <li><a href="/producto">Bolsos</a></li>
+                  <li><a href="/producto">Cartucheras</a></li>
+                  <li><a href="/producto">Mochilas</a></li>
+                </ul>
+            </li>     
+        </ul> 
+            
 
-                        <div class="valija"><a href=""></a><i class="fas fa-shopping-bag"></i></a></div>
-                        
-                        <div class="buscador"><a href=""></a><i class="fas fa-search"></i></a></div>
-
-                    </section>
-                    
-                </header>
-                <!--FIN HEADER-->
+        <div class="buscadores">
+           <div class="valija"><a href="/carrito"><i class="fas fa-shopping-bag"></i></a></div>
+           <div class="buscador"><a href="#"><label for="busqueda"><i class="fas fa-search"></label></i></a>
+             <input type="search" placeholder="Buscar productos" id="busqueda" name="busqueda">
+           </div>
+           <div class="ingreso"><a href="/ingreso"><i class="fas fa-user"></i></a></div>
+        </div>
+    </section>
+    
+</header>
+<!--FIN HEADER-->
 
                 
     <main>
 
         <!--MAIN-->   
 
-        <div class=rectanguloPrinpipal>
-            <div class=tituloMiCarrito>Mi carrito</div>
+        <div class="rectanguloPrinpipal">
+            <div class="tituloMiCarrito">Mi carrito</div>
             
-            <div class=detalleCompra>
-                
-                <div class=compra1>
-                    
-                    <div class=articulo1><img src="\images\fotosVisteteDePoder\indumentaria.jpg" alt="imagen    indumentaria">
-                    </div>
-                    
-                    <div class=detalleArticulo>
-                        <p> Detalle del producto </p>
-                        <p> Precio </p> 
-                        <div class="descripcion"> <!-- esta caja debería traer la información que se selecciona en productos-->
-                            <p>Descripcion del producto </p>
-                            <p>Precio $00.00</p>
-                                <label for="" > Talle: </label>  
-                            <select name="talle">
-                                    <option value="S">Small</option>
-                                    <option value="M">Medium</option>
-                                    <option value="L">Large</option>
-                                    <option value="XL">Extra-Large</option>
-                            </select>
+            <div class="detalleCarrito">
 
-                            <label for="" > Cantidad: </label>
-                                <select name="Cantidad">
+                <div class="detalleCompra">        
+                        
+                    <div class="compra1">
+                        
+                        <div class="articulo1"><img src="\images\fotosVisteteDePoder\indumentaria.jpg" alt="imagen    indumentaria">
+                        </div>
+                        
+                        <div class="detalleArticulo">
+                            <p> Detalle del producto </p>
+                        
+                            <div class="descripcionCompra"> <!-- esta caja debería traer la información que se selecciona en productos-->
+                                <p>Descripcion del producto </p>
+                                <p>Precio $00.00</p>
+                                    <label for="" > </label>  
+                                <select name="talle">
+                                        <option value="">Talle:</option>
+                                        <option value="S">Small</option>
+                                        <option value="M">Medium</option>
+                                        <option value="L">Large</option>
+                                        <option value="XL">Extra-Large</option>
+                                </select>
+
+                                <label for="" >  </label>
+                                    <select name="Cantidad">
+                                        <option value="">Cantidad:</option>
+                                        <option value="1">1</option>
+                                        <option value="2">2</option>
+                                        <option value="3">3</option>
+                                        <option value="4">4</option>
+                                        <option value="5">5</option>
+                                        <option value="6">6</option>
+                                        <option value="7">7</option>
+                                        <option value="8">8</option>
+                                        <option value="9">9</option>
+                                        <option value="10">10</option>
+                                    </select>
+                            </div>
+                        </div>
+                    </div>
+                
+                    <div class="compra2">
+                        <div class="articulo2"><img src="\images\fotosVisteteDePoder\masProductos1.jpg" alt="imagen indumentaria"></div>
+                    
+                        <div class="detalleArticulo">
+                            <p> Detalle del producto </p>
+                    
+                            <div class="descripcionCompra"> <!-- esta caja debería traer la información que se selecciona en productos-->
+                                <p>Descripcion del producto </p>
+                                <p>Precio $00.00</p>
+                                
+                                <label for="" ></label>
+                                <select name="Cantidad">                           
+                                    <option value="">Cantidad:</option>
                                     <option value="1">1</option>
                                     <option value="2">2</option>
                                     <option value="3">3</option>
@@ -94,43 +146,22 @@
                                     <option value="9">9</option>
                                     <option value="10">10</option>
                                 </select>
+                            </div>
+                        
                         </div>
                     </div>
-                </div>
-                <!-- esta caja debería conectarse con las cajas compra1 y compra2-->
-                <div class=detalleSubtotal>
+                
+                </div> 
+<!-- esta caja debería conectarse con las cajas compra1 y compra2-->
+                <div class="detalleSubtotal">
                     <div>Subtotal $$$</div>
                     <div>Total General $$$</div>
                     <div><button type="submit">Completar Compra</button> </div>
                 </div>
-
-                <div class=compra2>
-                    <div class=articulo2><img src="\images\fotosVisteteDePoder\masProductos1.jpg" alt="imagen indumentaria"></div>
-                    </div>
-                    <div class=detalleArticulo>
-                        <p> Detalle del producto </p>
-                        <p> Precio $$$</p> 
-                        <div class="descripcion"> <!-- esta caja debería traer la información que se selecciona en productos-->
-                            <p>Descripcion del producto </p>
-                            <p>Precio $00.00</p>
-                        
-                                <select name="Cantidad">
-                                    <option value="1">1</option>
-                                    <option value="2">2</option>
-                                    <option value="3">3</option>
-                                    <option value="4">4</option>
-                                    <option value="5">5</option>
-                                    <option value="6">6</option>
-                                    <option value="7">7</option>
-                                    <option value="8">8</option>
-                                    <option value="9">9</option>
-                                    <option value="10">10</option>
-                                </select>
-                        </div>
-                    
-                    
-                </div>
             </div>
+            
+            
+
         </div>
 
 

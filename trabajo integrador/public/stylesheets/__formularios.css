@@ -1,4 +1,4 @@
-main{
+/*main{
     box-sizing: inline-block;
     display:flex;
     justify-content: center;
@@ -7,7 +7,7 @@ main{
     font-weight: 600; 
     font-size: 20px;
     color:#4c4c49;
-}
+}*/
 /*caja padre*/
 form{
     background-image:url("/images/fotosVisteteDePoder/fondoFormularios.jpg");
