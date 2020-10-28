@@ -19,24 +19,31 @@ form{
     border-radius: 5px;
 }
 form .ingreso1{
-    margin-top: 52px;
+    margin-top: 80px;
     /*border: 1px solid red;*/
-    width: 8%;
+    width: 10%;
     justify-content: center;
+    border: 1px solid green;
+    text-align: center;
 }
 form .ingreso1 i{
     padding:10px;
-    margin-top: 20px;
+    margin-top: 10px;
 }
 
 .nombre input, .contraseña input{
+    display:block;
     text-decoration: none;
     border:none;
-    width: 100%;
+    width: 99.3%;
     border-radius:5px;
     box-shadow: 1px 3px 5px grey;
     margin-top:15px;
     margin-bottom:20px;
+    font-family : 'Josefin Sans', sans-serif; 
+    font-size: 1rem;
+    height: 30px;
+  
 }
 /*
 .nombre input:focus, .contraseña input:hover{
@@ -48,8 +55,9 @@ form .ingreso1 i{
 main form .ingreso2{
     /*border:1px solid green;*/
     flex-direction:column;
-    width: 80%;
-    margin: 20px;
+    width: 90%;
+    margin: 20px 20px 20px 0px;
+    border: 1px solid red;
 }
 
 .ingreso2 .iniciarSesion{
@@ -62,7 +70,11 @@ main form .ingreso2{
     background-color: #d9c65f;
     box-shadow: 3px 3px 3px grey;
     color:#4c4c49;
-    font-weight: 600; 
+    font-weight: 600;
+    font-family : 'Josefin Sans', sans-serif; 
+    font-size: 1rem;
+    height: 30px;
+   
 }
 .ingreso2 .iniciarSesion:hover{
     background-color: #cabb61;
@@ -82,14 +94,17 @@ main form .preguntas{
     margin-bottom:10px;
     padding-left: 10px;
     padding-right: 10px;
+    padding-top: 5px;
     font-weight: 500;
     display:block;
-    width: 100%;
     background-color: rgba(148, 211, 148, 0.8);;
     /*background-color: #eeeef7;*/ 
     border-radius: 5px;
     box-shadow: 1px 1px 5px grey;
     color:#4c4c49;
+    text-align: center;
+    text-decoration: none;
+    height: 25px;
 }
 main .preguntas:hover{
     color:#4c4c49;
@@ -116,13 +131,15 @@ form .registro1{
     display:flex;
     flex-direction:column;
     width: 10%;
-    padding-top:62px;
+    padding-top: 90px;
+    border: 1px solid red;
+    text-align: center;
 }
 form .registro1 i{
-    margin:20px;
+    margin:23px;
 }
 form .registro1 .ultimoLabel{
-    margin-top: 35px;
+    margin-top: 55px;
 }
 
 
@@ -130,9 +147,10 @@ form .registro1 .ultimoLabel{
 
 form .registro2{
     flex-direction:column;
-    width: 80%;
-    margin: 20px;
+    width: 90%;
+    margin: 20px 20px 20px 0px;
     /*border: 1px solid red;*/
+    border: 1px solid green;
 }
 
 form .registro2{
@@ -142,13 +160,17 @@ form .registro2{
 /*======INPUTS====*/
 .registro2 .inputsRegistro{
     /*border:1px solid red;*/
+    display:block;
     text-decoration: none;
     border:none;
-    width: 100%;
+    width: 99.3%;
     border-radius:5px;
     box-shadow: 1px 3px 5px grey;
     margin-top:15px;
     margin-bottom:20px;
+    font-family : 'Josefin Sans', sans-serif; 
+    font-size: 1rem;
+    height: 30px;
 }
 .textoContraseña{
     font-weight: 500;
@@ -166,24 +188,34 @@ form .registro2{
     box-shadow: 3px 3px 3px grey;
     color:#4c4c49;
     font-weight: 600; 
+    font-family : 'Josefin Sans', sans-serif; 
+    font-size: 1rem;
+    height: 30px;
+   
 }
 .registro2 .enviar:hover{
     background-color: #cabb61;
 }
 /*======A-INGRESO====*/
 .registro2 .aIngreso{
+    display:block;
     margin-top:10px;
     margin-bottom:10px;
     padding-left: 10px;
     padding-right: 10px;
+    padding-top: 5px;
     font-weight: 500;
-    display:block;
-    width: 100%;
     background-color: rgba(148, 211, 148, 0.8);;
     /*background-color: #eeeef7;*/ 
     border-radius: 5px;
     box-shadow: 1px 1px 5px grey;
     color:#4c4c49;
+    font-family : 'Josefin Sans', sans-serif; 
+    font-size: 1rem;
+    height: 25px;
+    text-align: center;
+    text-decoration: none;
+   
 }
 .registro2 .aIngreso:hover{
     color:#4c4c49;
@@ -194,3 +226,182 @@ form .registro2{
     box-shadow: inset 1px 3px 5px rgb(80, 79, 79);
     color:#61615d;
 }
+
+
+
+
+/*=======TABLET ingreso========*/
+
+@media (max-width: 768px){
+   
+    form .ingreso1{
+    background-color: yellow;
+    text-align: center;
+    font-size: 0.9rem;
+    margin-top: 70px;
+    }
+    form .ingreso1 i{
+        margin-top: 12px;
+    }
+    form .ingreso2{
+        font-size: 0.9rem;
+   }
+   form .ingreso2 input{
+    font-size: 0.9rem;
+   }   
+}
+
+/*=======TABLET intermedio ingreso========*/
+
+@media (max-width: 480px){
+   
+    form .ingreso1{
+    padding-right: 5px;
+    background-color: green;
+    text-align: center;
+    font-size: 0.8rem;
+    margin-top: 65px;
+    }
+    form .ingreso1 i{
+        margin-top: 12px;
+    }
+    form .ingreso2{
+        font-size: 0.8rem;
+   }
+   form .ingreso2 input{
+    font-size: 0.8rem;
+   }  
+   form .ingreso2 .iniciarSesion{
+    font-size: 0.8rem;
+   }  
+   form .ingreso2 .preguntas{
+    font-size: 0.7rem;
+   }   
+}
+
+
+/*=======CELULAR ingreso========*/
+
+@media (max-width: 360px){
+  
+    form .ingreso1{
+       width: 15%;
+        padding-right: 5px;
+        background-color: violet;
+        text-align: center;
+        font-size: 0.7rem;
+        margin-top: 45px;
+        }
+    form .ingreso1 i{
+     margin-top: 10px;
+    }
+       
+    form .ingreso2{
+     margin: 10px 10px 10px 0px;
+     width: 85%;
+     font-size: 0.6rem;
+     }
+
+       form .ingreso2 input{
+        font-size: 0.6rem;
+        height: 20px;
+       }  
+       form .ingreso2 .iniciarSesion{
+        font-size: 0.7rem;
+       }  
+       form .ingreso2 .preguntas{
+        
+        font-size: 0.7rem;
+        height: 32px;;
+       }   
+    }
+    
+
+
+
+/*=======TABLET registro========*/
+
+@media (max-width: 768px){
+   
+    form .registro1{
+    padding-right: 10px;
+    background-color: yellow;
+    font-size: 0.9rem;
+    margin-top: 70px;
+    }
+    form .registro1 i{
+        margin-top: 5px;
+    }
+    form .registro2{
+        font-size: 0.9rem;
+   }
+   form .registro2 input{
+    font-size: 0.9rem;
+   }   
+}
+
+/*=======TABLET intermedio registro========*/
+
+@media (max-width: 480px){
+   
+    form .registro1{
+    padding-right: 5px;
+    background-color: green;
+    text-align: center;
+    font-size: 0.8rem;
+    margin-top: 65px;
+    }
+    form .registro1 i{
+        margin-top: 12px;
+    }
+    form .registro2{
+        font-size: 0.8rem;
+   }
+   form .registro2 input{
+    font-size: 0.8rem;
+   }  
+   form .registro2 .iniciarSesion{
+    font-size: 0.8rem;
+   }  
+   form .registro2 .preguntas{
+    font-size: 0.7rem;
+   }   
+}
+
+
+/*=======CELULAR registro========*/
+
+@media (max-width: 360px){
+  
+    form .registro1{
+       width: 15%;
+        padding-right: 5px;
+        background-color: violet;
+        text-align: center;
+        font-size: 0.7rem;
+        margin-top: 45px;
+        }
+    form .registro1 i{
+     margin-top: 10px;
+    }
+       
+    form .registro2{
+     margin: 10px 10px 10px 0px;
+     width: 85%;
+     font-size: 0.6rem;
+     }
+
+       form .registro2 input{
+        font-size: 0.6rem;
+        height: 20px;
+       }  
+       form .registro2 .iniciarSesion{
+        font-size: 0.7rem;
+       }  
+       form .registro2 .preguntas{
+        
+        font-size: 0.7rem;
+        height: 32px;;
+       }   
+    }
+    

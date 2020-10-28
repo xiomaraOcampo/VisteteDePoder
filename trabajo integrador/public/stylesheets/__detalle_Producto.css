@@ -1,35 +1,80 @@
 .Nombre-Producto{
-    width: 50%;
+    width: 601px;
     display:flex;
-    justify-content: center;
-    background-color: yellow;
-    
+    display: flex;
+    margin-left: 300px;
+    margin-top: 90px;
+    background-color:#a5d5e2;
+    color: white; 
+}
+
+.producto-y-descripcion{
+ 
+    display:flex;
+    font-family : 'Josefin Sans', sans-serif; 
+    font-weight: 600; 
+    font-size: 20px;
+    margin-bottom:100px;
+    margin-top: 20px;
 }
 
 
-.fondo-detalle-producto{
- width:100%;
- display: flex;
- background-color: sandybrown;
- justify-content: center;
-}
+
 .producto{
-    background-color:green;
+    flex-direction: row;
+    flex-wrap: wrap;
+    width:200px;
+    height: 280px;
+    margin-left: 300px;
+    display: flex;
+  
+    }
+ img{
+        box-shadow: 1px 3px 5px grey;
+        background: #efeff3; 
+        margin-left:15px;
+        
+    } 
 
+
+.producto h2{
+    background-color:#a5d5e2;
+    color: white;
+    width:200px;
+    height: 45px;
 }
+
+
 .descripcion{
-    background-color: indianred;
     display: flex;
     flex-wrap: wrap;
+    width: 400px; 
+    height: 350px;   
     flex-direction: column;
+    margin-left: 30px;
     justify-content: space-around;
-    width:30%;
-    justify-content: center;
 }
+.talle-catidad{
+    margin-bottom: 10px;
+}
+
 .descripcion button{
- width:130px;
-
-
+ width:375px;
+ text-decoration: none;
+ border: none;
+ border-radius: 5px;
+ background-color: #d9c65f;
+ box-shadow: 3px 3px 3px grey;
+ color: #4c4c49;
+ font-weight: 600;
+ height:45px;
+ font-size:20px;
 }
+
+
+
+
+
+
 
   
