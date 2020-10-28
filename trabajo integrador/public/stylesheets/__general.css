@@ -21,7 +21,43 @@ html{
     color:#4c4c49;
 
 }
+select{
+    border:none;
+    border-radius: 5px;
+    box-shadow: 3px 3px 3px grey;
+    font-family : 'Josefin Sans', sans-serif; 
+    font-weight: 500; 
+    font-size: 20px;
+    color: grey;
+    padding-top: 3px;
+    margin: 0px 5px;
+}
 
+button{
+    margin-top:15px;
+    margin-bottom:10px;
+    text-decoration: none;
+    border:none;
+    border-radius:5px;
+    width: 100%;
+    background-color: #d9c65f;
+    box-shadow: 3px 3px 3px grey;
+    color:#4c4c49;
+    font-weight: 600;
+    font-family : 'Josefin Sans', sans-serif; 
+    font-size: 1rem;
+    height: 30px;
+   
+}
+button:hover{
+    background-color: #cabb61;
+}
+
+button:focus{
+    box-shadow: inset 1px 1px 5px grey;
+    color:#4c4c49;
+     /*quiero sacarle el borde negro al buttom*/ 
+}
 
 /*Viewport*/
 
