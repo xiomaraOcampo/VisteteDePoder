@@ -1,7 +1,7 @@
 let productController = {
 
     producto: function(req, res, next) {
-        res.render('Producto');
+        res.render('productsViews/Producto');
       }, 
    
     }

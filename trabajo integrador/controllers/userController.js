@@ -1,10 +1,10 @@
 let userController = {
 
     ingreso: function(req, res, next) {
-        res.render('usersVistas/ingreso');
+        res.render('usersViews/ingreso');
 },
     registro: function(req, res, next) {
-        res.render('usersVistas/registro');
+        res.render('usersViews/registro');
       }
 };
 
