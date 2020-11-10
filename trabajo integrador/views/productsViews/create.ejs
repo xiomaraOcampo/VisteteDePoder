@@ -67,31 +67,25 @@
                 
 <form  action="/home" method=get>
     <div class="registro1">
-        <label for="nombre"><i class="fas fa-user"></i></label>
-        <label for="email"><i class="fas fa-envelope"></i></label>
-        <label for="contraseña"><i class="fas fa-lock"></i></i></label>
-        <label class="ultimoLabel" for="confirmaciónContraseña"><i class="fas fa-lock"></i></label>
+        <label for="nombreProducto"><i class="fas fa-tshirt"></i></i></label>
+        <label for="descripcion"><i class="fas fa-edit"></i></i></label>
+        <!------PONER LOS ICONOS DE CADA INPUT ACA"-->
+        
     </div>
 
     <div class="registro2">
-        <h3>Crear cuenta</h3>
+        <h3>Crear producto</h3>
 
-        <input class=inputsRegistro type="text" placeholder="Tu nombre" id="nombre" name="NyP">
-                 
-        <input class="inputsRegistro" type="email" placeholder="Correo electrónico"id="email" name="email">
+        <input class=inputsRegistro type="text" placeholder="Nombre Producto" id="nombreProducto" name="NP">
+        
+        <textarea class="inputsRegistro"  placeholder="Descripción" name="descripcion" id="descripcion" cols="120" rows="1"></textarea><br>
                   
-        <input class="inputsRegistro" type="password" placeholder="Contraseña" id="contraseña" name="contraseña">
+      <!------TODOS LOS INPUTS DEBEN TENER class="inputsRegistro"-->
          
-        <p class="textoContraseña">!La contraseña debe tener al menos seis caracteres</p> 
-         
-        <input class="inputsRegistro" type="password" placeholder="Vuelve a escribir la contraseña" id="confirmaciónContraseña" name="confirmaciónContraseña"></p>
-      
-                     <!--Envían al home-->
-        <button class="enviar" type="submit">Crea tu cuenta en Vistete de Poder</button>
+        
+        <button class="enviar" type="submit">Crea tu producto en Vistete de Poder</button>
     
-        ¿Ya tenés una cuenta? 
-     
-        <a class="aIngreso"href="\ingreso">Iniciar sesión</a>
+        <a class="aIngreso"href="\products">Ver tus productos</a>
    </div>
 </form>
           
