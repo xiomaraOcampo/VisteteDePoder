@@ -1,75 +1,11 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-  
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css">
-    <link href = "https://fonts.googleapis.com/css2?family=Josefin+Sans&display=swap" rel = "stylesheet">
-<!--<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
---> <link rel="stylesheet" href="/stylesheets/style.css">
-   
-</head>
+
+<%-include("./partials/head")%>
+
 <body>
     <div class="container">
-            <!--HEADER-->
-            <header>
-                <section class="header1">
-                   
-                        <div class="envios">
-                            <i class="fas fa-shipping-fast"></i>
-                            Envios a todo el país
-                        </div>
-
-                        <div class="redes">
-                            <div class="f"><a href="https://www.facebook.com/vistetedepoderclothingdesign/"><img class="f" src="/images/facebook.jpg" alt="facebook"></a></div>
-                            <div class="i"><a href="https://www.instagram.com/remerasliterarias_vp/"><img src="/images/instagram.png" alt="instagram"></a></div>
-                            <div class="w"><a href="https://web.whatsapp.com/"><img src="/images/whatsapp.png" alt="whatsapp"></a></div> 
-                    
-                        </div>    
-                </section>
-
-                <section class=header2>
-                    <article class="logo"><img src="/images\logo.jpg" alt="logo"></article>   
-
-                    <ul class="menuHorizontal">
-                        <li class="palabras"><a class="home" href="/home">HOME</a></li>
-                        <li class="palabras"><a class="home" href="/producto">INDUMENTARIA<i class="fas fa-sort-down"></i></a> 
-                           <ul class="desplegable">
-                            <li><a href="/producto">Remeras</a></li>
-                            <li><a href="/producto">Barbijos</a></li>
-                            <li><a href="/producto">Gorras</a></li>
-                           </ul>  
-                        </li> 
-                        <li class="palabras"><a class="home" href="/producto">MERCHANDISIGN<i class="fas fa-sort-down"></i></a> 
-                            <ul class="desplegable">
-                            <li><a href="/producto">Tazas</a></li>
-                            <li><a href="/producto">Termos</a></li>
-                            <li><a href="/producto">Botellas</a></li>
-                            </ul>  
-                        </li>  
-                         <li class="palabras"><a class="home" href="/producto">ACCESORIOS<i class="fas fa-sort-down"></i></a>
-                            <ul class="desplegable">
-                              <li><a href="/producto">Bolsos</a></li>
-                              <li><a href="/producto">Cartucheras</a></li>
-                              <li><a href="/producto">Mochilas</a></li>
-                            </ul>
-                        </li>     
-                    </ul> 
-                        
-
-                    <div class="buscadores">
-                       <div class="valija"><a href="/carrito"><i class="fas fa-shopping-bag"></i></a></div>
-                       <div class="buscador"><a href="#"><label for="busqueda"><i class="fas fa-search"></label></i></a>
-                         <input type="search" placeholder="Buscar productos" id="busqueda" name="busqueda">
-                       </div>
-                       <div class="ingreso"><a href="/ingreso"><i class="fas fa-user"></i></a></div>
-                    </div>
-                </section>
-                
-            </header>
-            <!--FIN HEADER-->
+           <%-include("./partials/header")%>
             <main>
 
                 <!--MAIN-->   
@@ -150,7 +86,7 @@
                             <article><a href=""><img width=150px height="200px" src="/images/fotosVisteteDePoder/masProductos4.jpg" alt="barridoImagen4"></a></article>
                             <article><a href=""><img width=150px height="200px" src="/images/fotosVisteteDePoder/masProductos1.jpg" alt="barridoImagen1"></a></article>
                             <article><a href=""><img width=150px height="200px" src="/images/fotosVisteteDePoder/masProductos2.jpg" alt="barridoImagen2"></a></article>
-                            -->
+                            
                         </section>
 
                         
@@ -166,30 +102,7 @@
 
             </main>
 
-            <!--footer-->
-            <footer>
-            <div class="tarjetas">
-                <section class="Medios-de-pagos">
-                    <p> Medios de pago </p>                    
-                    <img width=50px src="/images/logo-mercadopago.jpg" alt="Mercado pago"></article>
-                </section>
-            
-                <section class="Forma-de-envio">
-                    <p> Forma de Envio <p>
-                    <img width=60px src="/images/Correo-Argentino-Logo.jpg" alt="Correo Argentino">
-                </section>
-            </div>
-                <section class="Menu-del-footer">
-                    <div><a href="">Contacto </a></div>
-                    <div> <a href="">Como comprar </a></div>
-                    <div> <a href="">Politica de cambio </a></div>
-                    <div> <a href="">Nosotros</a></div>
-                </section>      
-            </footer>
-
-            <!--FIN footer-->
-
-
+           <%-include("./partials/footer")%>
 
 
 

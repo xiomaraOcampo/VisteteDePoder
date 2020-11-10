@@ -3,6 +3,9 @@ var router = express.Router();
 var productController = require ('../controllers/productController');
 
 
-router.get('/Producto',productController.producto);
+router.get('/producto',productController.producto);
+
+router.get('/create',productController.create);
+
 
 module.exports = router;
