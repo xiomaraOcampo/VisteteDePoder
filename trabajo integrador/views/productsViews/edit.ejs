@@ -40,10 +40,20 @@
          
       <!--Categoría (que sea un Select)-->
       
-      <!--Talle/ Diseño / Cantidad (que sea un Select)-->
+     
+     
+     <!--Talle/ Diseño / Cantidad (que sea un Select)-->
 
-      <!--Precio (función de Miles)-->
-        <button class="enviar" value="enviar" type="submit">Editá tu producto en Vistete de Poder</button>
+     <input class=inputsRegistro type="text" placeholder="Talle" id="talleProducto" name="talle" value="<%= productFound.talle %>"> 
+     <input class=inputsRegistro type="text" placeholder="Diseño" id="disenioProducto" name="disenio" value="<%= productFound.disenio %>">
+     <input class=inputsRegistro type="text" placeholder="Cantidad" id="cantidadProducto" name="cantidad" value="<%= productFound.cantidad %>">
+     
+     <!--Precio (función de Miles)-->
+
+     <input class=inputsRegistro type="text" placeholder="precio" id="precioProducto" name="precio" value="<%= toThousand ( productFound.precio )%>">
+
+
+     <button class="enviar" value="enviar" type="submit">Editá tu producto en Vistete de Poder</button>
     
         <a class="aIngreso"href="\products">Ver tus productos</a>
    </div>

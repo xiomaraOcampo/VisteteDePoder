@@ -1,7 +1,7 @@
 const fs = require ('fs');
 //fs.writeFileSync(__dirname + '/../Data/productsFile.json' , []);
 let productsFile= JSON.parse(fs.readFileSync(__dirname + '/../Data/productsFile.json' ,{encoding: "utf-8"}));
-
+const toThousand = n =>n.toString().replace(/\B(?=(\d{3})+(?!\d))/g,".");
 //let productsJson= JSON.parse(productsFile);
 
 
@@ -37,7 +37,7 @@ let productController = {
           }
         }
      if ( productFound){
-       res.render('productsViews/edit',{productFound});
+       res.render('productsViews/edit',{productFound,toThousand } ); //el toThousand no sé por qué lo pongo acá si ya va en la vista 
      }else{
        res.send('No se ha encontrado el producto con Id: '+idProduct)
      };
