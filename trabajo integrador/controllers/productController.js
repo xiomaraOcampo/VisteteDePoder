@@ -25,18 +25,26 @@ let productController = {
 
      res.send('agregaste un producto ' + req.body.nombre);
      
+    },
+    edit: function(req, res, next){
+      var idProduct= req.params.id;
+      res.render('productsViews/edit')
+      var productFound;
+      for (var i=0; i <productsFile.length; i++){
+          if(productsFile[i].id == idProduct){
+            productFound=productsFile[i];
+            break; 
+          }
+        }
+     if ( productFound){
+       res.render('productsViews/edit',{productFound});
+     }else{
+       res.send('No se ha encontrado el producto con Id: '+idProduct)
+     };
     }
-    //edit: function(req, res, next){
-      //var idProduct= req.params.id;
-      //var productFound;
-      //for (var i=0; i <productsFile.length; i++){
-
-       // if(productsFile[i].id == idProduct{})
-     // }
-       // console.log(idProduct);
-    //}
+    
   
-    }
+    } //cierre general
       module.exports=productController;
 
     

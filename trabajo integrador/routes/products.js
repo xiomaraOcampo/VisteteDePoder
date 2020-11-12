@@ -28,7 +28,7 @@ router.post('/create',/*upload.single('avatar'),*/productController.store);
 
 //ruta para los formularios del administrador, para modificar productos
 
-//router.get('/edit/:id',productController.edit);
+router.get('/edit/:id',productController.edit);
 //router.post('/edit/:id',productController.update);
 
 

@@ -65,7 +65,7 @@
 
                 <!--MAIN-->  
                 
-<form  action="/products/create" method="POST" enctype="multipart/form-data">
+<form  action="/products/create" method="POST">
     <div class="registro1">
         <label for="nombreProducto"><i class="fas fa-tshirt"></i></i></label>
         <label for="descripcion"><i class="fas fa-edit"></i></i></label>
@@ -76,13 +76,12 @@
     <div class="registro2">
         <h3>Crear producto</h3>
 
-       <input class=inputsRegistro type="text" placeholder="Id Producto" id="id" name="id">
+        <input class=inputsRegistro type="text" placeholder="Id Producto" name="id">
 
         <input class=inputsRegistro type="text" placeholder="Nombre Producto" id="nombreProducto" name="nombre">
         
         <textarea class="inputsRegistro"  placeholder="Descripción" name="descripcion" id="descripcion" cols="120" rows="1"></textarea><br>
-         
-        <input type="file" name="avatar">
+     
       <!------TODOS LOS INPUTS DEBEN TENER class="inputsRegistro"-->
 
       <!--Imagen-->

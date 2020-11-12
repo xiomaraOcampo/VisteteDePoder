@@ -65,7 +65,7 @@
 
                 <!--MAIN-->  
                 
-<form  action="/products/edit" method="GET">
+<form  action="/products/edit/<%= productFound.id%>" method="POST">
     <div class="registro1">
         <label for="nombreProducto"><i class="fas fa-tshirt"></i></i></label>
         <label for="descripcion"><i class="fas fa-edit"></i></i></label>
@@ -76,9 +76,13 @@
     <div class="registro2">
         <h3>Editar producto</h3>
 
-        <input class=inputsRegistro type="text" placeholder="Nombre Producto" id="nombreProducto" name="nombre">
-        
-        <textarea class="inputsRegistro"  placeholder="Descripción" name="descripcion" id="descripcion" cols="120" rows="1"></textarea><br>
+        <input class=inputsRegistro type="text" placeholder="Nombre Producto" id="nombreProducto" name="nombre" value="<%= productFound.nombre %>">
+
+        <input class=inputsRegistro type="text" placeholder="Descripcion" id="descripcion" name="descripcion" value="<%= productFound.descripcion %>">
+
+        <!--<textarea class="inputsRegistro" name="descripcion" id="" cols="60" rows="1" value="<%= productFound.nombre %>" ></textarea><br>
+        Como traer la indo del JSON para que vea el usuario-->
+
                   
       <!------TODOS LOS INPUTS DEBEN TENER class="inputsRegistro"-->
 
