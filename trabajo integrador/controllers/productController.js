@@ -52,11 +52,11 @@ let productController = {
 */
     update: function (req, res, next){
      var idProduct= req.params.id;
-      var productFound ;
+      var productFound =[];
       for (var i=0; i <productsFile.length; i++){
         if(productsFile[i].id == idProduct){
           let editProduct= req.body;
-          editProduct = idProduct;
+          editProduct.id = idProduct;
           productFound.push(editProduct);
           
          }else{
