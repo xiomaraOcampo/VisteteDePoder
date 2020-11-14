@@ -1,4 +1,18 @@
-Conclusiones  del Sprint 1
+(Actividad Sprint 3): Conclusiones Sprint 2
+
+Start Doing: Fijar martes a las 8:00 como nuevo día fijo de reunión (rinde mas);
+
+More Of: Reuniones y hacemos algo de código entre las tres; reunirnos a pesar de no tener que entregar, para practicar;
+
+Keep Doing: Comunicación fluida, estar al tanto de lo que está haciendo la otra;
+
+Less Of: por el momento no sacaríamos nada, porque recién estamos empezando;
+
+Stop Doing: por el momento no sacaríamos nada, porque recién estamos empezando, seguramente notemos que debemos eliminar cosas una vez que tengamos mas cosas por desarrollar.
+
+
+
+(Actividad Sprint 2): Conclusiones  del Sprint 1
 
 
 Start Doing: Discord, Reuniones que fijamos horarios.
