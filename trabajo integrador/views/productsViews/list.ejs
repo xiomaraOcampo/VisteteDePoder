@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+    <%-include("../partials/head")%>
+<body>
+<div class="container">
+        <!--HEADER-->
+        
+            <%-include("../partials/header")%>
+          <!-- fin del HEADER-->  
+       <!--MAIN-->
+      <main class="mainProducto">
+          
+        <section class="Nombre-Producto">
+                  Lista de Productos
+        </section>
+            <ul>
+                        <% productsFile.forEach(function(productsFile){ %>
+                <li>
+                    Id: <%= productsFile.id %>
+                    <div class="producto-y-descripcion">
+                          
+                            <section class="fotoProducto">
+                                <article> <img src="/images/fotosVisteteDePoder/indumentaria.jpg" alt="Remera"><%= productsFile.avatar %> 
+                                </article>
+                            </section>
+                                
+                            <section class="descripcion">
+                              <div class="remera1"> Nombre: <%= productsFile.nombre %></div> 
+                              <div class="remera1"> Categoría: <%= productsFile.categoria %></div> 
+                              <div class="remera1"> Detalle: <%= productsFile.detalle %></div>
+                              <div class="remera1"> Talle: <%= productsFile.talle %> </div> 
+                              <div class="remera1"> Cantidad:  <%= productsFile.cantidad %></div> 
+                              <div class="remera1"> Diseño: <%= productsFile.disenio %></div> 
+                              <div class="remera1"> Precio: $ <%= toThousand(productsFile.precio) %></div> 
+                              <a href="/products/edit/<%= productsFile.id %>"><button type="button">EDITAR</button></a>
+                              <a href="/products/destroy/<%= productsFile.id %>"><button type="button" >BORRAR</button></a>
+                              </section>
+                  
+                    </div>
+
+                </li>
+
+                    <% }) %>
+
+              </ul>
+
+    </main>
+
+    <%-include("../partials/footer")%>
+</div> <!--este div, falta en detailProducts-->
+</body>
+</html>

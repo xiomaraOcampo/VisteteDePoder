@@ -1,1 +1,16 @@
-[{"nombre":"remerasssssssssssssssss","descripcion":["rosa"," remera "],"avatar":"","Categoria":"Categoria","talle":"","disenio":"","cantidad":"","precio":"","id":"1"},{"id":"2","nombre":"","descripcion":"hola\r\n","avatar":"","Categoria":"Categoria","talle":"","disenio":"","cantidad":"","precio":""}]
+[
+  {
+    "nombre": "remera",
+    "descripcion": [
+      "dsa",
+      " remera "
+    ],
+    "avatar": "",
+    "Categoria": "Categoria",
+    "talle": "",
+    "disenio": "",
+    "cantidad": "",
+    "precio": "1400",
+    "id": "1"
+  }
+]

@@ -1,4 +1,5 @@
 var express = require('express');
+const { RequestHeaderFieldsTooLarge } = require('http-errors');
 var router = express.Router();
 var productController = require ('../controllers/productController');
 /*var multer  = require('multer')
@@ -31,5 +32,8 @@ router.post('/create',/*upload.single('avatar'),*/productController.store);
 router.get('/edit/:id',productController.edit);
 router.post('/edit/:id',productController.update);
 
+router.get('/destroy/:id', productController.destroy);
+
+router.get('/list',productController.list);
 
 module.exports = router;

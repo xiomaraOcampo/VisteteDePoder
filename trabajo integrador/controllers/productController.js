@@ -18,9 +18,9 @@ let productController = {
       res.render('productsViews/create');
     }, 
     store: function(req, res, next) {
-    let product= req.body; 
+    let product= req.body;
     productsFile.push(product);
-    let productsFileJson= JSON.stringify(productsFile);
+    let productsFileJson= JSON.stringify(productsFile, null, 2);
     fs.writeFileSync(__dirname + '/../Data/productsFile.json' , productsFileJson);
 
      res.send('agregaste un producto ' + req.body.nombre);
@@ -37,7 +37,7 @@ let productController = {
           }
         }
      if (productFound){
-       res.render('productsViews/edit',{productFound,toThousand } ); //el toThousand no sé por qué lo pongo acá si ya va en la vista 
+       res.render('productsViews/edit',{productFound,toThousand } );  
      }else{
        res.send('No se ha encontrado el producto con Id: '+ idProduct)
      };
@@ -49,8 +49,7 @@ let productController = {
       res.send('hola');
     }
       
-*/
-    update: function (req, res, next){
+*/   update: function (req, res, next){
      var idProduct= req.params.id;
       var productFound =[];
       for (var i=0; i <productsFile.length; i++){
@@ -64,30 +63,30 @@ let productController = {
          }
 
       }
-        editProductJson= JSON.stringify(productFound);
+        editProductJson= JSON.stringify(productFound, null, 2);
         fs.writeFileSync(__dirname + '/../Data/productsFile.json' , editProductJson);
         res.send("Modificaste el producto " + req.body.nombre);
 
-    }
-    /*,
-    update: function (req, res, next){
-      var idProduct= req.params.id;
-      var editProduct= productsFile.map(function(product){
-        if(product.id == idProduct){
-          product= req.body;
+    }, 
 
-          
-        }
-      return product;
-      console.log(product)
-       
-      });
+   
+        destroy : function(req, res, next){
+          var idProduct= req.params.id;
+          var productDestroy = productsFile.filter(function(product){
+            return product.id != idProduct;
+          });
+          productDestroyJson = JSON.stringify(productDestroy, null, 2);
+          fs.writeFileSync(__dirname + "/../Data/productsFile.json", productDestroyJson);
+          res.send("Eliminaste un producto")
+          },
+    
+       list: function(req, res, next){
+         console.log(req.body);
+         res.render('productsViews/list', {productsFile, toThousand});
+      
+        
+      }   
 
-
-
-    }
-    */
-  
     } //cierre general
       module.exports=productController;
 
