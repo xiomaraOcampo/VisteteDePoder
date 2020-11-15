@@ -18,7 +18,18 @@ let productController = {
       res.render('productsViews/create');
     }, 
     store: function(req, res, next) {
-    let product= req.body;
+    let product= {avatar: req.files[0].filename,
+    ...req.body };
+     /* {id: req.body.id,
+      nombre: req.body.nombre,
+      descripcion: req.body.descripcion,
+      avatar: req.file[0].filename,
+      categoria: req.body.categoria,
+      talle: req.body.talle,
+      disenio: req.body.disenio,
+      precio: req.body.precio
+     }*/
+
     productsFile.push(product);
     let productsFileJson= JSON.stringify(productsFile, null, 2);
     fs.writeFileSync(__dirname + '/../Data/productsFile.json' , productsFileJson);
@@ -54,7 +65,8 @@ let productController = {
       var productFound =[];
       for (var i=0; i <productsFile.length; i++){
         if(productsFile[i].id == idProduct){
-          let editProduct= req.body;
+          let editProduct= {avatar: req.files[0].filename,
+            ...req.body };
           editProduct.id = idProduct;
           productFound.push(editProduct);
           
@@ -81,9 +93,11 @@ let productController = {
           },
     
        list: function(req, res, next){
-         console.log(req.body);
-         res.render('productsViews/list', {productsFile, toThousand});
+         /*console.log({avatar: req.files[0].filename,
+          ...req.body });*/
+         res.render('productsViews/list', {productsFile, toThousand}  );
       
+         
         
       }   
 

@@ -11,7 +11,7 @@
 
                 <!--MAIN-->  
                 
-<form  action="/products/edit/<%=productFound.id%>" method="POST">
+<form  action="/products/edit/<%=productFound.id%>" method="POST" enctype="multipart/form-data">
     <div class="registro1">
         <label for="nombreProducto"><i class="fas fa-tshirt"></i></i></label>
         <label for="descripcion"><i class="fas fa-edit"></i></i></label>
@@ -22,18 +22,19 @@
     <div class="registro2">
         <h3>Editar producto</h3>
 
+        <input class=inputsRegistro type="text" placeholder="Id Producto" name="id" value="<%= productFound.id %>">
+       
         <input class=inputsRegistro type="text" placeholder="Nombre Producto" id="nombreProducto" name="nombre" value="<%= productFound.nombre %>">
 
-        <input class=inputsRegistro type="text" placeholder="Descripcion" id="descripcion" name="descripcion" value="<%= productFound.descripcion %>">
-
-        <textarea class="inputsRegistro" name="descripcion" id="" cols="60" rows="1" value="<%= productFound.nombre %>" > <%= productFound.nombre %> </textarea><br>
+       
+        <textarea class="inputsRegistro" name="descripcion" id="" cols="60" rows="1" value="<%= productFound.descripcioon %>" > <%= productFound.descripcion %> </textarea><br>
      
 
                   
       <!------TODOS LOS INPUTS DEBEN TENER class="inputsRegistro"-->
 
       <!--Imagen-->
-      <input type="file" name="avatar"><br>
+      <input type="file" name="avatar" id="avatar" ><br>
 
 
     <!--Categoría (que sea un Select)-->
@@ -57,7 +58,7 @@
      
      <!--Precio (función de Miles)-->
 
-     <input class=inputsRegistro type="text" placeholder="precio" id="precioProducto" name="precio" value="<%= toThousand ( productFound.precio )%>">
+     <input class=inputsRegistro type="text" placeholder="precio" id="precioProducto" name="precio" value="<%= toThousand( productFound.precio )%>">
 
 
      <button class="enviar" value="enviar" type="submit">Editá tu producto en Vistete de Poder</button>

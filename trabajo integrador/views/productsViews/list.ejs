@@ -2,51 +2,59 @@
 <html lang="en">
     <%-include("../partials/head")%>
 <body>
-<div class="container">
+    <div class="container">
         <!--HEADER-->
         
             <%-include("../partials/header")%>
           <!-- fin del HEADER-->  
-       <!--MAIN-->
-      <main class="mainProducto">
-          
-        <section class="Nombre-Producto">
-                  Lista de Productos
-        </section>
-            <ul>
-                        <% productsFile.forEach(function(productsFile){ %>
-                <li>
-                    Id: <%= productsFile.id %>
-                    <div class="producto-y-descripcion">
+       <!--MAIN-->   
+       <main class="mainProducto">        
+
+       <section class="Nombre-Producto">
+        Lista de Productos
+</section>
+<ul>
+
+  <% productsFile.forEach(function(product){ %>
+  <li>
+    Id: <%= product.id %>
+
+    <div class="producto-y-descripcion">
                           
-                            <section class="fotoProducto">
-                                <article> <img src="/images/fotosVisteteDePoder/indumentaria.jpg" alt="Remera"><%= productsFile.avatar %> 
-                                </article>
-                            </section>
-                                
-                            <section class="descripcion">
-                              <div class="remera1"> Nombre: <%= productsFile.nombre %></div> 
-                              <div class="remera1"> Categoría: <%= productsFile.categoria %></div> 
-                              <div class="remera1"> Detalle: <%= productsFile.detalle %></div>
-                              <div class="remera1"> Talle: <%= productsFile.talle %> </div> 
-                              <div class="remera1"> Cantidad:  <%= productsFile.cantidad %></div> 
-                              <div class="remera1"> Diseño: <%= productsFile.disenio %></div> 
-                              <div class="remera1"> Precio: $ <%= toThousand(productsFile.precio) %></div> 
-                              <a href="/products/edit/<%= productsFile.id %>"><button type="button">EDITAR</button></a>
-                              <a href="/products/destroy/<%= productsFile.id %>"><button type="button" >BORRAR</button></a>
-                              </section>
-                  
-                    </div>
+      <section class="fotoProducto">
+          <article> <img src="/tmp/my-uploads/<%= product.avatar %> " alt=" <%= product.avatar %> ">
+              
+              
+         
+          </article>
+      </section>
 
-                </li>
+      <section class="descripcion">
+        <div class="remera1"> Nombre: <%= product.nombre %></div> 
+        <div class="remera1"> Categoría: <%= product.categoria %></div> 
+        <div class="remera1"> Detalle: <%= product.detalle %></div>
+        <div class="remera1"> Talle: <%= product.talle %> </div> 
+        <div class="remera1"> Cantidad:  <%= product.cantidad %></div>
+        <div class="remera1"> Diseño: <%= product.disenio %></div> 
+        <div class="remera1"> Precio: $ <%= toThousand(product.precio) %></div>
+         
+        <a href="/products/edit/<%= product.id %>"><button type="button">EDITAR</button></a>
+        <a href="/products/destroy/<%= product.id %>"><button type="button" >BORRAR</button></a>
 
-                    <% }) %>
+        </section>
 
-              </ul>
 
-    </main>
+
+
+    </div>
+
+
+  </li>
+  <% }); %>
+
+</ul>
+            </main>
 
     <%-include("../partials/footer")%>
-</div> <!--este div, falta en detailProducts-->
 </body>
 </html>

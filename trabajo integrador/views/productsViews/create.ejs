@@ -11,10 +11,10 @@
 
                 <!--MAIN-->  
                 
-<form  action="/products/create" method="POST">
+<form  action="/products/create" method="POST" enctype="multipart/form-data">
     <div class="registro1">
-        <label for="nombreProducto"><i class="fas fa-tshirt"></i></i></label>
-        <label for="descripcion"><i class="fas fa-edit"></i></i></label>
+        <label for="nombreProducto"></label>
+        <label for="descripcion"></label>
         <!------PONER LOS ICONOS DE CADA INPUT ACA"-->
         
     </div>
@@ -33,14 +33,14 @@
     
 
         
-      <input type="file" name="avatar"><br>
+      <input type="file" name="avatar" id="id"><br>
 
 
       <!--Categoría (que sea un Select)-->
 
-                   <label for="" > </label>                         
-                                <select class="inputsRegistro" name ="Categoria">
-                                    <option value="Categoria">Categoria</option>
+                   <label for="" > Categoría: </label>                         
+                                <select class="inputsRegistro" name ="categoria" id="categoria">
+                                   
                                     <option value="Indumentaria">Indumentaria</option>
                                     <option value="Merchandising">Merchandising</option>
                                     <option value="Accesorios">Accesorios</option>

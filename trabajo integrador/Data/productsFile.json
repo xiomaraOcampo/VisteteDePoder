@@ -1,16 +1,46 @@
 [
   {
+    "avatar": "avatar-1605469548894.ppt",
+    "id": "1",
     "nombre": "remera",
-    "descripcion": [
-      "dsa",
-      " remera "
-    ],
-    "avatar": "",
+    "descripcion": "  rosa  ",
     "Categoria": "Categoria",
-    "talle": "",
-    "disenio": "",
-    "cantidad": "",
-    "precio": "1400",
-    "id": "1"
+    "talle": "ss",
+    "disenio": "pink freud",
+    "cantidad": "23",
+    "precio": "777.777"
+  },
+  {
+    "avatar": "avatar-1605467883349.jpg",
+    "id": "2",
+    "nombre": "barbijo",
+    "descripcion": "verde",
+    "Categoria": "Accesorios",
+    "talle": "null",
+    "disenio": "dadsa",
+    "cantidad": "1",
+    "precio": "188"
+  },
+  {
+    "avatar": "avatar-1605467939780.JPG",
+    "id": "3",
+    "nombre": "cartera",
+    "descripcion": "amarilla",
+    "Categoria": "Accesorios",
+    "talle": "null",
+    "disenio": "pink freud",
+    "cantidad": "45",
+    "precio": "34234"
+  },
+  {
+    "avatar": "avatar-1605468709904.JPG",
+    "id": "4",
+    "nombre": "remera",
+    "descripcion": "azul",
+    "Categoria": "Indumentaria",
+    "talle": "m",
+    "disenio": "Simpsons",
+    "cantidad": "34",
+    "precio": "21312"
   }
 ]
