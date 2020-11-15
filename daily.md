@@ -1,6 +1,24 @@
 Daily
 
 
+15/11/2020
+
+Lau:
+● Qué hizo ayer/ armé la vista de list, y agregué el código para destroy y list
+● Si se encontró con algún impedimento/ me costó hacer la vista de list
+● Qué va a hacer hoy / terminar con Sprint 3 y ver lo de middleware;
+
+Xio:
+● Qué hizo ayer/ clase de Fede, reapasé para los trabajos sincrónicos, terminé de ver el video de Diego, las listas Delete, etc, y vi los videos para tener los códigos,
+● Si se encontró con algún impedimento/ con el trabajo de Diego, no cargaba, ponía en el formulario los datos pero no cargaba en el json
+● Qué va a hacer hoy / terminar con Sprint 3 y ver lo de middleware;
+Flor:
+● Qué hizo ayer/ estuve viendo multer y destroy;
+● Si se encontró con algún impedimento/ ningún impedimento
+● Qué va a hacer hoy / terminar con Sprint 3 y ver lo de middleware;
+
+
+
 ------------------------------------------------------------------------------------------------
 12/11/2020
 
