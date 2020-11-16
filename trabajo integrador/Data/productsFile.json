@@ -1,46 +1,35 @@
 [
   {
-    "avatar": "avatar-1605469548894.ppt",
+    "avatar": "avatar-1605490023939.jpg",
     "id": "1",
     "nombre": "remera",
-    "descripcion": "  rosa  ",
-    "Categoria": "Categoria",
-    "talle": "ss",
-    "disenio": "pink freud",
-    "cantidad": "23",
-    "precio": "777.777"
-  },
-  {
-    "avatar": "avatar-1605467883349.jpg",
-    "id": "2",
-    "nombre": "barbijo",
-    "descripcion": "verde",
-    "Categoria": "Accesorios",
-    "talle": "null",
-    "disenio": "dadsa",
-    "cantidad": "1",
-    "precio": "188"
-  },
-  {
-    "avatar": "avatar-1605467939780.JPG",
-    "id": "3",
-    "nombre": "cartera",
-    "descripcion": "amarilla",
-    "Categoria": "Accesorios",
-    "talle": "null",
-    "disenio": "pink freud",
-    "cantidad": "45",
-    "precio": "34234"
-  },
-  {
-    "avatar": "avatar-1605468709904.JPG",
-    "id": "4",
-    "nombre": "remera",
-    "descripcion": "azul",
+    "descripcion": " Remera blanca  ",
     "Categoria": "Indumentaria",
-    "talle": "m",
-    "disenio": "Simpsons",
-    "cantidad": "34",
-    "precio": "21312"
+    "talle": "M",
+    "disenio": "cortazar",
+    "cantidad": "1",
+    "precio": "800"
+  },
+  {
+    "avatar": "avatar-1605489918310.jpg",
+    "id": "2",
+    "nombre": "Taza",
+    "descripcion": "cafe con leche",
+    "categoria": "Merchandising",
+    "talle": "sin talle",
+    "disenio": "cortazar",
+    "cantidad": "3",
+    "precio": "1200"
+  },
+  {
+    "avatar": "avatar-1605489976080.jpg",
+    "id": "3",
+    "nombre": "bolso",
+    "descripcion": "bolso de compras",
+    "categoria": "Accesorios",
+    "talle": "sin talle",
+    "disenio": "borges",
+    "cantidad": "1",
+    "precio": "600"
   }
 ]

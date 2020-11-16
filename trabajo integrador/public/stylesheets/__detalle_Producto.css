@@ -45,6 +45,7 @@ main .fotoProducto img{
     margin:20px 0px 20px 0px;
     border-radius: 5px;
     box-shadow: 1px 3px 5px grey;
+    padding-left: 20px;
 }
 
 .producto{
@@ -78,11 +79,24 @@ main .fotoProducto img{
     /*border: 1px solid red;*/
 }
 .descripcion .remera1{
-    font-size: 1.2rem;
+    font-size: 1rem;
+    margin: 0px 20px;
 }
 .talle-catidad{
     margin-bottom: 10px;
     /*border: 1px solid red;*/
+}
+
+
+
+.fotoProducto{
+   
+    margin: 20px;
+    padding:20px;
+
+}
+.fotoProducto article img{
+    width: 100%;
 }
 /*
 .descripcion button{

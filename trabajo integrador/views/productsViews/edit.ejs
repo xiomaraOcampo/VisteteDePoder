@@ -13,8 +13,8 @@
                 
 <form  action="/products/edit/<%=productFound.id%>" method="POST" enctype="multipart/form-data">
     <div class="registro1">
-        <label for="nombreProducto"><i class="fas fa-tshirt"></i></i></label>
-        <label for="descripcion"><i class="fas fa-edit"></i></i></label>
+        <label for="nombreProducto"></label>
+        <label for="descripcion"></label>
         <!------PONER LOS ICONOS DE CADA INPUT ACA"-->
         
     </div>
@@ -28,26 +28,20 @@
 
        
         <textarea class="inputsRegistro" name="descripcion" id="" cols="60" rows="1" value="<%= productFound.descripcioon %>" > <%= productFound.descripcion %> </textarea><br>
-     
-
-                  
-      <!------TODOS LOS INPUTS DEBEN TENER class="inputsRegistro"-->
 
       <!--Imagen-->
       <input type="file" name="avatar" id="avatar" ><br>
+      <!---si no cargamos imagen se rompe...pero igualmente no la muestra-->
 
-
-    <!--Categoría (que sea un Select)-->
-
-      <label for="" > </label>                         
-                                <select class="inputsRegistro" name ="Categoria">
-                                    <option value="Categoria">Categoria</option>
+      <label for="" > Categoria</label>                         
+                                <select class="inputsRegistro" name ="Categoria" id="categoria">
+                                    
                                     <option value="Indumentaria">Indumentaria</option>
                                     <option value="Merchandising">Merchandising</option>
                                     <option value="Accesorios">Accesorios</option>
                                     
                                   </select>
-
+      <!--No se muestra en las tarjetas de listS-->
      
      
      <!--Talle/ Diseño / Cantidad (que sea un Select)-->
@@ -58,7 +52,7 @@
      
      <!--Precio (función de Miles)-->
 
-     <input class=inputsRegistro type="text" placeholder="precio" id="precioProducto" name="precio" value="<%= toThousand( productFound.precio )%>">
+     <input class=inputsRegistro type="text" placeholder="Precio" id="precioProducto" name="precio" value="<%= toThousand( productFound.precio )%>">
 
 
      <button class="enviar" value="enviar" type="submit">Editá tu producto en Vistete de Poder</button>

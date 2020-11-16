@@ -34,7 +34,8 @@ let productController = {
     let productsFileJson= JSON.stringify(productsFile, null, 2);
     fs.writeFileSync(__dirname + '/../Data/productsFile.json' , productsFileJson);
 
-     res.send('agregaste un producto ' + req.body.nombre);
+     //res.send('agregaste un producto ' + req.body.nombre);
+     res.render('productsViews/list', {productsFile, toThousand}  );
      
     },
     edit: function(req, res, next){
@@ -50,7 +51,8 @@ let productController = {
      if (productFound){
        res.render('productsViews/edit',{productFound,toThousand } );  
      }else{
-       res.send('No se ha encontrado el producto con Id: '+ idProduct)
+       //res.send('No se ha encontrado el producto con Id: '+ idProduct)
+       res.render('productsViews/list', {productsFile, toThousand}  );
      };
     },
   
@@ -77,7 +79,8 @@ let productController = {
       }
         editProductJson= JSON.stringify(productFound, null, 2);
         fs.writeFileSync(__dirname + '/../Data/productsFile.json' , editProductJson);
-        res.send("Modificaste el producto " + req.body.nombre);
+        //res.send("Modificaste el producto " + req.body.nombre);
+        res.render('productsViews/list', {productsFile, toThousand}  );
 
     }, 
 
@@ -89,7 +92,8 @@ let productController = {
           });
           productDestroyJson = JSON.stringify(productDestroy, null, 2);
           fs.writeFileSync(__dirname + "/../Data/productsFile.json", productDestroyJson);
-          res.send("Eliminaste un producto")
+          //res.send("Eliminaste un producto")
+          res.render('productsViews/list', {productsFile, toThousand}  );
           },
     
        list: function(req, res, next){
