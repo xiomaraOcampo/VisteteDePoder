@@ -79,6 +79,7 @@ let productController = {
           let editProduct= {avatar: 
             req.files.length>0 ? req.files[0].filename : productsFile[i].avatar,
             ...req.body };
+            
           editProduct.id = idProduct;
           productFound.push(editProduct);
           

@@ -1,50 +1,26 @@
 [
   {
-    "avatar": "masProductos1.jpg",
+    "avatar": "avatar-1605973085818.JPG",
     "id": "1",
     "nombre": "remera",
-    "descripcion": " Remera blanca  ",
+    "descripcion": "  rosa  ",
     "Categoria": "Indumentaria",
     "talle": "M",
     "disenio": "cortazar",
     "cantidad": "1",
-    "precio": "800",
+    "precio": "1.500",
     "delete": false
   },
   {
-    "avatar": "masProductos1.jpg",
+    "avatar": "avatar-1605973130753.JPG",
     "id": "2",
-    "nombre": "Taza",
-    "descripcion": "cafe con leche",
-    "categoria": "Merchandising",
-    "talle": "sin talle",
-    "disenio": "cortazar",
-    "cantidad": "3",
-    "precio": "1200",
-    "delete": true
-  },
-  {
-    "avatar": "masProductos1.jpg",
-    "id": "3",
-    "nombre": "bol",
-    "descripcion": "      bolso de compras      ",
+    "nombre": " calza",
+    "descripcion": "        ",
     "Categoria": "Indumentaria",
-    "talle": "sin talle",
-    "disenio": "borges",
-    "cantidad": "1",
-    "precio": "600",
-    "delete": true
-  },
-  {
-    "avatar": "avatar-1605910498870.jpg",
-    "id": "4",
-    "nombre": "",
-    "descripcion": "",
-    "categoria": "Indumentaria",
     "talle": "",
     "disenio": "",
     "cantidad": "",
-    "precio": "",
-    "delete": false
+    "precio": "2.000",
+     "delete": false
   }
 ]
