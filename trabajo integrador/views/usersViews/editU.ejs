@@ -14,9 +14,9 @@
 
                 <!--MAIN-->  
                 
-<form  action="/users/registro" method=get>
+<form  action="/users/edit/<%= userFound.id %>" method=POST>
     <div class="registro1">
-        <label for="id"><i class="fas fa-user"></i></label>
+         <!-- <label for="id"><i class="fas fa-user"></i></label>-->
         <label for="nombre"><i class="fas fa-user"></i></label>
         <label for="email"><i class="fas fa-envelope"></i></label>
         <label for="contraseña"><i class="fas fa-lock"></i></i></label>
@@ -24,22 +24,22 @@
     </div>
 
     <div class="registro2">
-        <h3>Crear cuenta</h3>
+        <h3>Editar cuenta</h3>
 
-        <input class=inputsRegistro type="text" placeholder="Id" name="id">
+        <!--<input class=inputsRegistro type="text" placeholder="Id" name="id">-->
 
-        <input class=inputsRegistro type="text" placeholder="Tu nombre" id="nombre" name="NyP">
+        <input class=inputsRegistro type="text" placeholder="Tu nombre" id="nombre" name="nombre" value="<%= userFound.nombre %>">
                  
-        <input class="inputsRegistro" type="email" placeholder="Correo electrónico"id="email" name="email">
+        <input class="inputsRegistro" type="email" placeholder="Correo electrónico"id="email" name="email" value="<%= userFound.email %>">
                   
-        <input class="inputsRegistro" type="password" placeholder="Contraseña" id="contraseña" name="contraseña">
+        <input class="inputsRegistro" type="password" placeholder="Contraseña" id="contrasenia" name="contrasenia"value="<%= userFound.contrasenia %>">
          
         <p class="textoContraseña">!La contraseña debe tener al menos seis caracteres</p> 
          
-        <input class="inputsRegistro" type="password" placeholder="Vuelve a escribir la contraseña" id="confirmaciónContraseña" name="confirmaciónContraseña"></p>
+        <input class="inputsRegistro" type="password" placeholder="Vuelve a escribir la contraseña" id="contraseniaB" name="contraseniaB" value="<%= userFound.contraseniaB%>"> </p>
       
                      <!--Envían al home-->
-        <button class="enviar" type="submit">Crea tu cuenta en Vistete de Poder</button>
+        <button class="enviar" type="submit">Edita tu cuenta en Vistete de Poder</button>
     
         ¿Ya tenés una cuenta? 
      

@@ -1,9 +1,9 @@
 [
   {
-    "avatar": "avatar-1605973085818.JPG",
+    "avatar": "avatar-1605993495926.jpg",
     "id": "1",
     "nombre": "remera",
-    "descripcion": "  rosa  ",
+    "descripcion": "     rosa     ",
     "Categoria": "Indumentaria",
     "talle": "M",
     "disenio": "cortazar",
@@ -12,15 +12,15 @@
     "delete": false
   },
   {
-    "avatar": "avatar-1605973130753.JPG",
+    "avatar": "avatar-1605993511465.jpg",
     "id": "2",
     "nombre": " calza",
-    "descripcion": "        ",
+    "descripcion": "            ",
     "Categoria": "Indumentaria",
     "talle": "",
     "disenio": "",
     "cantidad": "",
     "precio": "2.000",
-     "delete": false
+    "delete": false
   }
 ]
