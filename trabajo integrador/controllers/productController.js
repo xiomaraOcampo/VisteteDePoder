@@ -1,6 +1,9 @@
 const fs = require ('fs');
 //fs.writeFileSync(__dirname + '/../Data/productsFile.json' , []);
-let productsFile= JSON.parse(fs.readFileSync(__dirname + '/../Data/productsFile.json' ,{encoding: "utf-8"}));
+function leerJSON(){
+  return  JSON.parse(fs.readFileSync(__dirname + '/../Data/productsFile.json' ,{encoding: "utf-8"}));
+}
+let productsFile= leerJSON();
 const toThousand = n =>n.toString().replace(/\B(?=(\d{3})+(?!\d))/g,".");
 //let productsJson= JSON.parse(productsFile);
 
@@ -18,8 +21,11 @@ let productController = {
       res.render('productsViews/create');
     }, 
     store: function(req, res, next) {
-    let product= {avatar: req.files[0].filename,
-    ...req.body };
+    let product= {avatar:
+      req.files.length>0 ? req.files[0].filename : null, //o la imagen x defecto
+      ...req.body ,
+      delete: false
+    };
      /* {id: req.body.id,
       nombre: req.body.nombre,
       descripcion: req.body.descripcion,
@@ -35,7 +41,8 @@ let productController = {
     fs.writeFileSync(__dirname + '/../Data/productsFile.json' , productsFileJson);
 
      //res.send('agregaste un producto ' + req.body.nombre);
-     res.render('productsViews/list', {productsFile, toThousand}  );
+     //res.render('productsViews/list', {productsFile, toThousand}  );
+     res.redirect('/products/list');
      
     },
     edit: function(req, res, next){
@@ -64,10 +71,13 @@ let productController = {
       
 */   update: function (req, res, next){
      var idProduct= req.params.id;
+    
       var productFound =[];
       for (var i=0; i <productsFile.length; i++){
         if(productsFile[i].id == idProduct){
-          let editProduct= {avatar: req.files[0].filename,
+        
+          let editProduct= {avatar: 
+            req.files.length>0 ? req.files[0].filename : productsFile[i].avatar,
             ...req.body };
           editProduct.id = idProduct;
           productFound.push(editProduct);
@@ -80,28 +90,52 @@ let productController = {
         editProductJson= JSON.stringify(productFound, null, 2);
         fs.writeFileSync(__dirname + '/../Data/productsFile.json' , editProductJson);
         //res.send("Modificaste el producto " + req.body.nombre);
-        res.render('productsViews/list', {productsFile, toThousand}  );
+        //res.render('productsViews/list', {productsFile, toThousand}  );
+        res.redirect('/products/list');
 
     }, 
 
    
         destroy : function(req, res, next){
           var idProduct= req.params.id;
-          var productDestroy = productsFile.filter(function(product){
-            return product.id != idProduct;
+
+          /*var productDestroy = productsFile.find(function(product){
+            return product.id == idProduct;
           });
-          productDestroyJson = JSON.stringify(productDestroy, null, 2);
+         
+          productDestroy.delete=true;*/
+
+          var productDeleteTrue = productsFile.map(function(product){
+            if(product.id == idProduct){
+              product.delete=true;
+            }
+            return product;
+          });
+
+          /*var productDestroy = productsFile.filter(function(product){
+            return product.id != idProduct;
+          });*/
+
+
+          productDestroyJson = JSON.stringify(productDeleteTrue, null, 2);
           fs.writeFileSync(__dirname + "/../Data/productsFile.json", productDestroyJson);
           //res.send("Eliminaste un producto")
-          res.render('productsViews/list', {productsFile, toThousand}  );
+          //res.render('productsViews/list', {productsFile, toThousand}  );
+          res.redirect('/products/list');
           },
     
        list: function(req, res, next){
          /*console.log({avatar: req.files[0].filename,
           ...req.body });*/
-         res.render('productsViews/list', {productsFile, toThousand}  );
-      
-         
+    
+          let lectura = leerJSON();
+
+          var productList = lectura.filter(function(product){
+            return product.delete == false;
+          });
+
+    
+         res.render('productsViews/list', {productsFile:productList, toThousand}  );
         
       }   
 

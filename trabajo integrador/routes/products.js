@@ -10,7 +10,7 @@ const path = require ('path');
 // multer
 var storage = multer.diskStorage({
     destination: (req, file, cb) => {
-          cb(null, 'tmp/my-uploads')  
+          cb(null, 'public/images/imagesProducts')  
   
   },
     filename: function (req, file, cb) {
@@ -36,7 +36,7 @@ router.post('/create', upload.any('avatar'),productController.store);
 router.get('/edit/:id',productController.edit);
 router.post('/edit/:id',upload.any('avatar'),productController.update);
 
-router.get('/destroy/:id', productController.destroy);
+router.delete('/destroy/:id', productController.destroy);
 
 router.get('/list',productController.list);
 
