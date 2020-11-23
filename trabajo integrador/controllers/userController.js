@@ -15,7 +15,7 @@ let userController = {
         res.render('usersViews/registro');
       },
 
- //------ver que pasa cpon el encriptado de la contraseña----
+ //------ver que pasa con el encriptado de la contraseña----
     edit: function(req, res, next){
       //  res.render('usersViews/edit');
     
@@ -43,16 +43,17 @@ let userController = {
       
    update: function (req, res, next){
      var idUser= req.params.id;
-    
      var userFound =[];
+
      for (var i=0; i <usersFile.length; i++){
        if(usersFile[i].id == idUser){
        
-         let editUser= {avatar: 
-           req.body,
+         let editUser= {
+           id:idUser,
+           ...req.body,
            delete: false};
-           
-         editUser.id = idUser;
+          //editUser.id = idUser;
+
          userFound.push(editUser);
          
         }else{
@@ -65,7 +66,6 @@ let userController = {
        res.send("Modificaste el usuario " + req.body.nombre);
        //res.render('productsViews/list', {productsFile, toThousand}  );
        //res.redirect('/products/list');
-
    }
 
 };//cierre controller

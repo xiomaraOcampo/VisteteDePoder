@@ -1,13 +1,11 @@
 [
   {
-    "avatar": {
-      "nombre": "florencia ",
-      "email": "florcadelli@gmail.com",
-      "contrasenia": "",
-      "contraseniaB": ""
-    },
-    "delete": false,
-    "id": "1"
+    "id": "1",
+    "nombre": "flor",
+    "email": "florcadelli@gmail.com",
+    "contrasenia": "654321",
+    "contraseniaB": "654321",
+    "delete": false
   },
   {
     "id": "2",

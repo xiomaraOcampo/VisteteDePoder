@@ -14,7 +14,7 @@ router.get('/registro', userController.registro);
 //edicion de usuarios
 
 router.get('/edit/:id', userController.edit);
-router.post('/edit/:id', userController.update);
+router.put('/edit/:id', userController.update);
 
 
 module.exports = router;
