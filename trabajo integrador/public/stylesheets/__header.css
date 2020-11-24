@@ -3,90 +3,86 @@
     flex-direction: column;
     box-sizing: border-box;
     background-size: cover;
-    /*border: 2px solid red;*/
+    border: 2px solid red;
     
     
 
 }
-/*HEDAER 1*/
+/*================HEDAER 1==============*/
 header .header1{
     width: 100%; 
     background-image:url("/images/fotosVisteteDePoder/papelHeaderAlta.jpg");
     display:flex;
     align-items: center;
-    /*border: 2px solid red;*/
+    border: 2px solid red;
 }
 
-
+/* ===ENVIOS===*/
 header .header1 .envios{
-    width: 75%;
+    width: 70%;
     padding: 10px;
     padding-left: 30px;
     color: #dfdfe6; 
     margin: 1%;
-    /*border: 2px solid red;*/
+    border: 2px solid red;
 }
+/* ===REDES===*/
 header .header1 .redes{
     width: 20%;
     display:flex;
     justify-content: space-around;
     align-items:center;
-    margin: 1%;
-   /* border: 2px solid red;*/
+    border: 2px solid blue;
 }
 
 header .header1 .redes div{
-    width: 40px;
-   /* border: 2px solid red;*/
+    width: 35px;
+   border: 2px solid violet;
 }
 
 header .header1 .redes div img{
     width: 100%;
 }
-header .header1 .redes div .f{
-    border-radius: 50%;
-    width: 37px;
-}
 
 
+/*===============HEDAER 2=======================*/
 
-/*HEDAER 2*/
 header .header2{ 
     width: 100%;
     display:flex;
-    justify-content: center;
+    justify-content: space-around;
     align-items: flex-start;
-    /*border: 2px solid red;*/
+    border: 2px solid red;
 }
-
+/* ===LOGO===*/
 header .header2 .logo{
-    width: 15%;
+    width: 10%;
     display:flex;
     justify-content: center;
-    /*border: 2px solid red;*/
-    margin-top:15px;
-    margin-bottom:15px;
+    border: 2px solid red;
+    margin-top:5px;
+    margin-bottom:5px;
 }
 header .header2 .logo img{
-    width: 70%;
-    border-radius: 50%;
-    /*border: 2px solid red;*/
-}
-
-header .header2 .menuHorizontal{
     width: 60%;
-    margin-top: 5%;
+    border-radius: 50%;
+    border: 2px solid red;
+}
+/* ===MENU HORIZONTAL===*/
+header .header2 .menuHorizontal{
+    width: 50%;
+    margin-top: 3%;
     display:flex; 
     justify-content: space-around;
     align-items: flex-start;
-    /*border: 2px solid red;*/
+    border: 2px solid red;
+    font-size: 0.8rem;
+    padding:0px;
 }
-header .header2 .menuHorizontal .palabras{
-    /*border: 2px solid green;*/
-}
+
 header .header2 .menuHorizontal li{
     list-style:none;
-    /*border: 2px solid red;*/
+    border: 2px solid red;
 }
 header .header2 .menuHorizontal a{
     color: grey;
@@ -110,15 +106,43 @@ header .header2 .menuHorizontal .palabras a:hover{
 header .header2 .menuHorizontal .palabras a{
     text-decoration: none;;
 }
-
-header .header2 .menuHorizontal .palabras .desplegable a{
-    text-decoration: none;;
+header .header2 .menuHorizontal .palabras ul{
+  
+    border-radius: 5px;
+    align-items: start;
 }
+header .header2 .menuHorizontal .palabras .desplegable a{
+    text-decoration: none;
+   
+}
+
+/*===DESPLEGABLE====*/
+
+header .header2 .menuHorizontal .palabras ul{
+    display:none;
+    /*position:absolute;
+    min-width:140px;*/
+    border:1px solid violet;
+    position: absolute;
+    padding:4px;
+    background-color:  #f5f4f3;
+    box-shadow: 1px 3px 5px grey;
+   /* margin-left: 30px;*/
+}
+header .header2 .menuHorizontal .palabras ul a{
+    color:#4c4c49;
+}
+header .header2 .menuHorizontal .palabras:hover ul{
+    display:block;
+}
+
+
+/* ===BUSCADORES===*/
 header .header2 .buscadores{
     width: 20%;
     display:flex;
-    /*border: 2px solid red;*/
-    margin-top: 5.15%;
+    border: 2px solid red;
+    margin-top: 3.45%;
 }
 header .header2 .buscadores div{
     width: 49%;
@@ -126,8 +150,8 @@ header .header2 .buscadores div{
     justify-content: flex-start;
     align-items: center;
     flex-direction: column;
-    font-size: 1.25rem;
-    /*border: 2px solid green; */
+    font-size: 1rem;
+    border: 2px solid green; 
     color:#4c4c49; 
     position:relative;
     bottom:7px;
@@ -143,21 +167,7 @@ header .header2 .buscadores a:hover{
 }*/
 
 
-/*===DESPLEGABLE====*/
 
-header .header2 .menuHorizontal .palabras ul{
-    display:none;
-    /*position:absolute;
-    min-width:140px;*/
-    /*border:1px solid violet;*/
-    position: absolute;
-}
-header .header2 .menuHorizontal .palabras ul a{
-    color:#4c4c49;
-}
-header .header2 .menuHorizontal .palabras:hover ul{
-    display:block;
-}
 
 header .header2 .buscadores .buscador input{
     display:none;
@@ -179,54 +189,106 @@ header .header2 .buscadores .buscador input:focus{
     box-shadow: inset 5px 5px 5px grey;
 }
 
+
+
+
+
+/*======RESPONSIVE======*/
+
+
+
 /*=======TABLET header========*/
 
-@media (max-width: 768px){
-   
-    .header2{
-        flex-direction: column;
+@media (max-width: 1024px){
+
+    /*header 1*/
+    header .header1 .envios{
+        width: 60%;
     }
-    .menuHorizontal{
-       /* background-color: violet;*/
-        text-align: center;
-        font-size: 0.7rem;
-         }
+    header .header1 .redes{
+        width: 30%;
+    }
+    header .header1 .redes div{
+        width: 30px;
+    }
     
-    .buscadores{
-      /*background-color: violet;*/
-      font-size: 0.8rem;
+     /*header 2*/
+     header .header2 .logo{
+        width: 12%;
      }
-     form .ingreso2 .preguntas{
-        
-        font-size: 0.7rem;
-        height: 32px;;
-       }   
-    }
-
-/*=======TABLET header========*/
-
-@media (max-width: 480px){
-   
-    .header2{
+    header .header2 .menuHorizontal{
         flex-direction: column;
-    }
-    .menuHorizontal{
         /*background-color: violet;*/
-        text-align: center;
-        font-size: 0.7rem;
+        text-align: center; 
+        margin-top:1%;
          }
+    .menuHorizontal .palabras{
+        font-size: 0.7rem;
+    }
+    header .header2 .menuHorizontal .palabras ul{
+        margin-left: 110px;
+    }
+
+    header .header2 .buscadores{
+        margin-top:1.5%;
+    }
     
-    .buscadores{
-     /* background-color: violet;*/
-      font-size: 0.8rem;
+    header .header2 .buscadores div{
+      /*background-color: violet;*/
+      font-size: 0.9rem;
      }
+
      form .ingreso2 .preguntas{
-        
         font-size: 0.7rem;
         height: 32px;;
        }   
     }
 
+/*=======CELU HORIZONTAL header========*/
+
+@media (max-width: 750px){
+      /*header 1*/
+      header .header1 .envios{
+        width: 50%;
+        font-size: 0.7rem;
+    }
+    header .header1 .redes{
+        width: 30%;
+    }
+    header .header1 .redes div{
+        width: 25px;
+    }
+
+     /*header 2*/
+     header .header2 .logo{
+        width: 15%;
+     }
+ 
+    header .header2 .menuHorizontal{
+        flex-direction: column;
+        width: 35%;
+        background-color: violet;
+        text-align: center; 
+        margin-top:1%;
+         }
+    .menuHorizontal .palabras{
+        font-size: 0.6rem;
+    }
+    header .header2 .buscadores{
+        margin-top:1.5%;
+        width: 30%;
+    }
+    
+    header .header2 .buscadores div{
+      background-color: violet;
+      font-size: 0.9rem;
+     }
+     form .ingreso2 .preguntas{
+        font-size: 0.7rem;
+        height: 32px;;
+       }   
+    }
+   
 
 /*=======CELULAR header========*/
 /*
