@@ -1,18 +1,30 @@
 [
   {
-    "id": "1",
-    "nombre": "flor",
-    "email": "florcadelli@gmail.com",
-    "contrasenia": "654321",
-    "contraseniaB": "654321",
-    "delete": false
+    "id": "25",
+    "NyP": "xio",
+    "email": "",
+    "contraseña": "",
+    "confirmaciónContraseña": ""
   },
   {
-    "id": "2",
-    "nombre": "more",
-    "email": "morecadelli@gmail.com",
-    "contrasenia": "123456",
-    "contraseniaB": "123456",
-    "delete": false
+    "id": "25",
+    "NyP": "xio",
+    "email": "",
+    "contraseña": "",
+    "confirmaciónContraseña": ""
+  },
+  {
+    "id": "25",
+    "NyP": "xio",
+    "email": "xiomara@gmail.com",
+    "contraseña": "xxiomra",
+    "confirmaciónContraseña": "xxiomara"
+  },
+  {
+    "id": "11",
+    "NyP": "walter",
+    "email": "walter@gmail.com",
+    "contraseña": "walter",
+    "confirmaciónContraseña": "walter"
   }
 ]

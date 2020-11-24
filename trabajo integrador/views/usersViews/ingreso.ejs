@@ -2,48 +2,50 @@
 <html lang="en">
 
 <%-include("../partials/head")%>
+
 <body>
     <div class="container">
-            <!--HEADER-->
-            <header>
-                <%-include("../partials/header")%>
-                
-            </header>
-            <!--FIN HEADER-->
-<!--MAIN--> 
-<main>
-  
-<form action="/home" method=get>
-    <!--iconos-->  
+        <!--HEADER-->
+        <header>
+            <%-include("../partials/header")%>
 
-    <div class="ingreso1">
-        <label for="nombre"><i class="fas fa-user"></i></label>
-        <label for="contraseña"><i class="fas fa-lock"></i></label>
-    </div>
+        </header>
+        <!--FIN HEADER-->
+        <!--MAIN-->
+        <main>
 
-    <div class="ingreso2">
-        <h3>Ingresar cuenta</h3>
-        <!--inputs-->      
-        <div class="nombre">
-            <input type="text" placeholder="Nombre de usuario" id="nombre" name="NyP">
-        </div>
-        <div class="contraseña">
-            <input type="password" placeholder="Contraseña" id="contraseña" name="contraseña">
-        </div>   
-        <!--button-->                
-         <button class="iniciarSesion"type="submit">Iniciar sesión</button>
-         <!--textos-->    
-         <a class="preguntas" href="#">Me olvide mi contraseña</a>
-         <div class= "preguntita">¿No tenés cuenta?</div>
-        <a class="preguntas" href="\registro"> Crear una cuenta nueva</a>
-</div>
-</form>
-        
-</main>
+            <form action="/users/ingreso" method="POST">
+                <!--iconos-->
 
-<%-include("../partials/footer")%>
+                <div class="ingreso1">
+                    <label for="nombre"><i class="fas fa-user"></i></label>
+                    <label for="contraseña"><i class="fas fa-lock"></i></label>
+                </div>
+
+                <div class="ingreso2">
+                    <h3>Ingresar cuenta</h3>
+                    <!--inputs-->
+                    <div class="nombre">
+                        <input type="text" placeholder="Nombre de usuario" id="nombre" name="NyP">
+                    </div>
+                    <div class="contraseña">
+                        <input type="password" placeholder="Contraseña" id="contrasenia" name="contrasenia">
+                    </div>
+                    <!--button-->
+                    <button class="iniciarSesion" type="submit">Iniciar sesión</button>
+                    <!--textos-->
+                    <a class="preguntas" href="#">Me olvide mi contraseña</a>
+                    <div class="preguntita">¿No tenés cuenta?</div>
+                    <a class="preguntas" href="\registro"> Crear una cuenta nueva</a>
+                </div>
+            </form>
+
+        </main>
+
+        <%-include("../partials/footer")%>
 
     </div>
 
 </body>
+
 </html>
