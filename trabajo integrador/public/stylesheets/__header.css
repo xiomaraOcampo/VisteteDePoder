@@ -51,7 +51,7 @@ header .header2{
     width: 100%;
     display:flex;
     justify-content: space-around;
-    align-items: flex-start;
+    align-items: center;
     border: 2px solid red;
 }
 /* ===LOGO===*/
@@ -69,8 +69,14 @@ header .header2 .logo img{
     border: 2px solid red;
 }
 /* ===MENU HORIZONTAL===*/
+header .header2 nav{
+    display:flex;
+    width: 57%;
+    justify-content: center;
+    border: 1px solid violet;
+}
 header .header2 .menuHorizontal{
-    width: 50%;
+    width: 90%;
     margin-top: 3%;
     display:flex; 
     justify-content: space-around;
@@ -135,18 +141,18 @@ header .header2 .menuHorizontal .palabras ul a{
 header .header2 .menuHorizontal .palabras:hover ul{
     display:block;
 }
-
+header .header2 .hamburguesa {
+    display: none;
+  }
 
 /* ===BUSCADORES===*/
 header .header2 .buscadores{
     width: 20%;
     display:flex;
     border: 2px solid red;
-    margin-top: 3.45%;
+    margin-top: 1.5%;
 }
-header .header2 .buscadores .hamburguesa{
-    display:none;
-}
+
 header .header2 .buscadores div{
     width: 49%;
     display:flex;
@@ -215,14 +221,15 @@ header .header2 .buscadores .buscador input:focus{
      /*header 2*/
      header .header2 .logo{
         width: 12%;
-     }
-    
+     }/*
+     header .header2 .hamburguesa {
+        display: block;
+      }*/
     header .header2 .menuHorizontal{
-        /*flex-direction: column;*/
-        /*background-color: violet;*/
+      
         text-align: center; 
-        /*margin-top:1%;*/
-         }
+    }
+       
     .menuHorizontal .palabras{
         font-size: 0.7rem;
     }
@@ -262,52 +269,41 @@ header .header2 .buscadores .buscador input:focus{
     }
 
      /*header 2*/
+     header .header2{
+         align-items: center;
+     }
+
      header .header2 .logo{
         width: 15%;
      }
-        /*===DESPLEGABLE====*/
-/*
-header .header2 .menuHorizontal .palabras ul{
-    display:none;
-    border:1px solid violet;
-    position: absolute;
-    padding:4px;
-    background-color:  #f5f4f3;
-    box-shadow: 1px 3px 5px grey;
-   
-}
-header .header2 .menuHorizontal .palabras ul a{
-    color:#4c4c49;
-}
-header .header2 .menuHorizontal .palabras:hover ul{
-    display:block;
-}*/
+     header .header2 nav{
+        width: 40%;
+     }
+        /*===HAMBURGUESA====*/
+     header .header2 .hamburguesa {
+            display: block;
+          }
+
     header .header2 .menuHorizontal{
         display:none;
         position: absolute;
         flex-direction: column;
-        width: 10%;
+        width: 30%;
         background-color:  #f5f4a8;
-        /*background-image:url("/images/fotosVisteteDePoder/fondoFormularios.jpg");*/
-       text-align: start; 
-        margin-top: 35px;
-        margin-left: -100px;
-        /*justify-content: start;*/
+        text-align: start; 
+        margin-top:10px;
+        margin-left: 0px;
         align-items: flex-start;
         border-radius: 5px;
-         }/*
-header .header2 .hamburguesa:hover .menuHorizontal{
-            display:block;
-        }   */ 
-       /* header .header2 input[type="checkbox"] {
-            opacity: 0; 
+         }
+          /*
+        header .header2 input[type="checkbox"] {
+            opacity: 10; 
           }*/
-          header .header2  input:checked ~ .menuHorizontal {
+          header .header2  .hamburguesa:hover ~ .menuHorizontal {
             display: block;
           }
-          header .header2  input:checked ~ .hamburguesa {
-            display: none;
-          }
+
     header .header2 .menuHorizontal .palabras{
         font-size: 0.4rem;
         padding: 3px;
