@@ -7,9 +7,12 @@ router.get('/', function(req, res, next) {
   res.send('respond with a resource');
 });
 
-router.get('/ingreso', userController.ingreso);
 
 router.get('/registro', userController.registro);
+router.post('/registro', userController.storeRegistro);
+
+router.get('/ingreso', userController.ingreso);
+router.post('/ingreso', userController.storeIngreso);
 
 //edicion de usuarios
 
