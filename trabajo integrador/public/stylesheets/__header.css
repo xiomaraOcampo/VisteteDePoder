@@ -3,7 +3,7 @@
     flex-direction: column;
     box-sizing: border-box;
     background-size: cover;
-    border: 2px solid red;
+    /*border: 2px solid red;*/
     
     
 
@@ -14,7 +14,7 @@ header .header1{
     background-image:url("/images/fotosVisteteDePoder/papelHeaderAlta.jpg");
     display:flex;
     align-items: center;
-    border: 2px solid red;
+    /*border: 2px solid red;*/
 }
 
 /* ===ENVIOS===*/
@@ -24,7 +24,7 @@ header .header1 .envios{
     padding-left: 30px;
     color: #dfdfe6; 
     margin: 1%;
-    border: 2px solid red;
+    /*border: 2px solid red;*/
 }
 /* ===REDES===*/
 header .header1 .redes{
@@ -32,12 +32,12 @@ header .header1 .redes{
     display:flex;
     justify-content: space-around;
     align-items:center;
-    border: 2px solid blue;
+    /*border: 2px solid blue;*/
 }
 
 header .header1 .redes div{
     width: 35px;
-   border: 2px solid violet;
+   /*border: 2px solid violet;*/
 }
 
 header .header1 .redes div img{
@@ -52,28 +52,28 @@ header .header2{
     display:flex;
     justify-content: space-around;
     align-items: center;
-    border: 2px solid red;
+    /*border: 2px solid red;*/
 }
 /* ===LOGO===*/
 header .header2 .logo{
     width: 10%;
     display:flex;
     justify-content: center;
-    border: 2px solid red;
+    /*border: 2px solid red;*/
     margin-top:5px;
     margin-bottom:5px;
 }
 header .header2 .logo img{
     width: 60%;
     border-radius: 50%;
-    border: 2px solid red;
+    /*border: 2px solid red;*/
 }
 /* ===MENU HORIZONTAL===*/
 header .header2 nav{
     display:flex;
     width: 57%;
     justify-content: center;
-    border: 1px solid violet;
+    /*border: 1px solid violet;*/
 }
 header .header2 .menuHorizontal{
     width: 90%;
@@ -81,14 +81,14 @@ header .header2 .menuHorizontal{
     display:flex; 
     justify-content: space-around;
     align-items: flex-start;
-    border: 2px solid red;
+    /*border: 2px solid red;*/
     font-size: 0.8rem;
     padding:0px;
 }
 
 header .header2 .menuHorizontal li{
     list-style:none;
-    border: 2px solid red;
+    /*border: 2px solid red;*/
 }
 header .header2 .menuHorizontal a{
     color: grey;
@@ -128,7 +128,7 @@ header .header2 .menuHorizontal .palabras ul{
     display:none;
     /*position:absolute;
     min-width:140px;*/
-    border:1px solid violet;
+    /*border:1px solid violet;*/
     position: absolute;
     padding:4px;
     background-color:  #f5f4f3;
@@ -137,9 +137,17 @@ header .header2 .menuHorizontal .palabras ul{
 }
 header .header2 .menuHorizontal .palabras ul a{
     color:#4c4c49;
+    font-size: 1rem;
+    font-weight: 600;
 }
 header .header2 .menuHorizontal .palabras:hover ul{
     display:block;
+}
+header .header2 .menuHorizontal .palabras .desplegable{
+    width: 10%;
+}
+header .header2  .menuHorizontal .palabras .desplegable li{
+    padding: 5px;
 }
 header .header2 .hamburguesa {
     display: none;
@@ -149,7 +157,7 @@ header .header2 .hamburguesa {
 header .header2 .buscadores{
     width: 20%;
     display:flex;
-    border: 2px solid red;
+    /*border: 2px solid red;*/
     margin-top: 1.5%;
 }
 
@@ -160,7 +168,7 @@ header .header2 .buscadores div{
     align-items: center;
     flex-direction: column;
     font-size: 1rem;
-    border: 2px solid green; 
+    /*border: 2px solid green;*/ 
     color:#4c4c49; 
     position:relative;
     bottom:7px;
@@ -171,9 +179,9 @@ header .header2 .buscadores a{
 header .header2 .buscadores a:hover{
     color:grey;
 }
-/*header .header2 .buscadores a:focus{
+header .header2 .buscadores a:focus{
     color:#bebd6d;
-}*/
+}
 
 
 
@@ -189,6 +197,9 @@ header .header2 .buscadores .buscador input{
 }
 header .header2 .buscadores .buscador:hover input{
     display:block;
+    position:absolut;
+    margin-top: 20px;
+    width: 325%;
 }
 
 header .header2 .buscadores .buscador input:focus{
@@ -257,9 +268,10 @@ header .header2 .buscadores .buscador input:focus{
 
 @media (max-width: 750px){
       /*header 1*/
-      header .header1 .envios{
+    header .header1 .envios{
         width: 50%;
-        font-size: 0.7rem;
+        font-size: 0.8rem;
+        padding-left: 15px;
     }
     header .header1 .redes{
         width: 30%;
@@ -275,50 +287,70 @@ header .header2 .buscadores .buscador input:focus{
 
      header .header2 .logo{
         width: 15%;
-     }
-     header .header2 nav{
-        width: 40%;
-     }
+     } 
+   
         /*===HAMBURGUESA====*/
+        header .header2 nav{
+            width: 25%;
+        }
      header .header2 .hamburguesa {
             display: block;
           }
-
+      
     header .header2 .menuHorizontal{
         display:none;
-        position: absolute;
-        flex-direction: column;
-        width: 30%;
-        background-color:  #f5f4a8;
-        text-align: start; 
-        margin-top:10px;
-        margin-left: 0px;
-        align-items: flex-start;
-        border-radius: 5px;
-         }
-          /*
-        header .header2 input[type="checkbox"] {
-            opacity: 10; 
-          }*/
-          header .header2  .hamburguesa:hover ~ .menuHorizontal {
-            display: block;
-          }
-
-    header .header2 .menuHorizontal .palabras{
-        font-size: 0.4rem;
-        padding: 3px;
+    }   
+    
+    header .header2  .hamburguesa .desplegable2{ 
+        display:none;
     }
-    header .header2 .menuHorizontal .palabras ul{
-        margin-left: 50px;
-     }
+    header .header2  .hamburguesa i {
+        display:flex;
+    }
+    
+    header .header2  .hamburguesa i:hover .desplegable2{
+        display:block;
+        position: absolute;
+        width: 55%; 
+        background-color:  #f5f4f3;
+        border-radius: 5px;
+        box-shadow: 1px 3px 5px grey;
+        margin-top: -12px;
+        margin-left:0px;
+        z-index:10;
+        list-style:none;   
+    }
+    header .header2  .hamburguesa .desplegable2 a{
+        text-decoration: none;
+        font-family : 'Josefin Sans', sans-serif; 
+        color:#4c4c49;     
+    }
+    header .header2 .hamburguesa .desplegable2 a:hover{
+      
+      color:grey;
+    }
+    header .header2 .hamburguesa .desplegable2 a:focus{
+        color:#bebd6d;
+    }
+    header .header2  .hamburguesa .desplegable2 li{
+        padding: 10px;
+    }
+   
+    
+    /*header .header2  .hamburguesa:hover  ~.menuHorizontal {
+            display: block;
+          }*/
 
     header .header2 .buscadores{
-        margin-top: 20px;
+        margin-top: 15px;
         width: 40%;
+    }
+    header .header2 .buscadores .buscador:hover input{
+        margin-top: 15px;
     }
     
     header .header2 .buscadores div{
-      background-color: violet;
+      /*background-color: violet;*/
       font-size: 0.8rem;
      }
      
@@ -332,6 +364,7 @@ header .header2 .buscadores .buscador input:focus{
     /*header .header2 .buscadores .hamburguesa i{
         padding-left:5px ;
      }*/
+     
      form .ingreso2 .preguntas{
         font-size: 0.7rem;
         height: 32px;;
@@ -339,8 +372,12 @@ header .header2 .buscadores .buscador input:focus{
    
 }
 /*=======CELULAR header========*/
-/*
+
 @media (max-width: 480px){
+    header .header2 .logo{
+        width: 20%;
+     } 
+    }
      /*header 1*/
     /* header .header1 .envios{
         width: 50%;
