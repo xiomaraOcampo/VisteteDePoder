@@ -90,10 +90,10 @@ let userController = {
     //res.redirect('/products/list');
   },
 
-  destroy: {function(req, res, next){
+  destroy: function(req, res, next){
     var idUser = req.params.id;
     var userDeleteTrue = usersFile.map(function(user){
-      if(user.id ==idUser){
+      if(user.id == idUser){
         user.detele=true;
       }
       return user;
@@ -101,14 +101,10 @@ let userController = {
     userDestroyJson = JSON.stringify(userDeleteTrue, null, 2);
     fs.writeFileSync(__dirname + "/../Data/usersFile.json", userDestroyJson);
     res.send("sisiisii");
-  }
-    
-  }
+  },
+ // list: 
+
   
-  ,
-  list: {
-  
-  }
 
 };//cierre controller
 
