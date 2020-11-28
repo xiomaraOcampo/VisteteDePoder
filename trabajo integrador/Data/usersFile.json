@@ -13,5 +13,13 @@
     "email": "xio@hdhdhd",
     "contrasenia": "123",
     "confirmacionContrasenia": "123"
+  },
+  {
+    "id": "3",
+    "nombre": "Flor",
+    "email": "jfkdjfdij@dsjhdal",
+    "contrasenia": "123",
+    "confirmacionContrasenia": "123",
+    "delete": false
   }
 ]

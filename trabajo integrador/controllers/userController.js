@@ -13,7 +13,14 @@ let userController = {
   },
   storeRegistro: function (req, res, next) {
     //alert("Se ha registrado un usuario");
-    usersFile.push(req.body);
+    let registroUser = {
+      ...req.body,
+      delete : false
+
+    };
+
+
+    usersFile.push(registroUser);
     userJson = JSON.stringify(usersFile, null, 2);
     fs.writeFileSync(__dirname + '/../Data/usersFile.json', userJson);
 
