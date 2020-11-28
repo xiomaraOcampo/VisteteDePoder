@@ -13,7 +13,23 @@ const toThousand = n =>n.toString().replace(/\B(?=(\d{3})+(?!\d))/g,".");
 let productController = {
 
     detail: function(req, res, next) {
-        res.render('productsViews/detailProducts');
+
+      var idProduct= req.params.id;
+      
+      var productFound;
+        for(var i=0; i< productsFile.length; i++){
+          if(productsFile[i].id == idProduct){
+            productFound=productsFile[i];
+            break;
+          };
+        };
+          if(productFound){
+         res.render('productsViews/detailProducts', {productFound});
+        }else{
+          res.send('No se ha encontrado el producto con Id: '+ idProduct)
+        }
+      /*
+        res.render('productsViews/detailProducts');*/
       }, 
       //esta función es para el formulario de creación de productos// 
     

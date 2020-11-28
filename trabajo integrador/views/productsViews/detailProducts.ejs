@@ -7,40 +7,42 @@
         
             <%-include("../partials/header")%>
           <!-- fin del HEADER-->  
-       <!--MAIN-->   
-        <main class="mainProducto">
-         
+       <!--MAIN-->  
+        <main >class="mainProducto"
+        
+          <form  action="/products/detailProduct/<%= productFound.id %>" method="GET">
+
           <section class="Nombre-Producto">
-                 Remera 
-            </section>
+            <%= productFound.nombre %>
+          </section>
                     
          <div class="producto-y-descripcion">
                
                      <section class="fotoProducto">
-                         <article> <img src="/images/fotosVisteteDePoder/indumentaria.jpg" alt="Remera"></article>
+                         <article> <img src="/images/imagesProducts/<%= productFound.avatar %> " alt=" <%= productFound.avatar %> "></article>
                     <!-- variable de la imagen al final de la ruta-->
                     </section>
 
                       <section class="descripcion">
-                        <div class="remera1">Remera 1</div> 
-                         <p>Descripcion del producto lo que tiene impreso,con historia de la imagen,ETC.</p>
-                          <h4>Precio $54.00</h4>
+                        <div class="remera1">Producto: <%= productFound.nombre %></div> 
+                         <p>Descripción: <%= productFound.descripcion %></p>
+                          <h4>Precio: <%= productFound.precio %></h4>
                         
                     
                          <article class="talle-cantidad">
                           
-                               <label for="" >Talle </label>                         
-                                <select name ="talle">
+                               <label for="" >Talle: <%= productFound.talle %> </label>                         
+                                <!--<select name ="talle">
                                     <option value="S">Small</option>
                                     <option value="M">Medium</option>
                                     <option value="L">Large</option>
                                     <option value="XL">Extra-Large</option>
-                              </select>
+                              </select>-->
                          
 
                          
-                             <label for="" > Cantidad: </label>                         
-                               <select name="Cantidad" >
+                             <label for="" > Cantidad: <%= productFound.cantidad %></label>                         
+                               <!--<select name="Cantidad" >
                                   <option value="uno">1</option>
                                   <option value="dos">2</option>
                                   <option value="tres">3</option>
@@ -51,13 +53,15 @@
                                   <option value="ocho">8</option>
                                   <option value="nueve">9</option>
                                   <option value="diez">10</option>
-                              </select>
+                              </select>-->
                          </article>
                           <button type="button">Añadir a carrito</button>
 
                         </section>
                       
         </div>
+
+        </form>
     </main>
     <%-include("../partials/footer")%>
 </body>

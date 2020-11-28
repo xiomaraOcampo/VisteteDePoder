@@ -88,6 +88,15 @@ let userController = {
     res.send("Modificaste el usuario " + req.body.nombre);
     //res.render('productsViews/list', {productsFile, toThousand}  );
     //res.redirect('/products/list');
+  },
+
+  destroy: {
+    
+  }
+  
+  ,
+  list: {
+  
   }
 
 };//cierre controller
