@@ -5,14 +5,7 @@
     "email": "sjdhasjd@nhh",
     "contrasenia": "123",
     "confirmacionContrasenia": "",
-    "delete": false
-  },
-  {
-    "id": "2",
-    "nombre": "Xio",
-    "email": "xio@hdhdhd",
-    "contrasenia": "123",
-    "confirmacionContrasenia": "123"
+    "delete": true
   },
   {
     "id": "3",
@@ -20,6 +13,14 @@
     "email": "jfkdjfdij@dsjhdal",
     "contrasenia": "123",
     "confirmacionContrasenia": "123",
-    "delete": false
+    "delete": true
+  },
+  {
+    "id": "2",
+    "nombre": "Xio",
+    "email": "xio@hdhdhd",
+    "contrasenia": "123",
+    "confirmacionContrasenia": "123",
+    "delete": true
   }
 ]

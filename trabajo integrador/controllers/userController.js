@@ -98,18 +98,42 @@ let userController = {
   },
 
   destroy: function(req, res, next){
-    var idUser = req.params.id;
-    var userDeleteTrue = usersFile.map(function(user){
-      if(user.id == idUser){
-        user.detele=true;
-      }
-      return user;
-    });
 
- 
-    userDestroyJson = JSON.stringify(userDeleteTrue, null, 2);
-    fs.writeFileSync(__dirname + "/../Data/usersFile.json", userDestroyJson);
-    res.redirect('home');
+    
+    var idUser = req.params.id;
+
+    var userFound;
+    for (var i = 0; i < usersFile.length; i++) {
+      if (usersFile[i].id == idUser) {
+        userFound = usersFile[i];
+        break;
+      }
+    }
+    if (userFound)  {
+
+      var userDeleteTrue = usersFile.map(function(user){
+        if(user.id == idUser && user.delete != false){
+          user.delete=true;
+        }
+        return user;
+      });
+  
+   
+      userDestroyJson = JSON.stringify(userDeleteTrue, null, 2);
+      fs.writeFileSync(__dirname + "/../Data/usersFile.json", userDestroyJson);
+      
+      res.send("Eliminaste el Usuario " + idUser);
+     
+      // res.redirect('home');
+  
+      
+    } else {
+      res.send('No se ha encontrado el usuario con Id: ' + idUser)
+      //res.render('usersViews/list', {usersFile}  );
+    };
+  
+
+
   },
 
   list: function(req, res, next){
@@ -122,7 +146,7 @@ let userController = {
      });
 
 
-    res.render('usersViews/list', {userFile:userList}  );
+    res.send('usersViews/userlist');
    
  }   
 

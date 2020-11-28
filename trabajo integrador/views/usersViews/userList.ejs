@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+    <%-include("../partials/head")%>
+<body>
+     <div class="container">
+        <!--HEADER-->
+        
+            <%-include("../partials/header")%>
+          <!-- fin del HEADER-->  
+       <!--MAIN-->   
+       <main class="mainProducto">        
+
+       <section class="Nombre-Producto">
+        Lista de Productos
+</section>
+<ul>
+
+ <!--  <% productsFile.forEach(function(product){ %>
+  <li>
+    Id: <%= product.id %>
+
+    <div class="producto-y-descripcion">
+                          
+      <section class="fotoProducto">
+          <article> <img src="/images/imagesProducts/<%= product.avatar %> " alt=" <%= product.avatar %> ">
+              
+          </article>
+      </section>
+
+      <section class="descripcion">
+        <div class="remera1"> Nombre: <%= product.nombre %></div> 
+        <div class="remera1"> Categoría: <%= product.categoria %></div> 
+        <div class="remera1"> Detalle: <%= product.detalle %></div>
+        <div class="remera1"> Talle: <%= product.talle %> </div> 
+        <div class="remera1"> Cantidad:  <%= product.cantidad %></div>
+        <div class="remera1"> Diseño: <%= product.disenio %></div> 
+        <div class="remera1"> Precio: $ <%= toThousand(product.precio) %></div>
+
+       
+         
+        <a class="remera1" href="/users/edit/<%= user.id %>"><button type="button">Editar</button></a>
+      
+   
+</section>
+-->  
+
+  <form class="remera1" action="/users/destroy/<%= user.id %>?_method=DELETE" method="POST">
+
+          <button class="remera1" type='submit'>Borrar</button>
+        
+        </form>
+
+       <!--<a class="remera1" href="/products/destroy/<%= product.id %>"><button type="button" >Borrar</button></a>-->
+
+ 
+
+
+
+    </div>
+
+
+  </li>
+  <% }); %>
+
+</ul>
+            </main>
+
+    <%-include("../partials/footer")%>
+</body>
+</html>
