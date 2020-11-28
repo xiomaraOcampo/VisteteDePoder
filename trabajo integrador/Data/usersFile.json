@@ -1,10 +1,17 @@
 [
   {
     "id": "1",
-    "nombre": "Lorena",
-    "email": "laura@ygmail.com",
-    "contrasenia": "",
-    "contraseniaB": "",
+    "nombre": "Laura",
+    "email": "sjdhasjd@nhh",
+    "contrasenia": "123",
+    "confirmacionContrasenia": "",
     "delete": false
+  },
+  {
+    "id": "2",
+    "nombre": "Xio",
+    "email": "xio@hdhdhd",
+    "contrasenia": "123",
+    "confirmacionContrasenia": "123"
   }
 ]

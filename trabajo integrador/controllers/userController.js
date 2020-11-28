@@ -98,11 +98,26 @@ let userController = {
       }
       return user;
     });
+
+ 
     userDestroyJson = JSON.stringify(userDeleteTrue, null, 2);
     fs.writeFileSync(__dirname + "/../Data/usersFile.json", userDestroyJson);
-    res.send("sisiisii");
+    res.redirect('home');
   },
- // list: 
+
+  list: function(req, res, next){
+    
+
+     let lectura = leerJSON();
+
+     var userList = lectura.filter(function(user){
+       return user.delete == false;
+     });
+
+
+    res.render('usersViews/list', {userFile:userList}  );
+   
+ }   
 
   
 
