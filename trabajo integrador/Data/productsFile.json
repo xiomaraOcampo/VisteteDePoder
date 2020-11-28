@@ -22,5 +22,17 @@
     "cantidad": "",
     "precio": "2.000",
     "delete": false
+  },
+  {
+    "avatar": null,
+    "id": "1",
+    "nombre": "remera",
+    "descripcion": "rosa",
+    "categoria": "Indumentaria",
+    "talle": "",
+    "disenio": "",
+    "cantidad": "",
+    "precio": "",
+    "delete": false
   }
 ]

@@ -90,7 +90,18 @@ let userController = {
     //res.redirect('/products/list');
   },
 
-  destroy: {
+  destroy: {function(req, res, next){
+    var idUser = req.params.id;
+    var userDeleteTrue = usersFile.map(function(user){
+      if(user.id ==idUser){
+        user.detele=true;
+      }
+      return user;
+    });
+    userDestroyJson = JSON.stringify(userDeleteTrue, null, 2);
+    fs.writeFileSync(__dirname + "/../Data/usersFile.json", userDestroyJson);
+    res.send("sisiisii");
+  }
     
   }
   
