@@ -1,4 +1,4 @@
-(Actividad Sprint 4):Conclusiones Sprint 2
+(Actividad Sprint 4):Conclusiones Sprint 3
 
 Start Doing: Con la practica que ya ganamos en el Sprint 3, dividir mejor las tareas;
 
