@@ -1,4 +1,67 @@
-Daily
+Dailies
+28/11/2020
+LAU
+ayer: armando el destroy y list
+inconvenientes: no logro que funcionen
+hoy: ver solucionar destroy / list, si terminamos el sprint, retomar mercadoliebre;
+
+XIO
+ayer: estuve viendo lo de validación, haciendo la validación del registro
+inconvenientes: ahora no me lee la ruta, habrá alguna coma o algo, el resto funciona
+hoy: si terminamos con sprint, repasar la última clase con Diego de Cokies,
+
+FLOR
+ayer: estuve viendo validaciones, lo del encriptado de la contraseña, y empecé lo de session y cookies,
+inconvenientes: no tuve;
+hoy: que funcione todo e ABM de usuario
+
+24/11/2020
+LAU
+ayer: termine el ABM
+inconvenientes: tuve inconvenientes con los bucles y condicionales
+hoy: me voy a dedicar al BREAD, en el detalle producto. y el list y destroy para los usuarios.
+
+XIO
+ayer: hice el ABM
+inconvenientes: errores de sintaxis
+hoy: voy a seguir con estoy y adelantar con el proyecto.
+
+FLOR
+ayer: estuve con la edicion de usuarios y empece a ver el responsive.
+inconvenientes: no tuve
+hoy: seguir avanzando con el responsive.
+
+21/11/2020
+LAU
+ayer: hice la ruta y carpeta del carrito. Empecé con el GET de detalle producto.
+inconvenientes: tengo que repasar cosas viejas para ir resolviendo las tareas.
+hoy: terminar el ABM
+
+XIO
+ayer: configure DELETE para que funcione en las rutas, probe empezar a alrmar los USERS
+inconvenientes: no me muestra los datos de usuarios que yo subo por consola y no los envia por post.
+hoy: quiero resolver lo de los usuarios y despues ponerme con el ABM.
+
+FLOR
+ayer: estuve luchando con GITHUB, y con con el proyecto integrador.
+inconvenientes: que no recordaba algunos conceptos, y no funcionaba MULTER en el proyecto integrador.
+hoy: seguir avanzando con el proyecto integrador
+
+18/11/2020
+LAU
+ayer: me dedique a la clase
+inconvenientes: ninguno
+hoy: ver el sprint 4
+
+XIO
+ayer: a full con otras cosas. presencie la clase
+inconvenientes: ninguno
+hoy: me quiero meter con el entregable individual
+
+FLOR
+ayer: estuve con playground
+inconvenientes: no me esta funcionando hacer los ej de playground
+hoy: ver de que se trata el sprint 4
 
 
 15/11/2020
