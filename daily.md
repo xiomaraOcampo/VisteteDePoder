@@ -1,5 +1,9 @@
 Dailies
+
+
 28/11/2020
+
+
 LAU
 ayer: armando el destroy y list
 inconvenientes: no logro que funcionen
@@ -16,6 +20,8 @@ inconvenientes: no tuve;
 hoy: que funcione todo e ABM de usuario
 
 24/11/2020
+
+
 LAU
 ayer: termine el ABM
 inconvenientes: tuve inconvenientes con los bucles y condicionales
@@ -32,6 +38,8 @@ inconvenientes: no tuve
 hoy: seguir avanzando con el responsive.
 
 21/11/2020
+
+
 LAU
 ayer: hice la ruta y carpeta del carrito. Empecé con el GET de detalle producto.
 inconvenientes: tengo que repasar cosas viejas para ir resolviendo las tareas.
@@ -48,6 +56,8 @@ inconvenientes: que no recordaba algunos conceptos, y no funcionaba MULTER en el
 hoy: seguir avanzando con el proyecto integrador
 
 18/11/2020
+
+
 LAU
 ayer: me dedique a la clase
 inconvenientes: ninguno
