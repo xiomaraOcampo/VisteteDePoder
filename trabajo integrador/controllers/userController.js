@@ -4,6 +4,7 @@ function leerJSON() {
   return JSON.parse(fs.readFileSync(__dirname + '/../Data/usersFile.json', { encoding: "utf-8" }));
 }
 let usersFile = leerJSON();
+let { check, validationResult, body } = require('express-validator');
 
 
 let userController = {
@@ -15,16 +16,20 @@ let userController = {
     //alert("Se ha registrado un usuario");
     let registroUser = {
       ...req.body,
-      delete : false
+      delete: false
 
     };
 
+    let errors = validationResult(req);
+    if (errors.isEmpty()) {
+      usersFile.push(registroUser);
+      userJson = JSON.stringify(usersFile, null, 2);
+      fs.writeFileSync(__dirname + '/../Data/usersFile.json', userJson);
 
-    usersFile.push(registroUser);
-    userJson = JSON.stringify(usersFile, null, 2);
-    fs.writeFileSync(__dirname + '/../Data/usersFile.json', userJson);
-
-    res.render('home');
+      res.render('home');
+    } else {
+      return res.render('usersViews/registro', { errors: errors.errors });
+    }
   },
   //probar el jueves 26  porque no puedo editar el usuario qu cree//
 
@@ -97,9 +102,9 @@ let userController = {
     //res.redirect('/products/list');
   },
 
-  destroy: function(req, res, next){
+  destroy: function (req, res, next) {
 
-    
+
     var idUser = req.params.id;
 
     var userFound;
@@ -109,48 +114,48 @@ let userController = {
         break;
       }
     }
-    if (userFound)  {
+    if (userFound) {
 
-      var userDeleteTrue = usersFile.map(function(user){
-        if(user.id == idUser && user.delete != false){
-          user.delete=true;
+      var userDeleteTrue = usersFile.map(function (user) {
+        if (user.id == idUser && user.delete != false) {
+          user.delete = true;
         }
         return user;
       });
-  
-   
+
+
       userDestroyJson = JSON.stringify(userDeleteTrue, null, 2);
       fs.writeFileSync(__dirname + "/../Data/usersFile.json", userDestroyJson);
-      
+
       res.send("Eliminaste el Usuario " + idUser);
-     
+
       // res.redirect('home');
-  
-      
+
+
     } else {
       res.send('No se ha encontrado el usuario con Id: ' + idUser)
       //res.render('usersViews/list', {usersFile}  );
     };
-  
+
 
 
   },
 
-  list: function(req, res, next){
-    
+  list: function (req, res, next) {
 
-     let lectura = leerJSON();
 
-     var userList = lectura.filter(function(user){
-       return user.delete == false;
-     });
+    let lectura = leerJSON();
+
+    var userList = lectura.filter(function (user) {
+      return user.delete == false;
+    });
 
 
     res.send('usersViews/userlist');
-   
- }   
 
-  
+  }
+
+
 
 };//cierre controller
 

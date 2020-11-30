@@ -22,5 +22,33 @@
     "contrasenia": "123",
     "confirmacionContrasenia": "123",
     "delete": true
+  },
+  {
+    "nombre": "12335",
+    "email": "xiomara@gmail.com",
+    "contrasenia": "123456",
+    "confirmacionContrasenia": "123645",
+    "delete": false
+  },
+  {
+    "nombre": "",
+    "email": "xiomara@gmail.com",
+    "contrasenia": "",
+    "confirmacionContrasenia": "",
+    "delete": false
+  },
+  {
+    "nombre": "",
+    "email": "",
+    "contrasenia": "",
+    "confirmacionContrasenia": "",
+    "delete": false
+  },
+  {
+    "nombre": "xiomara",
+    "email": "xiomara@gmail.com",
+    "contrasenia": "xiomara",
+    "confirmacionContrasenia": "",
+    "delete": false
   }
 ]
