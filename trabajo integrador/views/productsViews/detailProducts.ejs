@@ -8,14 +8,14 @@
             <%-include("../partials/header")%>
           <!-- fin del HEADER-->  
        <!--MAIN-->  
-        <main >class="mainProducto"
-        
-          <form  action="/products/detailProduct/<%= productFound.id %>" method="GET">
+        <main class="mainProducto">
 
           <section class="Nombre-Producto">
             <%= productFound.nombre %>
           </section>
-                    
+        
+          <form  class= "tarjeta" action="/products/detailProduct/<%= productFound.id %>" method="GET">
+
          <div class="producto-y-descripcion">
                
                      <section class="fotoProducto">
