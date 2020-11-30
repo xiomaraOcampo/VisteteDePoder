@@ -1,3 +1,16 @@
+(Actividad Sprint 4):Conclusiones Sprint 3
+
+Start Doing: Con la practica que ya ganamos en el Sprint 3, dividir mejor las tareas;
+
+More Of: Reunirnos a pesar de no tener que entregar, para practicar;
+
+Keep Doing: Comunicación fluida, estar al tanto de lo que está haciendo la otra, seguir reuniendonos mucho. Y hacer algo de codigo juntas.
+
+Less Of: por el momento no sacaríamos nada, porque recién estamos empezando;
+
+Stop Doing: por el momento no sacaríamos nada, porque recién estamos empezando, seguramente notemos que debemos eliminar cosas una vez que tengamos mas cosas por desarrollar.
+
+
 (Actividad Sprint 3): Conclusiones Sprint 2
 
 Start Doing: Fijar martes a las 8:00 como nuevo día fijo de reunión (rinde mas);
