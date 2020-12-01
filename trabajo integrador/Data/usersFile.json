@@ -1,54 +1,8 @@
 [
   {
-    "id": "1",
-    "nombre": "Laura",
-    "email": "sjdhasjd@nhh",
-    "contrasenia": "123",
-    "confirmacionContrasenia": "",
-    "delete": true
-  },
-  {
-    "id": "3",
-    "nombre": "Flor",
-    "email": "jfkdjfdij@dsjhdal",
-    "contrasenia": "123",
-    "confirmacionContrasenia": "123",
-    "delete": true
-  },
-  {
-    "id": "2",
-    "nombre": "Xio",
-    "email": "xio@hdhdhd",
-    "contrasenia": "123",
-    "confirmacionContrasenia": "123",
-    "delete": true
-  },
-  {
-    "nombre": "12335",
-    "email": "xiomara@gmail.com",
-    "contrasenia": "123456",
-    "confirmacionContrasenia": "123645",
-    "delete": false
-  },
-  {
-    "nombre": "",
-    "email": "xiomara@gmail.com",
-    "contrasenia": "",
-    "confirmacionContrasenia": "",
-    "delete": false
-  },
-  {
-    "nombre": "",
-    "email": "",
-    "contrasenia": "",
-    "confirmacionContrasenia": "",
-    "delete": false
-  },
-  {
     "nombre": "xiomara",
     "email": "xiomara@gmail.com",
-    "contrasenia": "xiomara",
-    "confirmacionContrasenia": "",
+    "contrasenia": "$2b$10$QZ.oXs7zXnZdW3GTTCBM/OF0HnuMe3IaTKCehIZja0wMweFs8mXx6",
     "delete": false
   }
 ]

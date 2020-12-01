@@ -5,6 +5,7 @@ function leerJSON() {
 }
 let usersFile = leerJSON();
 let { check, validationResult, body } = require('express-validator');
+let bcrypt = require('bcrypt');
 
 
 let userController = {
@@ -15,9 +16,11 @@ let userController = {
   storeRegistro: function (req, res, next) {
     //alert("Se ha registrado un usuario");
     let registroUser = {
-      ...req.body,
+      nombre:req.body.nombre,
+      email:req.body.email,
+      contrasenia:bcrypt.hashSync (req.body.contrasenia,10),
       delete: false
-
+    //  cambie el ...req para qu no tome laconfimacion contraseña n el jason 
     };
 
     let errors = validationResult(req);
