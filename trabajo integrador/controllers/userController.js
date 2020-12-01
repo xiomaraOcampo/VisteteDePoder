@@ -16,11 +16,11 @@ let userController = {
   storeRegistro: function (req, res, next) {
     //alert("Se ha registrado un usuario");
     let registroUser = {
-      nombre:req.body.nombre,
-      email:req.body.email,
-      contrasenia:bcrypt.hashSync (req.body.contrasenia,10),
+      nombre: req.body.nombre,
+      email: req.body.email,
+      contrasenia: bcrypt.hashSync(req.body.contrasenia, 10),
       delete: false
-    //  cambie el ...req para qu no tome laconfimacion contraseña n el jason 
+      //  cambie el ...req para qu no tome laconfimacion contraseña n el jason 
     };
 
     let errors = validationResult(req);
@@ -41,15 +41,19 @@ let userController = {
     res.render('usersViews/ingreso');
   },
   storeIngreso: function (req, res, next) {
-    console.log(req.body.name + " " + req.body.contrasenia);
-    for (var i = 0; i < usersFile.length; i++) {
-      if (usersFile[i].name == req.body.name && usersFile[i].contrasenia == req.body.contrasenia) {
-        res.render('home');
-      }
-    }
-    res.send("usuario invalido");
-
+     let errors = validationResult(req);
+    if (errors.isEmpty()) {
+       
+    } else {
+      return res.render('userViews/ingreso', { errors: errors.errors });
+    } 
   },
+  /* console.log(req.body.name + " " + req.body.contrasenia);
+  for (var i = 0; i < usersFile.length; i++) {
+    if (usersFile[i].name == req.body.name && usersFile[i].contrasenia == req.body.contrasenia) {
+      res.render('home');
+    } */
+
 
   //------ver que pasa con el encriptado de la contraseña----
   edit: function (req, res, next) {

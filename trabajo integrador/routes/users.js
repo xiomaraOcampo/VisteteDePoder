@@ -19,7 +19,10 @@ router.post('/registro',[
 ], userController.storeRegistro);
 
 router.get('/ingreso', userController.ingreso);
-router.post('/ingreso', userController.storeIngreso);
+router.post('/ingreso', [
+  check ('email').isEmail().withMessage('El mail debe ser un mail valido'),
+  check ('contrasenia').isLength({min:6}).withMessage('La contraseña debe tener al menos seis caracteres'),
+] ,userController.storeIngreso);
 
 //edicion de usuarios
 
