@@ -9,7 +9,7 @@
     "disenio": "cortazar",
     "cantidad": "1",
     "precio": "1.500",
-    "delete": false
+    "delete": true
   },
   {
     "avatar": "avatar-1605993511465.jpg",
@@ -33,6 +33,6 @@
     "disenio": "",
     "cantidad": "",
     "precio": "",
-    "delete": false
+    "delete": true
   }
 ]

@@ -18,7 +18,9 @@
  
        
         <li>
-          <form>
+          <form class="borrar" method="POST" action="/users/destroy/<%= user.id %>?_method=DELETE" >
+
+      
           <div class="registro1">
             <label for="id"><i class="fas fa-user"></i></label>
             <label for="nombre"><i class="fas fa-user"></i></label>
@@ -39,8 +41,14 @@
                     
           
           </div>
-        </form>
-
+        
+         
+            <button type='submit'>Borrar</button>
+          
+          </form>
+  
+        
+        
  
         </li>
          <% }); %>

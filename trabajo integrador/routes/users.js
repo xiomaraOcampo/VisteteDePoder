@@ -29,7 +29,7 @@ router.post('/ingreso', [
 router.get('/edit/:id', userController.edit);
 router.put('/edit/:id', userController.update);
 
-router.get('/destroy/:id', userController.destroy);
+router.delete('/destroy/:id', userController.destroy); 
 router.get('/list',userController.list);
 
 

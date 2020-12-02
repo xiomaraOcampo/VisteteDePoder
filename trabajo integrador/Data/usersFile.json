@@ -1,27 +1,72 @@
 [
   {
-    "nombre": "xiomara",
-    "email": "xiomara@gmail.com",
-    "contrasenia": "$2b$10$QZ.oXs7zXnZdW3GTTCBM/OF0HnuMe3IaTKCehIZja0wMweFs8mXx6",
-    "delete": false
-  },
-  {
-    "nombre": "Flor",
-    "email": "flor@sjkdjsakd.com",
-    "contrasenia": "$2a$10$eI7YHpORHLG8HGwtICI2Kux.PIY7Oae8s0ehIvTWx8wabQEWyEVsm",
-    "delete": false
-  },
-  {
-    "nombre": "María",
-    "email": "maria@sdhajs.com",
-    "contrasenia": "$2a$10$utAfjDYBG/Dn4MS.ssrUreLjFT5Wgk9k4PsLhzRJRXbd7Tv1Dhlnq",
-    "delete": false
-  },
-  {
     "id": "4",
     "nombre": "Lau",
     "email": "lau@dksjdka.com",
     "contrasenia": "$2a$10$gfXOeKaXt64QMSqT2lgf0eTOCGjOAhacUOsPlyN0N2R4Xn.pns9KC",
+    "delete": true
+  },
+  {
+    "id": "1",
+    "nombre": "xio",
+    "email": "xio@kjasdkjsa.com",
+    "contrasenia": "$2a$10$h2bjqvpLwn9l4UcJLy161.kavHkM0GkfP1o1sCz.kf9cmZ9OBpjQi",
+    "delete": true
+  },
+  {
+    "id": "2",
+    "nombre": "Flor",
+    "email": "flor@sjkdjsakd.com",
+    "contrasenia": "$2a$10$WPSoJ.TWmCmmu9XEa1UJfud0CJJJSWzSHnqSvdQ0mmaz2Cd7C8ylm",
+    "delete": true
+  },
+  {
+    "id": "1",
+    "nombre": "xio",
+    "email": "xio@kjasdkjsa.com",
+    "contrasenia": "$2a$10$pFpIjd73mJBd3t7EltmzwOFjiLv3Xsvg4YTA/pt64IOSB573utCoa",
+    "delete": true
+  },
+  {
+    "id": "2",
+    "nombre": "Flor",
+    "email": "flor@sjkdjsakd.com",
+    "contrasenia": "$2a$10$8tekXouPZ3/AQzlvlh0djunsJQE2faQHiVjhNOt2ygdRoVwlKonM.",
+    "delete": true
+  },
+  {
+    "id": "3",
+    "nombre": "lau",
+    "email": "lau@dksjdka.com",
+    "contrasenia": "$2a$10$2O62p0ZowAQyRGS/1G0D2urLR.kyliNRYrm6ahKDbxWo08poKmFXy",
+    "delete": true
+  },
+  {
+    "id": "3",
+    "nombre": "Laura",
+    "email": "lau@dksjdka.com",
+    "contrasenia": "$2a$10$KtwnYvxASVD80mBZIsCvvOTUVrN0b4a2NVj4VimgdAQenxLfxs16G",
+    "delete": true
+  },
+  {
+    "id": "1",
+    "nombre": "xio",
+    "email": "xio@kjasdkjsa.com",
+    "contrasenia": "$2a$10$DMxR1B2BRQsdOQFYrwxuBulIYICuFPcHK8AXih4C/7db.uqxs7Ebe",
     "delete": false
+  },
+  {
+    "id": "2",
+    "nombre": "flor",
+    "email": "flor@sjkdjsakd.com",
+    "contrasenia": "$2a$10$nJNJ7k9OzYOGIweAyI1VietqehrYUSLjLXoVzvyXIX6G2aVRieNaW",
+    "delete": false
+  },
+  {
+    "id": "3",
+    "nombre": "lau",
+    "email": "lau@dksjdka.com",
+    "contrasenia": "$2a$10$lLYVLc8Azh88AYC.hG73N.yEAqW48UAF7vOxbRjUa06ncqXLKCGKe",
+    "delete": true
   }
 ]

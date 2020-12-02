@@ -108,46 +108,30 @@ let userController = {
     res.send("Modificaste el usuario " + req.body.nombre);
     //res.render('productsViews/list', {productsFile, toThousand}  );
     //res.redirect('/products/list');
-  },
+  } ,
 
   destroy: function (req, res, next) {
 
-
     var idUser = req.params.id;
 
-    var userFound;
-    for (var i = 0; i < usersFile.length; i++) {
-      if (usersFile[i].id == idUser) {
-        userFound = usersFile[i];
-        break;
-      }
-    }
-    if (userFound) {
-
-      var userDeleteTrue = usersFile.map(function (user) {
-        if (user.id == idUser && user.delete != false) {
+       var userDeleteTrue = usersFile.map(function (user) {
+        if (user.id == idUser) {
           user.delete = true;
         }
+        
+        console.log(userDeleteTrue);
         return user;
       });
 
 
       userDestroyJson = JSON.stringify(userDeleteTrue, null, 2);
       fs.writeFileSync(__dirname + "/../Data/usersFile.json", userDestroyJson);
-
-      res.send("Eliminaste el Usuario " + idUser);
-
-      // res.redirect('home');
-
-
-    } else {
-      res.send('No se ha encontrado el usuario con Id: ' + idUser)
-      //res.render('usersViews/list', {usersFile}  );
-    };
-
-
-
-  },
+ 
+     res.send("Eliminaste el Usuario " + idUser);
+     // res.redirect('usersViews/ulist');
+      
+      
+  } ,
 
   list: function (req, res, next) {
 
@@ -161,6 +145,7 @@ let userController = {
 
     res.render('usersViews/uList', {usersFile:userList});
   }
+
 };//cierre controller
 
 module.exports = userController;
