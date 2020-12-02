@@ -4,6 +4,8 @@ function leerJSON() {
   return JSON.parse(fs.readFileSync(__dirname + '/../Data/usersFile.json', { encoding: "utf-8" }));
 }
 let usersFile = leerJSON();
+let { check, validationResult, body } = require('express-validator');
+let bcrypt = require('bcrypt');
 
 
 let userController = {
@@ -14,17 +16,23 @@ let userController = {
   storeRegistro: function (req, res, next) {
     //alert("Se ha registrado un usuario");
     let registroUser = {
-      ...req.body,
-      delete : false
-
+      nombre: req.body.nombre,
+      email: req.body.email,
+      contrasenia: bcrypt.hashSync(req.body.contrasenia, 10),
+      delete: false
+      //  cambie el ...req para qu no tome laconfimacion contraseña n el jason 
     };
 
+    let errors = validationResult(req);
+    if (errors.isEmpty()) {
+      usersFile.push(registroUser);
+      userJson = JSON.stringify(usersFile, null, 2);
+      fs.writeFileSync(__dirname + '/../Data/usersFile.json', userJson);
 
-    usersFile.push(registroUser);
-    userJson = JSON.stringify(usersFile, null, 2);
-    fs.writeFileSync(__dirname + '/../Data/usersFile.json', userJson);
-
-    res.render('home');
+      res.render('home');
+    } else {
+      return res.render('usersViews/registro', { errors: errors.errors });
+    }
   },
   //probar el jueves 26  porque no puedo editar el usuario qu cree//
 
@@ -33,15 +41,19 @@ let userController = {
     res.render('usersViews/ingreso');
   },
   storeIngreso: function (req, res, next) {
-    console.log(req.body.name + " " + req.body.contrasenia);
-    for (var i = 0; i < usersFile.length; i++) {
-      if (usersFile[i].name == req.body.name && usersFile[i].contrasenia == req.body.contrasenia) {
-        res.render('home');
-      }
-    }
-    res.send("usuario invalido");
-
+     let errors = validationResult(req);
+    if (errors.isEmpty()) {
+       
+    } else {
+      return res.render('userViews/ingreso', { errors: errors.errors });
+    } 
   },
+  /* console.log(req.body.name + " " + req.body.contrasenia);
+  for (var i = 0; i < usersFile.length; i++) {
+    if (usersFile[i].name == req.body.name && usersFile[i].contrasenia == req.body.contrasenia) {
+      res.render('home');
+    } */
+
 
   //------ver que pasa con el encriptado de la contraseña----
   edit: function (req, res, next) {
@@ -97,9 +109,9 @@ let userController = {
     //res.redirect('/products/list');
   },
 
-  destroy: function(req, res, next){
+  destroy: function (req, res, next) {
 
-    
+
     var idUser = req.params.id;
 
     var userFound;
@@ -109,47 +121,45 @@ let userController = {
         break;
       }
     }
-    if (userFound)  {
+    if (userFound) {
 
-      var userDeleteTrue = usersFile.map(function(user){
-        if(user.id == idUser && user.delete != false){
-          user.delete=true;
+      var userDeleteTrue = usersFile.map(function (user) {
+        if (user.id == idUser && user.delete != false) {
+          user.delete = true;
         }
         return user;
       });
-  
-   
+
+
       userDestroyJson = JSON.stringify(userDeleteTrue, null, 2);
       fs.writeFileSync(__dirname + "/../Data/usersFile.json", userDestroyJson);
-      
+
       res.send("Eliminaste el Usuario " + idUser);
-     
+
       // res.redirect('home');
-  
-      
+
+
     } else {
       res.send('No se ha encontrado el usuario con Id: ' + idUser)
       //res.render('usersViews/list', {usersFile}  );
     };
-  
+
 
 
   },
 
-  list: function(req, res, next){
-    
+  list: function (req, res, next) {
 
-     let lectura = leerJSON();
 
-     var userList = lectura.filter(function(user){
-       return user.delete == false;
-     });
+    let lectura = leerJSON();
+
+    var userList = lectura.filter(function (user) {
+      return user.delete == false;
+    });
 
 
     res.send('usersViews/userlist');
-   
- }   
-
+  }
 };//cierre controller
 
 module.exports = userController;

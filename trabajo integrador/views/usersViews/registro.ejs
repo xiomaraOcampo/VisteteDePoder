@@ -2,57 +2,71 @@
 <html lang="en">
 
 <%-include("../partials/head")%>
+
 <body>
     <div class="container">
-            <!--HEADER-->
-            <header>
-                <%-include("../partials/header")%>
-                
-            </header>
-            <!--FIN HEADER-->
-            <main>
+        <!--HEADER-->
+        <header>
+            <%-include("../partials/header")%>
 
-                <!--MAIN-->  
-                
-<form  action="/users/registro" method="POST">
-    <div class="registro1">
-        <label for="id"><i class="fas fa-user"></i></label>
-        <label for="nombre"><i class="fas fa-user"></i></label>
-        <label for="email"><i class="fas fa-envelope"></i></label>
-        <label for="contrasenia"><i class="fas fa-lock"></i></i></label>
-        <label class="ultimoLabel" for="confirmacionContrasenia"><i class="fas fa-lock"></i></label>
-    </div>
-    <!-- que hace el registro 1 ? Soy xio -->
+        </header>
+        <!--FIN HEADER-->
+        <main>
 
-    <div class="registro2">
-        <h3>Crear cuenta</h3>
+            <!--MAIN-->
 
-        <input class=inputsRegistro type="text" placeholder="Id" name="id">
+            <form action="/users/registro" method="POST">
+                <div class="registro1">
+                    <label for="id"><i class="fas fa-user"></i></label>
+                    <label for="nombre"><i class="fas fa-user"></i></label>
+                    <label for="email"><i class="fas fa-envelope"></i></label>
+                    <label for="contrasenia"><i class="fas fa-lock"></i></i></label>
+                    <label class="ultimoLabel" for="confirmacionContrasenia"><i class="fas fa-lock"></i></label>
+                </div>
+                <% if (typeof errors!='undefined'){ %>
+                <p style='color:red'>ERROR</p>
+                <ul>
+                    <% for(i=0; i < errors.length; i++){ %>
+                    <li>
+                        <%=errors[i].msg %>
+                    </li>
+                    <% } %>
+                </ul>
 
-        <input class=inputsRegistro type="text" placeholder="Tu nombre" id="nombre" name="nombre">
-                 
-        <input class="inputsRegistro" type="email" placeholder="Correo electrónico"id="email" name="email">
-                  
-        <input class="inputsRegistro" type="password" placeholder="Contraseña" id="contrasenia" name="contrasenia">
-         
-        <p class="textoContraseña">!La contraseña debe tener al menos seis caracteres</p> 
-         
-        <input class="inputsRegistro" type="password" placeholder="Vuelve a escribir la contraseña" id="confirmacionContrasenia" name="confirmacionContrasenia"></p>
-      
-                     <!--Envían al home-->
-        <button class="enviar" type="submit">Crea tu cuenta en Vistete de Poder</button>
-    
-        ¿Ya tenés una cuenta? 
-     
-        <a class="aIngreso"href="\ingreso">Iniciar sesión</a>
-   </div>
-</form>
-          
-            </main>
+                <% } %>
 
-            <%-include("../partials/footer")%>
+                <div class="registro2">
+                    <h3>Crear cuenta</h3>
+
+                    <!-- <input class=inputsRegistro type="text" placeholder="Id" name="id"> -->
+
+                    <input class=inputsRegistro type="text" placeholder="Tu nombre" id="nombre" name="nombre">
+
+                    <input class="inputsRegistro" type="email" placeholder="Correo electrónico" id="email" name="email">
+
+                    <input class="inputsRegistro" type="password" placeholder="Contraseña" id="contrasenia"
+                        name="contrasenia">
+
+                    <p class="textoContraseña">!La contraseña debe tener al menos seis caracteres</p>
+
+                    <input class="inputsRegistro" type="password" placeholder="Vuelve a escribir la contraseña"
+                        id="confirmacionContrasenia" name="confirmacionContrasenia"></p>
+
+                    <!--Envían al home-->
+                    <button class="enviar" type="submit">Crea tu cuenta en Vistete de Poder</button>
+
+                    ¿Ya tenés una cuenta?
+
+                    <a class="aIngreso" href="\ingreso">Iniciar sesión</a>
+                </div>
+            </form>
+
+        </main>
+
+        <%-include("../partials/footer")%>
 
     </div>
 
 </body>
+
 </html>

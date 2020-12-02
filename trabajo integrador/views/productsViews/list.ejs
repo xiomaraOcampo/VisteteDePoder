@@ -19,7 +19,7 @@
   <% productsFile.forEach(function(product){ %>
   <li>
     Id: <%= product.id %>
-
+   <div class="fondo">
     <div class="producto-y-descripcion">
                           
       <section class="fotoProducto">
@@ -41,9 +41,9 @@
          
         <a class="remera1" href="/products/edit/<%= product.id %>"><button type="button">Editar</button></a>
 
-        <form class="remera1" action="/products/destroy/<%= product.id %>?_method=DELETE" method="POST">
+        <form class="borrar" action="/products/destroy/<%= product.id %>?_method=DELETE" method="POST">
 
-          <button class="remera1" type='submit'>Borrar</button>
+          <button type='submit'>Borrar</button>
         
         </form>
 
@@ -51,10 +51,15 @@
 
         </section>
 
+      
 
 
+<<<<<<< HEAD
 
-
+=======
+    </div>
+  </div>
+>>>>>>> 7749baf5479aa5ad24ff1dc53090cc7756db4faf
 
   </li>
   <% }); %>
