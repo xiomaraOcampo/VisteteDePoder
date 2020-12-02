@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+              <%-include("../partials/head")%>
+  
+    <body>
+        <div class="container">
+          <header>
+            <%-include("../partials/header")%>
+            
+          </header>
+
+          <main>
+      
+      
+      
+            <ul>
+         <% usersFile.forEach(function(user){ %>
+ 
+       
+        <li>
+          <form>
+          <div class="registro1">
+            <label for="id"><i class="fas fa-user"></i></label>
+            <label for="nombre"><i class="fas fa-user"></i></label>
+            <label for="email"><i class="fas fa-envelope"></i></label>
+          
+        </div>
+
+
+
+        <div class="registro2">
+          <h3> </h3>
+
+          <div class=inputsRegistro type="text" name="id"> Id: <%= user.id %> </div>
+
+          <div class=inputsRegistro type="text"  id="nombre" name="nombre">Nombre: <%= user.nombre %>  </div>
+                  
+          <div class="inputsRegistro" type="email" id="email" name="email">Email: <%= user.email %> </div>
+                    
+          
+          </div>
+        </form>
+
+ 
+        </li>
+         <% }); %>
+      </ul>
+        </main>
+ 
+    
+ 
+          <footer>
+                <%-include("../partials/footer")%>
+          
+          </footer>
+        </div>
+    </body>
+</html>

@@ -150,8 +150,6 @@ let userController = {
    
  }   
 
-  
-
 };//cierre controller
 
 module.exports = userController;
