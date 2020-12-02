@@ -68,5 +68,12 @@
     "email": "lau@dksjdka.com",
     "contrasenia": "$2a$10$lLYVLc8Azh88AYC.hG73N.yEAqW48UAF7vOxbRjUa06ncqXLKCGKe",
     "delete": true
+  },
+  {
+    "id": "4",
+    "nombre": "jose",
+    "email": "lau@dksjdka.com",
+    "contrasenia": "$2a$10$4jEpIU9EYNHXyXIUvlQDgeSK0.CBocsv3fJWXU3Ath0YsXmtqwVu2",
+    "delete": true
   }
 ]
