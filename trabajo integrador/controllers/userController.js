@@ -5,7 +5,7 @@ function leerJSON() {
 }
 let usersFile = leerJSON();
 let { check, validationResult, body } = require('express-validator');
-let bcrypt = require('bcrypt');
+let bcryptjs = require('bcryptjs');
 
 
 let userController = {
@@ -16,9 +16,10 @@ let userController = {
   storeRegistro: function (req, res, next) {
     //alert("Se ha registrado un usuario");
     let registroUser = {
+      id: req.body.id,
       nombre: req.body.nombre,
       email: req.body.email,
-      contrasenia: bcrypt.hashSync(req.body.contrasenia, 10),
+      contrasenia: bcryptjs.hashSync(req.body.contrasenia, 10),
       delete: false
       //  cambie el ...req para qu no tome laconfimacion contraseña n el jason 
     };
@@ -158,7 +159,7 @@ let userController = {
     });
 
 
-    res.send('usersViews/userlist');
+    res.render('usersViews/uList', {usersFile:userList});
   }
 };//cierre controller
 

@@ -4,5 +4,24 @@
     "email": "xiomara@gmail.com",
     "contrasenia": "$2b$10$QZ.oXs7zXnZdW3GTTCBM/OF0HnuMe3IaTKCehIZja0wMweFs8mXx6",
     "delete": false
+  },
+  {
+    "nombre": "Flor",
+    "email": "flor@sjkdjsakd.com",
+    "contrasenia": "$2a$10$eI7YHpORHLG8HGwtICI2Kux.PIY7Oae8s0ehIvTWx8wabQEWyEVsm",
+    "delete": false
+  },
+  {
+    "nombre": "María",
+    "email": "maria@sdhajs.com",
+    "contrasenia": "$2a$10$utAfjDYBG/Dn4MS.ssrUreLjFT5Wgk9k4PsLhzRJRXbd7Tv1Dhlnq",
+    "delete": false
+  },
+  {
+    "id": "4",
+    "nombre": "Lau",
+    "email": "lau@dksjdka.com",
+    "contrasenia": "$2a$10$gfXOeKaXt64QMSqT2lgf0eTOCGjOAhacUOsPlyN0N2R4Xn.pns9KC",
+    "delete": false
   }
 ]
