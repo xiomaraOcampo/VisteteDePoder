@@ -44,6 +44,9 @@ let userController = {
   storeIngreso: function (req, res, next) {
      let errors = validationResult(req);
     if (errors.isEmpty()) {
+    /*leer los usuario*/
+    /*recorro el array*/
+    
        
     } else {
       return res.render('userViews/ingreso', { errors: errors.errors });

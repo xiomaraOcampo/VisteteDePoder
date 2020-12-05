@@ -4,6 +4,18 @@
 <%-include("../partials/head")%>
 
 <body>
+    <% if (typeof errors!='undefined'){ %>
+        <p style='color:red'>ERROR</p>
+        <ul>
+            <% for(i=0; i < errors.length; i++){ %>
+            <li>
+                <%=errors[i].msg %>
+            </li>
+            <% } %>
+        </ul>
+
+        <% } %>
+
     <div class="container">
         <!--HEADER-->
         <header>
@@ -21,18 +33,7 @@
                     <label for="nombre"><i class="fas fa-user"></i></label>
                     <label for="contraseña"><i class="fas fa-lock"></i></label>
                 </div>
-                <% if (typeof errors!='undefined'){ %>
-                <p style='color:red'>ERROR</p>
-                <ul>
-                    <% for(i=0; i < errors.length; i++){ %>
-                    <li>
-                        <%=errors[i].msg %>
-                    </li>
-                    <% } %>
-                </ul>
-
-                <% } %>
-
+               
                 <div class="ingreso2">
                     <h3>Ingresar cuenta</h3>
                     <!--inputs-->

@@ -75,5 +75,19 @@
     "email": "lau@dksjdka.com",
     "contrasenia": "$2a$10$4jEpIU9EYNHXyXIUvlQDgeSK0.CBocsv3fJWXU3Ath0YsXmtqwVu2",
     "delete": true
+  },
+  {
+    "id": "33",
+    "nombre": "ana",
+    "email": "ana@gmail.com",
+    "contrasenia": "$2a$10$4d/f9.RaKAwwImPaKLi87.ONP7kD2ZX48LEkn4Z0tsH9ATViG6kTO",
+    "delete": false
+  },
+  {
+    "id": "56",
+    "nombre": "ruth",
+    "email": "ruth@gmail.com",
+    "contrasenia": "$2a$10$LFglW4qVI5j6245LbfgQAOHGkfPm9RLQHt0/2njWut/mCfeQuGT5K",
+    "delete": false
   }
 ]
