@@ -1,38 +1,14 @@
 [
   {
-    "avatar": "avatar-1605993495926.jpg",
-    "id": "1",
-    "nombre": "remera",
-    "descripcion": "     rosa     ",
-    "Categoria": "Indumentaria",
-    "talle": "M",
-    "disenio": "cortazar",
-    "cantidad": "1",
-    "precio": "1.500",
-    "delete": true
-  },
-  {
-    "avatar": "avatar-1605993511465.jpg",
-    "id": "2",
-    "nombre": " calza",
-    "descripcion": "            ",
-    "Categoria": "Indumentaria",
-    "talle": "",
-    "disenio": "",
-    "cantidad": "",
-    "precio": "2.000",
-    "delete": false
-  },
-  {
     "avatar": null,
     "id": "1",
-    "nombre": "remera",
-    "descripcion": "rosa",
+    "nombre": "barbijo",
+    "descripcion": "aaa",
     "categoria": "Indumentaria",
     "talle": "",
     "disenio": "",
     "cantidad": "",
     "precio": "",
-    "delete": true
+    "delete": false
   }
 ]

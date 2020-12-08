@@ -18,13 +18,25 @@
         <!------PONER LOS ICONOS DE CADA INPUT ACA"-->
         
     </div>
+    
+    <% if (typeof errors!='undefined'){ %>
+        <p style='color:red'>ERROR</p>
+        <ul>
+            <% for(i=0; i < errors.length; i++){ %>
+            <li>
+                <%=errors[i].msg %>
+            </li>
+            <% } %>
+        </ul>
+
+        <% } %>
 
     <div class="registro2">
         <h3>Crear producto</h3>
 
-        <input class=inputsRegistro type="text" placeholder="Id Producto" name="id">
+        <input class=inputsRegistro type="text" placeholder="Id Producto" name="id" value>
 
-        <input class=inputsRegistro type="text" placeholder="Nombre Producto" id="nombreProducto" name="nombre">
+        <input class=inputsRegistro type="text" placeholder="Nombre Producto" id="nombreProducto" name="nombre" >
         
         <textarea class="inputsRegistro"  placeholder="Descripción" name="descripcion" id="descripcion" cols="120" rows="1"></textarea><br>
      

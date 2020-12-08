@@ -6,7 +6,7 @@ function leerJSON(){
 let productsFile= leerJSON();
 const toThousand = n =>n.toString().replace(/\B(?=(\d{3})+(?!\d))/g,".");
 //let productsJson= JSON.parse(productsFile);
-
+let { check, validationResult, body } = require('express-validator');
 
 
 
@@ -37,9 +37,12 @@ let productController = {
       res.render('productsViews/create');
     }, 
     store: function(req, res, next) {
+     
     let product= {avatar:
       req.files.length>0 ? req.files[0].filename : null, //o la imagen x defecto
-      ...req.body ,
+     
+      nombre: req.body.nombre,
+     
       delete: false
     };
      /* {id: req.body.id,
@@ -51,16 +54,24 @@ let productController = {
       disenio: req.body.disenio,
       precio: req.body.precio
      }*/
+      let errors = validationResult(req);
 
+     if (errors.isEmpty()){
+      
     productsFile.push(product);
     let productsFileJson= JSON.stringify(productsFile, null, 2);
     fs.writeFileSync(__dirname + '/../Data/productsFile.json' , productsFileJson);
 
      //res.send('agregaste un producto ' + req.body.nombre);
      //res.render('productsViews/list', {productsFile, toThousand}  );
-     res.redirect('/products/list');
+     res.redirect('/products/list')
      
-    },
+     }else {
+      
+      return console.log(validationResult(req));
+     // return res.render('productsViews/create', {errors: errors.errors});
+    } ;
+  },
     edit: function(req, res, next){
       var idProduct= req.params.id;
 
@@ -77,7 +88,8 @@ let productController = {
        //res.send('No se ha encontrado el producto con Id: '+ idProduct)
        res.render('productsViews/list', {productsFile, toThousand}  );
      };
-    },
+    }
+    ,
   
 /*
 
