@@ -89,5 +89,19 @@
     "email": "ruth@gmail.com",
     "contrasenia": "$2a$10$LFglW4qVI5j6245LbfgQAOHGkfPm9RLQHt0/2njWut/mCfeQuGT5K",
     "delete": false
+  },
+  {
+    "id": "29",
+    "nombre": "xiomara",
+    "email": "xiomara@gmail.com",
+    "contrasenia": "$2a$10$5g.6kZEIAxiQAoJAj6juXugwFK7GBXLhvvk2JXOuOCb.INdY7Q5fe",
+    "delete": false
+  },
+  {
+    "id": "25",
+    "nombre": "pablo",
+    "email": "pablo@gmail.com",
+    "contrasenia": "$2a$10$0m9p2WiwlJBpFADUa2AQiu5Iskkt3LevTHH/ZVU44jwOBmG5cSmPW",
+    "delete": false
   }
 ]
