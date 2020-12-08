@@ -35,32 +35,47 @@ let userController = {
       return res.render('usersViews/registro', { errors: errors.errors });
     }
   },
-  //probar el jueves 26  porque no puedo editar el usuario qu cree//
+
 
 
   ingreso: function (req, res, next) {
     res.render('usersViews/ingreso');
   },
   storeIngreso: function (req, res, next) {
-     let errors = validationResult(req);
+    let errors = validationResult(req);
+    console.log(errors);
+    let usuarioAIngresar;
     if (errors.isEmpty()) {
-    /*leer los usuario*/
-    /*recorro el array*/
-    
-       
-    } else {
-      return res.render('userViews/ingreso', { errors: errors.errors });
-    } 
-  },
-  /* console.log(req.body.name + " " + req.body.contrasenia);
-  for (var i = 0; i < usersFile.length; i++) {
-    if (usersFile[i].name == req.body.name && usersFile[i].contrasenia == req.body.contrasenia) {
+
+
+      /*recorro el array*/
+
+      for (let i = 0; i < usersFile.length; i++) {
+        if (usersFile[i].email == req.body.email) {
+          if (bcryptjs.compareSync(req.body.contrasenia, usersFile[i].contrasenia)) {
+            usuarioAIngresar = usersFile[i];
+            break;
+          }
+        }
+
+      }
+
+      if (usuarioAIngresar == undefined) {
+        return res.render('usersViews/ingreso', {
+          errors: [
+            { msg: 'Credenciales invalidas' }
+          ]
+        });
+      }
+      req.session.usuarioIngresado = usuarioAIngresar;
       res.render('home');
-    } */
+ 
+    } else {
+      return res.render('usersViews/ingreso', { errors: errors.errors });
+    }
+  },
 
-
-  //------ver que pasa con el encriptado de la contraseña----
-  edit: function (req, res, next) {
+  edit: function (req,res,next) {
     //  res.render('usersViews/edit');
 
 
@@ -111,30 +126,30 @@ let userController = {
     res.send("Modificaste el usuario " + req.body.nombre);
     //res.render('productsViews/list', {productsFile, toThousand}  );
     //res.redirect('/products/list');
-  } ,
+  },
 
   destroy: function (req, res, next) {
 
     var idUser = req.params.id;
 
-       var userDeleteTrue = usersFile.map(function (user) {
-        if (user.id == idUser) {
-          user.delete = true;
-        }
-        
-        console.log(userDeleteTrue);
-        return user;
-      });
+    var userDeleteTrue = usersFile.map(function (user) {
+      if (user.id == idUser) {
+        user.delete = true;
+      }
+
+      console.log(userDeleteTrue);
+      return user;
+    });
 
 
-      userDestroyJson = JSON.stringify(userDeleteTrue, null, 2);
-      fs.writeFileSync(__dirname + "/../Data/usersFile.json", userDestroyJson);
- 
-     res.send("Eliminaste el Usuario " + idUser);
-     // res.redirect('usersViews/ulist');
-      
-      
-  } ,
+    userDestroyJson = JSON.stringify(userDeleteTrue, null, 2);
+    fs.writeFileSync(__dirname + "/../Data/usersFile.json", userDestroyJson);
+
+    res.send("Eliminaste el Usuario " + idUser);
+    // res.redirect('usersViews/ulist');
+
+
+  },
 
   list: function (req, res, next) {
 
@@ -146,7 +161,7 @@ let userController = {
     });
 
 
-    res.render('usersViews/uList', {usersFile:userList});
+    res.render('usersViews/uList', { usersFile: userList });
   }
 
 };//cierre controller
