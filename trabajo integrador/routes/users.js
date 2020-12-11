@@ -23,7 +23,7 @@ router.post('/ingreso', [
 //edicion de usuarios
 
 router.get('/edit/:id', userController.edit);
-router.put('/edit/:id', userController.update);
+router.put('/edit/:id', validations.usersRegister, userController.update);
 
 router.delete('/destroy/:id', userController.destroy); 
 router.get('/list',userController.list);

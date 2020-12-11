@@ -22,7 +22,17 @@
         <label for="contrasenia"><i class="fas fa-lock"></i></i></label>
         <label class="ultimoLabel" for="confirmacionContrasenia"><i class="fas fa-lock"></i></label>
     </div>
+    <% if (typeof errors!='undefined'){ %>
+        <p style='color:red'>ERROR</p>
+        <ul>
+            <% for(i=0; i < errors.length; i++){ %>
+            <li>
+                <%=errors[i].msg %>
+            </li>
+            <% } %>
+        </ul>
 
+        <% } %>
     <div class="registro2">
         <h3>Editar cuenta</h3>
 
@@ -32,11 +42,11 @@
                  
         <input class="inputsRegistro" type="email" placeholder="Correo electrónico"id="email" name="email" value="<%= userFound.email %>">
                   
-        <input class="inputsRegistro" type="password" placeholder="Contraseña" id="contrasenia" name="contrasenia"value="<%= userFound.contrasenia %>">
+        <input class="inputsRegistro" type="password" placeholder="Escribe una nueva contraseña" id="contrasenia" name="contrasenia"value="">
          
         <p class="textoContraseña">!La contraseña debe tener al menos seis caracteres</p> 
          
-        <input class="inputsRegistro" type="password" placeholder="Vuelve a escribir la contraseña" id="confirmacionContrasenia" name="confirmacionContrasenia" value="<%= userFound.confirmacionContrasenia%>"> </p>
+        <input class="inputsRegistro" type="password" placeholder="Vuelve a escribir la contraseña" id="confirmacionContrasenia" name="confirmacionContrasenia" value=""> </p>
       
                      <!--Envían al home-->
         <button class="enviar" type="submit">Edita tu cuenta en Vistete de Poder</button>
@@ -45,8 +55,9 @@
      
         <a class="aIngreso"href="\ingreso">Iniciar sesión</a>
    </div>
+   
 </form>
-          
+
             </main>
 
             <%-include("../partials/footer")%>

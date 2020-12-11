@@ -1,93 +1,41 @@
 [
   {
-    "id": "4",
-    "nombre": "Lau",
-    "email": "lau@dksjdka.com",
-    "contrasenia": "$2a$10$gfXOeKaXt64QMSqT2lgf0eTOCGjOAhacUOsPlyN0N2R4Xn.pns9KC",
-    "delete": true
-  },
-  {
     "id": "1",
-    "nombre": "xio",
+    "nombre": "x",
     "email": "xio@kjasdkjsa.com",
-    "contrasenia": "$2a$10$h2bjqvpLwn9l4UcJLy161.kavHkM0GkfP1o1sCz.kf9cmZ9OBpjQi",
-    "delete": true
-  },
-  {
-    "id": "2",
-    "nombre": "Flor",
-    "email": "flor@sjkdjsakd.com",
-    "contrasenia": "$2a$10$WPSoJ.TWmCmmu9XEa1UJfud0CJJJSWzSHnqSvdQ0mmaz2Cd7C8ylm",
-    "delete": true
-  },
-  {
-    "id": "1",
-    "nombre": "xio",
-    "email": "xio@kjasdkjsa.com",
-    "contrasenia": "$2a$10$pFpIjd73mJBd3t7EltmzwOFjiLv3Xsvg4YTA/pt64IOSB573utCoa",
-    "delete": true
-  },
-  {
-    "id": "2",
-    "nombre": "Flor",
-    "email": "flor@sjkdjsakd.com",
-    "contrasenia": "$2a$10$8tekXouPZ3/AQzlvlh0djunsJQE2faQHiVjhNOt2ygdRoVwlKonM.",
-    "delete": true
-  },
-  {
-    "id": "3",
-    "nombre": "lau",
-    "email": "lau@dksjdka.com",
-    "contrasenia": "$2a$10$2O62p0ZowAQyRGS/1G0D2urLR.kyliNRYrm6ahKDbxWo08poKmFXy",
-    "delete": true
-  },
-  {
-    "id": "3",
-    "nombre": "Laura",
-    "email": "lau@dksjdka.com",
-    "contrasenia": "$2a$10$KtwnYvxASVD80mBZIsCvvOTUVrN0b4a2NVj4VimgdAQenxLfxs16G",
-    "delete": true
-  },
-  {
-    "id": "1",
-    "nombre": "xio",
-    "email": "xio@kjasdkjsa.com",
-    "contrasenia": "$2a$10$DMxR1B2BRQsdOQFYrwxuBulIYICuFPcHK8AXih4C/7db.uqxs7Ebe",
+    "contrasenia": "$2a$10$UmCy0CYwtQ10zs28debbx.LS.wrnfiGSBQy8u./Nym9LdBpsJv2zW",
     "delete": false
   },
   {
     "id": "2",
-    "nombre": "flor",
+    "nombre": "florencia ",
     "email": "flor@sjkdjsakd.com",
-    "contrasenia": "$2a$10$nJNJ7k9OzYOGIweAyI1VietqehrYUSLjLXoVzvyXIX6G2aVRieNaW",
+    "contrasenia": "",
+    "confirmacionContrasenia": "",
     "delete": false
   },
   {
     "id": "3",
-    "nombre": "lau",
+    "nombre": "Laurita",
     "email": "lau@dksjdka.com",
-    "contrasenia": "$2a$10$lLYVLc8Azh88AYC.hG73N.yEAqW48UAF7vOxbRjUa06ncqXLKCGKe",
-    "delete": true
+    "contrasenia": "",
+    "confirmacionContrasenia": "",
+    "delete": false
   },
   {
     "id": "4",
-    "nombre": "jose",
+    "nombre": "josefina",
     "email": "lau@dksjdka.com",
-    "contrasenia": "$2a$10$4jEpIU9EYNHXyXIUvlQDgeSK0.CBocsv3fJWXU3Ath0YsXmtqwVu2",
-    "delete": true
-  },
-  {
-    "id": "33",
-    "nombre": "ana",
-    "email": "ana@gmail.com",
-    "contrasenia": "$2a$10$4d/f9.RaKAwwImPaKLi87.ONP7kD2ZX48LEkn4Z0tsH9ATViG6kTO",
+    "contrasenia": "",
+    "confirmacionContrasenia": "",
     "delete": false
   },
   {
     "id": "56",
-    "nombre": "ruth",
+    "nombre": "ruthas",
     "email": "ruth@gmail.com",
     "contrasenia": "$2a$10$LFglW4qVI5j6245LbfgQAOHGkfPm9RLQHt0/2njWut/mCfeQuGT5K",
+    "confirmacionContrasenia": "",
     "delete": false
   },
   {

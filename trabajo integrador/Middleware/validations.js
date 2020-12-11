@@ -14,6 +14,7 @@ let {check,validationResult,body}= require('express-validator');
   }).withMessage('Contraseña no coinciden') 
 
     ],
+
     productCreated:[
       check ('nombre').isLength({min:1}).withMessage('Este campo debe estar completo')
      // check ('descripcion').isLength({min:1}).withMessage('Este campo debe estar completo')

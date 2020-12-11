@@ -102,30 +102,50 @@ let userController = {
 
   update: function (req, res, next) {
     var idUser = req.params.id;
-    var userFound = [];
+    var userAEditar = [];
+    let errors = validationResult(req);
+    console.log(errors);
+       //isEmpty= esta vacia
+    if (errors.isEmpty()) {
+    
 
     for (var i = 0; i < usersFile.length; i++) {
       if (usersFile[i].id == idUser) {
 
         let editUser = {
           id: idUser,
-          ...req.body,
+          nombre: req.body.nombre,
+          email: req.body.email,
+          contrasenia: bcryptjs.hashSync(req.body.contrasenia, 10),
           delete: false
         };
-        //editUser.id = idUser;
-
-        userFound.push(editUser);
-
+        userAEditar.push(editUser);
       } else {
-        userFound.push(usersFile[i]);
+        userAEditar.push(usersFile[i]);
       }
-
     }
-    editUserJson = JSON.stringify(userFound, null, 2);
+    editUserJson = JSON.stringify(userAEditar, null, 2);
     fs.writeFileSync(__dirname + '/../Data/usersFile.json', editUserJson);
     res.send("Modificaste el usuario " + req.body.nombre);
     //res.render('productsViews/list', {productsFile, toThousand}  );
     //res.redirect('/products/list');
+  }else{
+    var userFound;
+    for (var i = 0; i < usersFile.length; i++) {
+      if (usersFile[i].id == idUser) {
+        userFound = usersFile[i];
+        break;
+      }
+    }
+    console.log(userFound)
+    res.render('usersViews/editU', { userFound, errors: errors.errors });
+    //me devuelve la vista con errores y el usuario pero ya no me deja editar
+    //res.redirect( '/users/edit/' + idUser,{userFound});
+    //asi redirecciona pero no manda los errores a la vista
+    //res.redirect( '/users/edit/' + idUser,{userFound:userFound, errors: errors.errors});
+    //cuando agrego los errores no redirecciona y devuelve este cartel: undefined. Redirecting to /users/edit/1
+  
+  }
   },
 
   destroy: function (req, res, next) {
