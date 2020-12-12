@@ -1,13 +1,67 @@
 [
   {
-    "avatar": null,
     "id": "1",
-    "nombre": "barbijo",
-    "descripcion": "aaa",
+    "nombre": "florencia ",
+    "descripcion": "",
+    "avatar": null,
     "categoria": "Indumentaria",
     "talle": "",
     "disenio": "",
-    "cantidad": "",
+    "precio": "",
+    "delete": false
+  },
+  {
+    "id": "2",
+    "nombre": "remerassssssssssssssssssssssssss",
+    "descripcion": "",
+    "avatar": null,
+    "categoria": "Indumentaria",
+    "talle": "",
+    "disenio": "",
+    "precio": "",
+    "delete": false
+  },
+  {
+    "id": "2",
+    "nombre": "",
+    "descripcion": "",
+    "avatar": null,
+    "categoria": "Indumentaria",
+    "talle": "",
+    "disenio": "",
+    "precio": "",
+    "delete": false
+  },
+  {
+    "id": "3",
+    "nombre": "florencia ",
+    "descripcion": "",
+    "avatar": null,
+    "categoria": "Indumentaria",
+    "talle": "",
+    "disenio": "",
+    "precio": "",
+    "delete": false
+  },
+  {
+    "id": "6",
+    "nombre": "pamela",
+    "descripcion": "",
+    "avatar": null,
+    "categoria": "Indumentaria",
+    "talle": "",
+    "disenio": "",
+    "precio": "",
+    "delete": false
+  },
+  {
+    "id": "28",
+    "nombre": " calzadosssssss",
+    "descripcion": "",
+    "avatar": null,
+    "categoria": "Indumentaria",
+    "talle": "",
+    "disenio": "",
     "precio": "",
     "delete": false
   }

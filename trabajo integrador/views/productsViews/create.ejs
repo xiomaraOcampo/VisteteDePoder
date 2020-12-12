@@ -9,34 +9,36 @@
             <!--FIN HEADER-->
             <main>
 
-                <!--MAIN-->  
+                <!--MAIN-->
+
+                <% if (typeof errors!='undefined'){ %>
+                    <p style='color:red'>ERROR</p>
+                    <ul>
+                        <% for(i=0; i < errors.length; i++){ %>
+                        <li>
+                            <%=errors[i].msg %>
+                        </li>
+                        <% } %>
+                    </ul>
+            
+                    <% } %>
+              
                 
 <form  action="/products/create" method="POST" enctype="multipart/form-data">
     <div class="registro1">
-        <label for="nombreProducto"></label>
+        <label for="nombre"></label>
         <label for="descripcion"></label>
         <!------PONER LOS ICONOS DE CADA INPUT ACA"-->
         
     </div>
     
-    <% if (typeof errors!='undefined'){ %>
-        <p style='color:red'>ERROR</p>
-        <ul>
-            <% for(i=0; i < errors.length; i++){ %>
-            <li>
-                <%=errors[i].msg %>
-            </li>
-            <% } %>
-        </ul>
-
-        <% } %>
-
+   
     <div class="registro2">
         <h3>Crear producto</h3>
 
         <input class=inputsRegistro type="text" placeholder="Id Producto" name="id" value>
 
-        <input class=inputsRegistro type="text" placeholder="Nombre Producto" id="nombreProducto" name="nombre" >
+        <input class=inputsRegistro type="text" placeholder="Nombre Producto" id="name" name="nombre" value="">
         
         <textarea class="inputsRegistro"  placeholder="Descripción" name="descripcion" id="descripcion" cols="120" rows="1"></textarea><br>
      

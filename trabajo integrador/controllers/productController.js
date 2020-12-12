@@ -37,26 +37,29 @@ let productController = {
       res.render('productsViews/create');
     }, 
     store: function(req, res, next) {
-     
-    let product= {avatar:
-      req.files.length>0 ? req.files[0].filename : null, //o la imagen x defecto
+      let errors = validationResult(req);
+      //console.log(errors.isEmpty());
+         //isEmpty= esta vacia
+      if (errors.isEmpty()) {
+    
+    /*let product= {
+      avatar:req.files.length>0 ? req.files[0].filename : null, //o la imagen x defecto
      
       nombre: req.body.nombre,
      
       delete: false
-    };
-     /* {id: req.body.id,
+    };*/
+    let product=
+      {id: req.body.id,
       nombre: req.body.nombre,
       descripcion: req.body.descripcion,
-      avatar: req.file[0].filename,
+      avatar: req.files.length>0 ? req.files[0].filename : null, //o la imagen x defecto
       categoria: req.body.categoria,
       talle: req.body.talle,
       disenio: req.body.disenio,
-      precio: req.body.precio
-     }*/
-      let errors = validationResult(req);
-
-     if (errors.isEmpty()){
+      precio: req.body.precio,
+      delete: false
+     }
       
     productsFile.push(product);
     let productsFileJson= JSON.stringify(productsFile, null, 2);
@@ -65,11 +68,11 @@ let productController = {
      //res.send('agregaste un producto ' + req.body.nombre);
      //res.render('productsViews/list', {productsFile, toThousand}  );
      res.redirect('/products/list')
-     
+    // }
      }else {
-      
-      return console.log(validationResult(req));
-     // return res.render('productsViews/create', {errors: errors.errors});
+     //res.send('hay errores')
+     //return console.log(validationResult(req));
+     return res.render('productsViews/create', {errors: errors.errors});
     } ;
   },
     edit: function(req, res, next){
