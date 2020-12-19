@@ -30,7 +30,7 @@ router.get('/detailProduct/:id', productController.detail);
 //ruta para los formularios del administrador, para cargar productos
 
 router.get('/create' ,productController.create);
-router.post('/create', validations.productCreated ,upload.any('avatar'),productController.store);
+router.post('/create',upload.any('avatar'), validations.productCreated,productController.store);
 
 //ruta para los formularios del administrador, para modificar productos
 

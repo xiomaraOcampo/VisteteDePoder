@@ -42,37 +42,66 @@ let productController = {
       avatar:
         req.files.length > 0 ? req.files[0].filename : null, //o la imagen x defecto
 
+      var idProduct= req.params.id;
+      
+      var productFound;
+        for(var i=0; i< productsFile.length; i++){
+          if(productsFile[i].id == idProduct){
+            productFound=productsFile[i];
+            break;
+          };
+        };
+          if(productFound){
+         res.render('productsViews/detailProducts', {productFound});
+        }else{
+          res.send('No se ha encontrado el producto con Id: '+ idProduct)
+        }
+      /*
+        res.render('productsViews/detailProducts');*/
+      }, 
+      //esta función es para el formulario de creación de productos// 
+    
+    create: function(req, res, next) {
+      res.render('productsViews/create');
+    }, 
+    store: function(req, res, next) {
+      let errors = validationResult(req);
+      //console.log(errors.isEmpty());
+         //isEmpty= esta vacia
+      if (errors.isEmpty()) {
+    
+    /*let product= {
+      avatar:req.files.length>0 ? req.files[0].filename : null, //o la imagen x defecto
+     
       nombre: req.body.nombre,
 
       delete: false
-    };
-    /* {id: req.body.id,
-     nombre: req.body.nombre,
-     descripcion: req.body.descripcion,
-     avatar: req.file[0].filename,
-     categoria: req.body.categoria,
-     talle: req.body.talle,
-     disenio: req.body.disenio,
-     precio: req.body.precio
-    }*/
-    let errors = validationResult(req);
-    console.log(validationResult(req));
+    };*/
+    let product=
+      {id: req.body.id,
+      nombre: req.body.nombre,
+      descripcion: req.body.descripcion,
+      avatar: req.files.length>0 ? req.files[0].filename : null, //o la imagen x defecto
+      categoria: req.body.categoria,
+      talle: req.body.talle,
+      disenio: req.body.disenio,
+      precio: req.body.precio,
+      delete: false
+     }
+      
+    productsFile.push(product);
+    let productsFileJson= JSON.stringify(productsFile, null, 2);
+    fs.writeFileSync(__dirname + '/../Data/productsFile.json' , productsFileJson);
 
-    /* if (errors.isEmpty()) {
-
-      productsFile.push(product);
-      let productsFileJson = JSON.stringify(productsFile, null, 2);
-      fs.writeFileSync(__dirname + '/../Data/productsFile.json', productsFileJson);
-
-      //res.send('agregaste un producto ' + req.body.nombre);
-      //res.render('productsViews/list', {productsFile, toThousand}  );
-      res.redirect('/products/list')
-
-    } else {
-
-      return console.log(validationResult(req));
-      // return res.render('productsViews/create', {errors: errors.errors});
-    }; */
+     //res.send('agregaste un producto ' + req.body.nombre);
+     //res.render('productsViews/list', {productsFile, toThousand}  );
+     res.redirect('/products/list')
+    // }
+     }else {
+     //res.send('hay errores')
+     //return console.log(validationResult(req));
+     return res.render('productsViews/create', {errors: errors.errors});
+    } ;
   },
   edit: function (req, res, next) {
     var idProduct = req.params.id;
