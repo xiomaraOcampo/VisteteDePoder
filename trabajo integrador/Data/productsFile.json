@@ -64,5 +64,16 @@
     "disenio": "",
     "precio": "",
     "delete": false
+  },
+  {
+    "id": "",
+    "nombre": "cc",
+    "descripcion": "cc",
+    "avatar": null,
+    "categoria": "Indumentaria",
+    "talle": "",
+    "disenio": "",
+    "precio": "1322",
+    "delete": false
   }
 ]
