@@ -51,5 +51,12 @@
     "email": "pablo@gmail.com",
     "contrasenia": "$2a$10$0m9p2WiwlJBpFADUa2AQiu5Iskkt3LevTHH/ZVU44jwOBmG5cSmPW",
     "delete": false
+  },
+  {
+    "id": "6",
+    "nombre": "Laura",
+    "email": "laura@gmail.com",
+    "contrasenia": "$2a$10$ta/biYaTlsPQBihZSB3sO.zgBwG6bAcKS7ZpaOt3Zg/DECkemIiMy",
+    "delete": false
   }
 ]

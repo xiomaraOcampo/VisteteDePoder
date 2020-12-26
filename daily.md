@@ -1,6 +1,120 @@
 Dailies
 
 
+
+
+----------------------------------------------------------------------------------------------------------
+
+23/12/2020
+
+
+LAU
+ayer: repasando base de datos en playground
+hoy: crud de base de datos con MOVIES
+mañana: seguir con base de datos
+XIO
+ayer: repasando base de datos en playground
+hoy: crud de base de datos con MOVIES
+mañana: seguir con base de datos y actualizando playground
+FLOR
+ayer: estuve estudiando las rutas
+hoy: hacer lo que teniamos pendiente en trello
+mañana: repasar bases de datos
+
+
+----------------------------------------------------------------------------------------------------------
+
+19/12/2020
+
+LAU
+ayer: validaciones de producto,
+inconvenientes: los merge que pude resolver como pude,
+hoy: estudiar lunes / ver GIT,
+
+Xio
+ayer: base de datos, hice el primer trabajo de playground,
+inconvenientes: sin inconvenientes,
+hoy: ver lo del lunes y repasar la última clase,
+
+Flor
+ayer: repaso de la clase del jueves,
+inconvenientes: intenté conectar el código con la base de datos y aún no me sale,
+hoy: estudiar para la clase del lunes,
+----------------------------------------------------------------------------------------------------------
+12/12/2020
+LAU
+ayer: curso de Git
+inconvenientes: no resolvi las validaciones
+hoy: terminar curso de Git
+mañana: mercado liebre
+
+Xio
+ayer: playground DB
+inconvenientes: no me enfrente a DB
+hoy: trabajito de DB
+
+Flor
+ayer: Mercadoliebre me arme un trello privado
+inconvenientes: las validaciones del edit de usuarios
+hoy: ver si resolvemos validaciones
+----------------------------------------------------------------------------------------------------------
+08/12/2020
+
+LAU
+ayer: estuve con validaciones
+inconvenientes: que no me salió
+hoy: sigo viendo de buscar la solución
+mañana: mercado liebre
+
+Xio
+ayer: login, me llevó su tiempo
+inconvenientes: prestar atención a la sintaxis
+hoy: ver lo de validaciones y practicar base de datos
+
+Flor
+ayer: repaso de de la logica. Mercadoliebre
+inconvenientes: me lleva mucho tiempo, me olvide de la reunion de equipo!
+hoy: seguir con Ml y pensar en algunos ajustes para nuestro proyecto
+----------------------------------------------------------------------------------------------------------
+05/12/2020
+
+LAU
+ayer: repasando validaciones, lista usuarios
+inconvenientes: ulist no funcionaba el boton delete, xq en la vista habia doble form.
+hoy: terminar de repasar validaciones
+
+XIO
+ayer: middlewares de validaciones
+inconvenientes: middlewares, login
+hoy: terminar el login, bases de datos, cookies
+
+FLOR
+ayer: video de heroes
+inconvenientes: paciencia
+hoy: mercado liebre para fijar conceptos
+----------------------------------------------------------------------------------------------------------
+02/12/2020
+
+LAU
+ayer: estuve luchando con el merge
+inconvenientes: que no supe resolver el conflicto
+hoy: ver el conflicto y hacer la validación;
+
+XIO
+ayer: hice las vaidaciones de los usuarios, hice los bcrypt, session y cookies, y el login
+inconvenientes: con el login, tengo que ver el video del 30/11/2020
+hoy: empezar a ver lo de la clase de mañana, y si puedo avanzo con el login
+
+FLOR
+ayer: hice un login paralelo, y con el css del detailProducts
+inconvenientes: tuve algunos pero fui resolviendo (especialemente con session y cookies)
+hoy: estudiar para mañana;
+
+
+
+
+
+----------------------------------------------------------------------------------------------------------
 28/11/2020
 
 
@@ -19,6 +133,8 @@ ayer: estuve viendo validaciones, lo del encriptado de la contraseña, y empecé
 inconvenientes: no tuve;
 hoy: que funcione todo e ABM de usuario
 
+
+----------------------------------------------------------------------------------------------------------
 24/11/2020
 
 
@@ -37,6 +153,8 @@ ayer: estuve con la edicion de usuarios y empece a ver el responsive.
 inconvenientes: no tuve
 hoy: seguir avanzando con el responsive.
 
+
+----------------------------------------------------------------------------------------------------------
 21/11/2020
 
 
@@ -54,7 +172,7 @@ FLOR
 ayer: estuve luchando con GITHUB, y con con el proyecto integrador.
 inconvenientes: que no recordaba algunos conceptos, y no funcionaba MULTER en el proyecto integrador.
 hoy: seguir avanzando con el proyecto integrador
-
+----------------------------------------------------------------------------------------------------------
 18/11/2020
 
 
@@ -73,7 +191,7 @@ ayer: estuve con playground
 inconvenientes: no me esta funcionando hacer los ej de playground
 hoy: ver de que se trata el sprint 4
 
-
+---------------------------------------------------------------------------------------------------------
 15/11/2020
 
 Lau:
