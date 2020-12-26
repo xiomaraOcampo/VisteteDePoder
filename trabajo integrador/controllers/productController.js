@@ -12,7 +12,7 @@ let { check, validationResult, body } = require('express-validator');
 
 let productController = {
 
-    detail: function(req, res, next) {
+    detailAdm: function(req, res, next) {
 
       var idProduct= req.params.id;
       
@@ -24,13 +24,32 @@ let productController = {
           };
         };
           if(productFound){
-         res.render('productsViews/detailProducts', {productFound});
+         res.render('productsViews/detailProductsAdm', {productFound});
         }else{
           res.send('No se ha encontrado el producto con Id: '+ idProduct)
         }
       /*
         res.render('productsViews/detailProducts');*/
       }, 
+      detailUs: function(req, res, next) {
+
+        var idProduct= req.params.id;
+        
+        var productFound;
+          for(var i=0; i< productsFile.length; i++){
+            if(productsFile[i].id == idProduct){
+              productFound=productsFile[i];
+              break;
+            };
+          };
+            if(productFound){
+           res.render('productsViews/detailProductsUs', {productFound});
+          }else{
+            res.send('No se ha encontrado el producto con Id: '+ idProduct)
+          }
+        /*
+          res.render('productsViews/detailProducts');*/
+        },
       //esta función es para el formulario de creación de productos// 
     
     create: function(req, res, next) {
@@ -54,6 +73,7 @@ let productController = {
       nombre: req.body.nombre,
       descripcion: req.body.descripcion,
       avatar: req.files.length>0 ? req.files[0].filename : null, //o la imagen x defecto
+      // avatar: req.files.length>0 ? req.files[0].filename :productsFile[100].avatar ,
       categoria: req.body.categoria,
       talle: req.body.talle,
       disenio: req.body.disenio,

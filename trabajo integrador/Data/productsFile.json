@@ -52,7 +52,7 @@
     "talle": "",
     "disenio": "",
     "precio": "",
-    "delete": false
+    "delete": true
   },
   {
     "id": "28",
@@ -74,6 +74,17 @@
     "talle": "",
     "disenio": "",
     "precio": "1322",
+    "delete": false
+  },
+  {
+    "id": "100",
+    "nombre": "foto default",
+    "descripcion": "default",
+    "avatar": "avatar-1608949795547.jpg",
+    "categoria": "Indumentaria",
+    "talle": "M",
+    "disenio": "freud",
+    "precio": "1000",
     "delete": false
   }
 ]

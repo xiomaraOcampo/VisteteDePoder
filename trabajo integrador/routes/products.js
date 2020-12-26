@@ -25,7 +25,8 @@ var storage = multer.diskStorage({
 
 //ruta para el detalle de productos que ve el usuario
 
-router.get('/detailProduct/:id', productController.detail);
+router.get('/detailProductAdm/:id', productController.detailAdm);
+router.get('/detailProductUs/:id', productController.detailUs);
 
 //ruta para los formularios del administrador, para cargar productos
 
