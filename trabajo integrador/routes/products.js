@@ -41,5 +41,6 @@ router.put('/edit/:id',upload.any('avatar'),productController.update);
 router.delete('/destroy/:id', productController.destroy);
 
 router.get('/list',productController.list);
+router.get('/listProductsUs',productController.listProductsUs);
 
 module.exports = router;

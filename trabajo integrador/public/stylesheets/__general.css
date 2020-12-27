@@ -58,6 +58,14 @@ button:focus{
     color:#4c4c49;
      /*quiero sacarle el borde negro al buttom*/ 
 }
+.sinSubrayado{
+    /*border: 1px solid red;*/
+    color:#4c4c49;
+    text-decoration: none;
+}
+.sinSubrayado .aCarrito{
+    width:90%;
+}
 
 /*Viewport*/
 
