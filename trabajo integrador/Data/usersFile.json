@@ -58,5 +58,34 @@
     "email": "laura@gmail.com",
     "contrasenia": "$2a$10$ta/biYaTlsPQBihZSB3sO.zgBwG6bAcKS7ZpaOt3Zg/DECkemIiMy",
     "delete": false
+  },
+  {
+    "id": "55",
+    "nombre": "Josefina",
+    "email": "jose@jose.com",
+    "contrasenia": "$2a$10$JOmGtD5kB/QrhLloDiIOhOomjCvlh01HqH3TIPhe6SN.dgmEjQh3i",
+    "delete": true
+  },
+  {
+    "id": "55",
+    "nombre": "Josefina",
+    "email": "jose@jose.com",
+    "contrasenia": "$2a$10$OcNGWq/6scRDaW5rrFoFRe6Zup/BpNQwie7ZhnqR6ARrzKm495dc.",
+    "delete": true
+  },
+  {
+    "id": "55",
+    "nombre": "Josefina",
+    "email": "jose@jose.com",
+    "contrasenia": "$2a$10$47Mbcmtg/gf8sPcOsSA4FuXwDKRxsO9f99sCnaFAij99xLnkysh7K",
+    "delete": true
+  },
+  {
+    "id": "55",
+    "nombre": "Josefina",
+    "email": "jose@jose.com",
+    "contrasenia": "$2a$10$k/VgRgL.K40jMgzwQUG9NO2QdwIwfIshlIyaQMU2gJlPwDJPJJiAy",
+    "userAvatar": "userAvatar-1609008619808.jpg",
+    "delete": false
   }
 ]

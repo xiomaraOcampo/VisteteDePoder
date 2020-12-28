@@ -25,11 +25,24 @@
             <label for="id"><i class="fas fa-user"></i></label>
             <label for="nombre"><i class="fas fa-user"></i></label>
             <label for="email"><i class="fas fa-envelope"></i></label>
-          
-        </div>
+       <% if(user.userAvatar){ %>
 
+    </div>
+        <section class="fotoProducto">
+          <article> <img src="/images/usersImages/<%= user.userAvatar %> " alt=" <%= user.userAvatar %> ">
+              
+          </article>
+      </section>
 
-
+    <% }else{ %>
+ 
+    </div>
+    <section class="fotoProducto">
+      <article> <img src="/images/usersImages/defaultImage.jpg"  alt="defaultImage.jpg">
+          <!--no lo muestra-->
+      </article>
+  </section>
+     <% }%> 
         <div class="registro2">
           <h3> </h3>
 

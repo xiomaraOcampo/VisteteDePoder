@@ -21,12 +21,25 @@
     Id: <%= product.id %>
    <div class="fondo">
     <div class="producto-y-descripcion">
-                          
+         
+      <% if(product.avatar){ %>
+
       <section class="fotoProducto">
-          <article> <img src="/images/imagesProducts/<%= product.avatar %> " alt=" <%= product.avatar %> ">
-              <!--no lo muestra-->
+          <article> <img src="/images/imagesProducts/<%= product.avatar  %> " alt=" <%= product.avatar %> ">
+              
           </article>
       </section>
+
+      <% }else{ %>
+
+        
+    
+    <section class="fotoProducto">
+      <article> <img src="/images/imagesProducts/defaultImage.jpg"  alt="defaultImage.jpg">
+          <!--no lo muestra-->
+      </article>
+  </section>
+     <% }%> 
 
       <section class="descripcion">
         <div class="remera1"> Nombre: <%= product.nombre %></div> 

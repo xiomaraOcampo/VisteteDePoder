@@ -86,5 +86,27 @@
     "disenio": "freud",
     "precio": "1000",
     "delete": false
+  },
+  {
+    "id": "7",
+    "nombre": "remera",
+    "descripcion": "jose",
+    "avatar": "avatar-1608984684695.jpg",
+    "categoria": "Merchandising",
+    "talle": "",
+    "disenio": "",
+    "precio": "2600",
+    "delete": false
+  },
+  {
+    "id": "26",
+    "nombre": "remera",
+    "descripcion": "ddd",
+    "avatar": null,
+    "categoria": "Indumentaria",
+    "talle": "",
+    "disenio": "",
+    "precio": "2333",
+    "delete": false
   }
 ]

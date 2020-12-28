@@ -20,6 +20,7 @@ let userController = {
       nombre: req.body.nombre,
       email: req.body.email,
       contrasenia: bcryptjs.hashSync(req.body.contrasenia, 10),
+      userAvatar: req.files.length>0 ? req.files[0].filename : null,
       delete: false
       //  cambie el ...req para qu no tome laconfimacion contraseña n el jason 
     };

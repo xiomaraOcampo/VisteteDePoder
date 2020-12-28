@@ -15,7 +15,7 @@
 
             <!--MAIN-->
 
-            <form action="/users/registro" method="POST">
+            <form action="/users/registro" method="POST" enctype="multipart/form-data">
                 <div class="registro1">
                     <label for="id"><i class="fas fa-user"></i></label>
                     <label for="nombre"><i class="fas fa-user"></i></label>
@@ -49,8 +49,12 @@
 
                     <p class="textoContraseña">!La contraseña debe tener al menos seis caracteres</p>
 
+     
+
                     <input class="inputsRegistro" type="password" placeholder="Vuelve a escribir la contraseña"
                         id="confirmacionContrasenia" name="confirmacionContrasenia"></p>
+
+                        <input  type="file" name="userAvatar" id="id"><br>
 
                     <!--Envían al home-->
                     <button class="enviar" type="submit">Crea tu cuenta en Vistete de Poder</button>
