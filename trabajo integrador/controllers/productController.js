@@ -189,7 +189,21 @@ let productController = {
     
          res.render('productsViews/list', {productsFile:productList, toThousand}  );
         
-      }   
+      }   ,
+      listProductsUs: function(req, res, next){
+        /*console.log({avatar: req.files[0].filename,
+         ...req.body });*/
+   
+         let lectura = leerJSON();
+
+         var productList = lectura.filter(function(product){
+           return product.delete == false;
+         });
+
+   
+        res.render('productsViews/listProductsUs', {productsFile:productList, toThousand}  );
+       
+     } 
 
     } //cierre general
       module.exports=productController;

@@ -1,7 +1,23 @@
 Dailies
 
 
+----------------------------------------------------------------------------------------------------------
 
+
+LAU
+ayer: CRUD de movies/ agregué subcategorías al proyecto/ empecé con multer para users,
+inconveniente: error de sintaxis, no me funciona multer,
+hoy: multer de usuarios/ sigo con el CRUD de movies
+
+XIO
+ayer: playground tablas, 
+inconveniente: el primer trabajo práctico ,
+hoy: terminar cuadrito, y empezar con el CRUD,
+
+FLOR
+ayer: armando CV/ detalle de usuarios / actualicé el git ("recorrido links")
+inconveniente: detalle producto no logro que borre, pero sí en detalle de usuario, (hay que hacer un list para usuarios),
+hoy: terminar lo del CV, repasar base de datos,
 
 ----------------------------------------------------------------------------------------------------------
 
