@@ -87,5 +87,13 @@
     "contrasenia": "$2a$10$k/VgRgL.K40jMgzwQUG9NO2QdwIwfIshlIyaQMU2gJlPwDJPJJiAy",
     "userAvatar": "userAvatar-1609008619808.jpg",
     "delete": false
+  },
+  {
+    "id": "65",
+    "nombre": "Laura",
+    "email": "lau@dksjdka.com",
+    "contrasenia": "$2a$10$pqg2XcOEAyMGheC03X1qOedyRlISKJJpb3iDAbeiBx04GxOrYLVu6",
+    "userAvatar": null,
+    "delete": false
   }
 ]

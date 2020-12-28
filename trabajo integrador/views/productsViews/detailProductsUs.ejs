@@ -18,10 +18,19 @@
 
          <div class="producto-y-descripcion">
                
+          <% if(productFound.avatar){ %>
                      <section class="fotoProducto">
                          <article> <img src="/images/imagesProducts/<%= productFound.avatar %> " alt=" <%= productFound.avatar %> "></article>
                     <!-- variable de la imagen al final de la ruta-->
                     </section>
+                    <% }else{ %>
+
+                      <section class="fotoProducto">
+                        <article> <img src="/images/imagesProducts/defaultImage.jpg"  alt="defaultImage.jpg">
+                            
+                        </article>
+                    </section>
+                       <% }%> 
 
                       <section class="descripcion">
                         <div class="remera1"> <%= productFound.nombre %></div> 
