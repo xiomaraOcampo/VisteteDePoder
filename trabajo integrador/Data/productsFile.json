@@ -108,5 +108,27 @@
     "disenio": "",
     "precio": "2333",
     "delete": false
+  },
+  {
+    "id": "101",
+    "nombre": "sss",
+    "descripcion": "sss",
+    "avatar": null,
+    "categoria": "Indumentaria",
+    "talle": "",
+    "disenio": "",
+    "precio": "122",
+    "delete": false
+  },
+  {
+    "id": "102",
+    "nombre": "aaa",
+    "descripcion": "aaa",
+    "avatar": "avatar-1609243681205.jpg",
+    "categoria": "Indumentaria",
+    "talle": "",
+    "disenio": "",
+    "precio": "122",
+    "delete": false
   }
 ]
