@@ -5,6 +5,7 @@ let {check,validationResult,body}= require('express-validator');
 const validations=require('../Middleware/validations');
 var multer = require('multer');
 // const { body } = require('express-validator');
+var guestMiddleware= require('../Middleware/guestMiddleware');
 
 const path = require ('path');
 
@@ -28,14 +29,21 @@ router.get('/', function(req, res, next) {
 });
 
 
-router.get('/registro', userController.registro);
+router.get('/registro',guestMiddleware, userController.registro);
 router.post('/registro',upload.any('userAvatar'), validations.usersRegister, userController.storeRegistro);
 
 router.get('/ingreso', userController.ingreso);
 router.post('/ingreso', [
-  check ('email').isEmail().withMessage('El mail debe ser un mail valido'),
-  check ('contrasenia').isLength({min:6}).withMessage('La contraseña debe tener al menos seis caracteres'),
+  check ('email').isEmail(),
+  check ('contrasenia').isLength({min:6}).withMessage('El mail y/o contraseña son invalidos'),
 ] ,userController.storeIngreso);
+router. get('/check',function (req,res,){
+  if (req.session.usuarioIngresado== undefined){
+    res.send('No estas logueado');
+  }else{
+   res.send('El usuario logueado es '+ req.session.usuarioIngresado.email);
+ } 
+});
 
 //edicion de usuarios
 
@@ -44,6 +52,7 @@ router.put('/edit/:id', validations.usersRegister, userController.update);
 
 router.delete('/destroy/:id', userController.destroy); 
 router.get('/list',userController.list);
+
 
 
 module.exports = router;

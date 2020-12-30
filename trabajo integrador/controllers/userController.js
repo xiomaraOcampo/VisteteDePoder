@@ -69,6 +69,12 @@ let userController = {
         });
       }
       req.session.usuarioIngresado = usuarioAIngresar;
+
+       if (req.body.recordame != undefined){
+        res.cookie('recordame',
+        usuarioAIngresar.email,{maxAge:60000})
+       }
+
       res.render('home');
  
     } else {
