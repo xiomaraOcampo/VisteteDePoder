@@ -143,7 +143,7 @@ let productController = {
         fs.writeFileSync(__dirname + '/../Data/productsFile.json' , editProductJson);
         //res.send("Modificaste el producto " + req.body.nombre);
         //res.render('productsViews/list', {productsFile, toThousand}  );
-        res.redirect('/products/list');
+        res.redirect('/products/detailProductUs/' +req.params.id);
 
     }, 
 

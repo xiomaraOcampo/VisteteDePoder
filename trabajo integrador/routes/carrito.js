@@ -4,6 +4,6 @@ const carritoController = require('../controllers/carritoController')
 
 
 
-router.get('/carrito', carritoController.cargaCarrito );
+router.get('/', carritoController.cargaCarrito );
 
 module.exports = router;
