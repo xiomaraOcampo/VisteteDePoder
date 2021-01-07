@@ -25,73 +25,75 @@
               
                 
 <form  action="/products/create" method="POST" enctype="multipart/form-data">
-    <div class="registro1">
-        <label for="nombre"></label>
-        <label for="descripcion"></label>
-        <!------PONER LOS ICONOS DE CADA INPUT ACA"-->
-        
-    </div>
+    
     
    
     <div class="registro2">
-        <h3>Crear producto</h3>
+        <h2>Crear producto</h2>
 
-        <input class=inputsRegistro type="text" placeholder="Id Producto" name="id" value>
-
-        <input class=inputsRegistro type="text" placeholder="Nombre Producto" id="name" name="nombre" value="">
+       
+        <label for="nombre">Nombre Producto</label>
+        <input class=inputsRegistro type="text" placeholder="" id="name" name="nombre" value="">
         
-        <textarea class="inputsRegistro"  placeholder="Descripción" name="descripcion" id="descripcion" cols="120" rows="1"></textarea><br>
+        <label for="precio">Precio</label>
+        <input class=inputsRegistro type="text" placeholder="" id="precioProducto" name="precio">
+
+        <label for="descripcion">Descripción</label> 
+        <textarea class="inputsRegistro"  placeholder="" name="descripcion" id="descripcion" cols="120" rows="1"></textarea><br>
+       
+        <label for="imagen">Imagen</label> 
+        <input  type="file" name="avatar" id="id"><br>
      
-      <!------TODOS LOS INPUTS DEBEN TENER class="inputsRegistro"-->
 
-    
-
-        
-      <input  type="file" name="avatar" id="id"><br>
-       <!---si no cargamos imagen se rompe-->
-
-
-      <!--Categoría (que sea un Select)-->
-
-                   <label for="" > Categoría: </label>                         
-                                <select class="inputsRegistro" name ="categoria" id="categoria">
-                                   
-                                    <option value="Indumentaria">Indumentaria</option>
-                                    <option value="Merchandising">Merchandising</option>
-                                    <option value="Accesorios">Accesorios</option>
-                                    
-                                  </select>
+        <label for="" > Categoría: </label>                         
+        <select class="inputsRegistro" name ="categoria" id="categoria">
+            <option value="Indumentaria">Indumentaria</option>
+            <option value="Merchandising">Merchandising</option>
+            <option value="Accesorios">Accesorios</option>
+        </select>
       
-      <!--SubCategoría (que sea un Select)-->
-        
         <label for="" > SubCategoría: </label>                         
-        <select class="inputsRegistro" name ="subCategoria" id="subCategoria">
-           
-            <option value="">SubCategoría</option>
-            <option value="Remera">Remera</option>
-            <option value="Musculosa">Musculosa</option>
-            <option value="Barbijo">Barbijo</option>
-            <option value="Taza">Taza</option>
-            <option value="Bolsa">Bolsa</option>
-            
-          </select>
+        <select class="inputsRegistro" name ="subcategoria" id="subCategoria">
+            <option value="remera">Remera</option>
+            <option value="barbijo">Barbijo</option>
+            <option value="gorra">Gorra</option>
+            <option value="taza">Taza</option>
+            <option value="termo">Termo</option>
+            <option value="botella">Botella</option>
+            <option value="bolso">Bolso</option>
+            <option value="cartuchera">Cartuchera</option>  
+            <option value="mochila">Mochila</option>
+        </select>
+       
+        <label for="" > Diseño: </label>
+        <select class="inputsRegistro" name="design"> 
+            <% for(let i=0; i<designs.length; i++){ %> 
+               <option value="<%= designs[i].id %>"> 
+                  <%= designs[i].design %> 
+               </option> 
+            <% } %>    
+           </select> 
 
-
+        <label for="" > Genero: </label>                         
+        <select class="inputsRegistro" name ="genero" id="genero">
+            <option value="ninio">Niño</option>
+            <option value="mujer">Mujer</option>
+            <option value="Hombre">Hombre</option> 
+        </select>  
     
-            
-      <!--Talle/ Diseño / Cantidad (que sea un Select)-->
-
-      <input class=inputsRegistro type="text" placeholder="Talle" id="talleProducto" name="talle">
-      <input class=inputsRegistro type="text" placeholder="Diseño" id="disenioProducto" name="disenio">
-      <input class=inputsRegistro type="text" placeholder="Cantidad" id="cantidadProducto" name="cantidad">
+        <label for="" > Talle: </label>                         
+        <select class="inputsRegistro" name ="talle" id="talle">
+            <option value="S">S</option>
+            <option value="M">M</option>
+            <option value="L">L</option>
+            <option value="XL">XL</option>  
+        </select>    
       
-      <!--Precio (función de Miles)-->
-
-      <input class=inputsRegistro type="text" placeholder="Precio" id="precioProducto" name="precio">
-
+      <!-- <input class=inputsRegistro type="text" placeholder="Cantidad" id="cantidadProducto" name="cantidad"> -->
+      
         <button class="enviar" value="enviar" type="submit">Crea tu producto en Vistete de Poder</button>
     
-        <a class="aIngreso"href="\products">Ver tus productos</a>
+        <a class="aIngreso"href="/products/list">Ver tus productos</a>
    </div>
 </form>
           

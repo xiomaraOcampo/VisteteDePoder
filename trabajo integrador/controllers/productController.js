@@ -7,8 +7,9 @@ let productsFile= leerJSON();
 const toThousand = n =>n.toString().replace(/\B(?=(\d{3})+(?!\d))/g,".");
 //let productsJson= JSON.parse(productsFile);
 let { check, validationResult, body } = require('express-validator');
+const { decodeBase64 } = require('bcryptjs');
 
-
+let db = require('../database/models');
 
 let productController = {
 
@@ -50,48 +51,46 @@ let productController = {
         /*
           res.render('productsViews/detailProducts');*/
         },
-      //esta función es para el formulario de creación de productos// 
+     pruebas:function(req, res, next) {
+      db.Designs.findAll()
+      .then(function (designs){
+           console.log(designs)
+           return res.send(designs)
+      })
+      .catch(function(error){
+          console.log(error);
+      })
+    }, 
     
     create: function(req, res, next) {
-      res.render('productsViews/create');
+      db.Designs.findAll()
+      .then(function (designs){
+           console.log(designs)
+           return res.render('productsViews/create', {designs:designs});
+      })
+      .catch(function(error){
+          console.log(error);
+      })
+      
     }, 
     store: function(req, res, next) {
       let errors = validationResult(req);
-      //console.log(errors.isEmpty());
          //isEmpty= esta vacia
       if (errors.isEmpty()) {
-    
-    /*let product= {
-      avatar:req.files.length>0 ? req.files[0].filename : null, //o la imagen x defecto
-     
-      nombre: req.body.nombre,
-     
-      delete: false
-    };*/
-    let product=
-      {id: req.body.id,
-      nombre: req.body.nombre,
-      descripcion: req.body.descripcion,
-      avatar: req.files.length>0 ? req.files[0].filename : null, //o la imagen x defecto
-      // avatar: req.files.length>0 ? req.files[0].filename :productsFile[100].avatar ,
-      categoria: req.body.categoria,
-      talle: req.body.talle,
-      disenio: req.body.disenio,
-      precio: req.body.precio,
-      delete: false
-     }
-      
-    productsFile.push(product);
-    let productsFileJson= JSON.stringify(productsFile, null, 2);
-    fs.writeFileSync(__dirname + '/../Data/productsFile.json' , productsFileJson);
 
-     //res.send('agregaste un producto ' + req.body.nombre);
-     //res.render('productsViews/list', {productsFile, toThousand}  );
-     res.redirect('/products/list')
-    // }
+        // console.log(req.body)
+        db.Products.create(
+           {id: req.body.id,
+            name: req.body.nombre,
+            price: req.body.precio,
+            description: req.body.descripcion,
+            image: req.files.length>0 ? req.files[0].filename : null, //o la imagen x defecto
+            subcategory: req.body.subcategoria,
+        })
+       res.redirect('/products/list')
+
      }else {
-     //res.send('hay errores')
-     //return console.log(validationResult(req));
+
      return res.render('productsViews/create', {errors: errors.errors});
     } ;
   },
