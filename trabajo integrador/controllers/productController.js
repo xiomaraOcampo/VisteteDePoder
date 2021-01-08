@@ -10,6 +10,7 @@ let { check, validationResult, body } = require('express-validator');
 const { decodeBase64 } = require('bcryptjs');
 
 let db = require('../database/models');
+const Products = require('../database/models/Products');
 
 let productController = {
 
@@ -52,14 +53,16 @@ let productController = {
           res.render('productsViews/detailProducts');*/
         },
      pruebas:function(req, res, next) {
-      db.Designs.findAll()
-      .then(function (designs){
-           console.log(designs)
-           return res.send(designs)
-      })
+     db.Products.findByPk(6,{
+        include:[{association:"designs"}]
+         })
+       .then(function (product){
+       return res.send(product)
+       })
       .catch(function(error){
-          console.log(error);
-      })
+       console.log(error);
+       })
+        // res.send("anda")
     }, 
     
     create: function(req, res, next) {
@@ -78,16 +81,36 @@ let productController = {
          //isEmpty= esta vacia
       if (errors.isEmpty()) {
 
-        // console.log(req.body)
+        //  console.log(req.body)
         db.Products.create(
-           {id: req.body.id,
+           {
             name: req.body.nombre,
             price: req.body.precio,
             description: req.body.descripcion,
             image: req.files.length>0 ? req.files[0].filename : null, //o la imagen x defecto
-            subcategory: req.body.subcategoria,
+            subcategory: req.body.subcategoria
         })
-       res.redirect('/products/list')
+
+        db.Products.findOne({
+             where:{
+                name:req.body.nombre
+             }
+           })
+           .then(function (product){
+              return res.send(product)
+                // return product
+           })
+           .catch(function(error){
+                 console.log(error);
+            })
+        // CREATE PARA LA TABLA PIVOT
+          db.Design_Product.create(
+          {design_id: req.body.disenio,
+           product_id: product.id
+          },
+          {include: [{association:"products"}]
+        });
+        //  res.redirect('/products/list')
 
      }else {
 

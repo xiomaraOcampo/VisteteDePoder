@@ -1,12 +1,8 @@
-// ESQUEMA PARA CUALQUIER ARCHIVO DE MODELO
-// todos los modelos deben hacer un module.exports de una funcion
-//parametro sequelize es la coneccion con la base de datos
-// parametro dataTypes, es el tipo de datos con el que vamos a trabajar
+
 module.exports = (sequelize, dataTypes) => {
-    // nombre del archivo del modelo en plural
+    
     let alias = "Designs";
-    // especificar las columnas de la base de datos en un objeto literal
-    // no es necesario poner todas las columnas de la tabla, pero si las que queremos tener disponibles
+   
     let cols = {
         id:{
             type:dataTypes.INTEGER,
@@ -24,8 +20,25 @@ module.exports = (sequelize, dataTypes) => {
         tableName:"designs",
         timestamps:false
        };
-       
+
     const Designs = sequelize.define(alias, cols, config);
+
+    Designs.associate = function(models){
+        Designs.hasMany(models.Design_Product,{
+            as:"design_product",
+            foreignKey:"designs_id"
+        })
+    }
+
+    /*Designs.associate = function(models){
+        Designs.belongsToMany(models.Products,{
+            as:"products",
+            through:"design_product",
+            foreignKey:"design_id",
+            otherKey:"product_id",
+            timestamps:false
+        })
+    }*/
 
     return Designs;
 }
