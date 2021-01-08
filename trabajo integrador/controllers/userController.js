@@ -6,9 +6,18 @@ function leerJSON() {
 let usersFile = leerJSON();
 let { check, validationResult, body } = require('express-validator');
 let bcryptjs = require('bcryptjs');
+const db =require("../database/models");
 
-
+ 
 let userController = {
+  index:function(req,res){
+    db.User.findAll().then(function(result){
+      res.send(result)
+    }).catch(function(error) {
+      console.log (error)
+      res.send("Error")
+    })
+  },
 
   registro: function (req, res, next) {
     res.render('usersViews/registro');
@@ -27,15 +36,25 @@ let userController = {
 
     let errors = validationResult(req);
     if (errors.isEmpty()) {
-      usersFile.push(registroUser);
-      userJson = JSON.stringify(usersFile, null, 2);
-      fs.writeFileSync(__dirname + '/../Data/usersFile.json', userJson);
-
+     /*  usersFile.push(registroUser);
+      db.User
+ */
+      /* userJson = JSON.stringify(usersFile, null, 2);
+      fs.writeFileSync(__dirname + '/../Data/usersFile.json', userJson); */
+      db.User.create({
+        "name":req.body.nombre,
+        "email": req.body.email,
+        "password":req.body.contrasenia,
+        "image":req.body.userAvatar,
+        "userTypes_id":0
+      });
       res.render('home');
     } else {
       return res.render('usersViews/registro', { errors: errors.errors });
     }
+
   },
+
 
 
 
