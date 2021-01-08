@@ -1,12 +1,14 @@
 [
   {
+    "avatar": "avatar-1609888578692.jpg",
     "id": "1",
     "nombre": "florencia ",
-    "descripcion": "",
-    "avatar": null,
-    "categoria": "Indumentaria",
+    "descripcion": "  ",
+    "Categoria": "Indumentaria",
+    "subCategoria": "",
     "talle": "",
     "disenio": "",
+    "cantidad": "",
     "precio": "",
     "delete": false
   },
@@ -55,13 +57,15 @@
     "delete": true
   },
   {
+    "avatar": "avatar-1609888385543.jpg",
     "id": "28",
-    "nombre": " calzadosssssss",
-    "descripcion": "",
-    "avatar": null,
-    "categoria": "Indumentaria",
+    "nombre": " calza",
+    "descripcion": "  ",
+    "Categoria": "Accesorios",
+    "subCategoria": "",
     "talle": "",
-    "disenio": "",
+    "disenio": "borges",
+    "cantidad": "",
     "precio": "",
     "delete": false
   },
@@ -129,6 +133,19 @@
     "talle": "",
     "disenio": "",
     "precio": "122",
+    "delete": false
+  },
+  {
+    "avatar": "avatar-1609888578692.jpg",
+    "id": "1",
+    "nombre": "florencia ",
+    "descripcion": "  ",
+    "Categoria": "Indumentaria",
+    "subCategoria": "",
+    "talle": "",
+    "disenio": "",
+    "cantidad": "",
+    "precio": "",
     "delete": false
   }
 ]

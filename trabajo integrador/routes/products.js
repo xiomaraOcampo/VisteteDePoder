@@ -23,11 +23,14 @@ var storage = multer.diskStorage({
 
    // router.get("", upload.any(), productController.store);
 
-//ruta para el detalle de productos que ve el usuario
+//detalle de producto diferentes para el administrador y el usuario
 
 router.get('/detailProductAdm/:id', productController.detailAdm);
 router.get('/detailProductUs/:id', productController.detailUs);
 
+// prueba para traer la tabla design
+
+router.get('/pruebas' ,productController.pruebas);
 //ruta para los formularios del administrador, para cargar productos
 
 router.get('/create' ,productController.create);
