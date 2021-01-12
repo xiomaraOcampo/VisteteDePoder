@@ -10,7 +10,7 @@ let { check, validationResult, body } = require('express-validator');
 const { decodeBase64 } = require('bcryptjs');
 
 let db = require('../database/models');
-const Products = require('../database/models/Products');
+// const Products = require('../database/models/Products');
 
 let productController = {
 
@@ -53,16 +53,15 @@ let productController = {
           res.render('productsViews/detailProducts');*/
         },
      pruebas:function(req, res, next) {
-     db.Products.findByPk(6,{
-        include:[{association:"designs"}]
-         })
-       .then(function (product){
-       return res.send(product)
+     db.Products.findAll()
+       .then(function (result){
+       return res.send(result)
        })
       .catch(function(error){
        console.log(error);
+       res.send("Error")
        })
-        // res.send("anda")
+          // res.send("anda")
     }, 
     
     create: function(req, res, next) {
@@ -88,7 +87,7 @@ let productController = {
             price: req.body.precio,
             description: req.body.descripcion,
             image: req.files.length>0 ? req.files[0].filename : null, //o la imagen x defecto
-            subcategory: req.body.subcategoria
+            subcategory_id: req.body.subcategoria
         })
 
         db.Products.findOne({

@@ -2,7 +2,7 @@ module.exports= {
   "development": {
     "username": "root",
     "password": null,
-    "database": "database_vistetep",
+    "database": "dbvistete",
     "host": "127.0.0.1",
     "dialect": "mysql"
   },
