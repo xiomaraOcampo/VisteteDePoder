@@ -37,23 +37,24 @@ module.exports = (sequelize, dataTypes) => {
    
     const Product = sequelize.define(alias, cols, config);
 
-    // de uno a muchos
-    // Product.associate = function(models){
-    //     Product.hasMany(models.Design_Product,{
-    //         as:"design_product",
-    //         foreignKey:"product_id"
-    //     })
+      // TIENE MUCHOS DISEÑOS EN LA TABLA INTERMEDIA
+    //  ASOCIACION A LA TABLA INETERMEDIA
+    Product.associate = function(models){
+        Product.hasMany(models.Design_Product,{
+            as:"design_product",
+            foreignKey:"product_id"
+        })
+    }
 
-    // }
-
-    /*Products.associate = function(models){
-        Products.belongsToMany(models.Designs,{
+    // FUNCION PARA ASOCIAR DE MUCHOS A MUCHOS SIN TABLA INTERMEDIA
+    Product.associate = function(models){
+        Product.belongsToMany(models.Design,{
             as:"designs",
             through:"design_product",
             foreignKey:"product_id",
             otherKey:"design_id",
             timestamps:false
         })
-    }*/
+    }
     return Product;
 }

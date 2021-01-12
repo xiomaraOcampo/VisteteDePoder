@@ -27,28 +27,31 @@ module.exports = (sequelize, dataTypes) => {
 
 
     // ver como es la relacion de uno a mucho hacia producto y design
-   /* Design_Product.associate = function(models){
-        Design_Product.belongsToMany(models.Designs,{
-            as:"designs",
-            through:"design_product",
-            foreignKey:"product_id",
-            otherKey:"design_id",
-            timestamps:false
-        })
-    }*/
     // Design_Product.associate = function(models){
-    //     Design_Product.belongsTo(models.Designs,{
-    //         as:"designs",
-    //         foreignKey:"design_id"
+    //     Design_Product.belongsToMany(models.Design,{
+    //         as:"design",
+    //         through:"design_product",
+    //         foreignKey:"product_id",
+    //         otherKey:"design_id",
+    //         timestamps:false
     //     })
     // }
 
-    // Design_Product.associate = function(models){
-    //     Design_Product.belongsTo(models.Products,{
-    //         as:"products",
-    //         foreignKey:"product_id"
-    //     })
-    // }
+    // MUCHOS PERTENECE A UN DISEÑO
+    Design_Product.associate = function(models){
+        Design_Product.belongsTo(models.Design,{
+            as:"designs",
+            foreignKey:"design_id"
+        })
+    }
+
+    // MUCHOS PERTENECE A UN PRODUCTO
+    Design_Product.associate = function(models){
+        Design_Product.belongsTo(models.Product,{
+            as:"products",
+            foreignKey:"product_id"
+        })
+    }
 
     return Design_Product;
 }

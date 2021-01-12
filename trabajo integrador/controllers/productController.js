@@ -10,7 +10,7 @@ let { check, validationResult, body } = require('express-validator');
 const { decodeBase64 } = require('bcryptjs');
 
 let db = require('../database/models');
-// const Products = require('../database/models/Products');
+
 
 let productController = {
 
@@ -53,7 +53,7 @@ let productController = {
           res.render('productsViews/detailProducts');*/
         },
      pruebas:function(req, res, next) {
-     db.Product.findAll()
+     db.Design_Product.findAll()
        .then(function (result){
        return res.send(result)
        })
@@ -65,7 +65,7 @@ let productController = {
     }, 
     
     create: function(req, res, next) {
-      db.Designs.findAll()
+      db.Design.findAll()
       .then(function (designs){
            console.log(designs)
            return res.render('productsViews/create', {designs:designs});
@@ -81,7 +81,7 @@ let productController = {
       if (errors.isEmpty()) {
 
         //  console.log(req.body)
-        db.Products.create(
+        db.Product.create(
            {
             name: req.body.nombre,
             price: req.body.precio,
@@ -90,26 +90,26 @@ let productController = {
             subcategory_id: req.body.subcategoria
         })
 
-        db.Products.findOne({
-             where:{
-                name:req.body.nombre
-             }
-           })
-           .then(function (product){
-              return res.send(product)
-                // return product
-           })
-           .catch(function(error){
-                 console.log(error);
-            })
+        // db.Products.findOne({
+        //      where:{
+        //         name:req.body.nombre
+        //      }
+        //    })
+        //    .then(function (product){
+        //       return res.send(product)
+        //         // return product
+        //    })
+        //    .catch(function(error){
+        //          console.log(error);
+        //     })
         // CREATE PARA LA TABLA PIVOT
           db.Design_Product.create(
           {design_id: req.body.disenio,
-           product_id: product.id
+          //  product_id: product.id
           },
-          {include: [{association:"products"}]
+          {include: [{association:"design_product"}]
         });
-        //  res.redirect('/products/list')
+          res.redirect('/products/list')
 
      }else {
 

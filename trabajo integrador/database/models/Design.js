@@ -1,7 +1,7 @@
 
 module.exports = (sequelize, dataTypes) => {
     
-    let alias = "Designs";
+    let alias = "Design";
    
     let cols = {
         id:{
@@ -21,24 +21,27 @@ module.exports = (sequelize, dataTypes) => {
         timestamps:false
        };
 
-    const Designs = sequelize.define(alias, cols, config);
-
-    // Designs.associate = function(models){
-    //     Designs.hasMany(models.Design_Product,{
-    //         as:"design_product",
-    //         foreignKey:"designs_id"
-    //     })
-    // }
-
-    /*Designs.associate = function(models){
-        Designs.belongsToMany(models.Products,{
+    const Design = sequelize.define(alias, cols, config);
+    
+     // TIENE MUCHOS PRODUCTOS EN LA TABLA INTERMEDIA
+    //  ASOCIACION A LA TABLA INETERMEDIA
+    Design.associate = function(models){
+        Design.hasMany(models.Design_Product,{
+            as:"design_product",
+            foreignKey:"design_id"
+        })
+    }
+    
+    // ASOCIACION CON PRODUCTOS 
+    Design.associate = function(models){
+        Design.belongsToMany(models.Product,{
             as:"products",
             through:"design_product",
             foreignKey:"design_id",
             otherKey:"product_id",
             timestamps:false
         })
-    }*/
-
-    return Designs;
+    }
+   
+    return Design;
 }
