@@ -53,7 +53,7 @@ let productController = {
           res.render('productsViews/detailProducts');*/
         },
      pruebas:function(req, res, next) {
-     db.Products.findAll()
+     db.Product.findAll()
        .then(function (result){
        return res.send(result)
        })

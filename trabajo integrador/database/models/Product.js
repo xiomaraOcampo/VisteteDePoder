@@ -1,7 +1,7 @@
 
 module.exports = (sequelize, dataTypes) => {
   
-    let alias = "Products";
+    let alias = "Product";
    
     let cols = {
         id:{
@@ -35,16 +35,16 @@ module.exports = (sequelize, dataTypes) => {
         timestamps:false
        };
    
-    const Products = sequelize.define(alias, cols, config);
+    const Product = sequelize.define(alias, cols, config);
 
     // de uno a muchos
-    Products.associate = function(models){
-        Products.hasMany(models.Design_Product,{
-            as:"design_product",
-            foreignKey:"product_id"
-        })
+    // Product.associate = function(models){
+    //     Product.hasMany(models.Design_Product,{
+    //         as:"design_product",
+    //         foreignKey:"product_id"
+    //     })
 
-    }
+    // }
 
     /*Products.associate = function(models){
         Products.belongsToMany(models.Designs,{
@@ -55,5 +55,5 @@ module.exports = (sequelize, dataTypes) => {
             timestamps:false
         })
     }*/
-    return Products;
+    return Product;
 }

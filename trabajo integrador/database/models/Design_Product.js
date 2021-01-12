@@ -36,19 +36,19 @@ module.exports = (sequelize, dataTypes) => {
             timestamps:false
         })
     }*/
-    Design_Product.associate = function(models){
-        Design_Product.belongsTo(models.Designs,{
-            as:"designs",
-            foreignKey:"design_id"
-        })
-    }
+    // Design_Product.associate = function(models){
+    //     Design_Product.belongsTo(models.Designs,{
+    //         as:"designs",
+    //         foreignKey:"design_id"
+    //     })
+    // }
 
-    Design_Product.associate = function(models){
-        Design_Product.belongsTo(models.Products,{
-            as:"products",
-            foreignKey:"product_id"
-        })
-    }
+    // Design_Product.associate = function(models){
+    //     Design_Product.belongsTo(models.Products,{
+    //         as:"products",
+    //         foreignKey:"product_id"
+    //     })
+    // }
 
     return Design_Product;
 }
