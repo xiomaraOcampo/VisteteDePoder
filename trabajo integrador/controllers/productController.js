@@ -140,28 +140,42 @@ let productController = {
             image: req.files.length>0 ? req.files[0].filename : null, //o la imagen x defecto
             subcategory_id: req.body.subcategoria
         })
-        // DESAFIO: COMO LEVANTAR EL ID DEL PRODUCTO QUE ESTAMOS CREANDO.
-        var ultimoId;
-
-        db.Product.findAll()
-          .then(function (products){
-          ultimoId =  products[products.length-1].id;
-          console.log(ultimoId)
-          // return ultimoId;
-          })
-        .catch(function(error){
-         console.log(error);   
-       })
-      //  console.log(ultimoId)
-        // CREATE PARA LAS TABLAS PIVOT
+        .then(function (product){
+          // console.log(product)
           db.Design_Product.create(
             {design_id: req.body.disenio,
-             product_id: ultimoId
+             product_id: product.id
             });
           db.Product_Size.create(
             {size_id: req.body.talle,
-             product_id: ultimoId
+             product_id: product.id
             });
+        })
+        .catch(function(error){
+          console.log(error);
+      })
+        // DESAFIO: COMO LEVANTAR EL ID DEL PRODUCTO QUE ESTAMOS CREANDO.
+      //   var ultimoId;
+
+      //   db.Product.findAll()
+      //     .then(function (products){
+      //     ultimoId =  products[products.length-1].id;
+      //     console.log(ultimoId)
+      //     // return ultimoId;
+      //     })
+      //   .catch(function(error){
+      //    console.log(error);   
+      //  })
+      //  console.log(ultimoId)
+        // CREATE PARA LAS TABLAS PIVOT
+          // db.Design_Product.create(
+          //   {design_id: req.body.disenio,
+          //    product_id: ultimoId
+          //   });
+          // db.Product_Size.create(
+          //   {size_id: req.body.talle,
+          //    product_id: ultimoId
+          //   });
 
           res.redirect('/products/list')
 
