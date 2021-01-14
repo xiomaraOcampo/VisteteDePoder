@@ -80,15 +80,16 @@
             <option value="mujer">Mujer</option>
             <option value="Hombre">Hombre</option> 
         </select>  
-    
-        <label for="" > Talle: </label>                         
-        <select class="inputsRegistro" name ="talle" id="talle">
-            <option value="S">S</option>
-            <option value="M">M</option>
-            <option value="L">L</option>
-            <option value="XL">XL</option>  
-        </select>    
-      
+       
+        <label for="" > Talle: </label>
+        <select class="inputsRegistro" name="talle"> 
+            <% for(let i=0; i<sizes.length; i++){ %> 
+               <option value="<%= sizes[i].id %>"> 
+                  <%= sizes[i].size %> 
+               </option> 
+            <% } %>    
+           </select> 
+
       <!-- <input class=inputsRegistro type="text" placeholder="Cantidad" id="cantidadProducto" name="cantidad"> -->
       
         <button class="enviar" value="enviar" type="submit">Crea tu producto en Vistete de Poder</button>

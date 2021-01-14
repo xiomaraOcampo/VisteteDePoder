@@ -53,22 +53,73 @@ let productController = {
           res.render('productsViews/detailProducts');*/
         },
      pruebas:function(req, res, next) {
-     db.Design_Product.findAll()
-       .then(function (result){
-       return res.send(result)
-       })
+  
+      let ultimoId;
+      db.Product.findAll()
+     .then(function (products){
+      ultimoId =  products[products.length-1].id;
+         //  return res.send(product [product.length - 1])
+      console.log(ultimoId)
+      res.send ("lo encontro")
+      })
       .catch(function(error){
-       console.log(error);
-       res.send("Error")
-       })
+       console.log(error);   
+     })
+      // db.Product.findAll()
+      //  .then(function (products){
+      //   let ultimoId =  products[products.length-1].id;
+      //      //  return res.send(product [product.length - 1])
+      //   console.log(ultimoId)
+      //   res.send ("lo encontro")
+      // })
+      // .catch(function(error){
+      //  console.log(error);
+      //  res.send("Error")    
+      // })
+      //  TRAE EL DISEÑO DE UN PRODUCTO ESPECIFICO
+      // db.Product.findAll({
+      //   include: [ {association: "designs"} ]
+      // })
+      //  .then(function (products){
+      //   res.send(products[2].designs[0].design)
+      // })
+      // .catch(function(error){
+      //  console.log(error);
+      //  res.send("Error")    
+      // })
+      // TRAE LOS DISEÑOS ASOCIADOS CON PRODUCTOS
+      // db.Design.findAll({
+      //      include: [ {association: "products"} ]
+      //    })
+      // .then(function (designs){  
+      //      res.send(designs)
+      // })
+      // .catch(function(error){
+      //     console.log(error);
+      //     res.send("Error")    
+      // })
+
+      // TRAE LA TABLA INTERMEDIA CON LOS PRODUCTOS. LOS DISEÑOS NO ANDAN
+    //  db.Design_Product.findAll({
+    //   include: [ {association: "products"} ]
+    // })
+    //    .then(function (result){
+    //    return res.send(result)
+    //    })
+    //   .catch(function(error){
+    //    console.log(error);
+    //    res.send("Error")
+    //    })
           // res.send("anda")
     }, 
     
     create: function(req, res, next) {
-      db.Design.findAll()
-      .then(function (designs){
-           console.log(designs)
-           return res.render('productsViews/create', {designs:designs});
+      let pedidoDesigns = db.Design.findAll()
+      let pedidoSizes =  db.Size.findAll()
+    
+      Promise.all([pedidoDesigns,pedidoSizes])
+      .then(function ([designs, sizes]){
+           return res.render('productsViews/create', {designs:designs, sizes:sizes});
       })
       .catch(function(error){
           console.log(error);
@@ -80,7 +131,7 @@ let productController = {
          //isEmpty= esta vacia
       if (errors.isEmpty()) {
 
-        //  console.log(req.body)
+        console.log(req.body)
         db.Product.create(
            {
             name: req.body.nombre,
@@ -89,26 +140,28 @@ let productController = {
             image: req.files.length>0 ? req.files[0].filename : null, //o la imagen x defecto
             subcategory_id: req.body.subcategoria
         })
-
-        // db.Products.findOne({
-        //      where:{
-        //         name:req.body.nombre
-        //      }
-        //    })
-        //    .then(function (product){
-        //       return res.send(product)
-        //         // return product
-        //    })
-        //    .catch(function(error){
-        //          console.log(error);
-        //     })
-        // CREATE PARA LA TABLA PIVOT
+        // DESAFIO: COMO LEVANTAR EL ID DEL PRODUCTO QUE ESTAMOS CREANDO.
+        var ultimoId;
+        db.Product.findAll()
+          .then(function (products){
+          ultimoId =  products[products.length-1].id;
+          console.log(ultimoId)
+          return ultimoId;
+          })
+        .catch(function(error){
+         console.log(error);   
+       })
+        
+        // CREATE PARA LAS TABLAS PIVOT
           db.Design_Product.create(
-          {design_id: req.body.disenio,
-          //  product_id: product.id
-          },
-          {include: [{association:"design_product"}]
-        });
+            {design_id: req.body.disenio,
+             product_id: ultimoId
+            });
+          db.Product_Size.create(
+            {size_id: req.body.talle,
+             product_id: ultimoId
+            });
+
           res.redirect('/products/list')
 
      }else {

@@ -32,7 +32,7 @@ module.exports = (sequelize, dataTypes) => {
         })
     }
     
-    // ASOCIACION CON PRODUCTOS 
+    // FUNCION PARA ASOCIAR DE MUCHOS A MUCHOS SIN TABLA INTERMEDIA 
     Design.associate = function(models){
         Design.belongsToMany(models.Product,{
             as:"products",
