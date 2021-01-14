@@ -57,10 +57,10 @@ let productController = {
       let ultimoId;
       db.Product.findAll()
      .then(function (products){
-      ultimoId =  products[products.length-1].id;
-         //  return res.send(product [product.length - 1])
-      console.log(ultimoId)
-      res.send ("lo encontro")
+      ultimoId =  products[products.length-1].id;  
+       console.log(ultimoId)
+      // return res.send (ultimoId )
+      res.send("lo encontro")
       })
       .catch(function(error){
        console.log(error);   
@@ -142,16 +142,17 @@ let productController = {
         })
         // DESAFIO: COMO LEVANTAR EL ID DEL PRODUCTO QUE ESTAMOS CREANDO.
         var ultimoId;
+
         db.Product.findAll()
           .then(function (products){
           ultimoId =  products[products.length-1].id;
           console.log(ultimoId)
-          return ultimoId;
+          // return ultimoId;
           })
         .catch(function(error){
          console.log(error);   
        })
-        
+      //  console.log(ultimoId)
         // CREATE PARA LAS TABLAS PIVOT
           db.Design_Product.create(
             {design_id: req.body.disenio,
