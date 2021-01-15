@@ -21,7 +21,7 @@ module.exports= function(sequelize,dataTypes){
             "type":dataTypes.STRING(255),
             "allowNull":true
          },
-         "userTypes_id":{
+         "type":{
             "type":dataTypes.INTEGER,
             "allowNull":false
          }

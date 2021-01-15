@@ -6,15 +6,15 @@ function leerJSON() {
 let usersFile = leerJSON();
 let { check, validationResult, body } = require('express-validator');
 let bcryptjs = require('bcryptjs');
-const db =require("../database/models");
+const db = require("../database/models");
 
- 
+
 let userController = {
-  index:function(req,res){
-    db.User.findAll().then(function(result){
+  index: function (req, res) {
+    db.User.findAll().then(function (result) {
       res.send(result)
-    }).catch(function(error) {
-      console.log (error)
+    }).catch(function (error) {
+      console.log(error)
       res.send("Error")
     })
   },
@@ -29,24 +29,24 @@ let userController = {
       nombre: req.body.nombre,
       email: req.body.email,
       contrasenia: bcryptjs.hashSync(req.body.contrasenia, 10),
-      userAvatar: req.files.length>0 ? req.files[0].filename : null,
+      userAvatar: req.files.length > 0 ? req.files[0].filename : null,
       delete: false
       //  cambie el ...req para qu no tome laconfimacion contraseña n el jason 
     };
 
     let errors = validationResult(req);
     if (errors.isEmpty()) {
-     /*  usersFile.push(registroUser);
-      db.User
- */
+      /*  usersFile.push(registroUser);
+       db.User
+  */
       /* userJson = JSON.stringify(usersFile, null, 2);
       fs.writeFileSync(__dirname + '/../Data/usersFile.json', userJson); */
       db.User.create({
-        "name":req.body.nombre,
+        "name": req.body.nombre,
         "email": req.body.email,
-        "password":req.body.contrasenia,
-        "image":req.body.userAvatar,
-        "userTypes_id":0
+        "password": req.body.contrasenia,
+        "image": req.body.userAvatar,
+        "type": 0
       });
       res.render('home');
     } else {
@@ -89,126 +89,94 @@ let userController = {
       }
       req.session.usuarioIngresado = usuarioAIngresar;
 
-       if (req.body.recordame != undefined){
+      if (req.body.recordame != undefined) {
         res.cookie('recordame',
-        usuarioAIngresar.email,{maxAge:60000})
-       }
+          usuarioAIngresar.email, { maxAge: 60000 })
+      }
 
       res.render('home');
- 
+
     } else {
       return res.render('usersViews/ingreso', { errors: errors.errors });
     }
   },
 
-  edit: function (req,res,next) {
+  edit: function (req, res, next) {
     //  res.render('usersViews/edit');
-
-
-    var idUser = req.params.id;
-
-    var userFound;
-    for (var i = 0; i < usersFile.length; i++) {
-      if (usersFile[i].id == idUser) {
-        userFound = usersFile[i];
-        break;
-      }
-    }
-    if (userFound) {
-      res.render('usersViews/editU', { userFound });
-    } else {
-      res.send('No se ha encontrado el usuario con Id: ' + idUser)
-      //res.render('usersViews/list', {usersFile}  );
-    };
+    db.User.findByPk(req.params.id)
+      .then(function (user) {
+        if (user == undefined){
+          res.send('No se ha encontrado el usuario ')
+        }else{
+          console.log (user);
+          res.render('usersViews/editU', { user:user });
+        }
+      });
   },
 
-  /*update: function(req, res, next) {
-    res.send('update funcionando');
-  }*/
 
-  update: function (req, res, next) {
-    var idUser = req.params.id;
-    var userAEditar = [];
-    let errors = validationResult(req);
-    console.log(errors);
-       //isEmpty= esta vacia
-    if (errors.isEmpty()) {
-    
-
-    for (var i = 0; i < usersFile.length; i++) {
-      if (usersFile[i].id == idUser) {
-
-        let editUser = {
-          id: idUser,
-          nombre: req.body.nombre,
-          email: req.body.email,
-          contrasenia: bcryptjs.hashSync(req.body.contrasenia, 10),
-          delete: false
-        };
-        userAEditar.push(editUser);
-      } else {
-        userAEditar.push(usersFile[i]);
+update: function (req, res, next) {
+  var idUser = req.params.id;
+  let errors = validationResult(req);
+  console.log(errors);
+  //isEmpty= esta vacia
+  if (errors.isEmpty()) {
+    db.User.update({
+      "name": req.body.nombre,
+      "email": req.body.email,
+      "password": req.body.contrasenia,
+      "image": req.body.userAvatar  
+    }, {
+      where: {
+        id: idUser
       }
-    }
-    editUserJson = JSON.stringify(userAEditar, null, 2);
-    fs.writeFileSync(__dirname + '/../Data/usersFile.json', editUserJson);
+    });
+
     res.send("Modificaste el usuario " + req.body.nombre);
-    //res.render('productsViews/list', {productsFile, toThousand}  );
-    //res.redirect('/products/list');
-  }else{
-    var userFound;
-    for (var i = 0; i < usersFile.length; i++) {
-      if (usersFile[i].id == idUser) {
-        userFound = usersFile[i];
-        break;
-      }
+  } else {
+    db.User.findByPk(idUser)
+    .then(function (user){
+      res.render('usersViews/editU', { user, errors: errors.errors });
+    });
+    
+  }
+},
+
+destroy: function (req, res, next) {
+
+  var idUser = req.params.id;
+
+  var userDeleteTrue = usersFile.map(function (user) {
+    if (user.id == idUser) {
+      user.delete = true;
     }
-    console.log(userFound)
-    res.render('usersViews/editU', { userFound, errors: errors.errors });
-    //me devuelve la vista con errores y el usuario pero ya no me deja editar
-    //res.redirect( '/users/edit/' + idUser,{userFound});
-    //asi redirecciona pero no manda los errores a la vista
-    //res.redirect( '/users/edit/' + idUser,{userFound:userFound, errors: errors.errors});
-    //cuando agrego los errores no redirecciona y devuelve este cartel: undefined. Redirecting to /users/edit/1
-  
-  }
-  },
 
-  destroy: function (req, res, next) {
-
-    var idUser = req.params.id;
-
-    var userDeleteTrue = usersFile.map(function (user) {
-      if (user.id == idUser) {
-        user.delete = true;
-      }
-
-      console.log(userDeleteTrue);
-      return user;
-    });
+    console.log(userDeleteTrue);
+    return user;
+  });
 
 
-    userDestroyJson = JSON.stringify(userDeleteTrue, null, 2);
-    fs.writeFileSync(__dirname + "/../Data/usersFile.json", userDestroyJson);
+  userDestroyJson = JSON.stringify(userDeleteTrue, null, 2);
+  fs.writeFileSync(__dirname + "/../Data/usersFile.json", userDestroyJson);
 
-    res.send("Eliminaste el Usuario " + idUser);
-    // res.redirect('usersViews/ulist');
-
-
-  },
-
-  list: function (req, res, next) {
+  res.send("Eliminaste el Usuario " + idUser);
+  // res.redirect('usersViews/ulist');
 
 
-    let lectura = leerJSON();
+},
 
-    var userList = lectura.filter(function (user) {
-      return user.delete == false;
-    });
+list: function (req, res, next) {
 
 
-    res.render('usersViews/uList', { usersFile: userList });
-  }
+  let lectura = leerJSON();
+
+  var userList = lectura.filter(function (user) {
+    return user.delete == false;
+  });
+
+
+  res.render('usersViews/uList', { usersFile: userList });
+}
 
 };//cierre controller
 

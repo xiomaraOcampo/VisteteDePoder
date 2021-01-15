@@ -14,7 +14,7 @@
 
                 <!--MAIN-->  
                 
-<form  action="/users/edit/<%= userFound.id %>?_method=PUT" method=POST>
+<form  action="/users/edit/<%= user.id %>?_method=PUT" method=POST>
     <div class="registro1">
          <!-- <label for="id"><i class="fas fa-user"></i></label>-->
         <label for="nombre"><i class="fas fa-user"></i></label>
@@ -38,9 +38,9 @@
 
         <!--<input class=inputsRegistro type="text" placeholder="Id" name="id">-->
 
-        <input class=inputsRegistro type="text" placeholder="Tu nombre" id="nombre" name="nombre" value="<%= userFound.nombre %>">
+        <input class=inputsRegistro type="text" placeholder="Tu nombre" id="nombre" name="nombre" value="<%= user.name %>">
                  
-        <input class="inputsRegistro" type="email" placeholder="Correo electrónico"id="email" name="email" value="<%= userFound.email %>">
+        <input class="inputsRegistro" type="email" placeholder="Correo electrónico"id="email" name="email" value="<%= user.email %>">
                   
         <input class="inputsRegistro" type="password" placeholder="Escribe una nueva contraseña" id="contrasenia" name="contrasenia"value="">
          
