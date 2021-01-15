@@ -68,11 +68,34 @@
 
         <div class="buscadores">
           
-           <div class="valija"><a href="/carrito/carrito"><i class="fas fa-shopping-bag"></i></a></div>
-           <div class="buscador"><a href="#"><label for="busqueda"><i class="fas fa-search"></label></i></a>
-             <input type="search" placeholder="Buscar productos" id="busqueda" name="busqueda">
+           <div class="valija"><a href="/carrito"><i class="fas fa-shopping-bag"></i></a></div>
+
+           <!-- <div class="buscador">
+              <form action="/products/pruebas" method="POST"></form>
+                   
+                     <i class="fas fa-search"><label for="busqueda"></label></i> 
+                     <input type="search" placeholder="Buscar productos" id="busqueda" name="busqueda">
+                     <input class="enviar" type="submit" value="busqueda">
+              </form>
+           </div> -->
+
+           <div class="buscador">
+           <form action="/products/search" method="post" target="_blank">
+            <p>
+
+                <label for="busqueda"><i class="fas fa-search"></i></label>
+
+                <input class="escribir" type="search" name="busqueda" placeholder="Escribe el nombre de tu producto">
+          
+                <input class="enviar" type="submit" value="Buscar">
+          
+            </p>
+          </form>
            </div>
-           <div class="ingreso"><a href="../users/ingreso"><i class="fas fa-user"></i></a></div>
+           
+
+
+           <div class="ingreso"><a href="/users/ingreso"><i class="fas fa-user"></i></a></div>
         </div>
     </section>
     

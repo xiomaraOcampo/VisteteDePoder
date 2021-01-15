@@ -89,18 +89,45 @@ let productController = {
     // }
     
   },
-  pruebas: function (req, res, next) {
-    let ultimoId;
-    db.Product.findAll()
-      .then(function (products) {
-        ultimoId = products[products.length - 1].id;
-        console.log(ultimoId);
-        // return res.send (ultimoId )
-        res.send("lo encontro");
+  search: function (req, res, next) {
+    console.log(req.body.busqueda)
+    db.Product.findOne({
+      where:{name: req.body.busqueda
+      }
+    })
+      .then(function (product) {
+        if(product){
+          return res.render("productsViews/detailProductsAdm", {
+            product: product,
+          });
+        }else{
+          return res.render("productsViews/mensajeNoEncontrado");
+        }
       })
       .catch(function (error) {
         console.log(error);
+        res.send("error")
       });
+  },
+  pruebas: function (req, res, next) {
+    // console.log(req.body.busqueda)
+    // db.Product.findOne({
+    //   where:{name: req.body.busqueda
+    //   }
+    // })
+    //   .then(function (product) {
+    //     if(product){
+    //       return res.render("productsViews/detailProductsAdm", {
+    //         product: product,
+    //       });
+    //     }else{
+    //       return res.render("productsViews/mensajeNoEncontrado");
+    //     }
+    //   })
+    //   .catch(function (error) {
+    //     console.log(error);
+    //     res.send("error")
+    //   });
     // let ultimoId;
     // db.Product.findAll()
     //   .then(function (products) {

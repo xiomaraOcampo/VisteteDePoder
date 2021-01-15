@@ -31,6 +31,11 @@ router.get('/detailProductUs/:id', productController.detailUs);
 // prueba para traer la tabla design
 
 router.get('/pruebas' ,productController.pruebas);
+
+// ruta del buscador
+router.post('/search' ,productController.search);
+
+
 //ruta para los formularios del administrador, para cargar productos
 
  router.get('/create' ,productController.create);
