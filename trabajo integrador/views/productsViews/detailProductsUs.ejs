@@ -1,83 +1,61 @@
 <!DOCTYPE html>
 <html lang="en">
-    <%-include("../partials/head")%>
-<body>
+  <%-include("../partials/head")%>
+  <body>
     <div class="container">
-        <!--HEADER-->
-        
-            <%-include("../partials/header")%>
-          <!-- fin del HEADER-->  
-       <!--MAIN-->  
-        <main class="mainProducto">
+      <!--HEADER-->
 
-          <section class="Nombre-Producto">
-            <%= productFound.nombre %>
-          </section>
-        
-          <form  class= "tarjeta" action="/products/detailProduct/<%= productFound.id %>" method="GET">
+      <%-include("../partials/header")%>
+      <!-- fin del HEADER-->
+      <!--MAIN-->
+      <main class="mainProducto">
+        <section class="Nombre-Producto"><%= product.name %></section>
 
-         <div class="producto-y-descripcion">
-               
-          <% if(productFound.avatar){ %>
-                     <section class="fotoProducto">
-                         <article> <img src="/images/imagesProducts/<%= productFound.avatar %> " alt=" <%= productFound.avatar %> "></article>
-                    <!-- variable de la imagen al final de la ruta-->
-                    </section>
-                    <% }else{ %>
+        <form
+          class="tarjeta"
+          action="/products/detailProduct/<%= product.id %>"
+          method="GET"
+        >
+          <div class="producto-y-descripcion">
+            <% if(product.image){ %>
+            <section class="fotoProducto">
+              <article>
+                <img
+                  src="/images/imagesProducts/<%= product.image %> "
+                  alt=" <%= product.image %> "
+                />
+              </article>
+            </section>
+            <% }else{ %>
 
-                      <section class="fotoProducto">
-                        <article> <img src="/images/imagesProducts/defaultImage.jpg"  alt="defaultImage.jpg">
-                            
-                        </article>
-                    </section>
-                       <% }%> 
+            <section class="fotoProducto">
+              <article>
+                <img
+                  src="/images/imagesProducts/defaultImage.jpg"
+                  alt="defaultImage.jpg"
+                />
+              </article>
+            </section>
+            <% }%>
 
-                      <section class="descripcion">
-                        <div class="remera1"> <%= productFound.nombre %></div> 
-                         <p> <%= productFound.descripcion %></p>
-                          <h4>$ <%= productFound.precio %></h4>
-                        
-                    
-                         <article class="talle-cantidad">
-                          
-                               <label for="" >Talle: </label> 
-                                                       <!--hacer una funcion que si la subcategoria es igual a remera, se imprima el select del talle  -->
-                                <select name ="talle">
-                                    <option value="S">Small</option>
-                                    <option value="M">Medium</option>
-                                    <option value="L">Large</option>
-                                    <option value="XL">Extra-Large</option>
-                              </select>
-                         
+            <section class="descripcion">
+              <div class="remera1">Producto: <%= product.name %></div>
+              <p>Descripción: <%= product.description %></p>
+              <h4>Precio: <%= product.price %></h4>
 
-                         
-                              <label for="" > Cantidad:   <!--<%= productFound.cantidad %>--></label>                          
-                               <select name="Cantidad" >
-                                  <option value="uno">1</option>
-                                  <option value="dos">2</option>
-                                  <option value="tres">3</option>
-                                  <option value="cuatro">4</option>
-                                  <option value="cinco">5</option>
-                                  <option value="seis">6</option>
-                                  <option value="siete">7</option>
-                                  <option value="ocho">8</option>
-                                  <option value="nueve">9</option>
-                                  <option value="diez">10</option>
-                              </select>
-                         </article>
-                         <a href="/carrito">
-                          <button type="button">Añadir a carrito</button>
-                        </a>
-                    
+              <article class="talle-cantidad">
+                <label for="">Talle: <%= product.size %> </label>
+              </article>
 
-                        </section>
-                      
-        </div>
+              <a class="remera1" href="/carrito"
+                ><button type="button">Añadir a carrito</button></a>
 
+            
+            </section>
+          </div>
         </form>
-    </main>
-    <%-include("../partials/footer")%>
-
-  </div>
-</body>
+      </main>
+      <%-include("../partials/footer")%>
+    </div>
+  </body>
 </html>

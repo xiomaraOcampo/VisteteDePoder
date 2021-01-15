@@ -39,12 +39,12 @@ module.exports = (sequelize, dataTypes) => {
 
       // TIENE MUCHOS DISEÑOS EN LA TABLA INTERMEDIA
     //  ASOCIACION A LA TABLA INETERMEDIA
-    Product.associate = function(models){
-        Product.hasMany(models.Design_Product,{
-            as:"design_product",
-            foreignKey:"product_id"
-        })
-    }
+    // Product.associate = function(models){
+    //     Product.hasMany(models.Design_Product,{
+    //         as:"design_product",
+    //         foreignKey:"product_id"
+    //     })
+    // }
 
     // FUNCION PARA ASOCIAR DE MUCHOS A MUCHOS SIN TABLA INTERMEDIA
     Product.associate = function(models){
@@ -53,6 +53,13 @@ module.exports = (sequelize, dataTypes) => {
             through:"design_product",
             foreignKey:"product_id",
             otherKey:"design_id",
+            timestamps:false
+        })
+        Product.belongsToMany(models.Size,{
+            as:"sizes",
+            through:"product_size",
+            foreignKey:"product_id",
+            otherKey:"size_id",
             timestamps:false
         })
     }
