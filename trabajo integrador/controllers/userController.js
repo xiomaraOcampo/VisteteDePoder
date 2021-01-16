@@ -205,6 +205,14 @@ list: function (req, res, next) {
 
 
   //res.render('usersViews/uList', { usersFile: userList });
+},
+detail:function(req,res,next){
+  var idUser = req.params.id;
+   db.User.findByPk(idUser)
+    .then(function (user){
+      console.log(user);
+      res.render('usersViews/detailUser',{user:user});
+    });
 }
 
 };//cierre controller

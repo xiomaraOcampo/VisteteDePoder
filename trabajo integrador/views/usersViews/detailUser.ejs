@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+              <%-include("../partials/head")%>
+  
+    <body>
+        <div class="container">
+          <header>
+            <%-include("../partials/header")%>
+            
+          </header>
+
+          <main>
+      
+      
+      
+            <ul>
+         
+ 
+       
+        <li>
+          <form class="borrar" action="/users/destroy/<%= user.id %>?_method=DELETE" method="POST">
+
+      
+          <div class="registro1">
+            <label for="id"><i class="fas fa-user"></i></label>
+            <label for="nombre"><i class="fas fa-user"></i></label>
+            <label for="email"><i class="fas fa-envelope"></i></label>
+       <% if(user.userAvatar){ %>
+
+    </div>
+        <section class="fotoProducto">
+          <article> <img src="/images/usersImages/<%= user.userAvatar %> " alt=" <%= user.userAvatar %> ">
+              
+          </article>
+      </section>
+
+    <% }else{ %>
+ 
+    </div>
+    <section class="fotoProducto">
+      <article> <img src="/images/usersImages/defaultImage.jpeg"  alt="defaultImage.jpeg">
+          <!--no lo muestra-->
+      </article>
+  </section>
+     <% }%> 
+        <div class="registro2">
+          <h3> </h3>
+
+          <div class=inputsRegistro type="text" name="id"> Id: <%= user.id %> </div>
+
+          <div class=inputsRegistro type="text"  id="nombre" name="nombre">Nombre: <%= user.name %>  </div>
+                  
+          <div class="inputsRegistro" type="email" id="email" name="email">Email: <%= user.email %> </div>
+                    
+          
+          </div>
+        
+         
+            <button type='submit'>Borrar</button>
+          
+          </form>
+  
+        
+        
+ 
+        </li>
+         
+      </ul>
+        </main>
+ 
+    
+ 
+          <footer>
+                <%-include("../partials/footer")%>
+          
+          </footer>
+        </div>
+    </body>
+</html>
