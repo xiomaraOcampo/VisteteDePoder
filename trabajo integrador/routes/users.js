@@ -6,6 +6,7 @@ const validations=require('../Middleware/validations');
 var multer = require('multer');
 // const { body } = require('express-validator');
 var guestMiddleware= require('../Middleware/guestMiddleware');
+var authMiddleware= require('../Middleware/authMiddleware');
 
 const path = require ('path');
 
@@ -30,12 +31,12 @@ router.get('/', userController.index);
 router.get('/registro',guestMiddleware, userController.registro);
 router.post('/registro',upload.any('userAvatar'), validations.usersRegister, userController.storeRegistro);
 
-router.get('/ingreso', userController.ingreso);
+router.get('/ingreso',guestMiddleware, userController.ingreso);
 router.post('/ingreso', [
   check ('email').isEmail(),
   check ('contrasenia').isLength({min:6}).withMessage('El mail y/o contraseña son invalidos'),
 ] ,userController.storeIngreso);
-router. get('/check',function (req,res,){
+router.get('/check',function (req,res,){
   if (req.session.usuarioIngresado== undefined){
     res.send('No estas logueado');
   }else{
@@ -49,7 +50,7 @@ router.get('/edit/:id', userController.edit);
 router.put('/edit/:id', validations.usersEdit, userController.update);
 
 router.delete('/destroy/:id', userController.destroy); 
-router.get('/list',userController.list);
+router.get('/list', authMiddleware,userController.list);
 
 
 

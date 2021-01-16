@@ -1,4 +1,4 @@
-function authMiddleware(req,rest,next){
+function authMiddleware(req,res,next){
     if (req.session.usuarioIngresado != undefined){
         next();
      }else{

@@ -55,46 +55,54 @@ let userController = {
 
   },
 
-
-
-
   ingreso: function (req, res, next) {
-    res.render('usersViews/ingreso');
+    res.render("usersViews/ingreso");
   },
   storeIngreso: function (req, res, next) {
     let errors = validationResult(req);
     console.log(errors);
     let usuarioAIngresar;
     if (errors.isEmpty()) {
+      db.User.findOne({
+        where: {
+          email: req.body.email
+        }
+      })
+      .then((resultado)=>{
+        
+        if (req.body.contrasenia == resultado.getDataValue('password')) {
+          usuarioAIngresar = {
+            id:resultado.getDataValue('id'), 
+            name:resultado.getDataValue('name'), 
+            email: resultado.getDataValue('email'),
+            image:resultado.getDataValue('image'),
+            type: resultado.getDataValue('type')
+          };
+        }
+        if (usuarioAIngresar == undefined) {
+          return res.render('usersViews/ingreso', {
+            errors: [
+              { msg: 'Credenciales invalidas' }
+            ]
+          });
+        }
+        req.session.usuarioIngresado = usuarioAIngresar;
 
-
-      /*recorro el array*/
-
-      for (let i = 0; i < usersFile.length; i++) {
-        if (usersFile[i].email == req.body.email) {
-          if (bcryptjs.compareSync(req.body.contrasenia, usersFile[i].contrasenia)) {
-            usuarioAIngresar = usersFile[i];
-            break;
-          }
+        if (req.body.recordame != undefined) {
+          res.cookie('recordame',
+            usuarioAIngresar.email, { maxAge: 60000 })
         }
 
-      }
-
-      if (usuarioAIngresar == undefined) {
-        return res.render('usersViews/ingreso', {
-          errors: [
-            { msg: 'Credenciales invalidas' }
-          ]
-        });
-      }
-      req.session.usuarioIngresado = usuarioAIngresar;
-
-      if (req.body.recordame != undefined) {
-        res.cookie('recordame',
-          usuarioAIngresar.email, { maxAge: 60000 })
-      }
-
-      res.render('home');
+        res.render('home');
+      });
+      // for (let i = 0; i < usersFile.length; i++) {
+      //   if (usersFile[i].email == req.body.email) {
+      //     if (bcryptjs.compareSync(req.body.contrasenia, usersFile[i].contrasenia)) {
+      //       usuarioAIngresar = usersFile[i];
+      //       break;
+      //     }
+      //   }
+      // }
 
     } else {
       return res.render('usersViews/ingreso', { errors: errors.errors });
@@ -142,24 +150,32 @@ update: function (req, res, next) {
   }
 },
 
-destroy: function (req, res, next) {
-
+destroy: function (req,res) {
+  
   var idUser = req.params.id;
+  console.log (idUser);
+  db.User.destroy({
+     where:{
+     id:idUser
+   }
+  
+  });
+  res.send("Eliminaste el Usuario " + idUser);
 
-  var userDeleteTrue = usersFile.map(function (user) {
+  /* var userDeleteTrue = usersFile.map(function (user) {
     if (user.id == idUser) {
       user.delete = true;
     }
 
     console.log(userDeleteTrue);
     return user;
-  });
+  }); */
 
 
-  userDestroyJson = JSON.stringify(userDeleteTrue, null, 2);
-  fs.writeFileSync(__dirname + "/../Data/usersFile.json", userDestroyJson);
+ /*  userDestroyJson = JSON.stringify(userDeleteTrue, null, 2);
+  fs.writeFileSync(__dirname + "/../Data/usersFile.json", userDestroyJson); */
 
-  res.send("Eliminaste el Usuario " + idUser);
+  
   // res.redirect('usersViews/ulist');
 
 
@@ -167,15 +183,28 @@ destroy: function (req, res, next) {
 
 list: function (req, res, next) {
 
+  let esAdmin=req.session.usuarioIngresado.type==1;
+  if (esAdmin) {
+    db.User.findAll().then(function (result) {
+      res.render('usersViews/uList', { usersFile: result});
+    }).catch(function (error) {
+      console.log(error)
+      res.send("Error")
+    });
+  }
+  else {
+    res.send("Error: Solo para administradores.");
+  }
+  
 
-  let lectura = leerJSON();
+  // let lectura = leerJSON();
 
-  var userList = lectura.filter(function (user) {
-    return user.delete == false;
-  });
+  // var userList = lectura.filter(function (user) {
+  //   return user.delete == false;
+  // });
 
 
-  res.render('usersViews/uList', { usersFile: userList });
+  //res.render('usersViews/uList', { usersFile: userList });
 }
 
 };//cierre controller
