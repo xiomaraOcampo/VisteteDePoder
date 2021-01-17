@@ -36,6 +36,8 @@ router.get('/pruebas' ,productController.pruebas);
 router.post('/search' ,productController.search);
 
 
+
+
 //ruta para los formularios del administrador, para cargar productos
 
  router.get('/create' ,productController.create);
@@ -50,5 +52,17 @@ router.delete('/destroy/:id', productController.destroy);
 
 router.get('/list',productController.list);
 router.get('/listProductsUs',productController.listProductsUs);
+
+// ruta del nav filtrando
+router.get('/Tshirt' ,productController.Tshirt);
+router.get('/chinstrap' ,productController.chinstrap);
+router.get('/cap' ,productController.cap);
+router.get('/cup' ,productController.cup);
+router.get('/thermo' ,productController.thermo);
+router.get('/bottle' ,productController.bottle);
+router.get('/handbag' ,productController.handbag);
+router.get('/pencilCase' ,productController.pencilCase);
+router.get('/backpack' ,productController.backpack);
+
 
 module.exports = router;
