@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+    <%-include("../partials/head")%>
+<body>
+    <div class="container">
+        <!--HEADER-->
+        
+            <%-include("../partials/header")%>
+          <!-- fin del HEADER-->  
+
+          <!--MAIN-->   
+       <main class="mainProducto">        
+       
+       <section class="Nombre-Producto">
+        Productos encontrados con tu busqueda
+       </section>
+    
+
+
+       <ul>
+
+        <% products.forEach(function(product){ %>
+        <li>
+        
+         <div class="fondo">
+          <div class="producto-y-descripcion">
+
+            <% if(product.image){ %>
+
+              <section class="fotoProducto">
+                  <article> <img src="/images/imagesProducts/<%= product.image  %> " alt=" <%= product.image %> ">
+                      
+                  </article>
+              </section>
+        
+              <% }else{ %>
+        
+                
+            
+            <section class="fotoProducto">
+              <article> <img src="/images/imagesProducts/defaultImage.jpg"  alt="defaultImage.jpg">
+                  <!--no lo muestra-->
+              </article>
+          </section>
+             <% }%> 
+
+
+            <section class="descripcion">
+            <div class="remera1"> Nombre: <%= product.name %></div>
+            <div class="remera1"> Descripción: <%= product.description %></div> 
+            <!-- NO  ANDA EL TOSAN -->
+            <div class="remera1"> Precio: $ <%= product.price %></div>
+            <!-- NO DEVUELVE LOS DISEÑOS -->
+            <div class="remera1"> Diseño: <%= product.designs.design %></div> 
+            <div class="remera1"> Talle: <%= product.sizes.size %></div> 
+             <a href="/carrito"><button class="aCarrito"type="button">Añadir a carrito</button></a>
+            </section>
+      
+          </div>
+          
+        </div>
+      
+        </li>
+        <% }); %>
+      
+      </ul>
+ 
+
+            </main>
+
+    <%-include("../partials/footer")%>
+</body>
+</html>

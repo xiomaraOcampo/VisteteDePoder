@@ -16,6 +16,7 @@ const { decodeBase64 } = require("bcryptjs");
 let db = require("../database/models");
 
 let productController = {
+  // INCORPORAR LAS ASOCIACIONES DE CATEGORIA Y SUBCATEGIRIA
   detailAdm: function (req, res, next) {
     db.Product.findByPk(req.params.id, {
       include: [{ association: "designs" }, { association: "sizes" }],
@@ -55,6 +56,7 @@ let productController = {
   //       res.render('productsViews/detailProducts');*/
   // },
   detailUs: function (req, res, next) {
+    // INCORPORAR LAS ASOCIACIONES DE CATEGORIA Y SUBCATEGIRIA
     db.Product.findByPk(req.params.id, {
       include: [{ association: "designs" }, { association: "sizes" }],
       raw: true,
@@ -90,16 +92,28 @@ let productController = {
     
   },
   search: function (req, res, next) {
-    console.log(req.body.busqueda)
-    db.Product.findOne({
-      where:{name: req.body.busqueda
+  
+  // PROBARLO BUSCANDO POR SUBCATEGORIA?
+  // PROBAR POR RAW QUERY SI SE PUEDE GENERAR LA BUSQUEDA CON %LIKE%
+  // INCORPORAR LAS ASOCIACIONES DE CATEGORIA Y SUBCATEGIRIA
+    db.Product.findAll(
+        {
+        where:{name: req.body.busqueda
+        },
+        include: [{ association: "designs" }, { association: "sizes" }],
+        raw: true,
+        nest: true
       }
-    })
-      .then(function (product) {
-        if(product){
-          return res.render("productsViews/detailProductsAdm", {
-            product: product,
+    )
+   
+      .then(function (products) {
+        //  res.send(products[1].designs.design)
+        if(products){
+          // return res.render("productsViews/listSearch")
+          return res.render("productsViews/listSearch", {
+            products: products
           });
+          //  res.send(products[1])
         }else{
           return res.render("productsViews/mensajeNoEncontrado");
         }
@@ -167,6 +181,7 @@ let productController = {
   },
 
   create: function (req, res, next) {
+    // INCORPORAR LAS ASOCIACIONES DE CATEGORIA Y SUBCATEGIRIA
     let pedidoDesigns = db.Design.findAll();
     let pedidoSizes = db.Size.findAll();
 
