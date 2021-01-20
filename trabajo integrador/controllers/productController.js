@@ -399,7 +399,7 @@ let productController = {
         res.send("error");
       });
   },
-  chinstrap: function (req, res, next) {
+  masc: function (req, res, next) {
     // res.send('ruta')
     // PROBARLO BUSCANDO POR SUBCATEGORIA?
     // INCORPORAR LAS ASOCIACIONES DE CATEGORIA Y SUBCATEGIRIA

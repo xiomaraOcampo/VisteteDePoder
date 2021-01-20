@@ -55,7 +55,7 @@ router.get('/listProductsUs',productController.listProductsUs);
 
 // ruta del nav filtrando
 router.get('/Tshirt' ,productController.Tshirt);
-router.get('/chinstrap' ,productController.chinstrap);
+router.get('/masc' ,productController.masc);
 router.get('/cap' ,productController.cap);
 router.get('/cup' ,productController.cup);
 router.get('/thermo' ,productController.thermo);
