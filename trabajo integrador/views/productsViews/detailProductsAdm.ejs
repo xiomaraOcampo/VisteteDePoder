@@ -1,67 +1,68 @@
 <!DOCTYPE html>
 <html lang="en">
-  <%-include("../partials/head")%>
+<%-include(".. /partials/head")%>
+
   <body>
     <div class="container">
       <!--HEADER-->
 
-      <%-include("../partials/header")%>
-      <!-- fin del HEADER-->
-      <!--MAIN-->
-      <main class="mainProducto">
-        <section class="Nombre-Producto"><%= product.name %></section>
+      <%-include(".. /partials/header")%>
+        <!-- fin del HEADER-->
+        <!--MAIN-->
+        <main class="mainProducto">
+          <section class="Nombre-Producto">
+            <%= product.name %>
+          </section>
 
-        <form
-          class="tarjeta"
-          action="/products/detailProduct/<%= product.id %>"
-          method="GET"
-        >
-          <div class="producto-y-descripcion">
-            <% if(product.image){ %>
-            <section class="fotoProducto">
-              <article>
-                <img
-                  src="/images/imagesProducts/<%= product.image %> "
-                  alt=" <%= product.image %> "
-                />
-              </article>
-            </section>
-            <% }else{ %>
+          <form class="tarjeta" action="/products/detailProduct/<%= product.id %>" method="GET">
+            <div class="producto-y-descripcion">
+              <% if(product.image){ %>
+                <section class="fotoProducto">
+                  <article>
+                    <img src="/images/imagesProducts/<%= product.image %> " alt=" <%= product.image %> " />
+                  </article>
+                </section>
+                <% }else{ %>
 
-            <section class="fotoProducto">
-              <article>
-                <img
-                  src="/images/imagesProducts/defaultImage.jpg"
-                  alt="defaultImage.jpg"
-                />
-              </article>
-            </section>
-            <% }%>
+                  <section class="fotoProducto">
+                    <article>
+                      <img src="/images/imagesProducts/defaultImage.jpg" alt="defaultImage.jpg" />
+                    </article>
+                  </section>
+                  <% }%>
 
-            <section class="descripcion">
-              <div class="remera1">Producto: <%= product.name %></div>
-              <p>Descripción: <%= product.description %></p>
-              <h4>Precio: <%= product.price %></h4>
+                    <section class="descripcion">
+                      <div class="remera1">Producto: <%= product.name %>
+                      </div>
+                      <p>Descripción: <%= product.description %>
+                      </p>
+                      <h4>Precio: <%= product.price %>
+                      </h4>
 
-              <article class="talle-cantidad">
-                <label for="">Talle: <%= product.size %> </label>
-              </article>
+                      <article class="talle-cantidad">
+                        <label for="">Talle: <%= product.size %> </label>
+                      </article>
 
-              <a class="remera1" href="/products/edit/<%= product.id %>"
-                ><button type="button">Editar</button></a>
+                  
+                        <article class="talle-cantidad">
+                          <label for="">Subcategoría: <%= product.subcat.subcategory %> </label>
+                        </article>
+                  
 
-              <form
-                class="borrar"
-                action="/products/destroy/<%= product.id %>?_method=DELETE"
-                method="POST">
-                <button type="submit">Borrar</button>
-                
-              </form>
-            </section>
-          </div>
-        </form>
-      </main>
-      <%-include("../partials/footer")%>
+                            <a class="remera1" href="/products/edit/<%= product.id %>"><button
+                                type="button">Editar</button></a>
+
+                            <form class="borrar" action="/products/destroy/<%= product.id %>?_method=DELETE"
+                              method="POST">
+                              <button type="submit">Borrar</button>
+
+                            </form>
+                    </section>
+            </div>
+          </form>
+        </main>
+        <%-include(".. /partials/footer")%>
     </div>
   </body>
+
 </html>
