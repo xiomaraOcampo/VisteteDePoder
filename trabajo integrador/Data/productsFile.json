@@ -1,16 +1,15 @@
 [
   {
     "avatar": "avatar-1609888578692.jpg",
-    "id": "1",
-    "nombre": "florencia ",
-    "descripcion": "  ",
+    "nombre": "remera",
+    "descripcion": " \r\n  ",
     "Categoria": "Indumentaria",
-    "subCategoria": "",
-    "talle": "",
-    "disenio": "",
-    "cantidad": "",
-    "precio": "",
-    "delete": false
+    "subCategoria": "1",
+    "disenio": "1",
+    "talle": "1",
+    "precio": "1222",
+    "delete": false,
+    "id": "1"
   },
   {
     "id": "2",
@@ -137,15 +136,14 @@
   },
   {
     "avatar": "avatar-1609888578692.jpg",
-    "id": "1",
-    "nombre": "florencia ",
-    "descripcion": "  ",
+    "nombre": "remera",
+    "descripcion": " \r\n  ",
     "Categoria": "Indumentaria",
-    "subCategoria": "",
-    "talle": "",
-    "disenio": "",
-    "cantidad": "",
-    "precio": "",
-    "delete": false
+    "subCategoria": "1",
+    "disenio": "1",
+    "talle": "1",
+    "precio": "1222",
+    "delete": false,
+    "id": "1"
   }
 ]

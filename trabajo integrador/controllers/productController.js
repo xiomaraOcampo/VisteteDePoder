@@ -223,55 +223,83 @@ let productController = {
           console.log(error);
         });
 
-      res.redirect("/products/list");
+      res.redirect("/products/list", { product: product });
     } else {
       return res.render("productsViews/create", { errors: errors.errors });
     }
   },
   edit: function (req, res, next) {
-    var idProduct = req.params.id;
+    // var idProduct = req.params.id;
 
-    var productFound;
-    for (var i = 0; i < productsFile.length; i++) {
-      if (productsFile[i].id == idProduct) {
-        productFound = productsFile[i];
-        break;
-      }
-    }
-    if (productFound) {
-      res.render("productsViews/edit", { productFound, toThousand });
-    } else {
-      //res.send('No se ha encontrado el producto con Id: '+ idProduct)
-      res.render("productsViews/list", { productsFile, toThousand });
-    }
+    // var productFound;
+    // for (var i = 0; i < productsFile.length; i++) {
+    //   if (productsFile[i].id == idProduct) {
+    //     productFound = productsFile[i];
+    //     break;
+    //   }
+    // }
+    // if (productFound) {
+    //   res.render("productsViews/edit", { productFound, toThousand });
+    // } else {
+    //   //res.send('No se ha encontrado el producto con Id: '+ idProduct)
+    //   res.render("productsViews/list", { productsFile, toThousand });
+    // }
+
+    let pedidoProduct = db.Product.findByPk(req.params.id);
+    let pedidoDesigns = db.Design.findAll();
+    let pedidoSizes = db.Size.findAll();
+    let pedidoSubcategories = db.Subcategory.findAll();
+  
+    Promise.all([pedidoProduct, pedidoDesigns, pedidoSizes, pedidoSubcategories])
+    .then(function([product, design, size, subcategory]){
+            // console.log([product, design, size, subcategory])
+            res.render("productsViews/edit", {product:product, design:design, size:size, subcategory:subcategory })
+    })
+
   },
   update: function (req, res, next) {
-    var idProduct = req.params.id;
+    // var idProduct = req.params.id;
 
-    var productFound = [];
-    for (var i = 0; i < productsFile.length; i++) {
-      if (productsFile[i].id == idProduct) {
-        let editProduct = {
-          avatar:
-            req.files.length > 0
-              ? req.files[0].filename
-              : productsFile[i].avatar,
-          ...req.body,
-          delete: false,
-        };
+    // var productFound = [];
+    // for (var i = 0; i < productsFile.length; i++) {
+    //   if (productsFile[i].id == idProduct) {
+    //     let editProduct = {
+    //       avatar:
+    //         req.files.length > 0
+    //           ? req.files[0].filename
+    //           : productsFile[i].avatar,
+    //       ...req.body,
+    //       delete: false,
+    //     };
 
-        editProduct.id = idProduct;
-        productFound.push(editProduct);
-      } else {
-        productFound.push(productsFile[i]);
+    //     editProduct.id = idProduct;
+    //     productFound.push(editProduct);
+    //   } else {
+    //     productFound.push(productsFile[i]);
+    //   }
+    // }
+    // editProductJson = JSON.stringify(productFound, null, 2);
+    // fs.writeFileSync(__dirname + "/../Data/productsFile.json", editProductJson);
+    // //res.send("Modificaste el producto " + req.body.nombre);
+    // //res.render('productsViews/list', {productsFile, toThousand}  );
+    // res.redirect("/products/detailProductUs/" + req.params.id);
+  
+    db.Product.update({
+      name: req.body.nombre,
+      price: req.body.precio,
+      description: req.body.descripcion,
+      image: req.files.length > 0 ? req.files[0].filename : null, //o la imagen x defecto
+      subcategory_id: req.body.subCategoria,
+      
+      design: req.body.disenio,
+      size: req.body.talle
+    },{
+      where: {
+          id: req.params.id
       }
-    }
-    editProductJson = JSON.stringify(productFound, null, 2);
-    fs.writeFileSync(__dirname + "/../Data/productsFile.json", editProductJson);
-    //res.send("Modificaste el producto " + req.body.nombre);
-    //res.render('productsViews/list', {productsFile, toThousand}  );
-    res.redirect("/products/detailProductUs/" + req.params.id);
-  },
+  
+  });res.redirect("/products/detailProductUs/" + req.params.id )
+},
   // destroy: function (req, res) {
   //   db.Product.destroy({
   //     where: {
@@ -311,7 +339,8 @@ let productController = {
     res.redirect("/products/list");
   },
 
-  list: function (req, res, next) {
+  list: function (req, res) {
+
     /*console.log({avatar: req.files[0].filename,
           ...req.body });*/
 
@@ -322,6 +351,10 @@ let productController = {
     });
 
     res.render("productsViews/list", { productsFile: productList, toThousand });
+
+
+
+
   },
   listProductsUs: function (req, res, next) {
     /*console.log({avatar: req.files[0].filename,

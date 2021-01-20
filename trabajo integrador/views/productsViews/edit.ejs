@@ -10,7 +10,7 @@
         <!--MAIN-->
 
         <form
-          action="/products/edit/<%=productFound.id%>?_method=PUT"
+          action="/products/edit/<%=product.id%>?_method=PUT"
           method="POST"
           enctype="multipart/form-data"
         >
@@ -23,13 +23,13 @@
           <div class="registro2">
             <h3>Editar producto</h3>
 
-            <input
+            <!-- <input
               class="inputsRegistro"
               type="text"
               placeholder="Id Producto"
               name="id"
-              value="<%= productFound.id %>"
-            />
+              value="<%= product.id %>"
+            /> -->
 
             <input
               class="inputsRegistro"
@@ -37,18 +37,20 @@
               placeholder="Nombre Producto"
               id="nombreProducto"
               name="nombre"
-              value="<%= productFound.nombre %>"
+              value="<%= product.name %>"
             />
 
+            
+            <label for=""> Descripción</label>
             <textarea
               class="inputsRegistro"
               name="descripcion"
               id=""
               cols="60"
               rows="1"
-              value="<%= productFound.descripcioon %>"
-            >
- <%= productFound.descripcion %> </textarea
+              value="<%= product.description %>"
+            > 
+ <%= product.descripcion %> </textarea
             ><br />
 
             <!--Imagen-->
@@ -68,61 +70,55 @@
               name="subCategoria"
               id="subCategoria"
             >
-              <option value="">SubCategoría</option>
-              <option value="Remera">Remera</option>
-              <option value="Musculosa">Musculosa</option>
-              <option value="Barbijo">Barbijo</option>
-              <option value="Taza">Taza</option>
-              <option value="Bolsa">Bolsa</option>
-            </select>
+            <% for(let i=0; i<subcategory.length; i++){ %> 
+              <option value="<%= subcategory[i].id %>"> 
+                 <%= subcategory[i].subcategory %> 
+              </option> 
+           <% } %>    
+           </select>
 
             <!--No se muestra en las tarjetas de listS-->
 
             <!--Talle/ Diseño / Cantidad (que sea un Select)-->
 
-            <input
-              class="inputsRegistro"
-              type="text"
-              placeholder="Talle"
-              id="talleProducto"
-              name="talle"
-              value="<%= productFound.talle %>"
-            />
-            <input
-              class="inputsRegistro"
-              type="text"
-              placeholder="Diseño"
-              id="disenioProducto"
-              name="disenio"
-              value="<%= productFound.disenio %>"
-            />
-            <input
-              class="inputsRegistro"
-              type="text"
-              placeholder="Cantidad"
-              id="cantidadProducto"
-              name="cantidad"
-              value="<%= productFound.cantidad %>"
-            />
+            
+            <label for="" > Diseño: </label>
+            <select class="inputsRegistro" name="disenio"> 
+                <% for(let i=0; i<design.length; i++){ %> 
+                   <option value="<%= design[i].id %>"> 
+                      <%= design[i].design %> 
+                   </option> 
+                <% } %>    
+               </select> 
 
-            <!--Precio (función de Miles)-->
 
-            <input
-              class="inputsRegistro"
-              type="text"
-              placeholder="Precio"
-              id="precioProducto"
-              name="precio"
-              value="<%= toThousand( productFound.precio )%>"
-            />
-
-            <button class="enviar" value="enviar" type="submit">
-              Editá tu producto en Vistete de Poder
-            </button>
-
-            <a class="aIngreso" href="\products">Ver tus productos</a>
-          </div>
-        </form>
+               <label for="" > Talle: </label>
+               <select class="inputsRegistro" name="talle"> 
+                   <% for(let i=0; i<size.length; i++){ %> 
+                      <option value="<%= size[i].id %>"> 
+                         <%= size[i].size %> 
+                      </option> 
+                   <% } %>    
+                  </select> 
+             <!--Precio (función de Miles)-->
+ 
+             <input
+               class="inputsRegistro"
+               type="text"
+               placeholder="Precio"
+               id="precioProducto"
+               name="precio"
+               value="<%=  product.price %>"
+             />
+ 
+             <button class="enviar" value="enviar" type="submit">
+               Editá tu producto en Vistete de Poder
+             </button>
+ 
+             <a class="aIngreso" href="\products">Ver tus productos</a>
+           </div>
+         </form>
+ 
       </main>
 
       <%-include("../partials/footer")%>
