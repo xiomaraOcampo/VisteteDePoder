@@ -51,19 +51,15 @@
             <option value="Accesorios">Accesorios</option>
         </select>
       
-        <label for="" > SubCategoría: </label>                         
-        <select class="inputsRegistro" name ="subcategoria" id="subCategoria">
-            <option value="remera">Remera</option>
-            <option value="barbijo">Barbijo</option>
-            <option value="gorra">Gorra</option>
-            <option value="taza">Taza</option>
-            <option value="termo">Termo</option>
-            <option value="botella">Botella</option>
-            <option value="bolso">Bolso</option>
-            <option value="cartuchera">Cartuchera</option>  
-            <option value="mochila">Mochila</option>
-        </select>
-       
+        <label for="" > SubCategoría: </label>
+        <select class="inputsRegistro" name="subcategoria"> 
+            <% for(let i=0; i<subcat.length; i++){ %> 
+               <option value="<%= subcat[i].id %>"> 
+                  <%= subcat[i].subcategory %> 
+               </option> 
+            <% } %>    
+           </select> 
+
         <label for="" > Diseño: </label>
         <select class="inputsRegistro" name="disenio"> 
             <% for(let i=0; i<designs.length; i++){ %> 

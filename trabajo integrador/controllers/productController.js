@@ -19,12 +19,13 @@ let productController = {
   // INCORPORAR LAS ASOCIACIONES DE CATEGORIA Y SUBCATEGIRIA
   detailAdm: function (req, res, next) {
     db.Product.findByPk(req.params.id, {
-      include: [{ association: "designs" }, { association: "sizes" }],
+      include: [{ association: "designs" }, { association: "sizes" }, { association: "subcat" }],
       raw: true,
       nest: true,
     })
       .then(function (product) {
         if (product) {
+          console.log(product);
           return res.render("productsViews/detailProductsAdm", {
             product: product,
           });
@@ -58,7 +59,7 @@ let productController = {
   detailUs: function (req, res, next) {
     // INCORPORAR LAS ASOCIACIONES DE CATEGORIA Y SUBCATEGIRIA
     db.Product.findByPk(req.params.id, {
-      include: [{ association: "designs" }, { association: "sizes" }],
+      include: [{ association: "designs" }, { association: "sizes" },{ association: "subcat" }],
       raw: true,
       nest: true,
     })
@@ -96,7 +97,7 @@ let productController = {
     // INCORPORAR LAS ASOCIACIONES DE CATEGORIA Y SUBCATEGIRIA
     db.Product.findAll({
       where: { name: req.body.busqueda },
-      include: [{ association: "designs" }, { association: "sizes" }],
+      include: [{ association: "designs" }, { association: "sizes" }, { association: "subcat" }],
       raw: true,
       nest: true,
     })
@@ -149,6 +150,7 @@ let productController = {
     //   .catch(function (error) {
     //     console.log(error);
     //   });
+
     //  TRAE EL DISEÑO DE UN PRODUCTO ESPECIFICO
     // db.Product.findAll({
     //   include: [ {association: "designs"} ]
@@ -177,13 +179,18 @@ let productController = {
     // INCORPORAR LAS ASOCIACIONES DE CATEGORIA Y SUBCATEGIRIA
     let pedidoDesigns = db.Design.findAll();
     let pedidoSizes = db.Size.findAll();
+    let pedidoSubcategories = db.Subcategory.findAll();
 
-    Promise.all([pedidoDesigns, pedidoSizes])
-      .then(function ([designs, sizes]) {
+
+   
+    Promise.all([pedidoDesigns, pedidoSizes, pedidoSubcategories])
+      .then(function ([designs, sizes, subcat]) {
         return res.render("productsViews/create", {
           designs: designs,
           sizes: sizes,
+          subcat: subcat
         });
+
       })
       .catch(function (error) {
         console.log(error);

@@ -62,6 +62,11 @@ module.exports = (sequelize, dataTypes) => {
             otherKey:"size_id",
             timestamps:false
         })
+        Product.belongsTo(models.Subcategory, {
+            as: "subcat",
+            foreignKey: "subcategory_id"
+        })
+        
     }
     return Product;
 }
