@@ -39,17 +39,17 @@
             <% }%>
 
             <section class="descripcion">
-              <div class="remera1">Producto: <%= product.name %></div>
-              <p>Descripción: <%= product.description %></p>
-              <h4>Precio: <%= product.price %></h4>
+              <div class="remera1"><%= product.name %></div>
+              <p> <%= product.description %></p>
+              <h4>$ <%= product.price %></h4>
 
               <article class="talle-cantidad">
-                <label for="">Talle: <%= product.size %> </label>
+                <label for=""> <%= product.size %> </label>
               </article>
 
-              <article class="talle-cantidad">
+              <!-- <article class="talle-cantidad">
                 <label for="">Subcategoría: <%= product.subcat.subcategory %> </label>
-              </article>
+              </article> -->
 
               <a class="remera1" href="/carrito"
                 ><button type="button">Añadir a carrito</button></a>
@@ -58,6 +58,7 @@
             </section>
           </div>
         </form>
+    
       </main>
       <%-include("../partials/footer")%>
     </div>

@@ -18,17 +18,22 @@
     box-shadow: 1px 3px 5px grey;
     /*border: 1px solid black;*/
 }
-/*main .tarjeta{
-    border:1px solid green;
+main .tarjeta{
+    /* border:1px solid green; */
     display:flex;
+    padding: 0px 30px;
+    box-shadow: 1px 3px 5px grey;
+
+
   
-}*/
+}
 main .fotoProducto{
     /*border: 1px solid green;*/
     box-shadow: 1px 3px 5px grey;
     background: #efeff3;
     display:flex;
     justify-content: center;
+    width: 100%;
 }
 /*
 main .fotoProducto img{
@@ -105,7 +110,7 @@ main .fotoProducto img{
 }
 .fotoProducto article img{
     width: 90%;
-    margin: 10px 10px 30px 10px;
+    margin: 10px 10px 50px 10px;
   
 }
 

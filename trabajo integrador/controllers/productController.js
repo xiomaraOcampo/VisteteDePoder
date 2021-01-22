@@ -27,7 +27,7 @@ let productController = {
         if (product) {
           console.log(product);
           return res.render("productsViews/detailProductsAdm", {
-            product: product,
+            product: product
           });
         } else {
           return res.render("productsViews/mensajeNoEncontrado");
@@ -223,7 +223,9 @@ let productController = {
           console.log(error);
         });
 
-      res.redirect("/products/list", { product: product });
+      // res.redirect("/products/list", { product: product });
+      res.send('creaste un producto')
+
     } else {
       return res.render("productsViews/create", { errors: errors.errors });
     }
@@ -409,7 +411,7 @@ let productController = {
         res.send("error");
       });
   },
-  chinstrap: function (req, res, next) {
+  masc: function (req, res, next) {
     // res.send('ruta')
     // PROBARLO BUSCANDO POR SUBCATEGORIA?
     // INCORPORAR LAS ASOCIACIONES DE CATEGORIA Y SUBCATEGIRIA
