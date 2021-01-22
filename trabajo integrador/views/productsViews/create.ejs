@@ -47,12 +47,12 @@
         <input  type="file" name="avatar" id="id"><br>
      
 
-        <label for="" > Categoría: </label>                         
+        <!-- <label for="" > Categoría: </label>                         
         <select class="inputsRegistro" name ="categoria" id="categoria">
             <option value="Indumentaria">Indumentaria</option>
             <option value="Merchandising">Merchandising</option>
             <option value="Accesorios">Accesorios</option>
-        </select>
+        </select> -->
       
         <label for="" > SubCategoría: </label>
         <select class="inputsRegistro subcat" name="subcategoria"> 
@@ -72,22 +72,7 @@
             <% } %>    
            </select> 
 
-        <label for="" > Genero: </label>                         
-        <select class="inputsRegistro" name ="genero" id="genero">
-            <option value="ninio">Niño</option>
-            <option value="mujer">Mujer</option>
-            <option value="Hombre">Hombre</option> 
-        </select>  
-       
-        <label class = "size" for="" > Talle: </label>
-        <select class="inputsRegistro size" name="talle"> 
-            <% for(let i=0; i<sizes.length; i++){ %> 
-               <option value="<%= sizes[i].size %>"> 
-                  <%= sizes[i].size %> 
-               </option> 
-            <% } %>    
-           </select> 
-
+    
       <!-- <input class=inputsRegistro type="text" placeholder="Cantidad" id="cantidadProducto" name="cantidad"> -->
       
         <button class="enviar" value="enviar" type="submit">Crea tu producto en Vistete de Poder</button>

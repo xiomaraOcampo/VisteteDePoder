@@ -26,7 +26,7 @@ let productController = {
       .then(function (product) {
         if (product) {
           console.log(product);
-          return res.render("productsViews/detailProductsAdm", {
+          return res.render("productsViews/detailProductAdm", {
             product: product
           });
         } else {
@@ -49,7 +49,7 @@ let productController = {
   //     }
   //   }
   //   if (productFound) {
-  //     res.render("productsViews/detailProductsAdm", { productFound });
+  //     res.render("productsViews/detailProductAdm", { productFound });
   //   } else {
   //     res.send("No se ha encontrado el producto con Id: " + idProduct);
   //   }
@@ -128,7 +128,7 @@ let productController = {
     // })
     //   .then(function (product) {
     //     if(product){
-    //       return res.render("productsViews/detailProductsAdm", {
+    //       return res.render("productsViews/detailProductAdm", {
     //         product: product,
     //       });
     //     }else{
@@ -178,16 +178,15 @@ let productController = {
   create: function (req, res, next) {
     // INCORPORAR LAS ASOCIACIONES DE CATEGORIA Y SUBCATEGIRIA
     let pedidoDesigns = db.Design.findAll();
-    let pedidoSizes = db.Size.findAll();
+    // let pedidoSizes = db.Size.findAll();
     let pedidoSubcategories = db.Subcategory.findAll();
 
 
    
-    Promise.all([pedidoDesigns, pedidoSizes, pedidoSubcategories])
-      .then(function ([designs, sizes, subcat]) {
+    Promise.all([pedidoDesigns, pedidoSubcategories])
+      .then(function ([designs, subcat]) {
         return res.render("productsViews/create", {
           designs: designs,
-          sizes: sizes,
           subcat: subcat
         });
 
@@ -214,10 +213,10 @@ let productController = {
             design_id: req.body.disenio,
             product_id: product.id,
           });
-          db.Product_Size.create({
-            size_id: req.body.talle,
-            product_id: product.id,
-          });
+          // db.Product_Size.create({
+          //   size_id: req.body.talle,
+          //   product_id: product.id,
+          // });
         })
         .catch(function (error) {
           console.log(error);
@@ -300,7 +299,7 @@ let productController = {
           id: req.params.id
       }
   
-  });res.redirect("/products/detailProductsAdm/" + req.params.id )
+  });res.redirect("/products/detailProductAdm/" + req.params.id )
 },
   // destroy: function (req, res) {
   //   db.Product.destroy({
