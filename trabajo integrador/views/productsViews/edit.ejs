@@ -30,7 +30,8 @@
               name="id"
               value="<%= product.id %>"
             /> -->
-
+           
+            <label for=""> Nombre producto</label>
             <input
               class="inputsRegistro"
               type="text"
@@ -53,9 +54,9 @@
  <%= product.description %> </textarea
             ><br />
 
-            <!--Imagen-->
+            <label for="" > Imagen </label>
             <input type="file" name="avatar" id="avatar" /><br />
-            <!---si no cargamos imagen se rompe...pero igualmente no la muestra-->
+      
 
             <!-- <label for=""> Categoria</label>
             <select class="inputsRegistro" name="Categoria" id="categoria">
@@ -64,7 +65,7 @@
               <option value="Accesorios">Accesorios</option>
             </select> -->
 
-            <label for=""> SubCategoría: </label>
+            <label for=""> SubCategoría </label>
             <select
               class="inputsRegistro"
               name="subCategoria"
@@ -82,7 +83,7 @@
             <!--Talle/ Diseño / Cantidad (que sea un Select)-->
 
             
-            <label for="" > Diseño: </label>
+            <label for="" > Diseño </label>
             <select class="inputsRegistro" name="disenio"> 
                 <% for(let i=0; i<design.length; i++){ %> 
                    <option value="<%= design[i].id %>"> 
@@ -101,7 +102,8 @@
                    <% } %>    
                   </select>  -->
              <!--Precio (función de Miles)-->
- 
+             
+             <label for="" > Precio </label>
              <input
                class="inputsRegistro"
                type="text"

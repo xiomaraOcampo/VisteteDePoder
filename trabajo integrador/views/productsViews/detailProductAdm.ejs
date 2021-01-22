@@ -41,7 +41,7 @@
             <section class="descripcion">
               <div class="remera1">Producto: <%= product.name %></div>
               <p> Descripcion: <%= product.description %></p>
-              <h4>Precio: $ <%= product.price %></h4>
+              <p> Diseño: <%= product.designs.design %></p>       
 
               <!-- <article class="talle-cantidad">
                 <label for=""> Talle: <%= product.sizes.size %> </label>
@@ -51,6 +51,8 @@
                 <label for="">Subcategoría: </label>
                 <%= product.subcat.subcategory %> 
               </article>
+
+              <h4>Precio: $ <%= product.price %></h4>
 
               <a class="remera1" href="/products/edit/<%= product.id %>"><button
                 type="button">Editar</button></a>

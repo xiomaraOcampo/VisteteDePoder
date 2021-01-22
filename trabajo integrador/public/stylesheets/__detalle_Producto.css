@@ -4,7 +4,8 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    /*border:1px solid green;*/
+    /* border:1px solid green; */
+  
 }
 
 .Nombre-Producto{
@@ -23,6 +24,7 @@ main .tarjeta{
     display:flex;
     padding: 0px 30px;
     box-shadow: 1px 3px 5px grey;
+    /* background-color: red; */
 
 
   
@@ -125,15 +127,35 @@ main .fotoProducto img{
     width:100%;
     background-image: none;
 }
+.tarjetamini{
+    /* border: red solid 1px; */
+    width: 60%;
+    display:flex;
+    text-decoration: none;
+    
+}
+.listado{
+    display:flex;
+    flex-direction: column;
+    /* border:1px violet solid; */
+    justify-content:center;
+    align-items: center;
 
+}
 ul li .fondo{
     display:flex;
-    justify-content: center;
+    justify-content: start;
     background-image:url("/images/fotosVisteteDePoder/fondoFormularios.jpg");
     box-shadow: 1px 3px 5px grey;
     margin:10px;
+    width: 100%;
+ 
 }
+ul li .fondo .producto-y-descripcion{
+    /* border:1px green solid; */
+    width: 90%;
 
+}
 
 
   

@@ -387,8 +387,8 @@ let productController = {
     // PROBARLO BUSCANDO POR SUBCATEGORIA?
     // INCORPORAR LAS ASOCIACIONES DE CATEGORIA Y SUBCATEGIRIA
     db.Product.findAll({
-      where: { name: "remera" },
-      include: [{ association: "designs" }, { association: "sizes" }],
+      where: { name: "Remera" },
+      include: [{ association: "designs" }],
       raw: true,
       nest: true,
     })
@@ -415,8 +415,8 @@ let productController = {
     // PROBARLO BUSCANDO POR SUBCATEGORIA?
     // INCORPORAR LAS ASOCIACIONES DE CATEGORIA Y SUBCATEGIRIA
     db.Product.findAll({
-      where: { name: "barbijo" },
-      include: [{ association: "designs" }, { association: "sizes" }],
+      where: { name: "Barbijo" },
+      include: [{ association: "designs" }],
       raw: true,
       nest: true,
     })
@@ -443,8 +443,8 @@ let productController = {
     // PROBARLO BUSCANDO POR SUBCATEGORIA?
     // INCORPORAR LAS ASOCIACIONES DE CATEGORIA Y SUBCATEGIRIA
     db.Product.findAll({
-      where: { name: "gorra" },
-      include: [{ association: "designs" }, { association: "sizes" }],
+      where: { name: "Gorra" },
+      include: [{ association: "designs" }],
       raw: true,
       nest: true,
     })
@@ -469,8 +469,8 @@ let productController = {
     // PROBARLO BUSCANDO POR SUBCATEGORIA?
     // INCORPORAR LAS ASOCIACIONES DE CATEGORIA Y SUBCATEGIRIA
     db.Product.findAll({
-      where: { name: "taza" },
-      include: [{ association: "designs" }, { association: "sizes" }],
+      where: { name: "Taza" },
+      include: [{ association: "designs" }],
       raw: true,
       nest: true,
     })
@@ -495,8 +495,8 @@ let productController = {
     // PROBARLO BUSCANDO POR SUBCATEGORIA?
     // INCORPORAR LAS ASOCIACIONES DE CATEGORIA Y SUBCATEGIRIA
     db.Product.findAll({
-      where: { name: "termo" },
-      include: [{ association: "designs" }, { association: "sizes" }],
+      where: { name: "Termo" },
+      include: [{ association: "designs" }],
       raw: true,
       nest: true,
     })
@@ -521,8 +521,8 @@ let productController = {
     // PROBARLO BUSCANDO POR SUBCATEGORIA?
     // INCORPORAR LAS ASOCIACIONES DE CATEGORIA Y SUBCATEGIRIA
     db.Product.findAll({
-      where: { name: "botella" },
-      include: [{ association: "designs" }, { association: "sizes" }],
+      where: { name: "Botella" },
+      include: [{ association: "designs" }],
       raw: true,
       nest: true,
     })
@@ -547,8 +547,8 @@ let productController = {
     // PROBARLO BUSCANDO POR SUBCATEGORIA?
     // INCORPORAR LAS ASOCIACIONES DE CATEGORIA Y SUBCATEGIRIA
     db.Product.findAll({
-      where: { name: "bolso" },
-      include: [{ association: "designs" }, { association: "sizes" }],
+      where: { name: "Bolso" },
+      include: [{ association: "designs" }],
       raw: true,
       nest: true,
     })
@@ -573,8 +573,8 @@ let productController = {
     // PROBARLO BUSCANDO POR SUBCATEGORIA?
     // INCORPORAR LAS ASOCIACIONES DE CATEGORIA Y SUBCATEGIRIA
     db.Product.findAll({
-      where: { name: "cartuchera" },
-      include: [{ association: "designs" }, { association: "sizes" }],
+      where: { name: "Cartuchera" },
+      include: [{ association: "designs" }],
       raw: true,
       nest: true,
     })
@@ -599,8 +599,8 @@ let productController = {
     // PROBARLO BUSCANDO POR SUBCATEGORIA?
     // INCORPORAR LAS ASOCIACIONES DE CATEGORIA Y SUBCATEGIRIA
     db.Product.findAll({
-      where: { name: "mochila" },
-      include: [{ association: "designs" }, { association: "sizes" }],
+      where: { name: "Mochila" },
+      include: [{ association: "designs" }],
       raw: true,
       nest: true,
     })

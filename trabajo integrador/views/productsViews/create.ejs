@@ -54,7 +54,7 @@
             <option value="Accesorios">Accesorios</option>
         </select> -->
       
-        <label for="" > SubCategoría: </label>
+        <label for="" > SubCategoría </label>
         <select class="inputsRegistro subcat" name="subcategoria"> 
             <% for(let i=0; i<subcat.length; i++){ %> 
                <option value="<%= subcat[i].id %>"> 
@@ -63,7 +63,7 @@
             <% } %>    
            </select> 
 
-        <label for="" > Diseño: </label>
+        <label for="" > Diseño </label>
         <select class="inputsRegistro" name="disenio"> 
             <% for(let i=0; i<designs.length; i++){ %> 
                <option value="<%= designs[i].id %>"> 
