@@ -298,7 +298,7 @@ let productController = {
           id: req.params.id
       }
   
-  });res.redirect("/products/detailProductUs/" + req.params.id )
+  });res.redirect("/products/detailProductsAdm/" + req.params.id )
 },
   // destroy: function (req, res) {
   //   db.Product.destroy({
@@ -344,15 +344,25 @@ let productController = {
     /*console.log({avatar: req.files[0].filename,
           ...req.body });*/
 
-    let lectura = leerJSON();
+    // let lectura = leerJSON();
 
-    var productList = lectura.filter(function (product) {
-      return product.delete == false;
-    });
+    // var productList = lectura.filter(function (product) {
+    //   return product.delete == false;
+    // });
 
-    res.render("productsViews/list", { productsFile: productList, toThousand });
+    // res.render("productsViews/list", { productsFile: productList, toThousand });
 
-
+    let pedidoProduct = db.Product.findAll();
+    let pedidoDesigns = db.Design.findAll();
+    let pedidoSizes = db.Size.findAll();
+    let pedidoSubcategories = db.Subcategory.findAll();
+  
+    Promise.all([pedidoProduct, pedidoDesigns, pedidoSizes, pedidoSubcategories])
+    .then(function([product, design, size, subcategory]){
+            // console.log([product, design, size, subcategory])
+            res.send("productsViews/list", {product:product, design:design, size:size, subcategory:subcategory })
+    })
+    
 
 
   },

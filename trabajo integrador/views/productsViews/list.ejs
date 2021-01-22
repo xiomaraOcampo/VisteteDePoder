@@ -11,71 +11,66 @@
           <!--MAIN-->   
        <main class="mainProducto">        
        
-       <section class="Nombre-Producto">
-        Lista de Productos
-</section>
-<ul>
-
-  <% productsFile.forEach(function(product){ %>
-  <li>
-    Id: <%= product.id %>
-   <div class="fondo">
-    <div class="producto-y-descripcion">
-         
-      <% if(product.avatar){ %>
-
-      <section class="fotoProducto">
-          <article> <img src="/images/imagesProducts/<%= product.avatar  %> " alt=" <%= product.avatar %> ">
-              
-          </article>
-      </section>
-
-      <% }else{ %>
-
-        
-    
-    <section class="fotoProducto">
-      <article> <img src="/images/imagesProducts/defaultImage.jpg"  alt="defaultImage.jpg">
-          <!--no lo muestra-->
-      </article>
+        <section class="Nombre-Producto">
+          Lista de Productos
   </section>
-     <% }%> 
-
-      <section class="descripcion">
-        <div class="remera1"> Nombre: <%= product.nombre %></div> 
-        <div class="remera1"> SubCategoría: <%= product.subcategoria %></div> 
-        <div class="remera1"> Descripción: <%= product.descripcion %></div> 
-        <div class="remera1"> Talle: <%= product.talle %> </div> 
-        <div class="remera1"> Cantidad:  <%= product.cantidad %></div>
-        <div class="remera1"> Diseño: <%= product.disenio %></div> 
-        <div class="remera1"> Precio: $ <%= toThousand(product.precio) %></div>
-
-       
-         
-        <a class="remera1" href="/products/edit/<%= product.id %>"><button type="button">Editar</button></a>
-
-        <form class="borrar" action="/products/destroy/<%= product.id %>?_method=DELETE" method="POST">
-
-          <button type='submit'>Borrar</button>
-        
-        </form>
-
-       <!--<a class="remera1" href="/products/destroy/<%= product.id %>"><button type="button" >Borrar</button></a>-->
-
+  <ul>
+  
+    <% product.forEach(function(product){ %>
+    <li>
+      Id: <%= product.id %>
+     <div class="fondo">
+      <div class="producto-y-descripcion">
+           
+        <% if(product.image){ %>
+  
+        <section class="fotoProducto">
+            <article> <img src="/images/imagesProducts/<%= product.image  %> " alt=" <%= product.image %> ">
+                
+            </article>
         </section>
-
+  
+        <% }else{ %>
+  
+          
       
-
-
+      <section class="fotoProducto">
+        <article> <img src="/images/imagesProducts/defaultImage.jpg"  alt="defaultImage.jpg">
+            <!--no lo muestra-->
+        </article>
+    </section>
+       <% }%> 
+  
+        <section class="descripcion">
+          <div class="remera1"> Nombre: <%= product.name %></div> 
+          <div class="remera1"> SubCategoría: <%= subcategory.subcategory %></div> 
+          <div class="remera1"> Descripción: <%= product.description %></div> 
+          <div class="remera1"> Talle: <%= size.size %> </div> 
+          <div class="remera1"> Cantidad:  </div>
+          <div class="remera1"> Diseño: <%= design.disenio %></div> 
+          <div class="remera1"> Precio: $ <%= product.price %></div>
+  
+         
+           
+          <a class="remera1" href="/products/edit/<%= product.id %>"><button type="button">Editar</button></a>
+  
+  
+         <!--<a class="remera1" href="/products/destroy/<%= product.id %>"><button type="button" >Borrar</button></a>-->
+  
+          </section>
+  
+        
+  
+  
+      </div>
     </div>
-  </div>
-
-  </li>
-  <% }); %>
-
-</ul>
-
-            </main>
+  
+    </li>
+    <% }); %>
+  
+  </ul>
+  
+              </main>
 
     <%-include("../partials/footer")%>
 </body>
