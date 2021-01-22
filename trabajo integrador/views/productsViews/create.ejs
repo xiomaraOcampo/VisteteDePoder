@@ -55,7 +55,7 @@
         </select>
       
         <label for="" > SubCategoría: </label>
-        <select class="inputsRegistro" name="subcategoria"> 
+        <select class="inputsRegistro subcat" name="subcategoria"> 
             <% for(let i=0; i<subcat.length; i++){ %> 
                <option value="<%= subcat[i].id %>"> 
                   <%= subcat[i].subcategory %> 
@@ -79,10 +79,10 @@
             <option value="Hombre">Hombre</option> 
         </select>  
        
-        <label for="" > Talle: </label>
-        <select class="inputsRegistro" name="talle"> 
+        <label class = "size" for="" > Talle: </label>
+        <select class="inputsRegistro size" name="talle"> 
             <% for(let i=0; i<sizes.length; i++){ %> 
-               <option value="<%= sizes[i].id %>"> 
+               <option value="<%= sizes[i].size %>"> 
                   <%= sizes[i].size %> 
                </option> 
             <% } %>    

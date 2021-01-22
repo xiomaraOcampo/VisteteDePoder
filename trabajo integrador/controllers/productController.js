@@ -27,7 +27,7 @@ let productController = {
         if (product) {
           console.log(product);
           return res.render("productsViews/detailProductsAdm", {
-            product: product,
+            product: product
           });
         } else {
           return res.render("productsViews/mensajeNoEncontrado");
