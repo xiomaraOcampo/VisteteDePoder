@@ -223,7 +223,9 @@ let productController = {
           console.log(error);
         });
 
-      res.redirect("/products/list", { product: product });
+      // res.redirect("/products/list", { product: product });
+      res.send('creaste un producto')
+
     } else {
       return res.render("productsViews/create", { errors: errors.errors });
     }

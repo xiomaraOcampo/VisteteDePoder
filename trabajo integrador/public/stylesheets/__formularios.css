@@ -184,9 +184,22 @@ form .registro2{
     font-size: 1rem;
     height: 30px;
 }
+.errores{
+   background-color:rgb(252, 239, 239); 
+}
+.errornombre{
+    color:red;
+    font-size: 0.9rem;
+}
+
+.errorPrecio{
+    color:red;
+    font-size: 0.9rem;
+}
+
 .textoContraseña{
     font-weight: 500;
-    font-size: 18px;;
+    font-size: 18px;
 }
 /*======ENVIAR====*/
 .registro2 .enviar{
