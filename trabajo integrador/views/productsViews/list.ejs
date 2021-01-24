@@ -14,10 +14,10 @@
         <section class="Nombre-Producto">
           Lista de Productos
   </section>
-  <ul>
+  <ul class= "listado">
   
     <% product.forEach(function(product){ %>
-    <li>
+    <li class="tarjetamini">
       Id: <%= product.id %>
      <div class="fondo">
       <div class="producto-y-descripcion">
@@ -32,7 +32,7 @@
   
         <% }else{ %>
   
-          
+           
       
       <section class="fotoProducto">
         <article> <img src="/images/imagesProducts/defaultImage.jpg"  alt="defaultImage.jpg">
@@ -45,8 +45,8 @@
           <div class="remera1"> Nombre: <%= product.name %></div> 
           <div class="remera1"> SubCategoría: <%= subcategory.subcategory %></div> 
           <div class="remera1"> Descripción: <%= product.description %></div> 
-          <div class="remera1"> Talle: <%= size.size %> </div> 
-          <div class="remera1"> Cantidad:  </div>
+          <!-- <div class="remera1"> Talle: <%= size.size %> </div>  -->
+          <!-- <div class="remera1"> Cantidad:  </div> -->
           <div class="remera1"> Diseño: <%= design.disenio %></div> 
           <div class="remera1"> Precio: $ <%= product.price %></div>
   

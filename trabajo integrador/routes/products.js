@@ -48,12 +48,14 @@ router.post('/search' ,productController.search);
 router.get('/edit/:id',productController.edit);
 router.put('/edit/:id',upload.any('avatar'),productController.update);
 
-router.delete('/destroy/:id', productController.destroy);
+router.delete('/destroy/:id', productController.delete);
 
 router.get('/list',productController.list);
 router.get('/listProductsUs',productController.listProductsUs);
 
 // ruta del nav filtrando
+// router.get('/nav/:id' ,productController.nav);
+
 router.get('/Tshirt' ,productController.Tshirt);
 router.get('/masc' ,productController.masc);
 router.get('/cap' ,productController.cap);

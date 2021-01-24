@@ -57,25 +57,60 @@ let productController = {
   //       res.render('productsViews/detailProducts');*/
   // },
   detailUs: function (req, res, next) {
-    // INCORPORAR LAS ASOCIACIONES DE CATEGORIA Y SUBCATEGIRIA
-    db.Product.findByPk(req.params.id, {
-      include: [{ association: "designs" }, { association: "sizes" },{ association: "subcat" }],
-      raw: true,
-      nest: true,
-    })
-      .then(function (product) {
-        if (product) {
-          return res.render("productsViews/detailProductsUs", {
-            product: product,
-          });
-        } else {
-          return res.render("productsViews/mensajeNoEncontrado");
-        }
-      })
-      .catch(function (error) {
-        console.log(error);
-        res.send("Error");
+   
+ // INCORPORAR LAS ASOCIACIONES DE CATEGORIA Y SUBCATEGIRIA
+ db.Product.findByPk(req.params.id, {
+  include: [{ association: "designs" }, { association: "sizes" },{ association: "subcat" }],
+  raw: true,
+  nest: true,
+})
+  .then(function (product) {
+    if (product) {
+      return res.render("productsViews/detailProductsUs", {
+        product: product,
       });
+    } else {
+      return res.render("productsViews/mensajeNoEncontrado");
+    }
+  })
+  .catch(function (error) {
+    console.log(error);
+    res.send("Error");
+  });
+
+
+
+
+    // let pedidoDesigns = db.Design.findAll();
+    // let pedidoSizes = db.Size.findAll();
+    // let pedidoGenres = db.Genre.findAll();
+    
+    // let pedidoProduct = db.Product.findByPk(req.params.id, {
+    //   include: [{ association: "designs" }, { association: "sizes" },{ association: "subcat" }, { association: "genres"}],
+    //   raw: true,
+    //   nest: true,
+    // })
+
+    // Promise.all([pedidoProduct, pedidoDesigns, pedidoSizes, pedidoGenres])
+    //   .then(function (product) {
+    //     if (product) {
+    //       // return res.render("productsViews/detailProductsUs", {
+    //       //   product: product,
+    //       // });
+        
+    //     console.log(product)
+    //     } else {
+    //       return res.render("productsViews/mensajeNoEncontrado");
+    //     }
+    //   })
+    //   .catch(function (error) {
+    //     console.log(error);
+    //     res.send("Error");
+    //   });
+
+
+      
+
     // var idProduct = req.params.id;
 
     // var productFound;
@@ -310,34 +345,39 @@ let productController = {
   //   return res.redirect("/products/list");
   // },
 
-  destroy: function (req, res, next) {
-    var idProduct = req.params.id;
+  delete: function (req, res, next) {
+    // var idProduct = req.params.id;
 
-    /*var productDestroy = productsFile.find(function(product){
-            return product.id == idProduct;
-          });
+    // /*var productDestroy = productsFile.find(function(product){
+    //         return product.id == idProduct;
+    //       });
          
-          productDestroy.delete=true;*/
+    //       productDestroy.delete=true;*/
 
-    var productDeleteTrue = productsFile.map(function (product) {
-      if (product.id == idProduct) {
-        product.delete = true;
-      }
-      return product;
-    });
+    // var productDeleteTrue = productsFile.map(function (product) {
+    //   if (product.id == idProduct) {
+    //     product.delete = true;
+    //   }
+    //   return product;
+    // });
 
-    /*var productDestroy = productsFile.filter(function(product){
-            return product.id != idProduct;
-          });*/
+    // /*var productDestroy = productsFile.filter(function(product){
+    //         return product.id != idProduct;
+    //       });*/
 
-    productDestroyJson = JSON.stringify(productDeleteTrue, null, 2);
-    fs.writeFileSync(
-      __dirname + "/../Data/productsFile.json",
-      productDestroyJson
-    );
-    //res.send("Eliminaste un producto")
-    //res.render('productsViews/list', {productsFile, toThousand}  );
-    res.redirect("/products/list");
+    // productDestroyJson = JSON.stringify(productDeleteTrue, null, 2);
+    // fs.writeFileSync(
+    //   __dirname + "/../Data/productsFile.json",
+    //   productDestroyJson
+    // );
+    // //res.send("Eliminaste un producto")
+    // //res.render('productsViews/list', {productsFile, toThousand}  );
+    // res.redirect("/products/list");
+  
+  db.Product.destroy({
+    where: {id: req.params.id}
+  })
+  res.send("Eliminaste un producto")
   },
 
   list: function (req, res) {
@@ -361,7 +401,7 @@ let productController = {
     Promise.all([pedidoProduct, pedidoDesigns, pedidoSizes, pedidoSubcategories])
     .then(function([product, design, size, subcategory]){
             // console.log([product, design, size, subcategory])
-            res.send("productsViews/list", {product:product, design:design, size:size, subcategory:subcategory })
+            res.render("productsViews/list", {product:product, design:design, size:size, subcategory:subcategory })
     })
     
 
@@ -371,17 +411,80 @@ let productController = {
     /*console.log({avatar: req.files[0].filename,
          ...req.body });*/
 
-    let lectura = leerJSON();
+    // let lectura = leerJSON();
 
-    var productList = lectura.filter(function (product) {
-      return product.delete == false;
-    });
+    // var productList = lectura.filter(function (product) {
+    //   return product.delete == false;
+    // });
 
-    res.render("productsViews/listProductsUs", {
-      productsFile: productList,
-      toThousand,
-    });
-  },
+    // res.render("productsViews/listProductsUs", {
+    //   productsFile: productList,
+    //   toThousand,
+    // });
+  
+    let pedidoProduct = db.Product.findAll();
+    let pedidoDesigns = db.Design.findAll();
+    let pedidoSizes = db.Size.findAll();
+    let pedidoSubcategories = db.Subcategory.findAll();
+  
+    Promise.all([pedidoProduct, pedidoDesigns, pedidoSizes, pedidoSubcategories])
+    .then(function([product, design, size, subcategory]){
+            // console.log([product, design, size, subcategory])
+            res.render("productsViews/listProductsUs", {product:product, design:design, size:size, subcategory:subcategory })
+
+    })},
+
+  
+  
+    // nav: function( req, res, next){
+    
+    //   // let cat = req.params.id;
+      
+      
+      
+    //   let pedidoProduct = db.Product.findAll(
+    //     {
+    //     where: {subcategory_id: "1"},
+    //     include: [{ association: "subcat" } ],
+    //     raw: true,
+    //     nest: true,
+    //     }
+    //     );
+      
+    //     let pedidoSubcategory = db.Subcategory.findAll(
+    //       {
+  
+    //       where: { category_id: "1" },
+    //     include: [{ association: "categorias" }],
+    //     raw: true,
+    //     nest: true,
+    //     }
+    //     );
+    //     // let pedidoCategory = db.Category.findByPk(1);
+         
+    //   Promise.all([ pedidoCategory, pedidoSubcategory, pedidoProduct  ])
+     
+    //   .then(function ([product, category, subcategory]) {
+    //       if ([product, category, subcategory]) {
+           
+    //       // console.log([product, category, subcategory]);
+    //         return res.render("productsViews/listSearch2", 
+    //           {product:product, category:category, subcategory:subcategory },
+    //         );
+    //       } else {
+    //         return res.render("productsViews/mensajeNoEncontrado");
+    //       }
+    //     })
+
+        
+      
+    //   .catch(function (error) {
+    //     console.log(error);
+    //     res.send("error");
+    //   });
+
+    // },
+
   Tshirt: function (req, res, next) {
     // res.send('ruta')
     // PROBARLO BUSCANDO POR SUBCATEGORIA?
@@ -392,10 +495,18 @@ let productController = {
       raw: true,
       nest: true,
     })
+    // db.Product.findAll({
+    //   where: { subcategory_id: "1" },
+    //   include: [{ association: "designs" },{ association: "subcat"}],
+    //   raw: true,
+    //   nest: true,
+    // })
 
       .then(function (products) {
         //  res.send(products[1].designs.design)
         if (products) {
+         
+        
           // return res.render("productsViews/listSearch")
           return res.render("productsViews/listSearch", {
             products: products,
