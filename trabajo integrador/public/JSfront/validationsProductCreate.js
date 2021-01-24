@@ -1,6 +1,8 @@
 window.addEventListener("load", function () {
     console.log("conectado con ProductCreate");
 
+
+    // PREGUNTAR
        let subcat =  document.querySelector(".subcat");
       console.log(subcat.value);
 
@@ -54,24 +56,6 @@ window.addEventListener("load", function () {
         errorPrecio.innerHTML ="";
       }
 
-  
-    //   let subcat =  document.querySelector(".subcat");
-    //   console.log(subcat.value);
-
-    //   let selectSize =  document.querySelectorAll(".size");
-    //   console.log(selectSize);
-
-    //  if(subcat.value !== "1" && subcat.value !== "2" && subcat.value !== "3" ){
-    //   selectSize.forEach(function(element){
-    //     element.style.display = "none";
-    //   }); 
-    //  }else{
-    //   selectSize.forEach(function(element){
-    //     element.style.display = "block";
-    //   });
-  
-    //  }
-  
 
      });
   });

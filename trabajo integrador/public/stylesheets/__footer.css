@@ -2,7 +2,7 @@ footer{
     background-image:url("/images/fotosVisteteDePoder/zocaloAlta.jpg");
     display:flex;
     justify-content: space-around;
-    align-items: center;
+    /* align-items: center; */
     box-sizing: border-box;
     width: 100%;
     font-family : 'Josefin Sans', sans-serif; 
@@ -10,11 +10,13 @@ footer{
     color:#dfdfe6;
     font-size: 20px;
     /*height: 150px;*/  
-    /*border: 1px solid red;*/
+    border: 1px solid red;
 }
 .tarjetas{
     display:flex;
-    /*border:1px solid violet;*/
+    border:1px solid violet;
+    margin-top:0px;
+
 }
 .Medios-de-pagos{
     display: inline-block;
@@ -23,7 +25,7 @@ footer{
     margin-top: 10px;
     margin-bottom: 10px;   
     text-align: center;
-    /*border: 1px solid red;*/
+    border: 1px solid red;
    
 }
 .Forma-de-envio{
@@ -33,19 +35,21 @@ footer{
     margin-top: 10px;
     margin-bottom: 10px;
     text-align: center;
-    /*border: 1px solid red;*/
+    border: 1px solid red;
 }
-.tarjetas  img{
+/* .tarjetas  img{
     border:2px solid grey;
-}
+} */
 
 .Menu-del-footer{       
 display: inline-block;
 box-sizing: border-box;
 margin-top:2px;
 height: 30px;
-margin-left:90px;
-/*border: 1px solid red;*/
+/* margin-left:90px; */
+border: 1px solid red;
+width: 100%;
+
 }
 .Menu-del-footer a{
     text-decoration: none;
@@ -56,11 +60,45 @@ display:inline-block;
 box-sizing: border-box; 
 margin-left:30px;
 margin-top: 2px;
-/*border: 1px solid red;*/
+border: 1px solid red;
+
 }
 
 .Menu-del-footer a {
 color:#dfdfe6;
-/*border: 1px solid red;*/
+border: 1px solid red;
 }
- 
+.info{
+    border:1px solid green;
+    flex-direction: column;
+    width: 60%;
+    margin-top: 2%;
+} 
+.infoContacto{
+   display: flex;
+   color:green;
+   border:violet 1px solid;
+   display:none;
+}
+.infoCompra{
+    display: flex;
+    color:#dfdfe6;
+    border:violet 1px solid;
+    display:none;
+  }  
+  .infoCambio{
+    display: flex;
+    color:red;
+    border:violet 1px solid;
+    display:none;
+  } 
+  .infoNosotros{
+    display: flex;
+    color:yellow;
+    border:violet 1px solid;
+    display:none;  
+  }
+ .none{
+     display:block;
+     /* position:absolute; */
+ }
