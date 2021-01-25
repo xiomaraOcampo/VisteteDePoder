@@ -43,6 +43,7 @@ router.get('/check',function (req,res,){
    res.send('El usuario logueado es '+ req.session.usuarioIngresado.email);
  } 
 });
+router.post('/logout', userController.logout);
 
 //edicion de usuarios
 
