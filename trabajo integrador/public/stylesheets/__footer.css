@@ -10,11 +10,11 @@ footer{
     color:#dfdfe6;
     font-size: 20px;
     /*height: 150px;*/  
-    border: 1px solid red;
+    /* border: 1px solid red; */
 }
 .tarjetas{
     display:flex;
-    border:1px solid violet;
+    /* border:1px solid violet; */
     margin-top:0px;
 
 }
@@ -25,7 +25,7 @@ footer{
     margin-top: 10px;
     margin-bottom: 10px;   
     text-align: center;
-    border: 1px solid red;
+    /* border: 1px solid red; */
    
 }
 .Forma-de-envio{
@@ -35,7 +35,7 @@ footer{
     margin-top: 10px;
     margin-bottom: 10px;
     text-align: center;
-    border: 1px solid red;
+    /* border: 1px solid red; */
 }
 /* .tarjetas  img{
     border:2px solid grey;
@@ -47,7 +47,7 @@ box-sizing: border-box;
 margin-top:2px;
 height: 30px;
 /* margin-left:90px; */
-border: 1px solid red;
+/* border: 1px solid red; */
 width: 100%;
 
 }
@@ -60,45 +60,59 @@ display:inline-block;
 box-sizing: border-box; 
 margin-left:30px;
 margin-top: 2px;
-border: 1px solid red;
+/* border: 1px solid red; */
 
 }
 
 .Menu-del-footer a {
 color:#dfdfe6;
-border: 1px solid red;
+/* border: 1px solid red; */
 }
 .info{
-    border:1px solid green;
+    /* border:1px solid green; */
     flex-direction: column;
     width: 60%;
     margin-top: 2%;
 } 
 .infoContacto{
    display: flex;
-   color:green;
-   border:violet 1px solid;
+   /* color:green; */
+   /* border:violet 1px solid; */
    display:none;
+   font-size: 0.95rem;
+   padding-left:3%;
+   padding-top: 0px;
 }
 .infoCompra{
     display: flex;
     color:#dfdfe6;
-    border:violet 1px solid;
+    /* border:violet 1px solid; */
     display:none;
+    font-size: 0.95rem;
+    padding-left:3%;
+    padding-top: 0px;
   }  
   .infoCambio{
     display: flex;
-    color:red;
-    border:violet 1px solid;
+    color:#dfdfe6;
+    /* color:red; */
+    /* border:violet 1px solid; */
     display:none;
+    font-size: 0.95rem;
+    padding-left:3%;
+    padding-top: 0px;
   } 
   .infoNosotros{
     display: flex;
-    color:yellow;
-    border:violet 1px solid;
+    /* color:yellow; */
+    color:#dfdfe6;
+    /* border:violet 1px solid; */
     display:none;  
+    font-size: 0.95rem;
+    padding-left:3%;
+    padding-top: 0px;
   }
- .none{
+ .block{
      display:block;
      /* position:absolute; */
  }

@@ -15,6 +15,7 @@ const { decodeBase64 } = require("bcryptjs");
 
 let db = require("../database/models");
 
+
 let productController = {
   // INCORPORAR LAS ASOCIACIONES DE CATEGORIA Y SUBCATEGIRIA
   detailAdm: function (req, res, next) {

@@ -10,7 +10,12 @@ window.addEventListener("load", function () {
   // console.log(botonContacto);
 
   botonContacto.addEventListener("click", function (e) {
-    infoContacto.classList.toggle("none");
+    infoContacto.classList.toggle("block");
+   
+      infoCompra.classList.remove("block");
+      infoCambio.classList.remove("block");
+      infoNosotros.classList.remove("block");
+    
   });
 
   let infoCompra = document.querySelector(".infoCompra");
@@ -20,7 +25,11 @@ window.addEventListener("load", function () {
   console.log(botonCompra);
 
   botonCompra.addEventListener("click", function (e) {
-    infoCompra.classList.toggle("none");
+    infoCompra.classList.toggle("block");
+
+      infoContacto.classList.remove("block");
+      infoCambio.classList.remove("block");
+      infoNosotros.classList.remove("block");
    });
 
   console.log(infoCompra.classList.toggle)
@@ -32,7 +41,10 @@ window.addEventListener("load", function () {
   console.log(botonCambio);
 
   botonCambio.addEventListener("click", function (e) {
-    infoCambio.classList.toggle("none");
+    infoCambio.classList.toggle("block");
+       infoContacto.classList.remove("block");
+       infoCompra.classList.remove("block");
+       infoNosotros.classList.remove("block");  
   });
   let infoNosotros = document.querySelector(".infoNosotros");
   console.log(infoNosotros.classList);
@@ -41,7 +53,10 @@ window.addEventListener("load", function () {
   console.log(botonNosotros);
 
   botonNosotros.addEventListener("click", function (e) {
-    infoNosotros.classList.toggle("none");
+    infoNosotros.classList.toggle("block");
+       infoContacto.classList.remove("block");
+       infoCompra.classList.remove("block");
+       infoCambio.classList.remove("block");
   });
 
   
