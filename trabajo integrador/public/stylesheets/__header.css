@@ -205,6 +205,34 @@ header .header2 .buscadores .buscador form .enviar {
   display: none;
 }
 
+header .header2 .buscadores .ingreso ul {
+  display: none;
+  position: absolute;
+  padding: 4px;
+  background-color: #f5f4f3;
+  box-shadow: 1px 3px 5px grey;
+  /* margin-left: 30px;*/
+}
+header .header2 .buscadores .ingreso a:hover {
+  color: grey;
+}
+header .header2 .buscadores .ingreso ul a {
+  color: #4c4c49;
+  font-size: 1rem;
+  font-weight: 600;
+  text-decoration: none;
+}
+header .header2 .buscadores .ingreso:hover ul {
+  display: block;
+}
+header .header2 .buscadores .ingreso .desplegable {
+  width: 10%;
+}
+header .header2 .buscadores .ingreso .desplegable li {
+  padding: 5px;
+  list-style: none;
+}
+
 /*======RESPONSIVE======*/
 
 /*=======TABLET header========*/
@@ -340,6 +368,7 @@ header .header2 .buscadores .buscador form .enviar {
     font-size: 0.7rem;
     height: 32px;
   }
+
 }
 /*=======CELULAR header========*/
 

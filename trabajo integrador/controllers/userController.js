@@ -87,6 +87,7 @@ let userController = {
           });
         }
         req.session.usuarioIngresado = usuarioAIngresar;
+        
 
         if (req.body.recordame != undefined) {
           res.cookie('recordame',
@@ -107,6 +108,10 @@ let userController = {
     } else {
       return res.render('usersViews/ingreso', { errors: errors.errors });
     }
+  },
+  logout: function (req, res, next) {
+    req.session.destroy();
+    res.render("usersViews/ingreso");
   },
 
   edit: function (req, res, next) {
