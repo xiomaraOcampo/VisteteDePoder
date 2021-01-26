@@ -259,7 +259,8 @@ let productController = {
         });
 
       // res.redirect("/products/list", { product: product });
-      res.send('creaste un producto')
+      // res.send('creaste un producto')
+      return res.render('productsViews/productCreated')
 
     // } else {
       // return res.render("productsViews/create", { errors: errors.errors });
@@ -732,5 +733,9 @@ let productController = {
         res.send("error");
       });
   },
+  productCreated:function (req, res, next) {
+    // res.send('anda la ruta')
+    return res.render('productsViews/productCreated')
+  }
 }; //cierre general
 module.exports = productController;

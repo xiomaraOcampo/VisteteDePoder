@@ -67,4 +67,6 @@ router.get('/pencilCase' ,productController.pencilCase);
 router.get('/backpack' ,productController.backpack);
 
 
+router.get('/productCreated' ,productController.productCreated);
+
 module.exports = router;

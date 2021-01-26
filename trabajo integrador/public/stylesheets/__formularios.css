@@ -256,7 +256,25 @@ form .registro2{
     box-shadow: inset 1px 3px 5px rgb(80, 79, 79);
     color:#61615d;
 }
+.padreGif{
+    /* border:1px solid violet; */
+    justify-content: center;
+    align-items: center;
+}
 
+.gif{
+    background : white;
+    width: 20%;
+    border:5px solid white;     
+    margin:auto;
+    margin-bottom: 2%;
+    padding-bottom: 2%;
+    box-shadow: 1px 3px 5px grey;
+}
+
+.gif img{
+    width: 100%;
+}
 
 
 
