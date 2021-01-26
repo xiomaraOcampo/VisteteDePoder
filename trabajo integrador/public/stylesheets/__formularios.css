@@ -197,6 +197,11 @@ form .registro2{
     font-size: 0.9rem;
 }
 
+.errorDescripcion{
+    color:red;
+    font-size: 0.9rem;
+}
+
 .textoContraseña{
     font-weight: 500;
     font-size: 18px;

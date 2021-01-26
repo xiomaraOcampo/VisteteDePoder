@@ -232,9 +232,9 @@ let productController = {
       });
   },
   store: function (req, res, next) {
-    let errors = validationResult(req);
+    // let errors = validationResult(req);
     //isEmpty= esta vacia
-    if (errors.isEmpty()) {
+    // if (errors.isEmpty()) {
       console.log(req.body);
       db.Product.create({
         name: req.body.nombre,
@@ -261,9 +261,9 @@ let productController = {
       // res.redirect("/products/list", { product: product });
       res.send('creaste un producto')
 
-    } else {
-      return res.render("productsViews/create", { errors: errors.errors });
-    }
+    // } else {
+      // return res.render("productsViews/create", { errors: errors.errors });
+    // }
   },
   edit: function (req, res, next) {
     // var idProduct = req.params.id;
