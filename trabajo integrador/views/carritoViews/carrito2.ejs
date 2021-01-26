@@ -15,37 +15,39 @@
     <meta charset="UTF-8">
     <title></title>
     <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css" integrity="sha384-9gVQ4dYFwwWSjIDZnLEWnxCjeSWFphJiwGPXr1jddIhOegiu1FwO5qRGvFXOdJZ4" crossorigin="anonymous">
+    <!-- <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css" integrity="sha384-9gVQ4dYFwwWSjIDZnLEWnxCjeSWFphJiwGPXr1jddIhOegiu1FwO5qRGvFXOdJZ4" crossorigin="anonymous"> -->
     <script>
         window.onload = function () {
             // Variables
             let baseDeDatos = [
                 {
                     id: 1,
-                    nombre: 'Patata',
+                    nombre: 'remera',
                     precio: 1,
-                    imagen: 'https://source.unsplash.com/random/500x500/?potato&sig=1'
+                    imagen: '/images/imagesProducts/remera.jpg'
                 },
                 {
                     id: 2,
-                    nombre: 'Cebolla',
+                    nombre: 'bolso',
                     precio: 1.2,
-                    imagen: 'https://source.unsplash.com/random/500x500/?onion&sig=2'
+                    imagen: '/images/imagesProducts/bolso.jpg'
                 },
                 {
                     id: 3,
-                    nombre: 'Calabacin',
+                    nombre: 'barbijo',
                     precio: 2.1,
-                    imagen: 'https://source.unsplash.com/random/500x500/?zucchini&sig=3'
+                    imagen: '/images/imagesProducts/barbijo.jpg'
                 },
                 {
                     id: 4,
-                    nombre: 'Fresas',
-                    precio: 0.6,
-                    imagen: 'https://source.unsplash.com/random/500x500/?burrs&sig=4'
+                    nombre: 'taza',
+                    precio: 2.5,
+                    imagen: '/images/imagesProducts/taza.jpg'
                 }
 
             ];
+
+            
             
             let $items = document.querySelector('#items');
             let carrito = [];
@@ -180,11 +182,12 @@
 </head>
 <body>
     <div class="container">
+        <div class="tituloMiCarrito">Mi carrito</div>
         <div class="row">
             <!-- Elementos generados a partir del JSON -->
             <main id="items" class="col-sm-8 row"></main>
-            <!-- Carrito -->
-            <aside class="col-sm-4">
+            <!-- Carrito  CAMBIE EK NOMBRE Y ESCRIBI DETALLE SUBTOTAL,FIJARSE SI AFECTA EN OTROS LADOS-->
+            <aside class="detalleSubtotal">
                 <h2>Carrito</h2>
                 <!-- Elementos del carrito -->
                 <ul id="carrito" class="list-group"></ul>
