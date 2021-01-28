@@ -75,6 +75,7 @@ module.exports = (sequelize, dataTypes) => {
 
         })
         
+        
 
 
 
