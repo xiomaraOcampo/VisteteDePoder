@@ -187,19 +187,12 @@ destroy: function (req,res) {
 },
 
 list: function (req, res, next) {
-
-  let esAdmin=req.session.usuarioIngresado.type==1;
-  if (esAdmin) {
     db.User.findAll().then(function (result) {
       res.render('usersViews/uList', { usersFile: result});
     }).catch(function (error) {
       console.log(error)
       res.send("Error")
     });
-  }
-  else {
-    res.send("Error: Solo para administradores.");
-  }
   
 
   // let lectura = leerJSON();

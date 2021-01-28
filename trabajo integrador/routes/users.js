@@ -7,6 +7,7 @@ var multer = require('multer');
 // const { body } = require('express-validator');
 var guestMiddleware= require('../Middleware/guestMiddleware');
 var authMiddleware= require('../Middleware/authMiddleware');
+var adminMiddleware= require('../Middleware/adminMiddleware');
 
 const path = require ('path');
 
@@ -43,7 +44,7 @@ router.get('/check',function (req,res,){
    res.send('El usuario logueado es '+ req.session.usuarioIngresado.email);
  } 
 });
-router.post('/logout', userController.logout);
+router.get('/logout', userController.logout);
 
 //edicion de usuarios
 
