@@ -23,8 +23,6 @@ cb(null, file.fieldname + '-' + Date.now() + path.extname(file.originalname))
 
 var upload = multer({ storage:storage});
 
-
-
 /* GET users listing. */
 router.get('/', userController.index);
 
@@ -37,6 +35,7 @@ router.post('/ingreso', [
   check ('email').isEmail(),
   check ('contrasenia').isLength({min:6}).withMessage('El mail y/o contraseña son invalidos'),
 ] ,userController.storeIngreso);
+
 router.get('/check',function (req,res,){
   if (req.session.usuarioIngresado== undefined){
     res.send('No estas logueado');

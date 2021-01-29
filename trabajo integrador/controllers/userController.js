@@ -42,10 +42,10 @@ let userController = {
       /* userJson = JSON.stringify(usersFile, null, 2);
       fs.writeFileSync(__dirname + '/../Data/usersFile.json', userJson); */
       db.User.create({
-        "name": req.body.nombre,
-        "email": req.body.email,
-        "password": req.body.contrasenia,
-        "image": req.body.userAvatar,
+        "name": registroUser.nombre,
+        "email":registroUser.email,
+        "password": registroUser.contrasenia,
+        "image": registroUser.userAvatar,
         "type": 0
       });
       res.render('home');
