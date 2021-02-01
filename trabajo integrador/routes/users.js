@@ -7,6 +7,7 @@ var multer = require('multer');
 // const { body } = require('express-validator');
 var guestMiddleware= require('../Middleware/guestMiddleware');
 var authMiddleware= require('../Middleware/authMiddleware');
+var adminMiddleware= require('../Middleware/adminMiddleware');
 
 const path = require ('path');
 
@@ -22,8 +23,6 @@ cb(null, file.fieldname + '-' + Date.now() + path.extname(file.originalname))
 
 var upload = multer({ storage:storage});
 
-
-
 /* GET users listing. */
 router.get('/', userController.index);
 
@@ -36,6 +35,7 @@ router.post('/ingreso', [
   check ('email').isEmail(),
   check ('contrasenia').isLength({min:6}).withMessage('El mail y/o contraseña son invalidos'),
 ] ,userController.storeIngreso);
+
 router.get('/check',function (req,res,){
   if (req.session.usuarioIngresado== undefined){
     res.send('No estas logueado');
@@ -43,7 +43,7 @@ router.get('/check',function (req,res,){
    res.send('El usuario logueado es '+ req.session.usuarioIngresado.email);
  } 
 });
-router.post('/logout', userController.logout);
+router.get('/logout', userController.logout);
 
 //edicion de usuarios
 

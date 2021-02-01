@@ -42,10 +42,10 @@ let userController = {
       /* userJson = JSON.stringify(usersFile, null, 2);
       fs.writeFileSync(__dirname + '/../Data/usersFile.json', userJson); */
       db.User.create({
-        "name": req.body.nombre,
-        "email": req.body.email,
-        "password": req.body.contrasenia,
-        "image": req.body.userAvatar,
+        "name": registroUser.nombre,
+        "email":registroUser.email,
+        "password": registroUser.contrasenia,
+        "image": registroUser.userAvatar,
         "type": 0
       });
       res.render('home');
@@ -187,19 +187,12 @@ destroy: function (req,res) {
 },
 
 list: function (req, res, next) {
-
-  let esAdmin=req.session.usuarioIngresado.type==1;
-  if (esAdmin) {
     db.User.findAll().then(function (result) {
       res.render('usersViews/uList', { usersFile: result});
     }).catch(function (error) {
       console.log(error)
       res.send("Error")
     });
-  }
-  else {
-    res.send("Error: Solo para administradores.");
-  }
   
 
   // let lectura = leerJSON();

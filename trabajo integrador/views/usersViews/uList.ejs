@@ -23,13 +23,13 @@
       
           <div class="registro1">
             <label for="id"><i class="fas fa-user"></i></label>
-            <label for="nombre"><i class="fas fa-user"></i></label>
+            <label for="name"><i class="fas fa-user"></i></label>
             <label for="email"><i class="fas fa-envelope"></i></label>
-       <% if(user.userAvatar){ %>
+       <% if(user.image){ %>
 
     </div>
         <section class="fotoProducto">
-          <article> <img src="/images/usersImages/<%= user.userAvatar %> " alt=" <%= user.userAvatar %> ">
+          <article> <img src="/images/usersImages/<%= user.image %> " alt=" <%= user.image %> ">
               
           </article>
       </section>
@@ -48,7 +48,7 @@
 
           <div class=inputsRegistro type="text" name="id"> Id: <%= user.id %> </div>
 
-          <div class=inputsRegistro type="text"  id="nombre" name="nombre">Nombre: <%= user.nombre %>  </div>
+          <div class=inputsRegistro type="text"  id="nombre" name="nombre">Nombre: <%= user.name %>  </div>
                   
           <div class="inputsRegistro" type="email" id="email" name="email">Email: <%= user.email %> </div>
                     

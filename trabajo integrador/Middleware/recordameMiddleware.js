@@ -5,10 +5,9 @@ const fs = require('fs');
   let usersFile = leerJSON();
 
 function recordameMiddleware(req,res,next){
-    next();
 
- if (req.cookies.recordame!=undefined &&
-    req.session.usuarioIngresado == undefined){
+    if (req.cookies.recordame!=undefined &&
+        req.session.usuarioIngresado == undefined){
         for (let i = 0; i < usersFile.length; i++){
             if (usersFile[i].email == req.cookies.recordame){
                 usuarioAIngresar = usersFile[i];
@@ -17,6 +16,7 @@ function recordameMiddleware(req,res,next){
         }
         req.session.usuarioIngresado = usuarioAIngresar;
     }
+    next();
 
 } 
 

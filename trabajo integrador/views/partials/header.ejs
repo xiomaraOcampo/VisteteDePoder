@@ -93,7 +93,11 @@
                 <ul class="desplegable">
                     <li><a href="../users/ingreso">Iniciar Sesion</a></li>
                     <li><a href="../users/registro">Registrarme</a></li>
-                    <li><a href="../users/detailUser">Mi cuenta</a></li>
+                    <%if (locals.user == undefined) {%>
+                        <li><a href="../users/ingreso">Mi cuenta</a></li>
+                    <%}else{%>
+                        <li><a href="../users/detail/<%=locals.user.id%>">Mi cuenta</a></li>
+                    <%}%>
                     <li><a href="../carrito/">Mis compras</a></li>
                     <li><a href="../users/logout">Cerrar Sesion</a></li>
 

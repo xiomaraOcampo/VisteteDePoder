@@ -30,7 +30,6 @@ app.use(methodOverride('_method'));
 app.use(session({secret:'secreto'}));
 app.use(recordameMiddleware);
 
-
 app.use('/', indexRouter);
 app.use('/users', usersRouter);
 app.use('/products', productsRouter);
@@ -55,5 +54,15 @@ app.use(function(err, req, res, next) {
   res.status(err.status || 500);
   res.render('error');
 });
+
+app.use(function (req, res, next) {
+  if(req.session.usuarioIngresado != undefined){
+    res.locals.user = req.session.usuarioIngresado;
+  } else{
+    res.locals.user = {id:0};
+  }
+  next();
+});
+
 
 module.exports = app;
