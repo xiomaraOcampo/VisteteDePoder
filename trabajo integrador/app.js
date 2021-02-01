@@ -33,7 +33,7 @@ app.use(recordameMiddleware);
 app.use('/', indexRouter);
 app.use('/users', usersRouter);
 app.use('/products', productsRouter);
-app.use('/api/users', apiUsersRouter);
+// app.use('/api/users', apiUsersRouter);
 app.use('/carrito', carritoRouter);
 
 // catch 404 and forward to error handler
