@@ -10,6 +10,7 @@ var indexRouter = require('./routes/index');
 var usersRouter = require('./routes/users');
 var productsRouter = require('./routes/products');
 var carritoRouter = require('./routes/carrito');
+var apiUsersRouter = require('./routes/api/users');
 var recordameMiddleware= require('./Middleware/recordameMiddleware');
 
 
@@ -33,7 +34,7 @@ app.use(recordameMiddleware);
 app.use('/', indexRouter);
 app.use('/users', usersRouter);
 app.use('/products', productsRouter);
-
+app.use('/api/users', apiUsersRouter);
 app.use('/carrito', carritoRouter);
 
 // catch 404 and forward to error handler
