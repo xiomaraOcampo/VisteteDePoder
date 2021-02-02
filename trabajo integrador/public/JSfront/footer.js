@@ -1,5 +1,5 @@
 window.addEventListener("load", function () {
-  console.log("conectado con footer");
+  // console.log("conectado con footer");
 
     // PREGUNTAR
 
@@ -10,38 +10,53 @@ window.addEventListener("load", function () {
   // console.log(botonContacto);
 
   botonContacto.addEventListener("click", function (e) {
-    infoContacto.classList.toggle("none");
+    infoContacto.classList.toggle("block");
+   
+      infoCompra.classList.remove("block");
+      infoCambio.classList.remove("block");
+      infoNosotros.classList.remove("block");
+    
   });
 
   let infoCompra = document.querySelector(".infoCompra");
-  console.log(infoCompra.classList);
+  // console.log(infoCompra.classList);
 
   let botonCompra = document.querySelector(".botonCompra");
-  console.log(botonCompra);
+  // console.log(botonCompra);
 
   botonCompra.addEventListener("click", function (e) {
-    infoCompra.classList.toggle("none");
+    infoCompra.classList.toggle("block");
+
+      infoContacto.classList.remove("block");
+      infoCambio.classList.remove("block");
+      infoNosotros.classList.remove("block");
    });
 
-  console.log(infoCompra.classList.toggle)
+  // console.log(infoCompra.classList.toggle)
 
   let infoCambio = document.querySelector(".infoCambio");
   // console.log(infoCambio.classList);
 
   let botonCambio = document.querySelector(".botonCambio");
-  console.log(botonCambio);
+  // console.log(botonCambio);
 
   botonCambio.addEventListener("click", function (e) {
-    infoCambio.classList.toggle("none");
+    infoCambio.classList.toggle("block");
+       infoContacto.classList.remove("block");
+       infoCompra.classList.remove("block");
+       infoNosotros.classList.remove("block");  
   });
   let infoNosotros = document.querySelector(".infoNosotros");
-  console.log(infoNosotros.classList);
+  // console.log(infoNosotros.classList);
 
   let botonNosotros = document.querySelector(".botonNosotros");
-  console.log(botonNosotros);
+  // console.log(botonNosotros);
 
   botonNosotros.addEventListener("click", function (e) {
-    infoNosotros.classList.toggle("none");
+    infoNosotros.classList.toggle("block");
+       infoContacto.classList.remove("block");
+       infoCompra.classList.remove("block");
+       infoCambio.classList.remove("block");
   });
 
   

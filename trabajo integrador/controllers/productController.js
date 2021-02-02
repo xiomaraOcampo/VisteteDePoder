@@ -15,6 +15,7 @@ const { decodeBase64 } = require("bcryptjs");
 
 let db = require("../database/models");
 
+
 let productController = {
   // INCORPORAR LAS ASOCIACIONES DE CATEGORIA Y SUBCATEGIRIA
   detailAdm: function (req, res, next) {
@@ -231,9 +232,9 @@ let productController = {
       });
   },
   store: function (req, res, next) {
-    let errors = validationResult(req);
+    // let errors = validationResult(req);
     //isEmpty= esta vacia
-    if (errors.isEmpty()) {
+    // if (errors.isEmpty()) {
       console.log(req.body);
       db.Product.create({
         name: req.body.nombre,
@@ -258,11 +259,12 @@ let productController = {
         });
 
       // res.redirect("/products/list", { product: product });
-      res.send('creaste un producto')
+      // res.send('creaste un producto')
+      return res.render('productsViews/productCreated')
 
-    } else {
-      return res.render("productsViews/create", { errors: errors.errors });
-    }
+    // } else {
+      // return res.render("productsViews/create", { errors: errors.errors });
+    // }
   },
   edit: function (req, res, next) {
     // var idProduct = req.params.id;
@@ -742,20 +744,24 @@ backpack: function (req, res, next) {
     nest: true,
   })
 
-    .then(function (products) {
-      // console.log(products )
-      if (products !== []) {
-        return res.render("productsViews/listSearch", {
-          products: products,
-        });
-      } else {
-        return res.render("productsViews/mensajeNoEncontrado");
-      }
-    })
-    .catch(function (error) {
-      console.log(error);
-      res.send("error");
-    });
-},
+      .then(function (products) {
+        // console.log(products )
+        if (products !== []) {
+          return res.render("productsViews/listSearch", {
+            products: products,
+          });
+        } else {
+          return res.render("productsViews/mensajeNoEncontrado");
+        }
+      })
+      .catch(function (error) {
+        console.log(error);
+        res.send("error");
+      });
+  },
+  productCreated:function (req, res, next) {
+    // res.send('anda la ruta')
+    return res.render('productsViews/productCreated')
+  }
 }; //cierre general
 module.exports = productController;

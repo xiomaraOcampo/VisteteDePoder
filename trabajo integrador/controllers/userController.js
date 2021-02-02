@@ -87,6 +87,7 @@ let userController = {
           });
         }
         req.session.usuarioIngresado = usuarioAIngresar;
+        
 
         if (req.body.recordame != undefined) {
           res.cookie('recordame',
@@ -107,6 +108,10 @@ let userController = {
     } else {
       return res.render('usersViews/ingreso', { errors: errors.errors });
     }
+  },
+  logout: function (req, res, next) {
+    req.session.destroy();
+    res.render("usersViews/ingreso");
   },
 
   edit: function (req, res, next) {
@@ -182,19 +187,12 @@ destroy: function (req,res) {
 },
 
 list: function (req, res, next) {
-
-  let esAdmin=req.session.usuarioIngresado.type==1;
-  if (esAdmin) {
     db.User.findAll().then(function (result) {
       res.render('usersViews/uList', { usersFile: result});
     }).catch(function (error) {
       console.log(error)
       res.send("Error")
     });
-  }
-  else {
-    res.send("Error: Solo para administradores.");
-  }
   
 
   // let lectura = leerJSON();
