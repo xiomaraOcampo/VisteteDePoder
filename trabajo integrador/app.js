@@ -10,6 +10,8 @@ var indexRouter = require('./routes/index');
 var usersRouter = require('./routes/users');
 var productsRouter = require('./routes/products');
 var carritoRouter = require('./routes/carrito');
+var apiUsersRouter = require('./routes/api/users');
+var apiProductsRouter = require('./routes/api/products');
 var recordameMiddleware= require('./Middleware/recordameMiddleware');
 
 
@@ -29,11 +31,11 @@ app.use(methodOverride('_method'));
 app.use(session({secret:'secreto'}));
 app.use(recordameMiddleware);
 
-
 app.use('/', indexRouter);
 app.use('/users', usersRouter);
 app.use('/products', productsRouter);
-
+app.use('/api/users', apiUsersRouter);
+app.use('/api/products', apiProductsRouter);
 app.use('/carrito', carritoRouter);
 
 // catch 404 and forward to error handler
@@ -54,5 +56,15 @@ app.use(function(err, req, res, next) {
   res.status(err.status || 500);
   res.render('error');
 });
+
+app.use(function (req, res, next) {
+  if(req.session.usuarioIngresado != undefined){
+    res.locals.user = req.session.usuarioIngresado;
+  } else{
+    res.locals.user = {id:0};
+  }
+  next();
+});
+
 
 module.exports = app;
