@@ -36,6 +36,7 @@ header .header1 .redes {
 header .header1 .redes div {
   width: 35px;
   /*border: 2px solid violet;*/
+  margin: 10px;
 }
 
 header .header1 .redes div img {
@@ -50,7 +51,7 @@ header .header2 {
   justify-content: space-between;
   align-items: center;
   padding:0px;
-  border: 2px solid red;
+  /* border: 2px solid red; */
 }
 /* ===LOGO===*/
 header .header2 .logo {
@@ -58,21 +59,21 @@ header .header2 .logo {
   display: flex;
   justify-content: center;
   align-items: start;
-  border: 2px solid red;
-  margin:0px;
+  /* border: 2px solid red; */
+  margin:5px;
 
 }
 header .header2 .logo img {
   width: 60%;
   border-radius: 50%;
-  border: 2px solid red;
+  /* border: 2px solid red; */
 }
 /* ===MENU HORIZONTAL===*/
 header .header2 nav {
   display: flex;
   width: 57%;
   justify-content: center;
-  border: 1px solid violet;
+  /* border: 1px solid violet; */
 }
 header .header2 .menuHorizontal {
   width: 90%;
@@ -80,14 +81,14 @@ header .header2 .menuHorizontal {
   display: flex;
   justify-content: space-around;
   align-items: flex-start;
-  border: 2px solid red;
+  /* border: 2px solid red; */
   font-size: 0.8rem;
   padding: 0px;
 }
 
 header .header2 .menuHorizontal li {
   list-style: none;
-  border: 2px solid red;
+  /* border: 2px solid red; */
 }
 header .header2 .menuHorizontal a {
   color: grey;
@@ -166,7 +167,7 @@ header .header2 .buscadores div {
   align-items: center;
   flex-direction: column;
   font-size: 1rem;
-  border: 2px solid green;
+  /* border: 2px solid green; */
   color: #4c4c49;
   position: relative;
   bottom: 7px;
@@ -203,16 +204,18 @@ header .header2 .buscadores .buscador input {
   width: 50%;
   height: 30px;
   position: absolute;
-  margin-top: 40px;
+  margin-top: 32px;
   margin-left: -100%;
   margin-right: 20px;
+  z-index:1;
+  width: 325%;
 }
 
 header .header2 .buscadores .buscador:hover input {
   display: block;
   position: absolut;
   margin-top: 0px;
-  width: 325%;
+  /* width: 325%; */
 }
 
 header .header2 .buscadores form {
@@ -226,10 +229,10 @@ header .header2 .buscadores .buscador form .enviar {
 
 header .header2 .buscadores .ingreso ul {
   display: none;
-  border:1px solid red;
+  /* border:1px solid red; */
   position: absolute;
-  top: -45px;
-  left:-35px;
+  top: -40px;
+  left:-50px;
   padding: 4px;
   background-color: #f5f4f3;
   box-shadow: 1px 3px 5px grey;
@@ -248,10 +251,10 @@ header .header2 .buscadores .ingreso ul a {
 header .header2 .buscadores .ingreso:hover ul {
   display: block;
 }
-header .header2 .buscadores .ingreso .desplegableUsuarios {
-  
+header .header2 .buscadores .ingreso .desplegableUsuarios { 
+
   flex-direction: column;
-  width: 170%;
+  width: 200%;
   border-radius: 5%;
   margin-top: 100%;
   padding:0%;
@@ -310,7 +313,20 @@ header .header2 .buscadores .ingreso .desplegableUsuarios li {
     font-size: 0.7rem;
     height: 32px;
   }
+  header .header2 .buscadores .ingreso .desplegableUsuarios{
+    margin-top:75px;
+    margin-left: -40%;
+    width: 260%;
+    /* background-color: red; */
+
+  }
+ 
+  header .header2 .menuHorizontal .palabras .desplegable{
+    width: 110px;
+  }
+  
 }
+
 
 /*=======CELU HORIZONTAL header========*/
 
@@ -396,12 +412,45 @@ header .header2 .buscadores .ingreso .desplegableUsuarios li {
     font-size: 0.7rem;
     height: 32px;
   }
+  header .header2 .buscadores .ingreso .desplegableUsuarios{
+    margin-top:75px;
+    margin-left: -50%;
+    width: 260%;
+    /* background-color:violet; */
+
+  }
+  div.buscadores i{
+    /* color:red; */
+    font-size: 0.8rem;
+  }
+ 
+ 
+ 
 
 }
 /*=======CELULAR header========*/
 
 @media (max-width: 480px) {
+  header .header1 .envios {
+    /* background-color: red; */
+    font-size: 0.6rem;
+  }
+  header .header1 .redes {
+    width: 40%;
+  }
   header .header2 .logo {
     width: 20%;
   }
+  header .header2 .buscadores .ingreso .desplegableUsuarios{
+    margin-top:75px;
+    margin-left: -50%;
+    width: 380%;
+    /* background-color:green; */
+
+  }
+ div.buscadores i{
+   /* color:red; */
+   font-size: 0.7rem;
+ }
+
 }

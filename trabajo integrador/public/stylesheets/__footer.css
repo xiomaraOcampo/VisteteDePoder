@@ -8,38 +8,36 @@ footer{
     font-family : 'Josefin Sans', sans-serif; 
     font-weight: 500; 
     color:#dfdfe6;
-    font-size: 20px;
+    font-size: 1rem;
     /*height: 150px;*/  
     /* border: 1px solid red; */
 }
 .tarjetas{
     display:flex;
+    justify-content: space-between;
     /* border:1px solid violet; */
     margin-top:0px;
 
 }
 .Medios-de-pagos{
-    display: inline-block;
-    box-sizing: border-box;
-    margin-left: 10px;
-    margin-top: 10px;
-    margin-bottom: 10px;   
-    text-align: center;
-    /* border: 1px solid red; */
-   
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+     margin: 10px;
+     /* border: 1px red solid; */
+     padding:0px;  
 }
 .Forma-de-envio{
-    display: inline-block;
-    box-sizing: border-box;
-    margin-left: 50px;
-    margin-top: 10px;
-    margin-bottom: 10px;
-    text-align: center;
-    /* border: 1px solid red; */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 10px;
+    /* border: 1px red solid;   */
+    /* padding-top:15px;   */
 }
-/* .tarjetas  img{
-    border:2px solid grey;
-} */
+
 
 .Menu-del-footer{       
 display: inline-block;
@@ -49,16 +47,18 @@ height: 30px;
 /* margin-left:90px; */
 /* border: 1px solid red; */
 width: 100%;
-
+display:flex;
+justify-content: space-around;
 }
 .Menu-del-footer a{
     text-decoration: none;
+   
 }
 
 .Menu-del-footer div{
 display:inline-block;
 box-sizing: border-box; 
-margin-left:30px;
+/* margin-left:30px; */
 margin-top: 2px;
 /* border: 1px solid red; */
 
@@ -115,8 +115,218 @@ color:#dfdfe6;
     padding-left:3%;
     padding-top: 0px;
     padding-bottom: 3%;
+    /* display:block; */
   }
  .block{
      display:block;
-     /* position:absolute; */
  }
+ /*=======TABLET header========*/
+
+@media (max-width: 1024px) {
+    /* main .mainHome{
+        background-color: red;
+    } */
+    
+    .info .Menu-del-footer {
+        /* flex-direction: column; */
+        font-size: 0.9rem;
+    }
+    .info .infoContacto{
+        padding-top: 10px;
+        font-size: 0.9rem;
+    }
+    .info .infoCompra{
+        padding-top: 10px;
+        font-size: 0.9rem;
+    }
+    .info .infoCambio{
+        padding-top: 10px;
+        font-size: 0.9rem;
+    }
+    .info .infoNosotros{
+        padding-top: 10px;
+        font-size: 0.9rem;
+    }
+    
+
+}
+
+
+/*=======CELU HORIZONTAL header========*/
+ @media (max-width: 750px) {
+    /* main .mainHome{
+    background-color: violet;
+    } */
+    footer{
+        flex-direction: column-reverse;
+    }
+    .tarjetas p{
+        font-size: 0.8rem;  
+    }
+    .tarjetas{
+        justify-content: flex-start;
+        /* align-items: center; */
+        font-size: 0.7rem;
+        flex-direction: column;
+    }
+    
+    .Medios-de-pagos{
+        display:flex;
+        flex-direction: row;
+        justify-content: space-around;
+    }
+    .Forma-de-envio{
+        display:flex;
+        flex-direction: row;
+        justify-content: space-around;
+        align-items: center;
+    
+        width: 40%;
+     }
+   
+    .Medios-de-pagos{
+        display:flex;
+        flex-direction: row;
+        justify-content: space-around;
+        align-items: center;
+        width: 40%;
+    }
+    .Forma-de-envio{
+        display:flex;
+        flex-direction: row;
+        justify-content: space-around;
+        padding:0px;
+    }
+    .tarjetas img{
+        /* border:1px solid green; */
+        width: 20%;
+     
+    }
+    .info{
+        width:100%
+    }
+    .info .Menu-del-footer {
+        font-size: 0.8rem;
+    }
+    .info .infoContacto{
+        font-size: 0.8rem;
+    }
+    .info .infoCompra{
+        font-size: 0.8rem;
+    }
+    .info .infoCambio{
+        font-size: 0.8rem;
+    }
+    .info .infoNosotros{
+        font-size: 0.8rem;
+    }
+
+}
+/*=======CELULAR header========*/
+
+@media (max-width: 480px) {
+    /* main .mainHome{
+   background-color: green;
+   } */
+
+   footer{
+    /* border: 1px red solid; */
+    flex-direction: row;
+   }
+   .tarjetas{
+    justify-content: flex-start;
+    /* align-items: center; */
+    font-size: 0.7rem;
+    flex-direction: column;
+    width: 50%;
+   }
+   .info{
+    width: 100%;
+    /* border: 1px solid green; */
+    display:flex;
+    align-items: center;
+   }
+.Medios-de-pagos{
+    display:flex;
+    flex-direction: row;
+    justify-content: space-around;
+    font-size: 0.7rem;
+    width: 100%;
+}
+.Forma-de-envio{
+    display:flex;
+    flex-direction: row;
+    justify-content: space-around;
+    font-size: 0.7rem;
+    width: 100%;
+}
+.tarjetas img{
+    width: 20%;
+}
+.info{
+    width: 35%;
+    /* border: 1px solid green; */
+    display:flex;
+    align-items: center;
+   }
+.info .Menu-del-footer {
+    display:flex;
+    /* border: 1px solid green; */
+    flex-direction: column; 
+    font-size: 0.7rem;
+    padding-top: 40px;
+    
+    /* padding:50px; */
+}
+.info .infoContacto{
+ 
+    background-image:url("/images/fotosVisteteDePoder/zocaloAlta.jpg");
+    /* border:1px solid green; */
+    border-radius: 5%;
+    /* padding-top: 10px; */
+    font-size: 0.7rem;
+    /* display:block; */
+    position: absolute;
+    margin-left: -50%;
+    margin-top: -120px;
+    width:60%;
+}
+.info .infoCompra{
+  
+    background-image:url("/images/fotosVisteteDePoder/zocaloAlta.jpg");
+    /* border:1px solid green; */
+    border-radius: 5%;
+    /* padding-top: 10px; */
+    font-size: 0.7rem;
+    /* display:block; */
+    position: absolute;
+    margin-left: -50%;
+    margin-top: -260px;
+    width:60%;
+}
+.info .infoCambio{
+    background-image:url("/images/fotosVisteteDePoder/zocaloAlta.jpg");
+    /* border:1px solid green; */
+    border-radius: 5%;
+    /* padding-top: 10px; */
+    font-size: 0.7rem;
+    /* display:block; */
+    position: absolute;
+    margin-left: -50%;
+    margin-top: -230px;
+    width:60%;
+}
+.info .infoNosotros{
+    background-image:url("/images/fotosVisteteDePoder/zocaloAlta.jpg");
+    /* border:1px solid green; */
+    border-radius: 5%;
+    /* padding-top: 10px; */
+    font-size: 0.7rem;
+    /* display:block; */
+    position: absolute;
+    margin-left: -50%;
+    margin-top: -190px;
+    width:60%;
+}
+
+}

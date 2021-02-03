@@ -20,54 +20,59 @@ main .mainHome {
 }
 
 .mainHome .menuFotos{
-    width: 40%;
+    width: 50%;
     display:flex;
-    justify-content: space-around;
-   /* border: 1px solid red;*/
+    justify-content: space-between;
+    /* border: 1px solid red; */
+    margin-left: -80px;
 }
 
 section .img-container-small {
     display: flex;
-    width: 30%;
+    width: 28%;
     margin: 10px;
     box-shadow: 1px 3px 5px grey;
-    background: #efeff3;       
+    background: #efeff3;    
+    /* border:1px solid green;    */
+    padding: 7px;
 }
 
 section .img-container-small:hover{
     box-shadow: inset 1px 3px 5px grey;
 }
 section .img-container-small .imagenMenu{
-    width:92.5%;
-    margin:10px 10px 0px 10px;
+    width:100%;
+    /* margin:10px 10px 0px 10px; */
+    /* border:violet 1px solid; */
     }
  section .img-container-small a{
      display: block;
      width: 100%;
      text-decoration: none;
  }
-.indumentariaLetras{
+  .indumentariaLetras{
     color: #797637;
     display:block;
     width: 20%;
-    font-size: 1.2rem;
-    padding:0px 10px;
+    font-size: 1rem;
+    /* padding:0px 10px; */
     font-weight: 600; 
+    margin:0px;
 }
 .accesorioLetras{
     color: #374258;
     display:block;
     width: 20%;
-    font-size: 1.2rem;
-    padding:0px 10px;
+    font-size: 1rem;
+    margin:0px;
     font-weight: 600; 
 }
 .merchanidingLetras {
     display:block;
     width: 20%;
     color: #577535;
-    font-size: 1.2rem;
-    padding:0px 10px;
+    font-size: 1rem;
+    margin:0px;
     font-weight: 600; 
    
 }
@@ -77,16 +82,18 @@ section .img-container-small .imagenMenu{
     margin: 50px 0px;
     width: 1000%;
     display:flex; 
+    justify-content: space-between;
     animation: cambio 80s infinite;
-    border:1px solid red;
+    /* border:1px solid red; */
 }
 section.slider article{
-    width: 5%;
+    width: 1%;
+    padding: 4px;
+    padding-bottom: 8px;
     justify-content: space-around;
-    /*overflow: hidden;*/
-    /* margin:0 5%;    */
-    border:1px solid green;
-    /* background-color: tomato; */
+    /* border:1px solid green; */
+    background-color: #efeff3;
+    box-shadow: 1px 3px 5px grey;
 }
 
 section.slider article a{
@@ -94,7 +101,7 @@ section.slider article a{
     width: 100%;
 }
 section.slider article img{
-    box-shadow: 1px 3px 5px grey;
+    width: 100%;
 }
 section.slider article img:hover{
     box-shadow: inset 1px 3px 5px grey;
@@ -161,3 +168,86 @@ section.slider article img:hover{
     100% {margin-left: -1000%;}
 
 }
+/*=======TABLET header========*/
+
+@media (max-width: 1024px) {
+    /* main .mainHome{
+        background-color: red;
+    } */
+    .mainHome .menuFotos{
+        width: 60%;
+    }
+    .indumentariaLetras{
+        font-size: 0.9rem;  
+    }
+    .accesorioLetras{   
+        font-size: 0.9rem;  
+    }
+    .merchanidingLetras {   
+        font-size: 0.9rem;
+    }
+      
+    section.slider article{
+        width: 1.2%;
+    }
+    /* section .img-container-small{
+        padding:5px;
+    } */
+}
+/*=======CELU HORIZONTAL header========*/
+
+@media (max-width: 750px) {
+    /* main .mainHome{
+    background-color: violet;
+    } */
+    .mainHome .menuFotos{
+        width: 80%;
+        margin-left: 20px;
+    }
+    .indumentariaLetras{
+        font-size: 0.7rem;  
+    }
+    .accesorioLetras{   
+        font-size: 0.7rem;  
+    }
+    .merchanidingLetras {   
+        font-size: 0.7rem;
+    }
+    section.slider article{
+        width: 1.5%;
+    } 
+    section .img-container-small{
+        padding:5px;
+    }
+}
+/*=======CELULAR header========*/
+
+@media (max-width: 480px) {
+         /* main .mainHome{
+        background-color: green;
+        } */
+        .mainHome .menuFotos{
+            margin-top: 5px;
+            width: 90%;
+            margin-left: 0px;
+        }
+        section .img-container-small {
+            width: 28%;
+            margin:2px;
+            padding:3px;
+        }
+        
+        .indumentariaLetras{
+            font-size: 0.5rem;  
+        }
+        .accesorioLetras{   
+            font-size: 0.5rem;  
+        }
+        .merchanidingLetras {   
+            font-size: 0.5rem;
+        }
+        section.slider article{
+            width: 1.8%;
+        } 
+       
+    }
