@@ -19,12 +19,8 @@ main .mainHome {
     width:100%;
 }
 
-.aside1 .carru1{
-    width: 100vw;
-}
-
 .mainHome .menuFotos{
-    width: 55%;
+    width: 40%;
     display:flex;
     justify-content: space-around;
    /* border: 1px solid red;*/
@@ -79,22 +75,18 @@ section .img-container-small .imagenMenu{
 
 .slider{
     margin: 50px 0px;
-    width: 100%;
+    width: 1000%;
     display:flex; 
-    /*margin:auto;*/
-    /*text-align: center;*/
-    /*padding: auto;*/    
-    animation: cambio 10s infinite;
-    /*border:1px solid red;*/
+    animation: cambio 80s infinite;
+    border:1px solid red;
 }
 section.slider article{
-    width: 15%;
-    justify-content: center;
+    width: 5%;
+    justify-content: space-around;
     /*overflow: hidden;*/
-    margin:0 5%;
-    /*padding:auto;*/
-    /*border:1px solid green;*/
-    /*background-color: tomato;*/
+    /* margin:0 5%;    */
+    border:1px solid green;
+    /* background-color: tomato; */
 }
 
 section.slider article a{
@@ -102,7 +94,6 @@ section.slider article a{
     width: 100%;
 }
 section.slider article img{
-    /*width: 100%;*/
     box-shadow: 1px 3px 5px grey;
 }
 section.slider article img:hover{
@@ -112,41 +103,42 @@ section.slider article img:hover{
 @keyframes cambio{
     
     0% {margin-left: 0;}
-    5% {margin-left: -5%;}
+    /* 5% {margin-left: -5%;} */
 
-    5% {margin-left: -5%;}
-    10% {margin-left: -10%;}
+    /* 5% {margin-left: -5%;}
+    10% {margin-left: -10%;} */
 
-    10% {margin-left: -10%;}
-    15% {margin-left: -15%;}
+    /* 10% {margin-left: -10%;}
+    15% {margin-left: -15%;} */
     
-    15% {margin-left: -15%;}
-    20% {margin-left: -20%;}
+    /* 15% {margin-left: -15%;}
+    20% {margin-left: -20%;} */
     
-    20% {margin-left: -20%;}
-    25% {margin-left: -25%;}
+    /* 20% {margin-left: -20%;}
+    25% {margin-left: -25%;} */
     
-    25% {margin-left: -25%;}
-    30% {margin-left: -30%;}
+    /* 25% {margin-left: -25%;}
+    30% {margin-left: -30%;} */
     
-    30% {margin-left: -30%;}
-    35% {margin-left: -35%;}
+    /* 30% {margin-left: -30%;}
+    35% {margin-left: -35%;} */
 
-    35% {margin-left: -35%;}
-    40% {margin-left: -40%;}
+    /* 35% {margin-left: -35%;}
+    40% {margin-left: -40%;} */
 
-    40% {margin-left: -40%;}
-    45% {margin-left: -45%;}
+    /* 40% {margin-left: -40%;}
+    45% {margin-left: -45%;} */
 
-    45% {margin-left: -45%;}
-    50% {margin-left: -50%;}
-
+    /* 45% {margin-left: -45%;}*/
+    /* 50% {margin-left: -50%;}  */
+/* 
     50% {margin-left: -50%;}
     55% {margin-left: -55%;}
 
-    55% {margin-left: -55%;}
-    60% {margin-left: -60%;}
-    60% {margin-left: -60%;}
+    /* 55% {margin-left: -55%;}
+    60% {margin-left: -60%;} */
+
+    /* 60% {margin-left: -60%;}
     65% {margin-left: -65%;}
 
     65% {margin-left: -65%;}
@@ -165,7 +157,7 @@ section.slider article img:hover{
 
     90% {margin-left: -90%;}
     95% {margin-left: -95%;}
-    95% {margin-left: -95%;}
-    100% {margin-left: -100%;}
+    95% {margin-left: -95%;}  */
+    100% {margin-left: -1000%;}
 
 }
