@@ -33,7 +33,6 @@ let userController = {
       delete: false
       //  cambie el ...req para qu no tome laconfimacion contraseña n el jason 
     };
-
     let errors = validationResult(req);
     if (errors.isEmpty()) {
       /*  usersFile.push(registroUser);
@@ -69,8 +68,7 @@ let userController = {
         }
       })
       .then((resultado)=>{
-        
-        if (req.body.contrasenia == resultado.getDataValue('password')) {
+        if (bcryptjs.compareSync(req.body.contrasenia, resultado.getDataValue('password'))) {
           usuarioAIngresar = {
             id:resultado.getDataValue('id'), 
             name:resultado.getDataValue('name'), 

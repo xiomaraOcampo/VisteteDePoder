@@ -29,7 +29,6 @@ app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
 app.use(methodOverride('_method'));
 app.use(session({secret:'secreto'}));
-app.use(recordameMiddleware);
 
 app.use('/', indexRouter);
 app.use('/users', usersRouter);
@@ -37,6 +36,7 @@ app.use('/products', productsRouter);
 app.use('/api/users', apiUsersRouter);
 app.use('/api/products', apiProductsRouter);
 app.use('/carrito', carritoRouter);
+app.use(recordameMiddleware);
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
