@@ -1,5 +1,6 @@
 <!--HEADER-->
 <header>
+    
     <section class="header1">
 
         <div class="envios">
@@ -75,13 +76,13 @@
             <div class="valija"><a href="/carrito"><i class="fas fa-shopping-bag"></i></a></div>
 
             <div class="buscador">
-                <form action="/products/search" method="post" target="_blank">
-                    <p>
+                <form class="formularioBuscador"action="/products/search" method="post" target="_blank">
+                    <p class="pBuscador">
 
-                        <label for="busqueda"><i class="fas fa-search"></i></label>
+                        <label class="labelBuscador"for="busqueda"><i class="fas fa-search"></i></label>
 
                         <input class="escribir" type="search" name="busqueda"
-                            placeholder="Escribe el nombre de tu producto">
+                            placeholder="Nombre producto">
 
                         <input class="enviar" type="submit" value="Buscar">
 
@@ -90,7 +91,7 @@
             </div>
             
             <div class="ingreso"><a class="home" href="/users/ingreso"><i class="fas fa-user"></i></a>
-                <ul class="desplegable">
+                <ul class="desplegableUsuarios">
                     <li><a href="../users/ingreso">Iniciar Sesion</a></li>
                     <li><a href="../users/registro">Registrarme</a></li>
                     <%if (locals.user == undefined) {%>
