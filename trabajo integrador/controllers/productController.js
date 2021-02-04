@@ -235,35 +235,35 @@ let productController = {
     // let errors = validationResult(req);
     //isEmpty= esta vacia
     // if (errors.isEmpty()) {
-      console.log(req.body);
-      db.Product.create({
-        name: req.body.nombre,
-        price: req.body.precio,
-        description: req.body.descripcion,
-        image: req.files.length > 0 ? req.files[0].filename : null, //o la imagen x defecto
-        subcategory_id: req.body.subcategoria,
-      })
-        .then(function (product) {
-          // console.log(product)
-          db.Design_Product.create({
-            design_id: req.body.disenio,
-            product_id: product.id,
-          });
-          // db.Product_Size.create({
-          //   size_id: req.body.talle,
-          //   product_id: product.id,
-          // });
-        })
-        .catch(function (error) {
-          console.log(error);
+    console.log(req.body);
+    db.Product.create({
+      name: req.body.nombre,
+      price: req.body.precio,
+      description: req.body.descripcion,
+      image: req.files.length > 0 ? req.files[0].filename : null, //o la imagen x defecto
+      subcategory_id: req.body.subcategoria,
+    })
+      .then(function (product) {
+        // console.log(product)
+        db.Design_Product.create({
+          design_id: req.body.disenio,
+          product_id: product.id,
         });
+        // db.Product_Size.create({
+        //   size_id: req.body.talle,
+        //   product_id: product.id,
+        // });
+      })
+      .catch(function (error) {
+        console.log(error);
+      });
 
-      // res.redirect("/products/list", { product: product });
-      // res.send('creaste un producto')
-      return res.render('productsViews/productCreated')
+    // res.redirect("/products/list", { product: product });
+    // res.send('creaste un producto')
+    return res.render('productsViews/productCreated')
 
     // } else {
-      // return res.render("productsViews/create", { errors: errors.errors });
+    // return res.render("productsViews/create", { errors: errors.errors });
     // }
   },
   edit: function (req, res, next) {
@@ -382,32 +382,102 @@ let productController = {
     res.send("Eliminaste un producto")
   },
 
-  list: function (req, res) {
+  listIndumentaria: function (req, res) {
 
-    /*console.log({avatar: req.files[0].filename,
-          ...req.body });*/
-
-    // let lectura = leerJSON();
-
-    // var productList = lectura.filter(function (product) {
-    //   return product.delete == false;
-    // });
-
-    // res.render("productsViews/list", { productsFile: productList, toThousand });
-
-    let pedidoProduct = db.Product.findAll();
-    let pedidoDesigns = db.Design.findAll();
-    let pedidoSizes = db.Size.findAll();
-    let pedidoSubcategories = db.Subcategory.findAll();
-
-    Promise.all([pedidoProduct, pedidoDesigns, pedidoSizes, pedidoSubcategories])
-      .then(function ([product, design, size, subcategory]) {
-        // console.log([product, design, size, subcategory])
-        res.render("productsViews/list", { product: product, design: design, size: size, subcategory: subcategory })
+  
+    let pedidoProduct = db.Product.findAll({
+        
+        include: [{ association: "designs" }, {association: "subcat"}],
+        raw: true,
+        nest: true,
       })
 
+      .then(function (products) {
+        
+        let productsFound = [];
 
+        for (let i=0; i<products.length; i++){
+          
+       console.log(products[i].subcat.category_id);
+       if(products[i].subcat.category_id == 1){
+          productsFound.push(products[i])
 
+       }
+        
+      }
+
+      res.render("productsViews/listSearch2", { productsFound: productsFound });
+      })
+
+      .catch(function (error) {
+        console.log(error);
+        res.send("error");
+      })
+  },
+  listMerchandising: function (req, res) {
+
+  
+    let pedidoProduct = db.Product.findAll({
+        
+        include: [{ association: "designs" }, {association: "subcat"}],
+        raw: true,
+        nest: true,
+      })
+
+      .then(function (products) {
+        
+        let productsFound = [];
+
+        for (let i=0; i<products.length; i++){
+          
+       console.log(products[i].subcat.category_id);
+       if(products[i].subcat.category_id == 2){
+          productsFound.push(products[i])
+
+       }
+        
+      }
+
+      res.render("productsViews/listSearch2", { productsFound: productsFound });
+      })
+
+      .catch(function (error) {
+        console.log(error);
+        res.send("error");
+      })
+  },
+
+  listAccesorios: function (req, res) {
+
+  
+    let pedidoProduct = db.Product.findAll({
+        
+        include: [{ association: "designs" }, {association: "subcat"}],
+        raw: true,
+        nest: true,
+      })
+
+      .then(function (products) {
+        
+        let productsFound = [];
+
+        for (let i=0; i<products.length; i++){
+          
+       console.log(products[i].subcat.category_id);
+       if(products[i].subcat.category_id == 3){
+          productsFound.push(products[i])
+
+       }
+        
+      }
+
+      res.render("productsViews/listSearch2", { productsFound: productsFound });
+      })
+
+      .catch(function (error) {
+        console.log(error);
+        res.send("error");
+      })
   },
   listProductsUs: function (req, res, next) {
     /*console.log({avatar: req.files[0].filename,
@@ -426,31 +496,31 @@ let productController = {
     // let pedidoCategories = 
     db.Subcategory.findAll({
 
-      include: [ { association: "categorias" }  ],
+      include: [{ association: "categorias" }],
       raw: true,
       nest: true,
     })
 
-    // let pedidoProduct = db.Product.findAll({
-    //   where: { pedidoSubcategories },
-    //   include: [{ association: "designs" }, { association: "sizes" },  { association: "subcat" }],
-    //   raw: true,
-    //   nest: true,
-    // })
-    // // let pedidoDesigns = db.Design.findAll();
-    // // let pedidoSizes = db.Size.findAll();
-    // let pedidoCategories = db.Category.findAll({
-    //   // where: {id: category_id},
-    //   include: [{ association: "categorias" }],
-    //   raw: true,
-    //   nest: true,
+      // let pedidoProduct = db.Product.findAll({
+      //   where: { pedidoSubcategories },
+      //   include: [{ association: "designs" }, { association: "sizes" },  { association: "subcat" }],
+      //   raw: true,
+      //   nest: true,
+      // })
+      // // let pedidoDesigns = db.Design.findAll();
+      // // let pedidoSizes = db.Size.findAll();
+      // let pedidoCategories = db.Category.findAll({
+      //   // where: {id: category_id},
+      //   include: [{ association: "categorias" }],
+      //   raw: true,
+      //   nest: true,
 
-        // });
+      // });
 
-    // Promise.all([pedidoProduct,  pedidoSubcategories])
-    .then(function (products) {
+      // Promise.all([pedidoProduct,  pedidoSubcategories])
+      .then(function (products) {
         // console.log(products)
-          res.render("productsViews/listProductsUs", {products:products})
+        res.render("productsViews/listProductsUs", { products: products })
           //         // , design:design, size:size, subcategory:subcategory })
 
           // })
@@ -460,58 +530,9 @@ let productController = {
           })
 
       })
-},
+  },
 
 
-
-  // nav: function( req, res, next){
-
-  //   // let cat = req.params.id;
-
-
-
-  //   let pedidoProduct = db.Product.findAll(
-  //     {
-  //     where: {subcategory_id: "1"},
-  //     include: [{ association: "subcat" } ],
-  //     raw: true,
-  //     nest: true,
-  //     }
-  //     );
-
-  //     let pedidoSubcategory = db.Subcategory.findAll(
-  //       {
-
-  //       where: { category_id: "1" },
-  //     include: [{ association: "categorias" }],
-  //     raw: true,
-  //     nest: true,
-  //     }
-  //     );
-  //     // let pedidoCategory = db.Category.findByPk(1);
-
-  //   Promise.all([ pedidoCategory, pedidoSubcategory, pedidoProduct  ])
-
-  //   .then(function ([product, category, subcategory]) {
-  //       if ([product, category, subcategory]) {
-
-  //       // console.log([product, category, subcategory]);
-  //         return res.render("productsViews/listSearch2", 
-  //           {product:product, category:category, subcategory:subcategory },
-  //         );
-  //       } else {
-  //         return res.render("productsViews/mensajeNoEncontrado");
-  //       }
-  //     })
-
-
-
-  //   .catch(function (error) {
-  //     console.log(error);
-  //     res.send("error");
-  //   });
-
-  // },
 
   Tshirt: function (req, res, next) {
     // res.send('ruta')
@@ -524,6 +545,7 @@ let productController = {
       nest: true,
     })
       // db.Product.findAll({
+
       //   where: { subcategory_id: "1" },
       //   include: [{ association: "designs" },{ association: "subcat"}],
       //   raw: true,
@@ -531,7 +553,14 @@ let productController = {
       // })
 
       .then(function (products) {
-        //  res.send(products[1].designs.design)
+
+        // for (let i=0; i < product.length; i++){
+        //   if(product[i].subcategory.category_id=1){
+        //     return products
+        //   }
+        // }
+        // //  res.send(products[1].designs.design)
+
         if (products) {
 
 
@@ -549,200 +578,44 @@ let productController = {
         res.send("error");
       });
   },
-masc: function (req, res, next) {
-  // res.send('ruta')
-  // PROBARLO BUSCANDO POR SUBCATEGORIA?
-  // INCORPORAR LAS ASOCIACIONES DE CATEGORIA Y SUBCATEGIRIA
-  db.Product.findAll({
-    where: { name: "Barbijo" },
-    include: [{ association: "designs" }],
-    raw: true,
-    nest: true,
-  })
-
-    .then(function (products) {
-      //  res.send(products[1].designs.design)
-      if (products) {
-        // return res.render("productsViews/listSearch")
-        return res.render("productsViews/listSearch", {
-          products: products,
-        });
-        //  res.send(products[1])
-      } else {
-        return res.render("productsViews/mensajeNoEncontrado");
-      }
+  masc: function (req, res, next) {
+    // res.send('ruta')
+    // PROBARLO BUSCANDO POR SUBCATEGORIA?
+    // INCORPORAR LAS ASOCIACIONES DE CATEGORIA Y SUBCATEGIRIA
+    db.Product.findAll({
+      where: { name: "Barbijo" },
+      include: [{ association: "designs" }],
+      raw: true,
+      nest: true,
     })
-    .catch(function (error) {
-      console.log(error);
-      res.send("error");
-    });
-},
-cap: function (req, res, next) {
-  // res.send('ruta')
-  // PROBARLO BUSCANDO POR SUBCATEGORIA?
-  // INCORPORAR LAS ASOCIACIONES DE CATEGORIA Y SUBCATEGIRIA
-  db.Product.findAll({
-    where: { name: "Gorra" },
-    include: [{ association: "designs" }],
-    raw: true,
-    nest: true,
-  })
 
-    .then(function (products) {
-      // console.log(products )
-      if (products !== []) {
-        return res.render("productsViews/listSearch", {
-          products: products,
-        });
-      } else {
-        return res.render("productsViews/mensajeNoEncontrado");
-      }
+      .then(function (products) {
+        //  res.send(products[1].designs.design)
+        if (products) {
+          // return res.render("productsViews/listSearch")
+          return res.render("productsViews/listSearch", {
+            products: products,
+          });
+          //  res.send(products[1])
+        } else {
+          return res.render("productsViews/mensajeNoEncontrado");
+        }
+      })
+      .catch(function (error) {
+        console.log(error);
+        res.send("error");
+      });
+  },
+  cap: function (req, res, next) {
+    // res.send('ruta')
+    // PROBARLO BUSCANDO POR SUBCATEGORIA?
+    // INCORPORAR LAS ASOCIACIONES DE CATEGORIA Y SUBCATEGIRIA
+    db.Product.findAll({
+      where: { name: "Gorra" },
+      include: [{ association: "designs" }],
+      raw: true,
+      nest: true,
     })
-    .catch(function (error) {
-      console.log(error);
-      res.send("error");
-    });
-},
-cup: function (req, res, next) {
-  // res.send('ruta')
-  // PROBARLO BUSCANDO POR SUBCATEGORIA?
-  // INCORPORAR LAS ASOCIACIONES DE CATEGORIA Y SUBCATEGIRIA
-  db.Product.findAll({
-    where: { name: "Taza" },
-    include: [{ association: "designs" }],
-    raw: true,
-    nest: true,
-  })
-
-    .then(function (products) {
-      // console.log(products )
-      if (products !== []) {
-        return res.render("productsViews/listSearch", {
-          products: products,
-        });
-      } else {
-        return res.render("productsViews/mensajeNoEncontrado");
-      }
-    })
-    .catch(function (error) {
-      console.log(error);
-      res.send("error");
-    });
-},
-thermo: function (req, res, next) {
-  // res.send('ruta')
-  // PROBARLO BUSCANDO POR SUBCATEGORIA?
-  // INCORPORAR LAS ASOCIACIONES DE CATEGORIA Y SUBCATEGIRIA
-  db.Product.findAll({
-    where: { name: "Termo" },
-    include: [{ association: "designs" }],
-    raw: true,
-    nest: true,
-  })
-
-    .then(function (products) {
-      // console.log(products )
-      if (products !== []) {
-        return res.render("productsViews/listSearch", {
-          products: products,
-        });
-      } else {
-        return res.render("productsViews/mensajeNoEncontrado");
-      }
-    })
-    .catch(function (error) {
-      console.log(error);
-      res.send("error");
-    });
-},
-bottle: function (req, res, next) {
-  // res.send('ruta')
-  // PROBARLO BUSCANDO POR SUBCATEGORIA?
-  // INCORPORAR LAS ASOCIACIONES DE CATEGORIA Y SUBCATEGIRIA
-  db.Product.findAll({
-    where: { name: "Botella" },
-    include: [{ association: "designs" }],
-    raw: true,
-    nest: true,
-  })
-
-    .then(function (products) {
-      // console.log(products )
-      if (products !== []) {
-        return res.render("productsViews/listSearch", {
-          products: products,
-        });
-      } else {
-        return res.render("productsViews/mensajeNoEncontrado");
-      }
-    })
-    .catch(function (error) {
-      console.log(error);
-      res.send("error");
-    });
-},
-handbag: function (req, res, next) {
-  // res.send('ruta')
-  // PROBARLO BUSCANDO POR SUBCATEGORIA?
-  // INCORPORAR LAS ASOCIACIONES DE CATEGORIA Y SUBCATEGIRIA
-  db.Product.findAll({
-    where: { name: "Bolso" },
-    include: [{ association: "designs" }],
-    raw: true,
-    nest: true,
-  })
-
-    .then(function (products) {
-      // console.log(products )
-      if (products !== []) {
-        return res.render("productsViews/listSearch", {
-          products: products,
-        });
-      } else {
-        return res.render("productsViews/mensajeNoEncontrado");
-      }
-    })
-    .catch(function (error) {
-      console.log(error);
-      res.send("error");
-    });
-},
-pencilCase: function (req, res, next) {
-  // res.send('ruta')
-  // PROBARLO BUSCANDO POR SUBCATEGORIA?
-  // INCORPORAR LAS ASOCIACIONES DE CATEGORIA Y SUBCATEGIRIA
-  db.Product.findAll({
-    where: { name: "Cartuchera" },
-    include: [{ association: "designs" }],
-    raw: true,
-    nest: true,
-  })
-
-    .then(function (products) {
-      // console.log(products )
-      if (products !== []) {
-        return res.render("productsViews/listSearch", {
-          products: products,
-        });
-      } else {
-        return res.render("productsViews/mensajeNoEncontrado");
-      }
-    })
-    .catch(function (error) {
-      console.log(error);
-      res.send("error");
-    });
-},
-backpack: function (req, res, next) {
-  // res.send('ruta')
-  // PROBARLO BUSCANDO POR SUBCATEGORIA?
-  // INCORPORAR LAS ASOCIACIONES DE CATEGORIA Y SUBCATEGIRIA
-  db.Product.findAll({
-    where: { name: "Mochila" },
-    include: [{ association: "designs" }],
-    raw: true,
-    nest: true,
-  })
 
       .then(function (products) {
         // console.log(products )
@@ -759,7 +632,163 @@ backpack: function (req, res, next) {
         res.send("error");
       });
   },
-  productCreated:function (req, res, next) {
+  cup: function (req, res, next) {
+    // res.send('ruta')
+    // PROBARLO BUSCANDO POR SUBCATEGORIA?
+    // INCORPORAR LAS ASOCIACIONES DE CATEGORIA Y SUBCATEGIRIA
+    db.Product.findAll({
+      where: { name: "Taza" },
+      include: [{ association: "designs" }],
+      raw: true,
+      nest: true,
+    })
+
+      .then(function (products) {
+        // console.log(products )
+        if (products !== []) {
+          return res.render("productsViews/listSearch", {
+            products: products,
+          });
+        } else {
+          return res.render("productsViews/mensajeNoEncontrado");
+        }
+      })
+      .catch(function (error) {
+        console.log(error);
+        res.send("error");
+      });
+  },
+  thermo: function (req, res, next) {
+    // res.send('ruta')
+    // PROBARLO BUSCANDO POR SUBCATEGORIA?
+    // INCORPORAR LAS ASOCIACIONES DE CATEGORIA Y SUBCATEGIRIA
+    db.Product.findAll({
+      where: { name: "Termo" },
+      include: [{ association: "designs" }],
+      raw: true,
+      nest: true,
+    })
+
+      .then(function (products) {
+        // console.log(products )
+        if (products !== []) {
+          return res.render("productsViews/listSearch", {
+            products: products,
+          });
+        } else {
+          return res.render("productsViews/mensajeNoEncontrado");
+        }
+      })
+      .catch(function (error) {
+        console.log(error);
+        res.send("error");
+      });
+  },
+  bottle: function (req, res, next) {
+    // res.send('ruta')
+    // PROBARLO BUSCANDO POR SUBCATEGORIA?
+    // INCORPORAR LAS ASOCIACIONES DE CATEGORIA Y SUBCATEGIRIA
+    db.Product.findAll({
+      where: { name: "Botella" },
+      include: [{ association: "designs" }],
+      raw: true,
+      nest: true,
+    })
+
+      .then(function (products) {
+        // console.log(products )
+        if (products !== []) {
+          return res.render("productsViews/listSearch", {
+            products: products,
+          });
+        } else {
+          return res.render("productsViews/mensajeNoEncontrado");
+        }
+      })
+      .catch(function (error) {
+        console.log(error);
+        res.send("error");
+      });
+  },
+  handbag: function (req, res, next) {
+    // res.send('ruta')
+    // PROBARLO BUSCANDO POR SUBCATEGORIA?
+    // INCORPORAR LAS ASOCIACIONES DE CATEGORIA Y SUBCATEGIRIA
+    db.Product.findAll({
+      where: { name: "Bolso" },
+      include: [{ association: "designs" }],
+      raw: true,
+      nest: true,
+    })
+
+      .then(function (products) {
+        // console.log(products )
+        if (products !== []) {
+          return res.render("productsViews/listSearch", {
+            products: products,
+          });
+        } else {
+          return res.render("productsViews/mensajeNoEncontrado");
+        }
+      })
+      .catch(function (error) {
+        console.log(error);
+        res.send("error");
+      });
+  },
+  pencilCase: function (req, res, next) {
+    // res.send('ruta')
+    // PROBARLO BUSCANDO POR SUBCATEGORIA?
+    // INCORPORAR LAS ASOCIACIONES DE CATEGORIA Y SUBCATEGIRIA
+    db.Product.findAll({
+      where: { name: "Cartuchera" },
+      include: [{ association: "designs" }],
+      raw: true,
+      nest: true,
+    })
+
+      .then(function (products) {
+        // console.log(products )
+        if (products !== []) {
+          return res.render("productsViews/listSearch", {
+            products: products,
+          });
+        } else {
+          return res.render("productsViews/mensajeNoEncontrado");
+        }
+      })
+      .catch(function (error) {
+        console.log(error);
+        res.send("error");
+      });
+  },
+  backpack: function (req, res, next) {
+    // res.send('ruta')
+    // PROBARLO BUSCANDO POR SUBCATEGORIA?
+    // INCORPORAR LAS ASOCIACIONES DE CATEGORIA Y SUBCATEGIRIA
+    db.Product.findAll({
+      where: { name: "Mochila" },
+      include: [{ association: "designs" }],
+      raw: true,
+      nest: true,
+    })
+
+      .then(function (products) {
+        // console.log(products )
+        if (products !== []) {
+          return res.render("productsViews/listSearch", {
+            products: products,
+          });
+        } else {
+          return res.render("productsViews/mensajeNoEncontrado");
+        }
+      })
+      .catch(function (error) {
+        console.log(error);
+        res.send("error");
+      });
+  },
+  productCreated: function (req, res, next) {
     // res.send('anda la ruta')
     return res.render('productsViews/productCreated')
   }

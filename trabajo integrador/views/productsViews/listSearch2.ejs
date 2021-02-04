@@ -19,7 +19,7 @@
 
        <ul class= "listado">
 
-        <% product.forEach(function(product){ %>
+        <% productsFound.forEach(function(product){ %>
         <li class="tarjetamini">
         
          <div class="fondo">
@@ -51,7 +51,7 @@
             <!-- NO  ANDA EL TOSAN -->
             <div class="remera1"> Precio: $ <%= product.price %></div>
             <!-- NO DEVUELVE LOS DISEÑOS -->
-            <div class="remera1"> Diseño:  product.designs.design </div> 
+            <div class="remera1"> Diseño:  <%= product.designs.design %> </div> 
            
 
              <a href="/carrito"><button class="aCarrito"type="button">Añadir a carrito</button></a>

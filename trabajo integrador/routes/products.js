@@ -50,7 +50,11 @@ router.put('/edit/:id',upload.any('avatar'),productController.update);
 
 router.delete('/destroy/:id', productController.delete);
 
-router.get('/list',productController.list);
+router.get('/listIndumentaria',productController.listIndumentaria);
+router.get('/listMerchandising',productController.listMerchandising);
+router.get('/listAccesorios',productController.listAccesorios);
+
+
 router.get('/listProductsUs',productController.listProductsUs);
 
 // ruta del nav filtrando

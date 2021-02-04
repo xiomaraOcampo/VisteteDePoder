@@ -23,7 +23,7 @@
 
             <ul class="menuHorizontal">
                 <li class="palabras"><a class="home" href="/home">HOME</a></li>
-                <li class="palabras"><a class="home" href="../products/list">INDUMENTARIA<i
+                <li class="palabras"><a class="home" href="../products/listIndumentaria">INDUMENTARIA<i
                             class="fas fa-sort-down"></i></a>
                     <ul class="desplegable">
                         <!-- <li><a href="../products/Tshirt">Remeras</a></li> -->
@@ -32,7 +32,7 @@
                         <li><a href="../products/cap">Gorras</a></li>
                     </ul>
                 </li>
-                <li class="palabras"><a class="home" href="../products/list">MERCHANDISIGN<i
+                <li class="palabras"><a class="home" href="../products/listMerchandising">MERCHANDISIGN<i
                             class="fas fa-sort-down"></i></a>
                     <ul class="desplegable">
                         <li><a href="../products/cup">Tazas</a></li>
@@ -40,7 +40,7 @@
                         <li><a href="../products/bottle">Botellas</a></li>
                     </ul>
                 </li>
-                <li class="palabras"><a class="home" href="../products/list">ACCESORIOS<i
+                <li class="palabras"><a class="home" href="../products/listAccesorios">ACCESORIOS<i
                             class="fas fa-sort-down"></i></a>
                     <ul class="desplegable">
                         <li><a href="../products/handbag">Bolsos</a></li>
@@ -93,11 +93,11 @@
                 <ul class="desplegable">
                     <li><a href="../users/ingreso">Iniciar Sesion</a></li>
                     <li><a href="../users/registro">Registrarme</a></li>
-                    <%if (locals.user == undefined) {%>
+                    <!-- <%if (locals.user == undefined) {%>
                         <li><a href="../users/ingreso">Mi cuenta</a></li>
-                    <%}else{%>
-                        <li><a href="../users/detail/<%=locals.user.id%>">Mi cuenta</a></li>
-                    <%}%>
+                    <%}else{%> -->
+                        <li><a href="../users/detail/<%=session.user.id%>">Mi cuenta</a></li>
+                    <!-- <%}%> -->
                     <li><a href="../carrito/">Mis compras</a></li>
                     <li><a href="../users/logout">Cerrar Sesion</a></li>
 
