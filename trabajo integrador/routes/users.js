@@ -52,7 +52,7 @@ router.put('/edit/:id', validations.usersEdit, userController.update);
 
 router.delete('/destroy/:id', userController.destroy); 
 router.get('/list',userController.list);
-router.get('/detail/:id',userController.detail);
+router.get('/detail/:id',authMiddleware,userController.detail);
 
 
 

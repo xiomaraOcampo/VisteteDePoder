@@ -1,7 +1,4 @@
-
 const db = require("../../database/models");
-
-
 let usersAPIController = {
   
  list: function (req, res, next) {
