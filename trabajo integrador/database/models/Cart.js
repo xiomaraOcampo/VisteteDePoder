@@ -39,11 +39,11 @@ module.exports = function (sequelize, dataTypes) {
         })
     }
     //asociacion tabla intermedia
-    // Cart.associate = function(models){
-    //     Cart.hasMany(models.Cart_Product,{
-    //         as:"cart_product",
-    //         foreignKey:"cart_id"
-    //     })
-    // }
+   /*  Cart.associate = function(models){
+        Cart.hasMany(models.Cart_Product,{
+            as:"cart_product",
+            foreignKey:"cart_id"
+        })
+    } */
     return Cart;
 }
