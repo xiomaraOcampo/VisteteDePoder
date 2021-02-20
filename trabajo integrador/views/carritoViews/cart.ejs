@@ -1,63 +1,75 @@
 <!DOCTYPE html>
 <html lang="en">
-    <%-include("../partials/head")%>
-<body>
-<div class="container">
-   <!--HEADER-->
-   <header>
-    <%-include("../partials/header")%>
-    
-   </header> 
-<!--FIN HEADER-->
-<html lang="es">
-<head>
-    <meta charset="UTF-8">
-    <title></title>
-    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
-    
-    
-</head>
-<body>
-    <div class="container">
-        <div class="tituloMiCarrito">Mi carrito</div>
-        <div class="row">
-            <!-- Elementos generados a partir del JSON -->
-            <main id="items" class="mainProducto">
-                <% products.forEach(function(product){ %>
-                    <div class="tarjeta">
-                        <div class="card-body">
-                            <img src="/images/imagesProducts/<%=product.image %>"class="fotoProducto" >
-                            <h5><%=product.name  %></h5>
-                            <p>$<%=product.price %></p>
-                            <button  marcador="$<%=product.id %>" >+</button>
-                        </div>
+<%-include("../partials/head")%>
+
+    <body>
+        <div class="container">
+            <!--HEADER-->
+            <header>
+                <%-include("../partials/header")%>
+
+            </header>
+            <!--FIN HEADER-->
+            <html lang="es">
+
+            <head>
+                <meta charset="UTF-8">
+                <title></title>
+                <meta name="viewport"
+                    content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+
+
+            </head>
+
+            <body>
+                <div class="container">
+                    <div class="tituloMiCarrito">Mi carrito</div>
+                    <div class="row">
+                        <!-- Vista de carga productos desde la base de datos-->
+                        <main id="items" class="mainProducto">
+                            <% products.forEach(function(product){ %>
+                                <div class="tarjeta">
+
+                                    <div class="card-body">
+
+                                        <img src="/images/imagesProducts/<%=product.image %>" class="fotoProducto">
+                                        <h5>
+                                            <%=product.name %>
+                                        </h5>
+                                        <p>
+                                            <%=product.description %>
+                                        </p>
+                                        <p>$<%=product.price %>
+                                        </p>
+                                        <form action="/carrito" method="POST" enctype="multipart/form-data">
+
+                                            <input type="hidden" id="productid<%=product.id %>" name="productid"
+                                                value="<%=product.id %>">
+                                            <button type="submit">+</button>
+                                        </form>
+
+                                    </div>
+
+                                </div>
+                                <%});%>
+                        </main>
+                        <!-- Carrito  CAMBIE EK NOMBRE Y ESCRIBI DETALLE SUBTOTAL,FIJARSE SI AFECTA EN OTROS LADOS-->
+                        <% if (carrito !=undefined){%>
+                            <aside class="detalleSubtotal">
+                                <h2>Carrito</h2>
+                                <!-- Elementos del carrito -->
+                                <ul id="carrito" class="list-group"></ul>
+                                <hr>
+                                <!-- Precio total -->
+                                <p class="text-right">Total: <span id="total"></span>&euro;</p>
+                                <button id="boton-vaciar" class="btn btn-danger">Vaciar</button>
+                            </aside>
+                            <%}%>
+
+
                     </div>
-                <%});%>
-            </main>
-            <!-- Carrito  CAMBIE EK NOMBRE Y ESCRIBI DETALLE SUBTOTAL,FIJARSE SI AFECTA EN OTROS LADOS-->
-            <aside class="detalleSubtotal">
-                <h2>Carrito</h2>
-                <!-- Elementos del carrito -->
-                <ul id="carrito" class="list-group"></ul>
-                <hr>
-                <!-- Precio total -->
-                <p class="text-right">Total: <span id="total"></span>&euro;</p>
-                <button id="boton-vaciar" class="btn btn-danger">Vaciar</button>
-            </aside>
-        </div>
-        <%-include("../partials/footer")%>
-    </div>
-</body>
-</html>
+                    <%-include("../partials/footer")%>
+                </div>
+            </body>
 
-
-
-
-
-
-
-
-
-
-
-
+            </html>
