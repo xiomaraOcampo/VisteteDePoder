@@ -10,6 +10,10 @@ module.exports= function(sequelize,dataTypes){
             "allowNull":false
             
          },
+         "product_id":{
+            "type":dataTypes.INTEGER,
+            "allowNull":false
+         },
          "quantity":{
             "type":dataTypes.INTEGER,
             "allowNull":false
