@@ -5,6 +5,10 @@ const productsAPIController = require ("../../controllers/api/productsAPIControl
 /* GET home page. */
 router.get('/', productsAPIController.list);
 
+router.get('/cat', productsAPIController.cat);
+
 router.get('/:id', productsAPIController.find);
+
+
 
 module.exports = router;

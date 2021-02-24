@@ -51,8 +51,30 @@ let productsAPIController = {
        console.log(error);
        res.send("Error");
      });
-   }
-
+   },
+   cat: function (req, res, next) {
+    //  res.send('cat')
+    db.Category.findAll()
+    .then(function (categories){ 
+    
+      let respuesta={
+        meta:{
+          status:200,
+          total: categories.length,
+          url:"/api/products/cat"
+        },
+        data:categories
+      };
+       res.json(respuesta);
+    })
+    // res.send('api products')
+    .catch(function (error) {
+      console.log(error);
+      res.send("Error");
+    });
+  
+  },
+  
 };//cierre controller
 
 module.exports = productsAPIController;
