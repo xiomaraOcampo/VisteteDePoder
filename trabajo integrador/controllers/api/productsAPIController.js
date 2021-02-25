@@ -5,12 +5,15 @@ const db = require("../../database/models");
 let productsAPIController = {
   
  list: function (req, res, next) {
-    db.Product.findAll()
+    db.Product.findAll({
+      include: [{ association: "designs" },{ association: "sizes" },{ association: "subcat" }],
+    })
     .then(function (products){ 
 
       for (let i=0; i< products.length; i++){
-        products[i].setDataValue("endpoint", "/api/user/" + products[i].id)
+        products[i].setDataValue("endpoint", "/api/product/" + products[i].id)
       }
+
       let respuesta={
         meta:{
           status:200,
@@ -21,7 +24,10 @@ let productsAPIController = {
       };
        res.json(respuesta);
     })
-    // res.send('api products')
+    .catch(function (error) {
+      console.log(error);
+      res.send("Error");
+    });
   },
   find: function (req, res, next) {
    
@@ -51,8 +57,30 @@ let productsAPIController = {
        console.log(error);
        res.send("Error");
      });
-   }
-
+   },
+   cat: function (req, res, next) {
+    //  res.send('cat')
+    db.Category.findAll()
+    .then(function (categories){ 
+    
+      let respuesta={
+        meta:{
+          status:200,
+          total: categories.length,
+          url:"/api/products/cat"
+        },
+        data:categories
+      };
+       res.json(respuesta);
+    })
+    // res.send('api products')
+    .catch(function (error) {
+      console.log(error);
+      res.send("Error");
+    });
+  
+  },
+  
 };//cierre controller
 
 module.exports = productsAPIController;

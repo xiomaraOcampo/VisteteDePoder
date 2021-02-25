@@ -41,10 +41,7 @@
                                         </p>
                                         <p>$<%=product.price %>
                                         </p>
-                                        <form action="/carrito" method="POST" enctype="multipart/form-data">
-
-                                            <input type="hidden" id="productid<%=product.id %>" name="productid"
-                                                value="<%=product.id %>">
+                                        <form action="/carrito/agregarProducto/<%= product.id %>" method="POST">
                                             <button type="submit">+</button>
                                         </form>
 
@@ -58,7 +55,19 @@
                             <aside class="detalleSubtotal">
                                 <h2>Carrito</h2>
                                 <!-- Elementos del carrito -->
-                                <ul id="carrito" class="list-group"></ul>
+                                <ul id="carrito" class="list-group">
+                                     <% for(let i=0; i<carrito.products.length; i++){ %>
+
+                                        <li><% carrito.products[i].Cart_Product.quantity %> x
+                                            <%  carrito.products[i].name %>-
+                                            $<%  carrito.products[i].price %>
+                                            <button  style="margin-left: 1rem;">X</button>
+                                        </li>  
+                                      <% } %> 
+
+
+                                </ul>
+
                                 <hr>
                                 <!-- Precio total -->
                                 <p class="text-right">Total: <span id="total"></span>&euro;</p>
