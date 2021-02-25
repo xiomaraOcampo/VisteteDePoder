@@ -74,23 +74,16 @@ module.exports = (sequelize, dataTypes) => {
             timestamps:false
 
         })
-        Product.belongsToMany(models.Cart, {
-            as: "carts",
-            through: "cart_product",
+        Product.belongsToMany(models.Cart,{
+            as: "Carts",
+            through: "Cart_Product",
             foreignKey: "product_id",
             otherKey: "cart_id",
-            timestamps: false
+            timestamps:false
         })
-        //asociacion de tabla intermedia
-        Product.associate = function(models){
-            Product.hasMany(models.Cart_Product,{
-                as:"cart_product",
-                foreignKey:"product_id"
-            })
-        }
+    }
+
     
 
-
-    }
     return Product;
 }
