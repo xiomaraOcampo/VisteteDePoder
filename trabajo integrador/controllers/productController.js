@@ -211,13 +211,13 @@ let productController = {
     // })
   },
 
-  create: function (req, res, next) {
+  create: function (req, res, next)   {
     // INCORPORAR LAS ASOCIACIONES DE CATEGORIA Y SUBCATEGIRIA
     let pedidoDesigns = db.Design.findAll();
     // let pedidoSizes = db.Size.findAll();
     let pedidoSubcategories = db.Subcategory.findAll();
 
-
+    console.log();
 
     Promise.all([pedidoDesigns, pedidoSubcategories])
       .then(function ([designs, subcat]) {
@@ -232,10 +232,12 @@ let productController = {
       });
   },
   store: function (req, res, next) {
-    // let errors = validationResult(req);
-    //isEmpty= esta vacia
-    // if (errors.isEmpty()) {
-    console.log(req.body);
+    let errors = validationResult(req);
+    let subcat = db.Subcategory.findAll();
+    let designs =db.Design.findAll();
+    // isEmpty= esta vacia
+    if (errors.isEmpty()) {
+    console.log(validationResult(req));
     db.Product.create({
       name: req.body.nombre,
       price: req.body.precio,
@@ -262,9 +264,9 @@ let productController = {
     // res.send('creaste un producto')
     return res.render('productsViews/productCreated')
 
-    // } else {
-    // return res.render("productsViews/create", { errors: errors.errors });
-    // }
+    } else {
+    return res.render("productsViews/create",  { errors: errors.errors, subcat:subcat, designs:designs });
+    }
   },
   edit: function (req, res, next) {
     // var idProduct = req.params.id;
@@ -283,16 +285,34 @@ let productController = {
     //   res.render("productsViews/list", { productsFile, toThousand });
     // }
 
-    let pedidoProduct = db.Product.findByPk(req.params.id);
+      
+    let pedidoProduct = db.Product.findByPk(req.params.id, 
+    // {include: [{ association: "designs" }, {association: "subcat"}, {association: "sizes"}],
+    //   raw: true,
+    //   nest: true,}
+)
     let pedidoDesigns = db.Design.findAll();
-    let pedidoSizes = db.Size.findAll();
-    let pedidoSubcategories = db.Subcategory.findAll();
 
-    Promise.all([pedidoProduct, pedidoDesigns, pedidoSizes, pedidoSubcategories])
-      .then(function ([product, design, size, subcategory]) {
-        // console.log([product, design, size, subcategory])
-        res.render("productsViews/edit", { product: product, design: design, size: size, subcategory: subcategory })
-      })
+    let pedidoSubcategories = db.Subcategory.findAll();
+    
+    
+    Promise.all([pedidoProduct, pedidoDesigns, pedidoSubcategories])
+      
+    
+    .then(function ([product, designs, subcategories]) {
+      // .then(function(product){
+
+        
+        if(product){
+        //  res.send([product, designs, subcategories])
+          res.render("productsViews/edit", { product: product, designs:designs, subcategories:subcategories})
+        }else {
+           res.render("productsViews/mensajeNoEncontrado"); 
+
+        }
+        }
+       );
+  
 
   },
   update: function (req, res, next) {
