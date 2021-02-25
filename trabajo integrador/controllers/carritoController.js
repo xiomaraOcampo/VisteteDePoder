@@ -1,7 +1,7 @@
 let db = require("../database/models");
 const Cart_Product = require("../database/models/Cart_Product");
 let carritoUsuario = null;
-let productos=null;
+let productos = null;
 
 
 const carritoController = {
@@ -16,16 +16,21 @@ const carritoController = {
     //cargar productos desde la base
     db.Product.findAll()
       .then(function (products) {
-        productos=products
+        console.log(products);
+        productos = products
         //cargar carrito sin finalizar,que este abierto
         let currentUser = req.session.usuarioIngresado;
         db.Cart.findOne({
+          include: [{association: 'products'}],
+          raw: true,
+          nest: true,
           where: {
             status: "open",
             User_id: currentUser.id
           }
         }).then(function (carrito) {
           console.log(carrito);
+          
           carritoUsuario = carrito;
           if (carritoUsuario == undefined) {
             carritoUsuario = db.Cart.create({
@@ -50,20 +55,19 @@ const carritoController = {
 
   agregarProducto: function (req, res, next) {
     // si existe un carrito abierto,agregarle producto
-    console.log("prodid "); 
-    console.log(req.body);
+    console.log("prodid ");
     console.log(req.params);
     db.Cart_Product.findOne({
       where: {
         cart_id: carritoUsuario.id,
-        product_id: req.body.productid
+        product_id: req.params.id
       }
     }).then(function (cartProduct) {
       console.log(cartProduct);
       if (cartProduct == undefined) {
         db.Cart_Product.create({
           cart_id: carritoUsuario.id,
-          product_id: req.body.productid,
+          product_id: req.params.id,
           quantity: 1,
           safeprice: 0
         })
@@ -82,7 +86,7 @@ const carritoController = {
     });
 
 
-    //si no existe un carrito abierto, crear uno para ese usuario y luego agregar el producto
+
 
   },
   vaciarCarrito: function (req, res, next) {

@@ -71,9 +71,9 @@
               name="subCategoria"
               id="subCategoria"
             >
-            <% for(let i=0; i<subcategory.length; i++){ %> 
-              <option value="<%= subcategory[i].id %>"> 
-                 <%= subcategory[i].subcategory %> 
+            <% for(let i=0; i<subcategories.length; i++){ %> 
+              <option value="<%= subcategories[i].id %>"> 
+                 <%= subcategories[i].subcategory %> 
               </option> 
            <% } %>    
            </select>
@@ -85,22 +85,15 @@
             
             <label for="" > Diseño </label>
             <select class="inputsRegistro" name="disenio"> 
-                <% for(let i=0; i<design.length; i++){ %> 
-                   <option value="<%= design[i].id %>"> 
-                      <%= design[i].design %> 
+                <% for(let i=0; i<designs.length; i++){ %> 
+                   <option value="<%= designs[i].id %>"> 
+                      <%= designs[i].design %> 
                    </option> 
                 <% } %>    
                </select> 
+ 
+     
 
-<!-- 
-               <label for="" > Talle: </label>
-               <select class="inputsRegistro" name="talle"> 
-                   <% for(let i=0; i<size.length; i++){ %> 
-                      <option value="<%= size[i].id %>"> 
-                         <%= size[i].size %> 
-                      </option> 
-                   <% } %>    
-                  </select>  -->
              <!--Precio (función de Miles)-->
              
              <label for="" > Precio </label>

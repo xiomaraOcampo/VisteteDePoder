@@ -89,7 +89,7 @@ let userController = {
 
         if (req.body.recordame != undefined) {
           res.cookie('recordame',
-            usuarioAIngresar.email, { maxAge: 60000 })
+            usuarioAIngresar.email, { maxAge: 180000 })
         }
 
         res.render('home');

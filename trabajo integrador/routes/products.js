@@ -3,7 +3,7 @@ const { RequestHeaderFieldsTooLarge } = require('http-errors');
 var router = express.Router();
 var productController = require ('../controllers/productController');
 var multer  = require('multer');
-const validations=require('../Middleware/validations');
+const validations = require('../Middleware/validations');
 
 //var upload = multer({ dest: 'uploads/' });
 const path = require ('path');
@@ -41,7 +41,7 @@ router.post('/search' ,productController.search);
 //ruta para los formularios del administrador, para cargar productos
 
  router.get('/create' ,productController.create);
- router.post('/create',upload.any('avatar'), validations.productCreated,productController.store);
+ router.post('/create',upload.any('avatar'), validations.productCreated, productController.store);
 
 //ruta para los formularios del administrador, para modificar productos
 
@@ -50,7 +50,11 @@ router.put('/edit/:id',upload.any('avatar'),productController.update);
 
 router.delete('/destroy/:id', productController.delete);
 
-router.get('/list',productController.list);
+router.get('/listIndumentaria',productController.listIndumentaria);
+router.get('/listMerchandising',productController.listMerchandising);
+router.get('/listAccesorios',productController.listAccesorios);
+
+
 router.get('/listProductsUs',productController.listProductsUs);
 
 // ruta del nav filtrando
