@@ -17,7 +17,7 @@ let db = require("../database/models");
 
 
 let productController = {
-  // INCORPORAR LAS ASOCIACIONES DE CATEGORIA Y SUBCATEGIRIA
+
   detailAdm: function (req, res, next) {
     db.Product.findByPk(req.params.id, {
       include: [{ association: "designs" }, { association: "sizes" }, { association: "subcat" }],
@@ -128,9 +128,6 @@ let productController = {
     // }
   },
   search: function (req, res, next) {
-    // PROBARLO BUSCANDO POR SUBCATEGORIA?
-    // PROBAR POR RAW QUERY SI SE PUEDE GENERAR LA BUSQUEDA CON %LIKE%
-    // INCORPORAR LAS ASOCIACIONES DE CATEGORIA Y SUBCATEGIRIA
     db.Product.findAll({
       where: { name: req.body.busqueda },
       include: [{ association: "designs" }, { association: "sizes" }, { association: "subcat" }],
@@ -139,8 +136,8 @@ let productController = {
     })
 
       .then(function (products) {
-        //  res.send(products[1].designs.design)
-        if (products) {
+        //  res.send(products)
+        if (products !==  []) {
           // return res.render("productsViews/listSearch")
           return res.render("productsViews/listSearch", {
             products: products,

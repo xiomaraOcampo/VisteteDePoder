@@ -4,17 +4,7 @@
 <%-include("../partials/head")%>
 
     <body>
-        <% if (typeof errors!='undefined' ){ %>
-            <p style='color:red'>ERROR</p>
-            <ul>
-                <% for(i=0; i < errors.length; i++){ %>
-                    <li>
-                        <%=errors[i].msg %>
-                    </li>
-                    <% } %>
-            </ul>
-
-            <% } %>
+       
 
                 <div class="container-fluid">
                     <!--HEADER-->
@@ -25,7 +15,17 @@
                     <!--FIN HEADER-->
                     <!--MAIN-->
                     <main>
-
+                        <% if (typeof errors!='undefined' ){ %>
+                            <p style='color:red'>ERROR</p>
+                            <ul>
+                                <% for(i=0; i < errors.length; i++){ %>
+                                    <li>
+                                        <%=errors[i].msg %>
+                                    </li>
+                                    <% } %>
+                            </ul>
+                
+                            <% } %>
                         <form action="/users/ingreso" method="POST">
                             <!--iconos-->
 
@@ -47,11 +47,11 @@
 
                                 <!--textos-->
                                 <!--label for="Recordame"></label-->
-                                <div class="recordame">Recordame</div><input type="checkbox" name="recordame"><br>
+                                <div class="recordame">Recordame</div><input type="checkbox" name="recordame">
                                 <button class="iniciarSesion" type="submit">Iniciar sesión</button>
                                 <!-- <a class="preguntas" href="#">Me olvide mi contraseña</a> -->
                                 <div class="preguntita">¿No tenés cuenta?</div>
-                                <a class="preguntas" href="users/registro"> Crear una cuenta nueva</a>
+                                <a class="preguntas" href="./registro"> Crear una cuenta nueva</a>
                             </div>
                         </form>
 

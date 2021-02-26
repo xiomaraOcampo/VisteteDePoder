@@ -27,6 +27,12 @@ module.exports= function(sequelize,dataTypes){
          "updatedAt":"updated_at"
      
        })
+       Cart_Product.associate = function(models){
+        Cart_Product.belongsTo(models.Product,{
+            as:"products",
+            foreignKey:"product_id"
+        })
+    }
  
  
     return Cart_Product;
