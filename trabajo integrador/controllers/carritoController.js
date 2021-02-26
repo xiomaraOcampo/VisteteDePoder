@@ -14,10 +14,14 @@ const carritoController = {
 
   cargaCarrito: function (req, res, next) {
     //cargar productos desde la base
-    db.Product.findAll()
+    db.Product.findAll({
+      include: [{ association: "cart_product" }],
+     raw: true,
+     nest: true,
+  })
       .then(function (products) {
-        console.log(products);
-        productos = products
+        console.log(products[2]);
+        /* productos = products
         //cargar carrito sin finalizar,que este abierto
         let currentUser = req.session.usuarioIngresado;
         db.Cart.findOne({
@@ -33,8 +37,9 @@ const carritoController = {
           
           carritoUsuario = carrito;
           if (carritoUsuario == undefined) {
+            console.log(req.session.usuarioIngresado);
             carritoUsuario = db.Cart.create({
-              "user_id": req.session.usuarioIngresado.id,
+              "User_id": req.session.usuarioIngresado.id,
               "status": "open"
             });
           }
@@ -43,8 +48,8 @@ const carritoController = {
         })
           .catch(function (error) {
             console.log(error);
-            res.send("error");
-          });
+            res.send("error"); 
+          });*/
 
       }).catch(function (error) {
         console.log(error);
