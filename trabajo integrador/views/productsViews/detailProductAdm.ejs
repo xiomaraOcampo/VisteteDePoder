@@ -54,17 +54,19 @@
 
               <h4>Precio: $ <%= product.price %></h4>
 
-              <a class="remera1" href="/products/edit/<%= product.id %>"><button
-                type="button">Editar</button></a>
+              <a class="remera1" href="/products/edit/<%= product.id %>">
+                <button type="button">Editar</button>
+              </a>
 
                 <form class="borrar" action="/products/destroy/<%= product.id %>?_method=DELETE"
                   method="POST">
+                  
                   <button type="submit">Borrar</button>
 
             </section>
           </div>
         </form>
-    
+      </div>
       </main>
       <%-include("../partials/footer")%>
     </div>
