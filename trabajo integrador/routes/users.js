@@ -30,11 +30,17 @@ router.get('/', userController.index);
 router.get('/registro',guestMiddleware, userController.registro);
 router.post('/registro',upload.any('userAvatar'), validations.usersRegister, userController.storeRegistro);
 
+
+// router.get('/ingreso', userController.ingreso);
+
 router.get('/ingreso',guestMiddleware, userController.ingreso);
-router.post('/ingreso', [
+router.post('/ingreso',
+ [
   check ('email').isEmail(),
   check ('contrasenia').isLength({min:6}).withMessage('El mail y/o contraseña son invalidos'),
-] ,userController.storeIngreso);
+], userController.storeIngreso);
+
+
 
 router.get('/check',function (req,res,){
   if (req.session.usuarioIngresado== undefined){
@@ -43,6 +49,8 @@ router.get('/check',function (req,res,){
    res.send('El usuario logueado es '+ req.session.usuarioIngresado.email);
  } 
 });
+
+
 router.get('/logout', userController.logout);
 
 //edicion de usuarios
@@ -52,7 +60,10 @@ router.put('/edit/:id', validations.usersEdit, userController.update);
 
 router.delete('/destroy/:id', userController.destroy); 
 router.get('/list',userController.list);
-router.get('/detail/:id',authMiddleware,userController.detail);
+
+
+//perfil???
+router.get('/detail/:id',userController.detail);
 
 
 

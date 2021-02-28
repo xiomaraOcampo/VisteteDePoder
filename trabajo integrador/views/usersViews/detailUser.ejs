@@ -18,18 +18,18 @@
  
        
         <li>
-          <form class="borrar" action="/users/destroy/<%= user.id %>?_method=DELETE" method="POST">
+          <form class="borrar" action="/users/destroy/<%= usuarioAIngresar.id %>?_method=DELETE" method="POST">
 
       
           <div class="registro1">
             <label for="id"><i class="fas fa-user"></i></label>
             <label for="nombre"><i class="fas fa-user"></i></label>
             <label for="email"><i class="fas fa-envelope"></i></label>
-       <% if(user.userAvatar){ %>
+       <% if(usuarioAIngresar.userAvatar){ %>
 
     </div>
         <section class="fotoProducto">
-          <article> <img src="/images/usersImages/<%= user.userAvatar %> " alt=" <%= user.userAvatar %> ">
+          <article> <img src="/images/usersImages/<%= usuarioAIngresar.userAvatar %> " alt=" <%= usuarioAIngresar.userAvatar %> ">
               
           </article>
       </section>
@@ -46,11 +46,11 @@
         <div class="registro2">
           <h3> </h3>
 
-          <div class=inputsRegistro type="text" name="id"> Id: <%= user.id %> </div>
+          <div class=inputsRegistro type="text" name="id"> Id: <%= usuarioAIngresar.id %> </div>
 
-          <div class=inputsRegistro type="text"  id="nombre" name="nombre">Nombre: <%= user.name %>  </div>
+          <div class=inputsRegistro type="text"  id="nombre" name="nombre">Nombre: <%= usuarioAIngresar.name %>  </div>
                   
-          <div class="inputsRegistro" type="email" id="email" name="email">Email: <%= user.email %> </div>
+          <div class="inputsRegistro" type="email" id="email" name="email">Email: <%= usuarioAIngresar.email %> </div>
                     
           
           </div>

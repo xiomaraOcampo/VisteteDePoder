@@ -20,8 +20,8 @@ const carritoController = {
      nest: true,
   })
       .then(function (products) {
-        console.log(products[2]);
-        /* productos = products
+        // console.log(products[2]);
+         productos = products
         //cargar carrito sin finalizar,que este abierto
         let currentUser = req.session.usuarioIngresado;
         db.Cart.findOne({
@@ -44,12 +44,12 @@ const carritoController = {
             });
           }
 
-          res.render('carritoViews/cart', { products: products, carrito: carritoUsuario });
+          res.render('carritoViews/cart', { products: products, carrito: carritoUsuario, usuarioAIngresar:usuarioAIngresar });
         })
           .catch(function (error) {
             console.log(error);
             res.send("error"); 
-          });*/
+          });
 
       }).catch(function (error) {
         console.log(error);
