@@ -20,7 +20,7 @@ let userController = {
   },
 
   registro: function (req, res, next) {
-    res.render('usersViews/registro', {usuarioAIngresar:usuarioAIngresar});
+    res.render('usersViews/registro');
   },
   storeRegistro: function (req, res, next) {
     //alert("Se ha registrado un usuario");
@@ -47,7 +47,7 @@ let userController = {
         "image": registroUser.userAvatar,
         "type": 0
       });
-      res.render('home', {usuarioAIngresar:usuarioAIngresar});
+      res.render('home');
     } else {
       return res.render('usersViews/registro', { errors: errors.errors });
     }
@@ -57,10 +57,11 @@ let userController = {
 
   ingreso: function (req, res, next) {
     let usuarioAIngresar; 
-    res.render("usersViews/ingreso", {usuarioAIngresar:usuarioAIngresar});
+    res.render("usersViews/ingreso");
+  
   },
   storeIngreso: function (req, res, next) {
-    
+    console.log(res.locals.user);
     let errors = validationResult(req);
     console.log(errors);
     let usuarioAIngresar;
@@ -82,6 +83,12 @@ let userController = {
           };
           
         }
+        // .then((resultado)=>{
+          
+        // if(bcryptjs.compareSync(req.body.contrasenia, usuarioAIngresar.password)){
+        // console.log(resultado)
+        //   ;
+        // }
         if (usuarioAIngresar == undefined ) {
           return res.render('usersViews/ingreso', {
             errors: [
@@ -97,7 +104,7 @@ let userController = {
         }
         // res.send(usuarioAIngresar.email)
         // res.render("usersViews/detailUser", {usuarioAIngresar:usuarioAIngresar})
-        res.render('home', {usuarioAIngresar:usuarioAIngresar});
+        res.render('home');
       })
 
         //xio, por qué no va el .catch???
@@ -121,7 +128,7 @@ let userController = {
   },
   logout: function (req, res, next) {
     req.session.destroy();
-    res.render("home", {usuarioAIngresar:usuarioAIngresar});
+    res.render("home");
   },
 
   edit: function (req, res, next) {
@@ -134,7 +141,7 @@ let userController = {
           // res.send('No se ha encontrado el usuario ')
         }else{
           console.log (usuarioAIngresar);
-          res.render('usersViews/editU', { usuarioAIngresar:usuarioAIngresar });
+          res.render('usersViews/editU');
         }
       })
       ;
@@ -151,7 +158,7 @@ update: function (req, res, next) {
 
 
 
-    
+       
     db.User.update({
       "name": req.body.nombre,
       "email": req.body.email,
@@ -164,7 +171,7 @@ update: function (req, res, next) {
     });
 
     // res.send("Modificaste el usuario " + req.body.nombre);
-    res.render('usersViews/perfil',{usuarioAIngresar:usuarioAIngresar});
+    res.render('usersViews/perfil');
   } else {
     db.User.findByPk(idUser)
     .then(function (user){
@@ -231,7 +238,7 @@ detail:function(req,res,next){
    db.User.findByPk(idUser)
     .then(function (usuarioAIngresar){
   //     // console.log(usuarioAIngresar);
-      res.render('usersViews/perfil',{usuarioAIngresar:usuarioAIngresar});
+      res.render('usersViews/perfil');
     })
     .catch(function (error) {
       console.log(error)

@@ -44,7 +44,7 @@ const carritoController = {
             });
           }
 
-          res.render('carritoViews/cart', { products: products, carrito: carritoUsuario, usuarioAIngresar:usuarioAIngresar });
+          res.render('carritoViews/cart', { products: products, carrito: carritoUsuario, currentUser:usuarioAIngresar });
         })
           .catch(function (error) {
             console.log(error);
