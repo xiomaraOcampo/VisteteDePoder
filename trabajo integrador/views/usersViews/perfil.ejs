@@ -14,7 +14,7 @@
 
                 <!--MAIN-->  
                 
-<form  action="/users/edit/<%= usuarioAIngresar.id %>?_method=PUT" method=POST>
+<form  action="/users/edit/<%= usuarioAIngresar.id %>" method=GET>
     <div class="registro1">
          <!-- <label for="id"><i class="fas fa-user"></i></label>-->
         <label for="nombre"><i class="fas fa-user"></i></label>
@@ -34,26 +34,20 @@
 
         <% } %>
     <div class="registro2">
-        <h3>Editar cuenta</h3>
+        <h3>Mi cuenta</h3>
 
         <!--<input class=inputsRegistro type="text" placeholder="Id" name="id">-->
 
-        <input class=inputsRegistro type="text" placeholder="Tu nombre" id="nombre" name="nombre" value="<%= usuarioAIngresar.name %>">
+        <div class=inputsRegistro type="text" placeholder="Tu nombre" id="nombre" name="nombre" value="<%= usuarioAIngresar.name %>"> <%= usuarioAIngresar.name %></div> 
                  
-        <input class="inputsRegistro" type="email" placeholder="Correo electrónico"id="email" name="email" value="<%= usuarioAIngresar.email %>">
+        <div class="inputsRegistro" type="email" placeholder="Correo electrónico"id="email" name="email" value="<%= usuarioAIngresar.email %>"><%= usuarioAIngresar.email %></div>
                   
-        <input class="inputsRegistro" type="password" placeholder="Escribe una nueva contraseña" id="contrasenia" name="contrasenia"value="">
-         
-        <p class="textoContraseña">!La contraseña debe tener al menos seis caracteres</p> 
-         
-        <input class="inputsRegistro" type="password" placeholder="Vuelve a escribir la contraseña" id="confirmacionContrasenia" name="confirmacionContrasenia" value=""> </p>
-      
+        
                      <!--Envían al home-->
         <button class="enviar" type="submit">Edita tu cuenta en Vistete de Poder</button>
     
-        ¿Ya tenés una cuenta? 
-     
-        <a class="aIngreso"href="\ingreso">Iniciar sesión</a>
+       
+       
    </div>
    
 </form>

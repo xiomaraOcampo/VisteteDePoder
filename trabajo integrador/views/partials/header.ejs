@@ -16,6 +16,7 @@
             <div class="w"><a href="https://web.whatsapp.com/"><img src="/images/whatsapp.png" alt="whatsapp"></a></div>
 
         </div>
+
     </section>
 
     <section class=header2>
@@ -89,19 +90,27 @@
                     </p>
                 </form>
             </div>
-            
-            <div class="ingreso"><a class="home" href="/users/ingreso"><i class="fas fa-user"></i></a>
+
+          <% if(usuarioAIngresar == undefined){%> 
+           <div class="ingreso"><a class="home" href="/users/ingreso"><i class="fas fa-user"></i></a>
                 <ul class="desplegableUsuarios">
                     <li><a href="../users/ingreso">Iniciar Sesion</a></li>
                     <li><a href="../users/registro">Registrarme</a></li>
-                   
-                    <li><a href="../carrito/">Mis compras</a></li>
-                    <li><a href="../users/logout">Cerrar Sesion</a></li>
 
-                    
                 </ul>
-
             </div>
+            <% }else { %>
+
+                <div class="ingreso">Hola <%= usuarioAIngresar.name %>!!! 
+                    <ul class="desplegableUsuarios">
+
+                        <li><a href="/users/detail/<%=usuarioAIngresar.id%>">Mi cuenta</a></li>
+                        <li><a href="/carrito">Mis compras</a></li>
+                        <li><a href="/users/logout">Cerrar Sesion</a></li>    
+                    </ul>
+                </div>
+            
+            <%}%>
         </div>
     </section>
 

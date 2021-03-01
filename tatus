@@ -1,0 +1,1291 @@
+[33mcommit 9b2cc40c1597f259dea09b3d5710be10216baef7[m[33m ([m[1;36mHEAD -> [m[1;32mmaster[m[33m)[m
+Merge: 1e9279d 5933d50
+Author: Laulore86 <lauraloreiro1@gmail.com>
+Date:   Fri Feb 26 17:41:51 2021 -0300
+
+    Merge branch 'master' of https://github.com/xiomaraOcampo/VisteteDePoder
+
+[33mcommit 1e9279d9ef9b179f8cabb8bdafd06e4b4979f693[m
+Author: Laulore86 <lauraloreiro1@gmail.com>
+Date:   Fri Feb 26 17:37:35 2021 -0300
+
+    model Product
+
+[33mcommit 5933d508ed075c8a0624b9021172cccd66c00caa[m[33m ([m[1;31morigin/master[m[33m, [m[1;31morigin/HEAD[m[33m)[m
+Author: xiomaraOcampo <xiomaravictoriaocampo@gmail.com>
+Date:   Fri Feb 26 12:00:53 2021 -0300
+
+    subo lo ultimo de carrito
+
+[33mcommit ee063c2f7c05f7be5b8d0ba6533727c07453241d[m
+Author: florcadelli <florcadelli@gmail.com>
+Date:   Fri Feb 26 07:09:30 2021 -0300
+
+    details responsive
+
+[33mcommit b60836cf445f80335aa57ed4e060e373480d9efc[m
+Merge: 673ade7 fa24fc9
+Author: florcadelli <florcadelli@gmail.com>
+Date:   Thu Feb 25 17:44:34 2021 -0300
+
+    Merge branch 'master' of https://github.com/xiomaraOcampo/VisteteDePoder into master
+
+[33mcommit 673ade7e0497cfc9196f2db63135f80ed53c5e3d[m
+Author: florcadelli <florcadelli@gmail.com>
+Date:   Thu Feb 25 17:44:26 2021 -0300
+
+    formularios responsive
+
+[33mcommit fa24fc9dc49db3d66e9b3b9ccdbc5a56997ba9c3[m
+Merge: 2b57f73 5b6d519
+Author: Laulore86 <lauraloreiro1@gmail.com>
+Date:   Thu Feb 25 15:00:43 2021 -0300
+
+    Merge branch 'master' of https://github.com/xiomaraOcampo/VisteteDePoder
+
+[33mcommit 2b57f73b7285763f4709a051930b54d5c3617a71[m
+Author: Laulore86 <lauraloreiro1@gmail.com>
+Date:   Thu Feb 25 14:44:40 2021 -0300
+
+    con id -no encontrado- en edit
+
+[33mcommit 5b6d5196875e94ac62bee5b86cacc441fae4cb96[m
+Author: Xiomara Ocampo <xiomaravictoriaocampo@gmail.com>
+Date:   Thu Feb 25 14:32:52 2021 -0300
+
+    prueba
+
+[33mcommit e580f299fab33f21bfbfa64c1af225c120100bde[m
+Author: florcadelli <florcadelli@gmail.com>
+Date:   Thu Feb 25 11:12:22 2021 -0300
+
+    ajuste de conatainers
+
+[33mcommit 185a8502043e4a2c2925a2ea70f5a0c1dce321c3[m
+Author: florcadelli <florcadelli@gmail.com>
+Date:   Wed Feb 24 15:14:07 2021 -0300
+
+    dashboard
+
+[33mcommit ce916f7cf45ce593a1e11ebfe7c14c4920375f90[m
+Author: florcadelli <florcadelli@gmail.com>
+Date:   Wed Feb 24 14:00:08 2021 -0300
+
+     Api products e imagenes
+
+[33mcommit 0ed2c1aa4a4e69be6e8e4cfa4e16cd02a181e006[m
+Merge: 39f44a3 ee4e8ad
+Author: Laulore86 <lauraloreiro1@gmail.com>
+Date:   Sun Feb 21 17:59:30 2021 -0300
+
+    Merge branch 'master' of https://github.com/xiomaraOcampo/VisteteDePoder
+
+[33mcommit ee4e8adf7959fd873db0d52f405ab592ccb68cee[m
+Author: florcadelli <florcadelli@gmail.com>
+Date:   Sat Feb 20 20:57:05 2021 -0300
+
+    cors instalado
+
+[33mcommit 1cc7b39230628f54aeb17bd9787dfe239c0bb88f[m
+Author: Xiomara Ocampo <xiomaravictoriaocampo@gmail.com>
+Date:   Sat Feb 20 09:49:31 2021 -0300
+
+    Subo parte del carrito
+
+[33mcommit 39f44a33a19a50391013cd7177308ed0467ac908[m
+Merge: d797e09 1b5f864
+Author: Laulore86 <lauraloreiro1@gmail.com>
+Date:   Mon Feb 8 14:31:07 2021 -0300
+
+    commit cart
+
+[33mcommit d797e0946434858ef8aa4c0f42982d44dbe80a2c[m
+Merge: 5fc630d 9ac66fc
+Author: Laulore86 <lauraloreiro1@gmail.com>
+Date:   Mon Feb 8 14:27:27 2021 -0300
+
+     .
+
+[33mcommit 1b5f86438428c1764fabe8ba821d3d5d970907d8[m
+Author: Xiomara Ocampo <xiomaravictoriaocampo@gmail.com>
+Date:   Sat Feb 6 07:57:03 2021 -0300
+
+    carga carrito
+
+[33mcommit 5fc630d8c46bd3432fd8d6d0153269baaa60a880[m
+Author: Laulore86 <lauraloreiro1@gmail.com>
+Date:   Thu Feb 4 15:44:35 2021 -0300
+
+    ,,
+
+[33mcommit 9ac66fcebf8a9e06fb21b6f0d91973681aa0bed4[m
+Author: Xiomara Ocampo <xiomaravictoriaocampo@gmail.com>
+Date:   Thu Feb 4 11:49:42 2021 -0300
+
+     modelos tabalas intermedias
+
+[33mcommit fb64439e8a3b7edb91b117cab504b0f23717ae8d[m
+Author: florcadelli <florcadelli@gmail.com>
+Date:   Wed Feb 3 18:52:52 2021 -0300
+
+    home responsive
+
+[33mcommit 315a084a63f3d01a38205fbf1e56083212c14d07[m
+Merge: 714d3bd 329278f
+Author: Xiomara Ocampo <xiomaravictoriaocampo@gmail.com>
+Date:   Tue Feb 2 22:56:05 2021 -0300
+
+    Merge branch 'master' of https://github.com/xiomaraOcampo/VisteteDePoder into master
+
+[33mcommit 714d3bde95ea74f1936b387f00a12f5e9461e042[m
+Author: Xiomara Ocampo <xiomaravictoriaocampo@gmail.com>
+Date:   Tue Feb 2 22:55:43 2021 -0300
+
+    subo el encriptado de LOGIN y la COOKIE
+
+[33mcommit 329278fee62b33f0589f12e248387e0768e2eb5e[m
+Author: florcadelli <florcadelli@gmail.com>
+Date:   Tue Feb 2 21:22:55 2021 -0300
+
+     ajustes del home y header
+
+[33mcommit 745d92441f7e39655f8e15185e15a70256e22386[m
+Merge: 10d279b 2134cce
+Author: Laulore86 <lauraloreiro1@gmail.com>
+Date:   Tue Feb 2 07:48:35 2021 -0300
+
+    Merge branch 'master' of https://github.com/xiomaraOcampo/VisteteDePoder
+
+[33mcommit 10d279bc92d898d097461ac64d4502bf9e4edb93[m
+Merge: 68a3bb8 05c983d
+Author: Laulore86 <lauraloreiro1@gmail.com>
+Date:   Tue Feb 2 07:48:25 2021 -0300
+
+    ,,
+
+[33mcommit 2134cce0c142a93d0f453c510c64b1d19d73a498[m
+Author: florcadelli <florcadelli@gmail.com>
+Date:   Mon Feb 1 21:57:01 2021 -0300
+
+    api products
+
+[33mcommit 27fb60036e4974f5f192e256a728cfa301bef51c[m
+Author: Xiomara Ocampo <xiomaravictoriaocampo@gmail.com>
+Date:   Mon Feb 1 18:58:45 2021 -0300
+
+    subo l meta de User
+
+[33mcommit 91054c5932186cf5156f0b3d795373bf4b3c3040[m
+Author: Xiomara Ocampo <xiomaravictoriaocampo@gmail.com>
+Date:   Mon Feb 1 17:50:36 2021 -0300
+
+    API de users
+
+[33mcommit b7df97107f92c006a325a8f7107a12d2d7f5f3a0[m
+Author: florcadelli <florcadelli@gmail.com>
+Date:   Mon Feb 1 17:12:54 2021 -0300
+
+    api users en proceso
+
+[33mcommit 9a7d417ad085373773583a2af46e13196f064776[m
+Merge: 556973b d27d158
+Author: florcadelli <florcadelli@gmail.com>
+Date:   Mon Feb 1 16:30:53 2021 -0300
+
+    ruta api users
+
+[33mcommit 556973ba5610283daffcc4555d104ed00009b090[m
+Author: florcadelli <florcadelli@gmail.com>
+Date:   Mon Feb 1 16:24:49 2021 -0300
+
+    ruta api
+
+[33mcommit d27d15866fe06492d9dc4057457c859b11d54772[m
+Author: Xiomara Ocampo <xiomaravictoriaocampo@gmail.com>
+Date:   Fri Jan 29 00:28:16 2021 -0300
+
+    subo lo de laimagen de usuario y la encriptacion de registro
+
+[33mcommit 68a3bb8078496e846459e300e0a7dff69aa9b4f9[m
+Author: Laulore86 <lauraloreiro1@gmail.com>
+Date:   Thu Jan 28 15:22:16 2021 -0300
+
+    .
+
+[33mcommit 05c983d569735eab6327c672de19f68ca6eccf8c[m
+Author: Xiomara Ocampo <xiomaravictoriaocampo@gmail.com>
+Date:   Wed Jan 27 22:57:38 2021 -0300
+
+    subo adminMIddleware
+
+[33mcommit ec5fb77c59d710afe4003efe12e61b3de74fefd5[m
+Author: florcadelli <florcadelli@gmail.com>
+Date:   Tue Jan 26 17:18:59 2021 -0300
+
+    gif para crete product
+
+[33mcommit 76f855f580dad32d471b5d1fd4e64b38ef826340[m
+Author: xiomaraOcampo <xiomaravictoriaocampo@gmail.com>
+Date:   Tue Jan 26 16:10:06 2021 -0300
+
+    prueba carrito
+
+[33mcommit e1e9b0d1a389b64f8ad1d0aa1a433dfa0a58826e[m
+Author: florcadelli <florcadelli@gmail.com>
+Date:   Tue Jan 26 10:16:25 2021 -0300
+
+    validacion create products
+
+[33mcommit f55432cf73b9993f20dfca8670038d9c159103db[m
+Merge: 0cc3aa5 c65e849
+Author: florcadelli <florcadelli@gmail.com>
+Date:   Mon Jan 25 21:33:52 2021 -0300
+
+    Merge branch 'master' of https://github.com/xiomaraOcampo/VisteteDePoder into master
+
+[33mcommit c65e849f6666e0a31b668d158d4ebc50b9efadee[m
+Author: xiomaraOcampo <xiomaravictoriaocampo@gmail.com>
+Date:   Mon Jan 25 20:56:30 2021 -0300
+
+    subo carrito2 vista
+
+[33mcommit 161fc061c547b72c04df375279eaf80640d61871[m
+Author: xiomaraOcampo <xiomaravictoriaocampo@gmail.com>
+Date:   Mon Jan 25 19:23:34 2021 -0300
+
+    subo lo de logout
+
+[33mcommit 0cc3aa5422c0b49fd95f245d37193e8dce46d50f[m
+Author: florcadelli <florcadelli@gmail.com>
+Date:   Mon Jan 25 18:49:30 2021 -0300
+
+    footer info funcionando
+
+[33mcommit 84d99bf73de4e06d41fd12e85864ff4c745b7b39[m
+Merge: a5c6ed9 bb8bdbd
+Author: Laulore86 <lauraloreiro1@gmail.com>
+Date:   Sun Jan 24 10:11:45 2021 -0300
+
+    Merge branch 'master' of https://github.com/xiomaraOcampo/VisteteDePoder
+
+[33mcommit a5c6ed90a741079eb1debd88ff6e8acf39479ebe[m
+Author: Laulore86 <lauraloreiro1@gmail.com>
+Date:   Sun Jan 24 10:11:24 2021 -0300
+
+    con delete de Productos
+
+[33mcommit bb8bdbdc9b3adaf8e4c97386f9ff6eca8e7a85f4[m
+Author: florcadelli <florcadelli@gmail.com>
+Date:   Sat Jan 23 19:05:18 2021 -0300
+
+    prueba de mensajes footer
+
+[33mcommit 41a8c08660082cf9c9b80bdccae77d5abb0297dc[m
+Author: florcadelli <florcadelli@gmail.com>
+Date:   Fri Jan 22 19:38:59 2021 -0300
+
+    con nueva base de datos
+
+[33mcommit 1e9f71ab69823a7f6bdf1429e652646314eafea1[m
+Author: Laulore86 <lauraloreiro1@gmail.com>
+Date:   Fri Jan 22 16:41:15 2021 -0300
+
+    sacando talle y genero de create
+
+[33mcommit 6330fe99c0cc4e683584bdb7d84289e87379164d[m
+Merge: 001b381 8342ee4
+Author: Laulore86 <lauraloreiro1@gmail.com>
+Date:   Fri Jan 22 16:07:36 2021 -0300
+
+    listado de productos en proceso
+
+[33mcommit 001b381043d91886a8481a9a9df26c276990c9db[m
+Author: Laulore86 <lauraloreiro1@gmail.com>
+Date:   Fri Jan 22 16:04:04 2021 -0300
+
+    listado en produccion
+
+[33mcommit 8342ee4edf92325678c7e4998d68a7eba7b5a68c[m
+Author: florcadelli <florcadelli@gmail.com>
+Date:   Fri Jan 22 14:56:51 2021 -0300
+
+    fotos productos en alta
+
+[33mcommit ba59f3dd7b1a696d5686512261546b1cb396d8be[m
+Author: florcadelli <florcadelli@gmail.com>
+Date:   Fri Jan 22 14:38:28 2021 -0300
+
+    ajustes detail product
+
+[33mcommit 454eb2ceebe6eacee13353787d8187b77e453d55[m
+Author: florcadelli <florcadelli@gmail.com>
+Date:   Fri Jan 22 11:00:32 2021 -0300
+
+    validacion create producto
+
+[33mcommit 51a5305aa010515be3be53d4841ac92664d7a414[m
+Merge: e1a0cd4 781f47c
+Author: florcadelli <florcadelli@gmail.com>
+Date:   Wed Jan 20 20:25:53 2021 -0300
+
+    Merge branch 'master' of https://github.com/xiomaraOcampo/VisteteDePoder into master
+
+[33mcommit e1a0cd4afbf9144e3fdcf663a54870033a79fb16[m
+Author: florcadelli <florcadelli@gmail.com>
+Date:   Wed Jan 20 20:25:41 2021 -0300
+
+    masc
+
+[33mcommit 781f47c2e96949dfa381563701aa0c87647f0a0f[m
+Merge: f58a347 31f90a4
+Author: xiomaraOcampo <xiomaravictoriaocampo@gmail.com>
+Date:   Wed Jan 20 17:26:11 2021 -0300
+
+    Merge branch 'master' of https://github.com/xiomaraOcampo/VisteteDePoder into master
+
+[33mcommit f58a347b9fed18c98cd59095bcb5930f6d383a69[m
+Author: xiomaraOcampo <xiomaravictoriaocampo@gmail.com>
+Date:   Wed Jan 20 17:20:18 2021 -0300
+
+    subo tablas en ingles
+
+[33mcommit 31f90a4c63e3e227a522c2eb5460e490eacf9494[m
+Merge: 0800176 0766627
+Author: florcadelli <florcadelli@gmail.com>
+Date:   Wed Jan 20 16:24:50 2021 -0300
+
+    borre exel
+
+[33mcommit 0800176648dfb1def25dad318c16589486cbd697[m
+Author: florcadelli <florcadelli@gmail.com>
+Date:   Wed Jan 20 16:15:52 2021 -0300
+
+    fotos de productos
+
+[33mcommit 0766627d50c986e9f1e6999e566f827a948ab0e2[m
+Author: Laulore86 <lauraloreiro1@gmail.com>
+Date:   Wed Jan 20 14:56:59 2021 -0300
+
+    con edit y update
+
+[33mcommit d67f9517475228f75e880ed1f9d8712c2697014e[m
+Author: Laulore86 <lauraloreiro1@gmail.com>
+Date:   Wed Jan 20 13:36:49 2021 -0300
+
+    con Subcategoria en vista de administrador, usuario y create
+
+[33mcommit cb8607f46d947e1d84e4406a138d8914b89de31c[m
+Author: florcadelli <florcadelli@gmail.com>
+Date:   Sun Jan 17 20:57:23 2021 -0300
+
+    comenzando en nav
+
+[33mcommit 64b1169f9b707b2abf26048bfd98b026e136ef62[m
+Author: florcadelli <florcadelli@gmail.com>
+Date:   Sun Jan 17 15:20:55 2021 -0300
+
+    ajustes en el buscador
+
+[33mcommit d9471aafe957048bf1efdda1b1746727edc77ab0[m
+Author: Xiomara Ocampo <xiomaravictoriaocampo@gmail.com>
+Date:   Sat Jan 16 03:03:15 2021 -0300
+
+    Subo el detalle de usuario
+
+[33mcommit e8b690b4147c476eaa7d372acf78e7afc664f83f[m
+Author: Xiomara Ocampo <xiomaravictoriaocampo@gmail.com>
+Date:   Sat Jan 16 00:58:16 2021 -0300
+
+    subo los middlewares de session y lo de usuario
+
+[33mcommit 24b188bc93b16404444dddec86b16725ce7f6c6e[m
+Author: Xiomara Ocampo <xiomaravictoriaocampo@gmail.com>
+Date:   Fri Jan 15 18:36:10 2021 -0300
+
+     Borro las carptas que tenia demas
+
+[33mcommit 03d0d94f12702493f9e89d660c356fc8b58fc7d5[m
+Author: florcadelli <florcadelli@gmail.com>
+Date:   Fri Jan 15 16:30:40 2021 -0300
+
+    buscador de productos
+
+[33mcommit e75e2a32dc3ff4632d054bda4f38dfdf07b7667f[m
+Author: florcadelli <florcadelli@gmail.com>
+Date:   Fri Jan 15 10:39:21 2021 -0300
+
+    detail product
+
+[33mcommit 2668fd524c4b2b6f00572ab94d102ab2a0c0c378[m
+Author: florcadelli <florcadelli@gmail.com>
+Date:   Thu Jan 14 17:36:48 2021 -0300
+
+    create funcionando
+
+[33mcommit 7474706833feaeb4486a05d5498aa046aa364614[m
+Author: florcadelli <florcadelli@gmail.com>
+Date:   Thu Jan 14 10:35:25 2021 -0300
+
+    archivo SQL
+
+[33mcommit 1ef6eca934301ec1960a1018d157c32007a47e7a[m
+Author: florcadelli <florcadelli@gmail.com>
+Date:   Wed Jan 13 22:10:55 2021 -0300
+
+    create con design y size
+
+[33mcommit 1d40373f603dfed2a63f44b69adce63f219e5a2d[m
+Author: florcadelli <florcadelli@gmail.com>
+Date:   Tue Jan 12 19:35:31 2021 -0300
+
+    modelos de size y product_size
+
+[33mcommit de66f06028a8eccf0af10618a2b88ecbc960f39d[m
+Author: florcadelli <florcadelli@gmail.com>
+Date:   Tue Jan 12 15:42:47 2021 -0300
+
+    product sin S
+
+[33mcommit 45c1cb58e3b03ba424c94a68807586a1f0bf32e2[m
+Author: florcadelli <florcadelli@gmail.com>
+Date:   Tue Jan 12 15:31:51 2021 -0300
+
+    product funcionando
+
+[33mcommit b01801081b166d49151d4428ece5f28f1da29e1a[m
+Author: Xiomara Ocampo <xiomaravictoriaocampo@gmail.com>
+Date:   Sun Jan 10 12:14:11 2021 -0300
+
+    Subo como estaba el viernes
+
+[33mcommit ac980e986e88f956615043efc30a218782966d0d[m
+Merge: 923fa06 f8bee69
+Author: Xiomara Ocampo <xiomaravictoriaocampo@gmail.com>
+Date:   Fri Jan 8 18:09:22 2021 -0300
+
+    Merge branch 'master' of https://github.com/xiomaraOcampo/VisteteDePoder into master
+
+[33mcommit 923fa0626d694d2684f4c31009e5994d0cc158bf[m
+Author: Xiomara Ocampo <xiomaravictoriaocampo@gmail.com>
+Date:   Fri Jan 8 18:05:22 2021 -0300
+
+    base de datos User
+
+[33mcommit e24f023f45bac317248851acb31a7c3362ffef38[m
+Author: Xiomara Ocampo <xiomaravictoriaocampo@gmail.com>
+Date:   Fri Jan 8 18:03:38 2021 -0300
+
+    bd USER
+
+[33mcommit f8bee697358ae08af5d7eee0cf79a82b68994aeb[m
+Author: florcadelli <florcadelli@gmail.com>
+Date:   Fri Jan 8 17:58:10 2021 -0300
+
+    create mas completo
+
+[33mcommit ce2f8cac8b5b8b20f94c2555ba25c89346915d27[m
+Author: florcadelli <florcadelli@gmail.com>
+Date:   Thu Jan 7 18:51:05 2021 -0300
+
+    create
+
+[33mcommit a0820766e1341db33e764ccc73cb69c8abb483e3[m
+Author: florcadelli <florcadelli@gmail.com>
+Date:   Wed Jan 6 10:20:50 2021 -0300
+
+    edit
+
+[33mcommit 64fc8c93aa7422b890972c0ae0dbb11fee82569c[m
+Author: florcadelli <florcadelli@gmail.com>
+Date:   Tue Jan 5 09:46:28 2021 -0300
+
+    midificacion diagrama de tablas
+
+[33mcommit 5fdf5507e943578e38520ce84e038a34a02b54f4[m
+Author: Xiomara Ocampo <xiomaravictoriaocampo@gmail.com>
+Date:   Mon Jan 4 17:10:16 2021 -0300
+
+    lo que agregamos en la clase de practica
+
+[33mcommit 44de3dc260a7500b2d6198cf76c385f7d22c3bdc[m
+Author: Xiomara Ocampo <xiomaravictoriaocampo@gmail.com>
+Date:   Mon Jan 4 10:34:18 2021 -0300
+
+    tabla user
+
+[33mcommit 36e54a652ff8675531de7c094007ab23f1bceff8[m
+Author: Xiomara Ocampo <xiomaravictoriaocampo@gmail.com>
+Date:   Mon Jan 4 08:19:38 2021 -0300
+
+     tablas users
+
+[33mcommit 063de33e2e0c7d13e4ddb94b39a6e87fda212a98[m
+Author: florcadelli <florcadelli@gmail.com>
+Date:   Sun Jan 3 21:20:11 2021 -0300
+
+    sequelize instalado
+
+[33mcommit f1380f1775b50d4d6b7da0ae4c3187609dda8baa[m
+Author: florcadelli <florcadelli@gmail.com>
+Date:   Sat Jan 2 13:27:24 2021 -0300
+
+    tablas con tipos de datos
+
+[33mcommit 6b2e2f806b78447ab73c342d068697fe655a00f5[m
+Author: florcadelli <florcadelli@gmail.com>
+Date:   Fri Jan 1 20:57:26 2021 -0300
+
+    tablas actualizadas
+
+[33mcommit 03efb32bb5099d1c5187dc54bae45b0256affa56[m
+Author: Xiomara Ocampo <xiomaravictoriaocampo@gmail.com>
+Date:   Wed Dec 30 19:39:55 2020 -0300
+
+    cookies y middleware
+
+[33mcommit c052631dc7752bb489c4cdfcac9c48103f63537f[m
+Author: Laulore86 <lauraloreiro1@gmail.com>
+Date:   Tue Dec 29 10:57:17 2020 -0300
+
+    con base de datos actualizada
+
+[33mcommit 7f7f17ac80f616ca12f0d30e454190665d9897ea[m
+Author: florcadelli <florcadelli@gmail.com>
+Date:   Tue Dec 29 09:14:49 2020 -0300
+
+    tablas
+
+[33mcommit 5c3ac04baa00f912a38f524067a2bc0dd6f4c189[m
+Author: Laulore86 <lauraloreiro1@gmail.com>
+Date:   Mon Dec 28 00:18:53 2020 -0300
+
+    con fotos default
+
+[33mcommit 1dac3aabbeaac37fb125b81b7a19400461005897[m
+Merge: 320fd17 b818ab6
+Author: Laulore86 <lauraloreiro1@gmail.com>
+Date:   Sun Dec 27 23:46:18 2020 -0300
+
+    merge
+
+[33mcommit 320fd17bd6bd38b57411c2a09733d8360c596226[m
+Author: Laulore86 <lauraloreiro1@gmail.com>
+Date:   Sun Dec 27 23:39:57 2020 -0300
+
+    multer de usuarios y foto default
+
+[33mcommit b818ab676ed2a4432b3020c9259f94454e03fe8b[m
+Author: florcadelli <florcadelli@gmail.com>
+Date:   Sun Dec 27 08:44:16 2020 -0300
+
+    links y listado de productos para usuarios
+
+[33mcommit 424d736741a7ff592c6dc29d97387f4c7f03f2a1[m
+Author: Laulore86 <lauraloreiro1@gmail.com>
+Date:   Sat Dec 26 08:15:23 2020 -0300
+
+    Merge branch 'master' of https://github.com/xiomaraOcampo/VisteteDePoder
+
+[33mcommit 296dbe689a7f713a84abee2e05397ca46544c578[m
+Author: florcadelli <florcadelli@gmail.com>
+Date:   Fri Dec 25 23:36:43 2020 -0300
+
+    navegacion y detalle para usuario
+
+[33mcommit fa437bf0075cbb9f590467fc89d2c5089a248bfe[m
+Author: Laulore86 <lauraloreiro1@gmail.com>
+Date:   Wed Dec 23 11:13:12 2020 -0300
+
+    con base de datos
+
+[33mcommit 4819856d95428d2c4548cd452788e8970552fe9e[m
+Author: Laulore86 <lauraloreiro1@gmail.com>
+Date:   Sat Dec 19 08:45:28 2020 -0300
+
+    validaciones de creación de productos
+
+[33mcommit be7e6823440eac61c27eabfa7ddb88642dbca928[m
+Author: Laulore86 <lauraloreiro1@gmail.com>
+Date:   Sat Dec 19 08:03:14 2020 -0300
+
+    merge en productController!
+    git log
+    q
+
+[33mcommit 6d6d5bfad185b5d71cea76efd2536c816f2151d2[m
+Merge: 8b2d54b b16a8bb
+Author: Laulore86 <lauraloreiro1@gmail.com>
+Date:   Sat Dec 19 07:46:21 2020 -0300
+
+    merge en productController
+
+[33mcommit 8b2d54be018ea77f97a175a22ebe3f0a17d7917d[m
+Author: Laulore86 <lauraloreiro1@gmail.com>
+Date:   Sat Dec 19 07:41:16 2020 -0300
+
+    cambios en productController
+
+[33mcommit b16a8bb6a2d5615cee0b9bb2d3db67b6d3f3ecd9[m
+Author: florcadelli <florcadelli@gmail.com>
+Date:   Sat Dec 12 14:24:08 2020 -0300
+
+    validacion nombre producto
+
+[33mcommit 2787c8c3bbe23b0f648e0c855329204d8a684b90[m
+Author: florcadelli <florcadelli@gmail.com>
+Date:   Fri Dec 11 20:58:26 2020 -0300
+
+    edit con validacones, incompleto
+
+[33mcommit 9d98944475d127c319b60d1d44631ae4de7b11e0[m
+Merge: e63f51b bdbbbd0
+Author: Laulore86 <lauraloreiro1@gmail.com>
+Date:   Tue Dec 8 08:55:03 2020 -0300
+
+    Merge branch 'master' of https://github.com/xiomaraOcampo/VisteteDePoder into master
+
+[33mcommit e63f51b8527cab2523dfd4bc47072d60f192a15e[m
+Author: Laulore86 <lauraloreiro1@gmail.com>
+Date:   Tue Dec 8 08:30:21 2020 -0300
+
+    validación productos a medio camino
+
+[33mcommit bdbbbd060b4fb8e9091f60615c08a20bdac5f97c[m
+Author: Xiomara Ocampo <xiomaravictoriaocampo@gmail.com>
+Date:   Mon Dec 7 21:45:42 2020 -0300
+
+    Subo el login
+
+[33mcommit 896fbfda1f25a400890a4fedcdc4ae003bd37778[m
+Author: Xiomara Ocampo <xiomaravictoriaocampo@gmail.com>
+Date:   Sat Dec 5 06:56:53 2020 -0300
+
+    agrego middleware de registro
+
+[33mcommit 1fb98563051642c88669871d0dba092419f92bad[m
+Author: Laulore86 <lauraloreiro1@gmail.com>
+Date:   Wed Dec 2 19:25:37 2020 -0300
+
+    con session descomentado
+
+[33mcommit 42862865fccac8c662553673f798e6ad4ad8fc2b[m
+Author: Laulore86 <lauraloreiro1@gmail.com>
+Date:   Wed Dec 2 19:20:14 2020 -0300
+
+    con delete funcionando
+
+[33mcommit 93424b1b17179c757543e6f7836b759352e9277f[m
+Author: Laulore86 <lauraloreiro1@gmail.com>
+Date:   Wed Dec 2 09:18:50 2020 -0300
+
+    con session comentado
+
+[33mcommit f955deb82289354a5c9c4ac68756d7e447feec99[m
+Merge: 49ee866 7749baf
+Author: Laulore86 <lauraloreiro1@gmail.com>
+Date:   Tue Dec 1 23:24:16 2020 -0300
+
+    espero no hacer macana
+
+[33mcommit 49ee866dc606c3cd9e4a89111002a76d524b9d6b[m
+Author: Laulore86 <lauraloreiro1@gmail.com>
+Date:   Tue Dec 1 23:19:49 2020 -0300
+
+    luchando con los merges, nos los entiendo
+
+[33mcommit 7749baf5479aa5ad24ff1dc53090cc7756db4faf[m
+Author: Xiomara Ocampo <xiomaravictoriaocampo@gmail.com>
+Date:   Tue Dec 1 17:19:22 2020 -0300
+
+    va el session y lo primero de login
+
+[33mcommit 90863987ba0b0006b22ce0849bea1cf73cbcd251[m
+Author: Xiomara Ocampo <xiomaravictoriaocampo@gmail.com>
+Date:   Tue Dec 1 11:36:04 2020 -0300
+
+    subo EL BCRYPT de la contaseña
+
+[33mcommit b370e78afcf12608640fcca9e137775ee12c6542[m
+Author: florcadelli <florcadelli@gmail.com>
+Date:   Mon Nov 30 14:55:47 2020 -0300
+
+    css detail y list
+
+[33mcommit 0c8be239c9ab01dd6ae01cf35fa10ab8c14e0960[m
+Merge: 9c29689 759c2aa
+Author: Xiomara Ocampo <xiomaravictoriaocampo@gmail.com>
+Date:   Mon Nov 30 10:49:35 2020 -0300
+
+    Merge branch 'master' of https://github.com/xiomaraOcampo/VisteteDePoder into master
+
+[33mcommit 9c296891da988cad49a482f34ad69db28702f9ea[m
+Author: Xiomara Ocampo <xiomaravictoriaocampo@gmail.com>
+Date:   Mon Nov 30 10:47:02 2020 -0300
+
+    agrego la validacion de registro
+
+[33mcommit 759c2aae50f9f4e111d89701ef138f7325ffc007[m
+Author: xiomaraOcampo <71240363+xiomaraOcampo@users.noreply.github.com>
+Date:   Sun Nov 29 18:07:59 2020 -0300
+
+    Sprint 4:Dailies
+
+[33mcommit 7c92eb54f9a6bf80ebb19d33a6171036456ca482[m
+Author: xiomaraOcampo <71240363+xiomaraOcampo@users.noreply.github.com>
+Date:   Sun Nov 29 18:06:34 2020 -0300
+
+    Agrego las dailies del Sprint 4
+
+[33mcommit 755f062d469303ce0ea1c81651991a0f505714ac[m
+Author: xiomaraOcampo <71240363+xiomaraOcampo@users.noreply.github.com>
+Date:   Sun Nov 29 17:59:18 2020 -0300
+
+    Sprint 4: Retro.
+
+[33mcommit f6da01203763936eb141d1bd9e0bb7abc0d647a7[m
+Author: xiomaraOcampo <71240363+xiomaraOcampo@users.noreply.github.com>
+Date:   Sun Nov 29 17:57:55 2020 -0300
+
+    Sprint 4: Retrospectiva
+
+[33mcommit db8aa8bc6298e4c82d0559c47e1c673c7571b29c[m
+Author: Laulore86 <lauraloreiro1@gmail.com>
+Date:   Sat Nov 28 12:48:10 2020 -0300
+
+    con destroy
+
+[33mcommit 7b8ce7a25b074c206f3a9e2e2b7149301927a102[m
+Author: Laulore86 <lauraloreiro1@gmail.com>
+Date:   Sat Nov 28 11:01:37 2020 -0300
+
+    con delete en el registro
+
+[33mcommit 4147f242cd6842aacd0b7e6a5a3d46993a42c86a[m
+Author: Laulore86 <lauraloreiro1@gmail.com>
+Date:   Sat Nov 28 10:56:59 2020 -0300
+
+    con contrasennnnnnniiiiiiaaaa
+
+[33mcommit 9e914ee2008791284ca68ecab0aa991a20edc4cf[m
+Author: Laulore86 <lauraloreiro1@gmail.com>
+Date:   Sat Nov 28 09:14:49 2020 -0300
+
+    probando
+
+[33mcommit 0bd76032faf93206102b44e57d778d92200d9c11[m
+Author: Laulore86 <lauraloreiro1@gmail.com>
+Date:   Sat Nov 28 08:34:22 2020 -0300
+
+    con diteilproduct individual
+
+[33mcommit 724fa10ece93739d813188f35b6452fbfcf477a2[m
+Author: Laulore86 <lauraloreiro1@gmail.com>
+Date:   Sat Nov 28 08:10:25 2020 -0300
+
+    detailProduct individual
+
+[33mcommit 7aea1db66d5de6f098c1e3b5d5c89e4c038eadd1[m
+Author: florcadelli <florcadelli@gmail.com>
+Date:   Fri Nov 27 09:58:19 2020 -0300
+
+    header responsive
+
+[33mcommit 1ddf5a646cda1c7d6d749e14ba8241db0130ecc0[m
+Merge: 701f809 77431bc
+Author: florcadelli <florcadelli@gmail.com>
+Date:   Wed Nov 25 09:46:01 2020 -0300
+
+    Merge branch 'master' of https://github.com/xiomaraOcampo/VisteteDePoder into master
+
+[33mcommit 701f809a68f471297c34dc5838d68d4103ca6756[m
+Author: florcadelli <florcadelli@gmail.com>
+Date:   Wed Nov 25 09:31:57 2020 -0300
+
+    burguer
+
+[33mcommit 77431bc7fe4e736036f8f287b9486ff0b327f2be[m
+Merge: 5aa0f82 065d901
+Author: Xiomara Ocampo <xiomaravictoriaocampo@gmail.com>
+Date:   Tue Nov 24 16:58:54 2020 -0300
+
+    Merge branch 'master' of https://github.com/xiomaraOcampo/VisteteDePoder into master
+
+[33mcommit 5aa0f8221383bf8c01eda61e651b1916f726e266[m
+Author: Xiomara Ocampo <xiomaravictoriaocampo@gmail.com>
+Date:   Tue Nov 24 16:58:13 2020 -0300
+
+    agrego lo del registro
+
+[33mcommit 065d90107b198a12677365381b70081eab6e882c[m
+Author: florcadelli <florcadelli@gmail.com>
+Date:   Tue Nov 24 15:31:59 2020 -0300
+
+    luchando
+
+[33mcommit 1dc5874e44c7fdef98b81bae6c483111e1219e0d[m
+Author: florcadelli <florcadelli@gmail.com>
+Date:   Tue Nov 24 11:10:07 2020 -0300
+
+    header responsive
+
+[33mcommit 06b799038740d07fc477c8e1cf54c05c9e7aa562[m
+Author: florcadelli <florcadelli@gmail.com>
+Date:   Mon Nov 23 15:35:35 2020 -0300
+
+    edit usuarios funcionando
+
+[33mcommit 17544c98a6b84c112cd4969f83dd80a14cc650d3[m
+Author: florcadelli <florcadelli@gmail.com>
+Date:   Sat Nov 21 20:35:05 2020 -0300
+
+    carpeta con fotos de produstos y edit usuarios
+
+[33mcommit b541561062f4fe7195c99420f057b3b2e1793924[m
+Author: florcadelli <florcadelli@gmail.com>
+Date:   Sat Nov 21 12:43:37 2020 -0300
+
+    con PUT
+
+[33mcommit e203cb34567915e76f0866d45192de609b302cef[m
+Author: florcadelli <florcadelli@gmail.com>
+Date:   Fri Nov 20 21:23:51 2020 -0300
+
+    ajustes con fede
+
+[33mcommit c80288ac19212adbd577e707feebc55d648950a1[m
+Author: Laulore86 <lauraloreiro1@gmail.com>
+Date:   Thu Nov 19 23:11:52 2020 -0300
+
+    Subo carrito, con carpeta en views y controller
+
+[33mcommit 5f099f73498423134f7ae63cc0a15acd80e9acd6[m
+Author: florcadelli <florcadelli@gmail.com>
+Date:   Sun Nov 15 22:28:33 2020 -0300
+
+    ajustes CSS y renders a list
+
+[33mcommit 5f2bbcc5eddf604ef4814d99eecff113942af8d9[m
+Author: Laulore86 <lauraloreiro1@gmail.com>
+Date:   Sun Nov 15 16:51:54 2020 -0300
+
+    actualizo daily
+
+[33mcommit 1ff19e508034f62a35e96862432dcf99264228d1[m
+Author: Laulore86 <lauraloreiro1@gmail.com>
+Date:   Sun Nov 15 16:47:08 2020 -0300
+
+    subo con multer andando
+
+[33mcommit 616d3b4ac868c732c38d4f20df5cdb5341e93fe3[m
+Author: Laulore86 <lauraloreiro1@gmail.com>
+Date:   Sat Nov 14 14:02:43 2020 -0300
+
+     Sprint 3: retro y daily
+
+[33mcommit 03c2189874025a083354cf9d735a5459021601d0[m
+Author: Laulore86 <lauraloreiro1@gmail.com>
+Date:   Sat Nov 14 13:29:58 2020 -0300
+
+    subo función destroy y list, vista list
+
+[33mcommit 9c53083f1cf76be5f9594488e7b8be0437635214[m
+Author: florcadelli <florcadelli@gmail.com>
+Date:   Thu Nov 12 17:57:25 2020 -0300
+
+    edit Post funcionannndooo
+
+[33mcommit f988ba0f3a1a99e5e0f537d36cec3666f7c28b59[m
+Author: Laulore86 <lauraloreiro1@gmail.com>
+Date:   Thu Nov 12 17:11:46 2020 -0300
+
+    con update en camino
+
+[33mcommit a0efc2a0705a5b45e73cf58b7eb55fd3f760c518[m
+Author: Xiomara Ocampo <xiomaravictoriaocampo@gmail.com>
+Date:   Thu Nov 12 15:49:58 2020 -0300
+
+     Subo categorias
+
+[33mcommit feb0b7a49664ddab2d7acc32b6043711dc90ccda[m
+Author: Laulore86 <lauraloreiro1@gmail.com>
+Date:   Thu Nov 12 14:49:55 2020 -0300
+
+    con input de precio, talle, cantidad y diseño
+
+[33mcommit fd2b5b43968ff660a524d50f1a7e30d26166336e[m
+Author: Xiomara Ocampo <xiomaravictoriaocampo@gmail.com>
+Date:   Thu Nov 12 13:04:08 2020 -0300
+
+    Subo los ultimos header partial
+
+[33mcommit e28cf39fcfc497a6facf792ffac83a9f5b22b7fa[m
+Author: Xiomara Ocampo <xiomaravictoriaocampo@gmail.com>
+Date:   Thu Nov 12 12:48:57 2020 -0300
+
+    agrego los partials header
+
+[33mcommit 7a62f2e26817142b0c0cb19d4f3534e833f057a1[m
+Author: florcadelli <florcadelli@gmail.com>
+Date:   Thu Nov 12 12:18:59 2020 -0300
+
+    desarrollo de edit por Get
+
+[33mcommit 9bd6c227639a58fa0701d5aaa3e9200072f9f4ce[m
+Author: florcadelli <florcadelli@gmail.com>
+Date:   Wed Nov 11 20:52:41 2020 -0300
+
+    multer a medio camino
+
+[33mcommit be59921a42fd83462c711a34016f0b195ae9b737[m
+Author: Laulore86 <lauraloreiro1@gmail.com>
+Date:   Wed Nov 11 17:18:59 2020 -0300
+
+    Armando Funciones del formulario
+
+[33mcommit 6b8547f5e698d76282c377ec22f203237b1ca162[m
+Author: florcadelli <florcadelli@gmail.com>
+Date:   Tue Nov 10 12:01:31 2020 -0300
+
+    actualizacion links nav
+
+[33mcommit 7435ab9e97bb8f40ae355978dcce1de0d6a74f9e[m
+Author: florcadelli <florcadelli@gmail.com>
+Date:   Tue Nov 10 11:15:58 2020 -0300
+
+    create html
+
+[33mcommit 0dfbf275e020406c586b88d5f55fccf7bab1bbc2[m
+Author: LauLore86 <lauraloreiro1@gmail.com>
+Date:   Tue Nov 10 09:45:53 2020 -0300
+
+    con include de footer y vista de Formulario de Producto
+
+[33mcommit 325ac048b47d96c302f26e9e55f0f4653fc12ce7[m
+Author: LauLore86 <lauraloreiro1@gmail.com>
+Date:   Sun Nov 8 20:04:17 2020 -0300
+
+    ruta y controller del home
+
+[33mcommit 3835f211cf20ca63888f97b9e3e155195995d721[m
+Author: Xiomara Ocampo <xiomaravictoriaocampo@gmail.com>
+Date:   Sun Nov 8 08:08:06 2020 -0300
+
+     Subu los conrtrollers de product y la vista
+
+[33mcommit 02d4717ef073898958f54c210389b674360a406f[m
+Author: florcadelli <florcadelli@gmail.com>
+Date:   Sat Nov 7 15:08:49 2020 -0300
+
+    cambio de rutas y views Users
+
+[33mcommit 9ccc36d5667ed21deab4c2ac8baed39190ac980f[m
+Author: florcadelli <florcadelli@gmail.com>
+Date:   Wed Oct 28 16:45:35 2020 -0300
+
+    ajustes varios
+
+[33mcommit 1140d650dfb590dc739caf9ae9f369866877108e[m
+Author: florcadelli <florcadelli@gmail.com>
+Date:   Wed Oct 28 11:26:30 2020 -0300
+
+    ajustes en carrito y detalle
+
+[33mcommit 69e4d41a3af88b165fa373bb3d0fd741ab0a41a9[m
+Author: Laulore86 <lauraloreiro1@gmail.com>
+Date:   Wed Oct 28 01:52:25 2020 -0300
+
+    modificaciones en el carrito
+
+[33mcommit 2ab01d819b232885401d714d0346df49e61add47[m
+Merge: 12a39ad ad59d50
+Author: Laulore86 <lauraloreiro1@gmail.com>
+Date:   Wed Oct 28 01:34:27 2020 -0300
+
+    Merge branch 'master' of https://github.com/xiomaraOcampo/VisteteDePoder into master
+
+[33mcommit 12a39ade045303ef8a30080d3081ca0195b9909f[m
+Author: Laulore86 <lauraloreiro1@gmail.com>
+Date:   Wed Oct 28 01:29:17 2020 -0300
+
+    carrito en marcha
+
+[33mcommit ad59d50845e7b9145fcdc03e31d9b5994c37371b[m
+Author: Xiomara Ocampo <xiomaravictoriaocampo@gmail.com>
+Date:   Tue Oct 27 18:41:55 2020 -0300
+
+    modificaciones del dealle del producto
+
+[33mcommit b8e5567992ae6368d38ad704d648f66dc1119730[m
+Merge: 83aaccc 06df2c1
+Author: Xiomara Ocampo <xiomaravictoriaocampo@gmail.com>
+Date:   Tue Oct 27 17:52:35 2020 -0300
+
+    Merge branch 'master' of https://github.com/xiomaraOcampo/VisteteDePoder into master
+
+[33mcommit 83aaccc8667d8f14787ebf3436115e91949a450f[m
+Author: Xiomara Ocampo <xiomaravictoriaocampo@gmail.com>
+Date:   Tue Oct 27 17:52:18 2020 -0300
+
+    Subo modificaciones del detalle del producto
+
+[33mcommit 06df2c138b4b443e292cfd1c93d8a1bc741896f9[m
+Author: florcadelli <florcadelli@gmail.com>
+Date:   Tue Oct 27 10:44:04 2020 -0300
+
+    tipografia y ajustes en ingreso
+
+[33mcommit f261449dc3af7398d2226386ca2bb57a17a6c796[m
+Author: Laulore86 <lauraloreiro1@gmail.com>
+Date:   Mon Oct 26 17:09:59 2020 -0300
+
+    con general de css
+
+[33mcommit ee680bba439bbeae50088162545bb492f405f2fa[m
+Merge: 4151619 360d918
+Author: Xiomara Ocampo <xiomaravictoriaocampo@gmail.com>
+Date:   Mon Oct 26 14:21:03 2020 -0300
+
+    Merge branch 'master' of https://github.com/xiomaraOcampo/VisteteDePoder into master
+
+[33mcommit 4151619d1da7b039ef4de8322e0e52a98d969383[m
+Author: Xiomara Ocampo <xiomaravictoriaocampo@gmail.com>
+Date:   Mon Oct 26 14:17:05 2020 -0300
+
+    ultimo de detalle de producto
+
+[33mcommit 360d918efb48fff1a517c24e4b89dcec11b5fd22[m
+Author: florcadelli <florcadelli@gmail.com>
+Date:   Sun Oct 25 19:49:30 2020 -0300
+
+    desplegaaaables
+
+[33mcommit 00c7ab7b1d281fc8c782e90291ec9075791e8c24[m
+Author: florcadelli <florcadelli@gmail.com>
+Date:   Sun Oct 25 10:30:29 2020 -0300
+
+    formularios
+
+[33mcommit 7523d32f857fdfb097a2d24d26d4e7c16a0c4eba[m
+Author: florcadelli <florcadelli@gmail.com>
+Date:   Sat Oct 24 17:52:09 2020 -0300
+
+     cambios en formularios
+
+[33mcommit ea8a178409bc9adf373aaa7d11733cc520673285[m
+Author: Laulore86 <lauraloreiro1@gmail.com>
+Date:   Sat Oct 24 12:41:23 2020 -0300
+
+    HTML del home y carrito sin carrusel
+
+[33mcommit 19247c717a7f4ba8e0630252fe8273be6e9b7070[m
+Author: Laulore86 <lauraloreiro1@gmail.com>
+Date:   Sat Oct 24 10:24:33 2020 -0300
+
+    cambios en fotos del container-small (hay que seguir ajustando)
+
+[33mcommit 87d3cf458bf1eb067c1f5c97470e46481adc4c3b[m
+Author: florcadelli <florcadelli@gmail.com>
+Date:   Fri Oct 23 17:29:41 2020 -0300
+
+    ajustes en header y formularios
+
+[33mcommit ca0972367abc57a8e19ec6b7298c18d48f7e0779[m
+Author: florcadelli <florcadelli@gmail.com>
+Date:   Fri Oct 23 12:45:18 2020 -0300
+
+    ajustes header
+
+[33mcommit d1f41ebac8e23ab9d0cd066438bcddd96053c846[m
+Author: LauLore86 <lauraloreiro1@gmail.com>
+Date:   Fri Oct 23 10:35:36 2020 -0300
+
+    con css integrador
+
+[33mcommit 90c99da962c10b6158e16a8a3244c2ce03210aaa[m
+Merge: 3243de2 be96bd2
+Author: LauLore86 <lauraloreiro1@gmail.com>
+Date:   Thu Oct 22 15:08:28 2020 -0300
+
+    Merge branch 'master' of https://github.com/xiomaraOcampo/VisteteDePoder into master
+
+[33mcommit 3243de247486a9eeefb2c21acd065f5750579f2d[m
+Author: LauLore86 <lauraloreiro1@gmail.com>
+Date:   Thu Oct 22 14:55:46 2020 -0300
+
+    HTML del Carrito
+
+[33mcommit be96bd259c3b8072613e5e387ac2c01315b6dcee[m
+Author: Laulore86 <68503861+Laulore86@users.noreply.github.com>
+Date:   Thu Oct 22 13:58:10 2020 -0300
+
+    Create retro.md
+
+[33mcommit 5cfdd0480413ecc5e96acc9a0c0cf2ae3cf9f5d0[m
+Author: florcadelli <florcadelli@gmail.com>
+Date:   Thu Oct 22 12:38:03 2020 -0300
+
+    estetica de formularios
+
+[33mcommit bf158be5d3cca87b774a1490bb587edd7b12f5e2[m
+Author: florcadelli <florcadelli@gmail.com>
+Date:   Thu Oct 22 11:20:36 2020 -0300
+
+    creo carpeta de diseño
+
+[33mcommit e1e0764a076b2e8e8abc238017ce0847f9fa2cbd[m
+Author: LauLore86 <lauraloreiro1@gmail.com>
+Date:   Tue Oct 20 22:25:05 2020 -0300
+
+    Home con barrido
+
+[33mcommit 8a174d323fbe60385a55a51c2f363b5633a90f66[m
+Merge: 05c9aeb 27112be
+Author: Xiomara Ocampo <xiomaravictoriaocampo@gmail.com>
+Date:   Tue Oct 20 17:22:48 2020 -0300
+
+    Merge branch 'master' of https://github.com/xiomaraOcampo/VisteteDePoder into master
+
+[33mcommit 05c9aeb60b7d16dba5f76885b50cebc85cd097f1[m
+Author: Xiomara Ocampo <xiomaravictoriaocampo@gmail.com>
+Date:   Tue Oct 20 17:11:31 2020 -0300
+
+     agrego el HTML del detalle del producto
+
+[33mcommit 27112beac6cfdbed229cbbda2f7769abb877eeeb[m
+Author: florcadelli <florcadelli@gmail.com>
+Date:   Mon Oct 19 22:13:17 2020 -0300
+
+    header con flexbox
+
+[33mcommit 6a7791c540acdf39d8b25d369cf7df6bbddd338d[m
+Author: LauLore86 <lauraloreiro1@gmail.com>
+Date:   Sat Oct 17 20:24:16 2020 -0300
+
+    home con carrusel
+
+[33mcommit ce64763bd2767140e6660da049140e384efae85e[m
+Author: florcadelli <florcadelli@gmail.com>
+Date:   Sat Oct 17 16:55:22 2020 -0300
+
+    cambios en imagenes
+
+[33mcommit a6a6517a39421f69e382ce2e9142ebb22cfd8f05[m
+Author: Laulore86 <lauraloreiro1@gmail.com>
+Date:   Sat Oct 17 12:11:11 2020 -0300
+
+    home con cambios en css
+
+[33mcommit fc448b810d2c716bc431e2df845f515705d0a72b[m
+Author: Laulore86 <lauraloreiro1@gmail.com>
+Date:   Sat Oct 17 10:07:27 2020 -0300
+
+    cambios en css del home
+
+[33mcommit 0f462efd21f5cd35810086caa1a3c03f230d6ad7[m
+Author: Xiomara Ocampo <xiomaravictoriaocampo@gmail.com>
+Date:   Fri Oct 16 21:46:42 2020 -0300
+
+    subo el footer actualizado
+
+[33mcommit bed76025265bd2ed16591a8c13f71d19ff31ad44[m
+Author: florcadelli <florcadelli@gmail.com>
+Date:   Fri Oct 16 06:52:51 2020 -0300
+
+    arriba el header!
+
+[33mcommit 0c02a59e8d69b72c9d25d27cccd33e4ce3a52e15[m
+Author: Laulore86 <lauraloreiro1@gmail.com>
+Date:   Thu Oct 15 18:06:39 2020 -0300
+
+    main home con fondo
+
+[33mcommit 5538473ff035d84300c86fd0003d2f2787073be5[m
+Author: Laulore86 <lauraloreiro1@gmail.com>
+Date:   Thu Oct 15 17:56:59 2020 -0300
+
+    main del home con mas css y carrusel
+
+[33mcommit 20978a53ba42d5644b0b3cd33354755d250d6c7d[m
+Author: florcadelli <florcadelli@gmail.com>
+Date:   Wed Oct 14 16:16:36 2020 -0300
+
+    subo fotos, tipografia y colores a carpeta PUBLIC
+
+[33mcommit c2748d271b87ceb7fecf89237b7bb311f814160f[m
+Merge: ea277dc 57eb3b8
+Author: Xiomara Ocampo <xiomaravictoriaocampo@gmail.com>
+Date:   Wed Oct 14 11:50:19 2020 -0300
+
+    subo el HTML del footer
+
+[33mcommit ea277dc313e123b3593c16b96b19a14786fa62ab[m
+Author: Xiomara Ocampo <xiomaravictoriaocampo@gmail.com>
+Date:   Wed Oct 14 11:34:47 2020 -0300
+
+     subo el footer
+
+[33mcommit 57eb3b81d1b7b0e9974284e60e9ce8bf3c1d717c[m
+Author: Laulore86 <lauraloreiro1@gmail.com>
+Date:   Wed Oct 14 02:05:09 2020 -0300
+
+    Agregué algo de css al main del Home
+
+[33mcommit 98a97276d4b54a3f71f6989ca41632bd485c742f[m
+Author: Laulore86 <lauraloreiro1@gmail.com>
+Date:   Wed Oct 14 01:08:30 2020 -0300
+
+    main (modelo de cajas) del Home
+
+[33mcommit 7c8e8345359acda93d623d80a95248458b3644e3[m
+Author: florcadelli <florcadelli@gmail.com>
+Date:   Tue Oct 13 00:03:21 2020 -0300
+
+    subo formulario de login y de ingreso en Html
+
+[33mcommit 40f1b8ba7d9cb0ec317bd0733fabf3977fd5daa8[m
+Author: florcadelli <florcadelli@gmail.com>
+Date:   Mon Oct 12 23:18:09 2020 -0300
+
+    subo header del home
+
+[33mcommit 0f1b650ba5891221dfb6bd1d640a8f0e4a632e84[m
+Author: Xiomara Ocampo <xiomaravictoriaocampo@gmail.com>
+Date:   Mon Oct 12 19:47:31 2020 -0300
+
+    subo el proyecto final para codear
+
+[33mcommit 98096793f9e1f1c621b37a8a82be5dab783204ef[m
+Author: florcadelli <florcadelli@gmail.com>
+Date:   Mon Oct 12 19:06:41 2020 -0300
+
+    subo ppt de cajas
+
+[33mcommit 7bef385562b01629dc806719565c5e68759d848a[m
+Author: florcadelli <florcadelli@gmail.com>
+Date:   Tue Sep 29 18:49:30 2020 -0300
+
+    subo wireframes y propuesta estética
+
+[33mcommit a12682f009b99aa2ca951c344a1f79266ed47e75[m
+Author: florcadelli <florcadelli@gmail.com>
+Date:   Wed Sep 23 10:41:59 2020 -0300
+
+    agrego referencias
+
+[33mcommit 55eb1e1e7d60c02d3923f1c1fc61d96024aaa455[m
+Author: florcadelli <florcadelli@gmail.com>
+Date:   Tue Sep 22 19:09:50 2020 -0300
+
+    morifique la info del producto
+
+[33mcommit a35c611becc0ecda6846bc4903e2c635c0b3cdad[m
+Author: xiomaraOcampo <71240363+xiomaraOcampo@users.noreply.github.com>
+Date:   Mon Sep 21 16:47:11 2020 -0300
+
+    Tematica del market place
+
+[33mcommit 31cd9f6cd50f5feff6e7b2be21dda22fea9bb159[m
+Author: xiomaraOcampo <71240363+xiomaraOcampo@users.noreply.github.com>
+Date:   Mon Sep 21 15:52:31 2020 -0300
+
+    Initial commit

@@ -1,6 +1,7 @@
 const homeController = {  
     home: function(req, res, next) {
-        res.render('home');
+      let usuarioAIngresar= req.session.usuarioIngresado;
+        res.render('home', {usuarioAIngresar:usuarioAIngresar});
       }
 }
 

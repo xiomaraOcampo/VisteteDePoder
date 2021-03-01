@@ -7,7 +7,7 @@ let usersFile = leerJSON();
 let { check, validationResult, body } = require('express-validator');
 let bcryptjs = require('bcryptjs');
 const db = require("../database/models");
-
+let usuarioAIngresar;
 
 let userController = {
   index: function (req, res) {
@@ -20,7 +20,7 @@ let userController = {
   },
 
   registro: function (req, res, next) {
-    res.render('usersViews/registro');
+    res.render('usersViews/registro', {usuarioAIngresar:usuarioAIngresar});
   },
   storeRegistro: function (req, res, next) {
     //alert("Se ha registrado un usuario");
@@ -47,17 +47,20 @@ let userController = {
         "image": registroUser.userAvatar,
         "type": 0
       });
-      res.render('home');
+      res.render('home', {usuarioAIngresar:usuarioAIngresar});
     } else {
       return res.render('usersViews/registro', { errors: errors.errors });
     }
 
   },
 
+
   ingreso: function (req, res, next) {
-    res.render("usersViews/ingreso");
+    let usuarioAIngresar; 
+    res.render("usersViews/ingreso", {usuarioAIngresar:usuarioAIngresar});
   },
   storeIngreso: function (req, res, next) {
+    
     let errors = validationResult(req);
     console.log(errors);
     let usuarioAIngresar;
@@ -68,6 +71,7 @@ let userController = {
         }
       })
       .then((resultado)=>{
+        console.log(resultado);
         if (bcryptjs.compareSync(req.body.contrasenia, resultado.getDataValue('password'))) {
           usuarioAIngresar = {
             id:resultado.getDataValue('id'), 
@@ -76,8 +80,9 @@ let userController = {
             image:resultado.getDataValue('image'),
             type: resultado.getDataValue('type')
           };
+          
         }
-        if (usuarioAIngresar == undefined) {
+        if (usuarioAIngresar == undefined ) {
           return res.render('usersViews/ingreso', {
             errors: [
               { msg: 'Credenciales invalidas' }
@@ -86,14 +91,21 @@ let userController = {
         }
         req.session.usuarioIngresado = usuarioAIngresar;
         
-
         if (req.body.recordame != undefined) {
           res.cookie('recordame',
             usuarioAIngresar.email, { maxAge: 180000 })
         }
+        // res.send(usuarioAIngresar.email)
+        // res.render("usersViews/detailUser", {usuarioAIngresar:usuarioAIngresar})
+        res.render('home', {usuarioAIngresar:usuarioAIngresar});
+      })
 
-        res.render('home');
-      });
+        //xio, por qué no va el .catch???
+      // .catch(function(error){
+      //   console.log(error)
+      // });
+
+
       // for (let i = 0; i < usersFile.length; i++) {
       //   if (usersFile[i].email == req.body.email) {
       //     if (bcryptjs.compareSync(req.body.contrasenia, usersFile[i].contrasenia)) {
@@ -109,29 +121,37 @@ let userController = {
   },
   logout: function (req, res, next) {
     req.session.destroy();
-    res.render("usersViews/ingreso");
+    res.render("home", {usuarioAIngresar:usuarioAIngresar});
   },
 
   edit: function (req, res, next) {
+    let usuarioAIngresar;
     //  res.render('usersViews/edit');
     db.User.findByPk(req.params.id)
-      .then(function (user) {
-        if (user == undefined){
-          res.send('No se ha encontrado el usuario ')
+      .then(function (usuarioAIngresar) {
+        if (usuarioAIngresar == undefined){
+          res.render("usersViews/mensajeNoEncontrado")
+          // res.send('No se ha encontrado el usuario ')
         }else{
-          console.log (user);
-          res.render('usersViews/editU', { user:user });
+          console.log (usuarioAIngresar);
+          res.render('usersViews/editU', { usuarioAIngresar:usuarioAIngresar });
         }
-      });
+      })
+      ;
   },
 
 
 update: function (req, res, next) {
   var idUser = req.params.id;
   let errors = validationResult(req);
+  let usuarioAIngresar;
   console.log(errors);
   //isEmpty= esta vacia
   if (errors.isEmpty()) {
+
+
+
+    
     db.User.update({
       "name": req.body.nombre,
       "email": req.body.email,
@@ -143,7 +163,8 @@ update: function (req, res, next) {
       }
     });
 
-    res.send("Modificaste el usuario " + req.body.nombre);
+    // res.send("Modificaste el usuario " + req.body.nombre);
+    res.render('usersViews/perfil',{usuarioAIngresar:usuarioAIngresar});
   } else {
     db.User.findByPk(idUser)
     .then(function (user){
@@ -154,7 +175,7 @@ update: function (req, res, next) {
 },
 
 destroy: function (req,res) {
-  
+  let usuarioAIngresar;
   var idUser = req.params.id;
   console.log (idUser);
   db.User.destroy({
@@ -203,11 +224,18 @@ list: function (req, res, next) {
   //res.render('usersViews/uList', { usersFile: userList });
 },
 detail:function(req,res,next){
-  var idUser = req.params.id;
+
+  var idUser = req.session.usuarioIngresado.id;
+  // var idUser = req.params.id;
+  let usuarioAIngresar;
    db.User.findByPk(idUser)
-    .then(function (user){
-      console.log(user);
-      res.render('usersViews/detailUser',{user:user});
+    .then(function (usuarioAIngresar){
+  //     // console.log(usuarioAIngresar);
+      res.render('usersViews/perfil',{usuarioAIngresar:usuarioAIngresar});
+    })
+    .catch(function (error) {
+      console.log(error)
+      res.send("Error")
     });
 }
 
