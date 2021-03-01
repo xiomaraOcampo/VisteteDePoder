@@ -54,15 +54,9 @@ const carritoController = {
             }); 
           }*/
 
-<<<<<<< HEAD
-          res.render('carritoViews/cart', { products: products, carrito: carritoUsuario, currentUser:usuarioAIngresar });
-        })
-          .catch(function (error) {
-=======
          
     
           /* .catch(function (error) {
->>>>>>> e5a5cc1a73cee0b7394ad630f53a5bdfe1db3e46
             console.log(error);
             res.send("error"); 
           }); */
