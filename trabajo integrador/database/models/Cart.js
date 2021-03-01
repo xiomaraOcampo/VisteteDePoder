@@ -29,6 +29,9 @@ module.exports = function (sequelize, dataTypes) {
             otherKey: "product_id",
             timestamps: false
         })
+       
+          
+
     }
     return Cart;
 }

@@ -2,7 +2,7 @@ let db = require("../database/models");
 const Cart_Product = require("../database/models/Cart_Product");
 let carritoUsuario = null;
 let productos = null;
-
+let currentUser = null;
 
 const carritoController = {
 
@@ -14,18 +14,13 @@ const carritoController = {
 
   cargaCarrito: function (req, res, next) {
     //cargar productos desde la base
-    db.Product.findAll({
-      include: [{ association: "cart_product" }],
-     raw: true,
-     nest: true,
-  })
-      .then(function (products) {
-        // console.log(products[2]);
-         productos = products
-        //cargar carrito sin finalizar,que este abierto
-        let currentUser = req.session.usuarioIngresado;
+    currentUser = req.session.usuarioIngresado;
+    
+      
+       
+    //cargar carrito sin finalizar,que este abierto
         db.Cart.findOne({
-          include: [{association: 'products'}],
+          // include: [{association: 'products'}],
           raw: true,
           nest: true,
           where: {
@@ -33,28 +28,44 @@ const carritoController = {
             User_id: currentUser.id
           }
         }).then(function (carrito) {
-          console.log(carrito);
           
-          carritoUsuario = carrito;
+          db.Cart_Product.findAll({
+            where: {
+              cart_id: carrito.id
+            },
+            include: [{association: 'products'}]
+          }).then(function (products){
+           products.map(function (producto){
+             console.log(producto.products);
+           })
+           
+            res.render('carritoViews/cart', { products: products, carrito: carritoUsuario, usuarioAIngresar: currentUser});
+
+          })
+          })
+
+
+          
+          /* carritoUsuario = carrito;
           if (carritoUsuario == undefined) {
-            console.log(req.session.usuarioIngresado);
             carritoUsuario = db.Cart.create({
               "User_id": req.session.usuarioIngresado.id,
               "status": "open"
-            });
-          }
+            }); 
+          }*/
 
+<<<<<<< HEAD
           res.render('carritoViews/cart', { products: products, carrito: carritoUsuario, currentUser:usuarioAIngresar });
         })
           .catch(function (error) {
+=======
+         
+    
+          /* .catch(function (error) {
+>>>>>>> e5a5cc1a73cee0b7394ad630f53a5bdfe1db3e46
             console.log(error);
             res.send("error"); 
-          });
-
-      }).catch(function (error) {
-        console.log(error);
-        res.send("Error");
-      });
+          }); */
 
   },
 
@@ -86,12 +97,9 @@ const carritoController = {
         })
       }
 
-      res.render('carritoViews/cart', { products: productos, carrito: carritoUsuario });
+      res.render('carritoViews/cart', { products: productos, carrito: carritoUsuario, usuarioAIngresar:currentUser });
 
     });
-
-
-
 
   },
   vaciarCarrito: function (req, res, next) {
@@ -101,5 +109,6 @@ const carritoController = {
   }
 
 }
+
 
 module.exports = carritoController;

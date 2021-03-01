@@ -50,13 +50,13 @@
                                 </div>
                                 <%});%>
                         </main>
-                        <!-- Carrito  CAMBIE EK NOMBRE Y ESCRIBI DETALLE SUBTOTAL,FIJARSE SI AFECTA EN OTROS LADOS-->
+                         Carrito  CAMBIE EK NOMBRE Y ESCRIBI DETALLE SUBTOTAL,FIJARSE SI AFECTA EN OTROS LADOS
                         <% if (carrito !=undefined){%>
                             <aside class="detalleSubtotal">
                                 <h2>Carrito</h2>
-                                <!-- Elementos del carrito -->
+                                <! Elementos del carrito 
                                 <ul id="carrito" class="list-group">
-                                     <% for(let i=0;carrito.products!=undefined && i<carrito.products.length; i++){ %>
+                                      <% for(let i=0;carrito.products!=undefined && i<carrito.products.length; i++){ %>
 
                                         <li><% carrito.products[i].Cart_Product.quantity %> x
                                             <%  carrito.products[i].name %>-
@@ -64,10 +64,10 @@
                                             <%  carrito.products[i].cart_product.quantity %>
                                             <button  style="margin-left: 1rem;">X</button>
                                         </li>  
-                                      <% } %> 
+                                      <% } %>  
 
 
-                                </ul>
+                                </ul> 
 
                                 <hr>
                                 <!-- Precio total -->
