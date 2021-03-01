@@ -136,8 +136,17 @@ let userController = {
           console.log (usuarioAIngresar);
           res.render('usersViews/editU', { usuarioAIngresar:usuarioAIngresar });
         }
-      })
-      ;
+      });
+ /* 
+        db.User.findByPk(req.params.id)
+      .then(function (user) {
+        if (user == undefined){
+          res.send('No se ha encontrado el usuario ')
+        }else{
+          console.log (user);
+          res.render('usersViews/editU', { user:user });
+        }
+      }) */;
   },
 
 
