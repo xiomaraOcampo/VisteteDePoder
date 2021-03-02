@@ -137,7 +137,7 @@ let productController = {
 
       .then(function (products) {
         //  res.send(products)
-        if (products !==  []) {
+        if (products.length > 0) {
           // return res.render("productsViews/listSearch")
           return res.render("productsViews/listSearch", {
             products: products,

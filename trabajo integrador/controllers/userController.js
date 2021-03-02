@@ -7,7 +7,7 @@ let usersFile = leerJSON();
 let { check, validationResult, body } = require('express-validator');
 let bcryptjs = require('bcryptjs');
 const db = require("../database/models");
-let usuarioAIngresar;
+
 
 let userController = {
   index: function (req, res) {
@@ -56,7 +56,7 @@ let userController = {
 
 
   ingreso: function (req, res, next) {
-    let usuarioAIngresar; 
+    
     res.render("usersViews/ingreso");
   
   },

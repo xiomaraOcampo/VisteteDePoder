@@ -47,20 +47,20 @@ const carritoController = {
 
 
           
-    //       /* carritoUsuario = carrito;
-    //       if (carritoUsuario == undefined) {
-    //         carritoUsuario = db.Cart.create({
-    //           "User_id": req.session.usuarioIngresado.id,
-    //           "status": "open"
-    //         }); 
-    //       }*/
+          /* carritoUsuario = carrito;
+          if (carritoUsuario == undefined) {
+            carritoUsuario = db.Cart.create({
+              "User_id": req.session.usuarioIngresado.id,
+              "status": "open"
+            }); 
+          }*/
 
-    //       res.render('carritoViews/cart', { products: products, carrito: carritoUsuario, currentUser:usuarioAIngresar });
-    //     })
-    //       .catch(function (error) {
-    //         console.log(error);
-    //         res.send("error"); 
-    //       }); */
+         
+    
+          /* .catch(function (error) {
+            console.log(error);
+            res.send("error"); 
+          }); */
 
   },
 
