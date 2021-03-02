@@ -52,8 +52,10 @@
              <!-- NO  ANDA EL TOSAN -->
             <div class="remera1"> Precio: $ <%= product.price %></div>
            
+            <form action="/carrito/agregarProducto/<%= product.id %>" method="POST" >
 
-             <a href="/carrito"><button class="aCarrito"type="button">Añadir a carrito</button></a>
+             <button class="aCarrito"type="submit">Añadir a carrito</button>
+            </form>
             </section>
       
           </div>

@@ -27,55 +27,26 @@
                     <div class="row">
                         <!-- Vista de carga productos desde la base de datos-->
                         <main id="items" class="mainProducto">
-                            <% products.forEach(function(product){ %>
-                                <div class="tarjeta">
-
-                                    <div class="card-body">
-
-                                        <img src="/images/imagesProducts/<%=product.image %>" class="fotoProducto">
-                                        <h5>
-                                            <%=product.name %>
-                                        </h5>
-                                        <p>
-                                            <%=product.description %>
-                                        </p>
-                                        <p>$<%=product.price %>
-                                        </p>
-                                        <form action="/carrito/agregarProducto/<%= product.id %>" method="POST">
-                                            <button type="submit">+</button>
-                                        </form>
-
-                                    </div>
-
-                                </div>
-                                <%});%>
-                        </main>
-                         Carrito  CAMBIE EK NOMBRE Y ESCRIBI DETALLE SUBTOTAL,FIJARSE SI AFECTA EN OTROS LADOS
-                        <% if (carrito !=undefined){%>
-                            <aside class="detalleSubtotal">
+                            <% if (carrito !=undefined){%>
                                 <h2>Carrito</h2>
-                                <! Elementos del carrito 
                                 <ul id="carrito" class="list-group">
-                                      <% for(let i=0;carrito.products!=undefined && i<carrito.products.length; i++){ %>
-
-                                        <li><% carrito.products[i].Cart_Product.quantity %> x
-                                            <%  carrito.products[i].name %>-
-                                            $<%  carrito.products[i].price %>
-                                            <%  carrito.products[i].cart_product.quantity %>
-                                            <button  style="margin-left: 1rem;">X</button>
-                                        </li>  
-                                      <% } %>  
-
-
-                                </ul> 
+                                    <% for(let i=0;products!=undefined && i < products.length; i++){ %>
+                                        <li>
+                                            
+                                            <%= products[i].quantity.toString() %> x
+                                            <%= products[i].products.name %>-
+                                            $<%= products[i].products.price %>
+                                            <button style="margin-left: 1rem;">X</button>
+                                        </li>
+                                    <% } %>
+                                </ul>
 
                                 <hr>
                                 <!-- Precio total -->
                                 <p class="text-right">Total: <span id="total"></span>&euro;</p>
                                 <button id="boton-vaciar" class="btn btn-danger">Vaciar</button>
-                            </aside>
-                            <%}%>
-
+                                <%}%>
+                        </main>
 
                     </div>
                     <%-include("../partials/footer")%>
