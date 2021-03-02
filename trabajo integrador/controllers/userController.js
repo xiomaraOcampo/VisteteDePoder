@@ -104,7 +104,7 @@ let userController = {
         }
         // res.send(usuarioAIngresar.email)
         // res.render("usersViews/detailUser", {usuarioAIngresar:usuarioAIngresar})
-        res.render('home');
+        res.render('usersViews/perfil', {usuarioAIngresar:usuarioAIngresar});
       })
 
         //xio, por qué no va el .catch???
