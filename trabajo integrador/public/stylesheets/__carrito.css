@@ -3,58 +3,160 @@
 .rectanguloPrinpipal {
     margin: auto; 
     box-sizing: inline-block;
-    
 }
 
 .tituloMiCarrito{
-   
-
-     /*listo esto lo uso */
-     background-color: rgba(148, 211, 148, 0.8);
-    font-size: 1.5rem;
-    margin:20px 5% 20px 5%;
-    padding: 8px 0px 5px 20px;
+    background-color: rgba(148, 211, 148, 0.8);
+    font-size: 1.2rem;
+    margin:0px 5% 20px 5%;
+    padding: 3px 0px 3px 20px;
     border-radius: 5px;
+    box-shadow: 1px 3px 5px grey;   
+}
+#items{
+    /* border:solid 1px red; */
+    width:50%;
+    margin:0px 5% 20px 5%;
+    margin: auto;
+}
+#items li{ 
+    background-image:url("/images/fotosVisteteDePoder/fondoFormularios.jpg");
+    margin-top:1%;
+    list-style: none;
+    border-radius: 2%;
     box-shadow: 1px 3px 5px grey;
-    
+    display:flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-around;
+}
+#items li .imagenCarrito{
+    /* border:1px solid red; */
+    width: 20%;
+    margin: 2%;
+    box-shadow: 1px 3px 5px grey;
+    background: #efeff3;
+    display:flex;
+    justify-content: center;
+ 
+}
+#items li .imagenCarrito img{
+    width: 100%;
+    padding-top: 3%;
+    padding-left: 3%;
+    padding-right: 3%;
+    padding-bottom: 8%;
+}
+#items li .datosProdCarrito{
+    width: 40%;
+    /* border:1px solid green; */
+    padding: 0%;
+    display:flex;
+    flex-direction: column;
+    justify-content: space-around;
+    margin-top: 2%;
+    margin-bottom: 2%;
+}
+#items li .datosProdCarrito .cantidadCarrito{
+    padding-left: 1rem;
+    padding-top: 5%;
+    font-weight: 500;
+    color: #4c4c49;
+}
+#items li .datosProdCarrito .precioCarrito{
+    padding-left: 1rem;
+    padding-top: 5%;
+    font-weight: 500;
+    color: #4c4c49;
+}
+#items .borrarProducto{
+    width: 70%;
+    /* border:1px solid violet; */
+    padding-left: 0px;
+    margin-left: 0px;
+}
+
+#items .botonTotal{
+    background-color: rgba(148, 211, 148, 0.8);
+}
+
+/* @media (max-width: 1024px) {} */
+/* @media (max-width: 750px) {} */
+/* @media (max-width: 480px) {} */
+
+@media (max-width: 1024px) {
+    #items{
+        /* background-color: red; */
+        width: 70%;
+    }
+}
+
+@media (max-width: 750px) {
+    #items{
+        /* background-color:yellow; */
+        width: 85%;
+    }
+    #items li .datosProdCarrito{
+        width: 60%;
+    }
+    #items li .datosProdCarrito .cantidadCarrito{
+        font-size: 0.8rem;
+    }
+    #items li .datosProdCarrito .precioCarrito{
+       font-size: 0.8rem;
+    }
+    #items li .datosProdCarrito .borrarProducto{
+        width: 70%;
+        font-size: 0.8rem;
+     }
+}
+@media (max-width: 480px) {
+    #items{
+        /* background-color:green; */
+        width: 85%;
+    }
+    #items li .datosProdCarrito{
+        width: 70%;
+    }
+    #items li .datosProdCarrito .cantidadCarrito{
+        font-size: 0.7rem;
+    }
+    #items li .datosProdCarrito .precioCarrito{
+       font-size: 0.7rem;
+    }
+    #items li .datosProdCarrito .borrarProducto{
+        width: 70%;
+        font-size: 0.7rem;
+     }
 }
 
 
 
- .tarjeta{
-     /*esto lo uso porque lo toma*/
-    background-image:url("/images/fotosVisteteDePoder/fondoFormularios.jpg");
-    width: 50%;
-    box-shadow: 1px 3px 5px grey;
-    border-radius: 5px;  
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-around;
-    margin:10px 0px;
-   
-    
-} 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
  
 
-.detalleSubtotal{
 
-    /*lo toma*/
-    background-image:url("/images/fotosVisteteDePoder/fondoFormularios.jpg");
-    margin: auto;
-    width: 40%;
-    height: 30vh;
-    display: flex;
-    flex-direction: column; 
-    justify-content: space-around;
-    align-items: center;
-    border-radius: 5px;  
-    box-shadow: 1px 3px 5px grey;
-    border: 1px solid red; 
-}
-
-.detalleSubtotal div{
-   width: 90%;
-
-}
 
 

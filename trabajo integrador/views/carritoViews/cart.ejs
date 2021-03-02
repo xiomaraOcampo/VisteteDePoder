@@ -1,56 +1,65 @@
 <!DOCTYPE html>
 <html lang="en">
-<%-include("../partials/head")%>
+  <%-include("../partials/head")%>
 
-    <body>
-        <div class="container">
-            <!--HEADER-->
-            <header>
-                <%-include("../partials/header")%>
-
-            </header>
-            <!--FIN HEADER-->
-            <html lang="es">
-
-            <head>
-                <meta charset="UTF-8">
-                <title></title>
-                <meta name="viewport"
-                    content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
-
-
-            </head>
-
-            <body>
-                <div class="container">
-                    <div class="tituloMiCarrito">Mi carrito</div>
-                    <div class="row">
-                        <!-- Vista de carga productos desde la base de datos-->
-                        <main id="items" class="mainProducto">
-                            <% if (carrito !=undefined){%>
-                                <h2>Carrito</h2>
-                                <ul id="carrito" class="list-group">
-                                    <% for(let i=0;products!=undefined && i < products.length; i++){ %>
-                                        <li>
-                                            
-                                            <%= products[i].quantity.toString() %> x
-                                            <%= products[i].products.name %>-
-                                            $<%= products[i].products.price %>
-                                            <button style="margin-left: 1rem;">X</button>
-                                        </li>
-                                    <% } %>
-                                </ul>
-
-                                <hr>
-                                <!-- Precio total -->
-                                <p class="text-right">Total: <span id="total"></span>&euro;</p>
-                                <button id="boton-vaciar" class="btn btn-danger">Vaciar</button>
-                                <%}%>
-                        </main>
-
+  <body>
+    <div class="container-fluid">
+      <!--HEADER-->
+      <header><%-include("../partials/header")%></header>
+      <!--FIN HEADER-->
+      <html lang="es">
+        <div class="container-fluid">
+          <div class="tituloMiCarrito">Mi carrito</div>
+          <div class="row">
+            <!-- Vista de carga productos desde la base de datos-->
+            <main id="items">
+              <% if (carrito !=undefined){%>
+              <!-- <h2>Carrito</h2> -->
+              <ul id="carrito" class="list-group">
+                <% for(let i=0;products!=undefined && i < products.length; i++){
+                %>
+                <li>
+                  <div class="imagenCarrito">
+                    <img
+                      src="/images/imagesProducts/<%= products[i].products.image %> "
+                      alt="<%= products[i].products.image %> "
+                    />
+                  </div>
+                  <div class="datosProdCarrito">
+                    <div class="cantidadCarrito">
+                      <%= products[i].products.name %> x <%=
+                      products[i].quantity.toString() %>
                     </div>
-                    <%-include("../partials/footer")%>
-                </div>
-            </body>
+                    <div class="precioCarrito">
+                      Precio: $<%= products[i].products.price %>
+                    </div>
+                    <button class="borrarProducto" style="margin-left: 1rem">
+                        Borrar producto
+                      </button>
+                  </div>
+                  
+                </li>
+                <% } %>
+              </ul>
 
-            </html>
+              <!-- Precio total COMO LO CALCULAMOS?-->
+              <!-- <p >Total: Como calculamos valor total de productos? <span id="total"></span></p> -->
+              <button class="botonTotal" class="btn btn-danger">
+                Total: $ 0000
+              </button>
+
+              <!-- QUE ESTE BOTON ENVIE A CAMBIAR EL STATUS DEL CARRITO A CERRADO Y QUE RENDERICE UN MSJ DE FELICITACIONES, COMPRASTE EL PRODUCTO -->
+              <button class="botonComprar" class="btn btn-danger">
+                Comprar
+              </button>
+              <button id="boton-vaciar" class="btn btn-danger">Vaciar</button>
+
+              <%}%>
+            </main>
+          </div>
+          <%-include("../partials/footer")%>
+        </div>
+      </html>
+    </div>
+  </body>
+</html>

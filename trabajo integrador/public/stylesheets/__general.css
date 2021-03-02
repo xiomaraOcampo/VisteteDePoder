@@ -67,6 +67,9 @@ button:focus{
 .sinSubrayado .aCarrito{
     width:90%;
 }
+.añadirCarrito{
+    width: 100%;
+}
 .container-fluid{
     padding:0px;
 }
