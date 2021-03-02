@@ -10,6 +10,7 @@ router.get('/carrito2', carritoController.carrito2 );
 
 
 //Empiezo el CRUD de carrito,vamos que se puede !!
+
 router.get('/',authMiddleware,carritoController.cargaCarrito );
 router.post('/agregarProducto/:id', carritoController.agregarProducto); 
 router.post('/vaciar', carritoController.vaciarCarrito);
