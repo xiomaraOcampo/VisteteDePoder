@@ -4,7 +4,7 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    border:1px solid green;
+    /* border:1px solid green; */
   
 }
 
@@ -13,14 +13,16 @@
     box-sizing: inline-block; 
     background-color: rgba(148, 211, 148, 0.8);
     font-size: 1rem;
+    font-weight: 600;
+    color:#4c4c49;
     margin:10px 5% 10px 5%;
     padding: 8px 0px 5px 20px;
     border-radius: 5px;
     box-shadow: 1px 3px 5px grey;
-    border: 1px solid black;
+    /* border: 1px solid black; */
 }
 main .tarjeta{
-    border:1px solid green;
+    /* border:1px solid green; */
     display:flex;
     padding: 0% 2%;
     box-shadow: 1px 3px 5px grey;
@@ -30,7 +32,7 @@ main .tarjeta{
   
 }
 main .fotoProducto{
-    border: 1px solid green;
+    /* border: 1px solid green; */
     box-shadow: 1px 3px 5px grey;
     background: #efeff3;
     display:flex;
@@ -56,7 +58,7 @@ main .fotoProducto{
     height: 280px;
     margin-left: 20px;
     display: flex;
-    border: 1px solid black;
+    /* border: 1px solid black; */
     }
 
 
@@ -78,7 +80,7 @@ main .fotoProducto{
     flex-direction: column;
     justify-content: space-around;
     /* padding-top: 20px; */
-    border: 1px solid red;
+    /* border: 1px solid red; */
 }
 .descripcion .remera1{
     font-size: 1.2rem;
@@ -121,16 +123,16 @@ main .fotoProducto{
     margin:0px;
 }
 .tarjetamini{
-    border: red solid 1px;
+    /* border: red solid 1px; */
     width: 50%;
     display:flex;
     text-decoration: none;
-    
+    color:#4c4c49;    
 }
 .listado{
     display:flex;
     flex-direction: column;
-    border:1px violet solid;
+    /* border:1px violet solid; */
     justify-content:center;
     align-items: center;
     padding:0px;
@@ -149,19 +151,15 @@ ul li .fondo{
     width: 100%;
  
 }
-ul li .fondo .producto-y-descripcion{
-    border:1px green solid;
-    /* width: 90%; */
 
-}
 /* @media (max-width: 1024px) {} */
 /* @media (max-width: 750px) {} */
 /* @media (max-width: 480px) {} */
 
 @media (max-width: 1024px){
-    .mainProducto{
-        background-color: red;
-    }
+    /* .mainProducto{ */
+        /* background-color: red; */
+    /* } */
     .descripcion .remera1{
         font-size: 1.2rem;
     }
@@ -182,9 +180,9 @@ ul li .fondo .producto-y-descripcion{
     
 }
 @media (max-width: 800px){
-    .mainProducto{
-        background-color: violet;
-    }
+    /* .mainProducto{ */
+        /* background-color: violet; */
+    /* } */
     .descripcion .remera1{
         font-size: 1.2rem;
     }
@@ -193,7 +191,7 @@ ul li .fondo .producto-y-descripcion{
         font-size: 1.2rem;
     }
     main .tarjeta{
-        border:1px solid black;
+        /* border:1px solid black; */
         width: 85%;
         font-size: 1rem;
     }
@@ -207,24 +205,45 @@ ul li .fondo .producto-y-descripcion{
     /* .producto-y-descripcion p{
         font-size: 0.9rem;
     } */
+    ul .tarjetamini{
+        width: 85%;
+    }
+   
+    ul li .fotoProducto{
+        /* border:3px solid orange; */
+        width: 40%;
+    }
+    ul li .descripcion{
+        width: 55%;
+    }
+    ul li .descripcion .remera1{
+        /* border:1px solid orange; */
+        font-size: 1rem;
+    }
+    ul li .descripcion .añadirCarrito{
+        /* border:1px solid orange; */
+        font-size: 1rem;
+        padding:0px;
+        margin:0px;
+    }
 }
 @media (max-width: 480px){
     .mainProducto{
-        background-color:yellow;
+        /* background-color:yellow; */
     }
     main .Nombre-Producto{
         width: 95%;
         font-size: 0.9rem;
     }
     main .tarjeta{
-        border:1px solid black;
+        /* border:1px solid black; */
         width: 95%;
         font-size: 0.8rem;
         /* justify-content: flex-start; */
         /* align-items: flex-start; */
     }
     main .fotoProducto{
-        border:1px solid black;
+        /* border:1px solid black; */
         margin-top: -15%;
     }
     .descripcion .remera1{
@@ -237,10 +256,25 @@ ul li .fondo .producto-y-descripcion{
         font-size: 0.9rem;
     }
     .descripcion .añadir{
-        border: 1px solid red;
+        /* border: 1px solid red; */
         z-index: 1;
         width: 220%;
         margin-left: -120%;
         font-size: 0.9rem;
+    }
+    ul .tarjetamini{
+        width: 95%;
+    }
+    ul li .descripcion .remera1{
+        /* border:1px solid orange; */
+        font-size: 0.8rem;
+    }
+   
+    ul li .descripcion .añadirCarrito{
+        /* border: 1px solid red; */
+        z-index: 1;
+        width: 180%;
+        margin-left: -80%;
+        font-size: 0.9rem; 
     }
 }
