@@ -64,8 +64,6 @@ const carritoController = {
         });
       }
 
-      
-    
       db.Cart_Product.findOne({
         where: {
           cart_id: carritoUsuario.id,
@@ -92,7 +90,8 @@ const carritoController = {
             // me muestra todos los productos en la vista
             db.Cart_Product.findAll({
               where: {
-                cart_id: carritoUsuario.id
+                cart_id: carritoUsuario.id,
+                status: "open"
                 // que el status sea open ponerlo dps
               },
               raw: true,
@@ -111,9 +110,27 @@ const carritoController = {
       });
     });
   },
+
+   // eliminar productos carrito
+  destroy: function (req,res) {
+    var cartProductId = req.params.id;
+    console.log (cartProductId);
+    db.Cart_Product.destroy({
+      where:{
+      id:cartProductId
+    }
+    
+    });
+    res.send("Eliminaste el producto" + cartProductId);
+  },
   vaciarCarrito: function (req, res, next) {
-    // eliminar productos carrito
-    res.render('carritoViews/cart');
+    db.Cart_Product.destroy({
+      where:{
+        cart_id: req.params.id
+      }
+    });
+ 
+    res.send("Vaciaste el carrito");
 
   }
 
