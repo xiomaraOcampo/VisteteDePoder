@@ -3,9 +3,6 @@ const router = express.Router();
 const carritoController = require('../controllers/carritoController');
 var authMiddleware= require('../Middleware/authMiddleware');
 
-
-
-
 router.get('/carrito2',authMiddleware, carritoController.carrito2 );
 
 

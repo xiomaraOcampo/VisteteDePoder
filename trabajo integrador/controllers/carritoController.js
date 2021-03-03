@@ -40,8 +40,14 @@ const carritoController = {
         })
         console.log(items);
         res.render('carritoViews/cart', { products: items, carrito: carrito, usuarioAIngresar: currentUser });
-      })
-    })
+      }).catch(function (error) {
+        console.log(error)
+        res.send("Error")
+      });
+    }).catch(function (error) {
+      console.log(error)
+      res.send("Error")
+    });
   },
 
   agregarProducto: function (req, res, next) {
@@ -78,21 +84,12 @@ const carritoController = {
             product_id: req.params.id,
             quantity: 1,
             safeprice: 0
-          })
-        } else {
-          db.Cart_Product.update({
-            quantity: cartProduct.quantity + 1
-          }, {
-            where: {
-              id: cartProduct.id
-            }
           }).then(function() {
             // me muestra todos los productos en la vista
             db.Cart_Product.findAll({
               where: {
-                cart_id: carritoUsuario.id,
-                status: "open"
-                // que el status sea open ponerlo dps
+                cart_id: carritoUsuario.id
+                // ya vieene abierto de antes
               },
               raw: true,
               nest: true,
@@ -104,9 +101,50 @@ const carritoController = {
               })
               res.render('carritoViews/cart', { products: items, carrito: carrito, usuarioAIngresar: currentUser });
             })
-    
-          })
+            .catch(function (error) {
+              console.log(error)
+              res.send("Error items")
+            });
+          }).catch(function (error) {
+            console.log(error)
+            res.send("Error crear Producto")
+          });
+        } else {
+          db.Cart_Product.update({
+            quantity: cartProduct.quantity + 1
+          }, {
+            where: {
+              id: cartProduct.id
+            }
+          }).then(function() {
+            // me muestra todos los productos en la vista
+            db.Cart_Product.findAll({
+              where: {
+                cart_id: carritoUsuario.id
+                // ya vieene abierto de antes
+              },
+              raw: true,
+              nest: true,
+              include: [{ association: 'products' }]
+            }).then(function (products) {
+              items = products.map(function (producto) {
+                
+                return producto;
+              })
+              res.render('carritoViews/cart', { products: items, carrito: carrito, usuarioAIngresar: currentUser });
+            })
+            .catch(function (error) {
+              console.log(error)
+              res.send("Error items")
+            });
+          }).catch(function (error) {
+            console.log(error)
+            res.send("Error agregar Producto")
+          });
         }
+      }).catch(function (error) {
+        console.log(error)
+        res.send("Error Carrito")
       });
     });
   },
