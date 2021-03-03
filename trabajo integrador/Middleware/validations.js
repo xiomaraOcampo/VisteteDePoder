@@ -26,6 +26,10 @@ let {check,validationResult,body}= require('express-validator');
       check ('nombre').isLength({min:1}).withMessage('Este campo debe estar completo'),
       check ('email').isEmail().withMessage('El mail es incorrecto'),
 
+    ],
+    usersUpload:[
+      check ('email').isEmail(),
+      check ('contrasenia').isLength({min:6}).withMessage('El mail y/o contraseña son invalidos'),
     ]
 }
 

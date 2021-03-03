@@ -28,17 +28,13 @@ router.get('/', userController.index);
 
 
 router.get('/registro',guestMiddleware, userController.registro);
-router.post('/registro',upload.any('userAvatar'), validations.usersRegister, userController.storeRegistro);
+router.post('/registro',upload.any('userAvatar'), guestMiddleware, validations.usersRegister, userController.storeRegistro);
 
 
 // router.get('/ingreso', userController.ingreso);
 
-router.get('/ingreso',guestMiddleware, userController.ingreso);
-router.post('/ingreso',
- [
-  check ('email').isEmail(),
-  check ('contrasenia').isLength({min:6}).withMessage('El mail y/o contraseña son invalidos'),
-], userController.storeIngreso);
+router.get('/ingreso', guestMiddleware, userController.ingreso);
+router.post('/ingreso', validations.usersUpload, userController.storeIngreso);
 
 
 
@@ -59,7 +55,7 @@ router.get('/edit/:id', userController.edit);
 router.put('/edit/:id', validations.usersEdit, userController.update);
 
 router.delete('/destroy/:id', userController.destroy); 
-router.get('/list',userController.list);
+router.get('/list',adminMiddleware ,userController.list);
 
 
 //perfil???

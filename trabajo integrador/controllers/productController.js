@@ -328,7 +328,26 @@ let productController = {
       })
   },
 
+  listProductsAdm: function (req, res, next) {
+  
+    db.Subcategory.findAll({
 
+      include: [{ association: "categorias" }],
+      raw: true,
+      nest: true,
+    })
+
+      .then(function (products) {
+        console.log(products)
+        res.render("productsViews/list", { products: products })
+         
+          .catch(function (error) {
+            console.log(error);
+            res.send("error");
+          })
+
+      })
+  },
 
   Tshirt: function (req, res, next) {
     // res.send('ruta')

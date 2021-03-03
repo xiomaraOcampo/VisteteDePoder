@@ -6,14 +6,14 @@ var authMiddleware= require('../Middleware/authMiddleware');
 
 
 
-router.get('/carrito2', carritoController.carrito2 );
+router.get('/carrito2',authMiddleware, carritoController.carrito2 );
 
 
 //Empiezo el CRUD de carrito,vamos que se puede !!
 
 router.get('/',authMiddleware,carritoController.cargaCarrito );
-router.post('/agregarProducto/:id', carritoController.agregarProducto); 
-router.post('/vaciar', carritoController.vaciarCarrito);
+router.post('/agregarProducto/:id',authMiddleware, carritoController.agregarProducto); 
+router.post('/vaciar',authMiddleware, carritoController.vaciarCarrito);
 
 
 module.exports = router;
