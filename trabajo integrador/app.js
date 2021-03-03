@@ -11,6 +11,7 @@ var indexRouter = require('./routes/index');
 var usersRouter = require('./routes/users');
 var productsRouter = require('./routes/products');
 var carritoRouter = require('./routes/carrito');
+var carritoRouter3 = require('./routes/carrito3');
 var apiUsersRouter = require('./routes/api/users');
 var apiProductsRouter = require('./routes/api/products');
 var recordameMiddleware= require('./Middleware/recordameMiddleware');
@@ -38,6 +39,7 @@ app.use('/products', productsRouter);
 app.use('/api/users', apiUsersRouter);
 app.use('/api/products', apiProductsRouter);
 app.use('/carrito', carritoRouter);
+app.use('/carrito3', carritoRouter3);
 app.use(recordameMiddleware);
 
 

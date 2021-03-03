@@ -104,7 +104,17 @@ let userController = {
         }
         // res.send(usuarioAIngresar.email)
         // res.render("usersViews/detailUser", {usuarioAIngresar:usuarioAIngresar})
-        res.render('home');
+        
+        if(req.session.usuarioIngresado.type==1){
+          res.render('usersViews/perfilAdm', {usuarioAIngresar:usuarioAIngresar});
+        }else{
+          res.render('usersViews/perfil', {usuarioAIngresar:usuarioAIngresar});
+
+        }
+        
+        
+        
+        
       })
 
         //xio, por qué no va el .catch???
@@ -141,7 +151,7 @@ let userController = {
           // res.send('No se ha encontrado el usuario ')
         }else{
           console.log (usuarioAIngresar);
-          res.render('usersViews/editU');
+          res.render('usersViews/editU', {usuarioAIngresar});
         }
       });
  /* 
@@ -157,38 +167,55 @@ let userController = {
   },
 
 
-update: function (req, res, next) {
-  var idUser = req.params.id;
-  let errors = validationResult(req);
-  let usuarioAIngresar;
-  console.log(errors);
-  //isEmpty= esta vacia
-  if (errors.isEmpty()) {
-
-
-
-       
-    db.User.update({
-      "name": req.body.nombre,
-      "email": req.body.email,
-      "password": req.body.contrasenia,
-      "image": req.body.userAvatar  
-    }, {
-      where: {
-        id: idUser
-      }
-    });
-
-    // res.send("Modificaste el usuario " + req.body.nombre);
-    res.render('usersViews/perfil');
-  } else {
-    db.User.findByPk(idUser)
-    .then(function (user){
-      res.render('usersViews/editU', { user, errors: errors.errors });
-    });
+  update: function (req, res, next) {
+    var idUser = req.params.id;
+    let errors = validationResult(req);
+    let usuarioAIngresar;
     
-  }
-},
+    //isEmpty= esta vacia
+    if (errors.isEmpty()) {
+  
+  
+  
+         
+      db.User.update({
+        "name": req.body.nombre,
+        "email": req.body.email,
+        "password":bcryptjs.hashSync(req.body.contrasenia, 10),
+        "image": req.body.userAvatar  
+      }, {
+        where: {
+          id: idUser
+        }
+      })
+
+      .then(function(resultado){
+        if (bcryptjs.compareSync(req.body.contrasenia, resultado.getDataValue('password'))) {
+          usuarioAIngresar = {
+            id:resultado.getDataValue('id'), 
+            name:resultado.getDataValue('name'), 
+            email: resultado.getDataValue('email'),
+            image:resultado.getDataValue('image'),
+            type: resultado.getDataValue('type')
+          }
+        }
+        return usuarioAIngresar
+
+      })
+
+   
+      console.log(usuarioAIngresar)
+      res.send("Modificaste el usuario " + req.body.nombre);
+      // res.render('usersViews/perfil', {usuarioAIngresar});
+      
+    } else {
+      db.User.findByPk(idUser)
+      .then(function (user){
+        res.render('usersViews/editU', { user, errors: errors.errors });
+      });
+      
+    }
+  },
 
 destroy: function (req,res) {
   let usuarioAIngresar;

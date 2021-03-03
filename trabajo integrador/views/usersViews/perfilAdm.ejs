@@ -14,9 +14,9 @@
 
                 <!--MAIN-->  
                 
-<form  action="/users/edit/<%= usuarioAIngresar.id %>?_method=PUT" method=GET>
+<form  action="/users/edit/<%= usuarioAIngresar.id %>" method=GET>
     <div class="registro1">
-     
+         <!-- <label for="id"><i class="fas fa-user"></i></label>-->
         <label for="nombre"><i class="fas fa-user"></i></label>
         <label for="email"><i class="fas fa-envelope"></i></label>
         <label for="contrasenia"><i class="fas fa-lock"></i></i></label>
@@ -51,6 +51,18 @@
    </div>
    
 </form>
+
+<form action="/products/create">
+
+<button class="enviar" type="submit">Crear Producto</button>
+
+</form>
+
+<form action="/products/edit">
+
+    <button class="enviar" type="submit">Ver Productos</button>
+    
+    </form>
 
             </main>
 

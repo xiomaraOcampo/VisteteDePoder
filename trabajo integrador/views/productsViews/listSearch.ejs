@@ -12,7 +12,7 @@
        <main class="mainProducto">        
        
        <section class="Nombre-Producto">
-        Productos encontrados con tu busqueda
+        Productos encontrados 
        </section>
     
 
@@ -46,13 +46,13 @@
 
 
             <section class="descripcion">
-            <div class="remera1 nombre"> Nombre: <%= product.name %></div>
-            <div class="remera1"> Descripción: <%= product.description %></div> 
-            <div class="remera1"> Diseño: <%= product.designs.design %></div> 
+            <div class="remera1 nombre">  <%= product.name %></div>
+            <div class="remera1">  <%= product.description %></div> 
+            <div class="remera1"> Diseño inspirado en "<%= product.designs.design %>"</div> 
              <!-- NO  ANDA EL TOSAN -->
             <div class="remera1"> Precio: $ <%= product.price %></div>
            
-            <form action="/carrito/agregarProducto/<%= product.id %>" method="POST" >
+            <form class="añadirCarrito" action="/carrito/agregarProducto/<%= product.id %>" method="POST" >
 
              <button class="aCarrito"type="submit">Añadir a carrito</button>
             </form>
