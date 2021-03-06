@@ -213,60 +213,58 @@ let productController = {
   listIndumentaria: function (req, res) {
 
   
-    let pedidoProduct = db.Product.findAll({
+    db.Product.findAll({
         
         include: [{ association: "designs" }, {association: "subcat"}],
         raw: true,
         nest: true,
       })
 
-      .then(function (products) {
+      .then(function (prods) {
         
-        let productsFound = [];
-
-        for (let i=0; i<products.length; i++){
+         let products = [];
+          // res.send(prods)
+         for (let i=0; i<prods.length; i++){
           
-       console.log(products[i].subcat.category_id);
-       if(products[i].subcat.category_id == 1){
-          productsFound.push(products[i])
+        console.log(prods[i].subcat);
+        if(prods[i].subcat.category_id == 1){
+         products.push(prods[i])
 
-       }
-        
-      }
-
-      res.render("productsViews/listSearch2", { productsFound: productsFound });
+        }
+       
+         }
+      res.render("productsViews/listSearch", { products: products });
       })
 
-      .catch(function (error) {
-        console.log(error);
-        res.send("error");
-      })
+      // .catch(function (error) {
+      //   console.log(error);
+      //   res.send("error");
+      // })
   },
   listMerchandising: function (req, res) {
 
   
-    let pedidoProduct = db.Product.findAll({
+    db.Product.findAll({
         
         include: [{ association: "designs" }, {association: "subcat"}],
         raw: true,
         nest: true,
       })
 
-      .then(function (products) {
+      .then(function (prods) {
         
-        let productsFound = [];
+        let products = [];
 
-        for (let i=0; i<products.length; i++){
+        for (let i=0; i<prods.length; i++){
           
-       console.log(products[i].subcat.category_id);
-       if(products[i].subcat.category_id == 2){
-          productsFound.push(products[i])
-
+      //  console.log(prods[i].subcat.category_id);
+       if(prods[i].subcat.category_id == 2){
+          products.push(prods[i])
        }
         
       }
 
-      res.render("productsViews/listSearch2", { productsFound: productsFound });
+      res.render("productsViews/listSearch", { products: products });
       })
 
       .catch(function (error) {
@@ -278,28 +276,28 @@ let productController = {
   listAccesorios: function (req, res) {
 
   
-    let pedidoProduct = db.Product.findAll({
+      db.Product.findAll({
         
         include: [{ association: "designs" }, {association: "subcat"}],
         raw: true,
         nest: true,
       })
 
-      .then(function (products) {
+      .then(function (prods) {
         
-        let productsFound = [];
+        let products = [];
 
-        for (let i=0; i<products.length; i++){
+        for (let i=0; i<prods.length; i++){
           
-       console.log(products[i].subcat.category_id);
-       if(products[i].subcat.category_id == 3){
-          productsFound.push(products[i])
+      //  console.log(prods[i].subcat.category_id);
+       if(prods[i].subcat.category_id == 3){
+          products.push(prods[i])
 
        }
         
       }
 
-      res.render("productsViews/listSearch2", { productsFound: productsFound });
+      res.render("productsViews/listSearch", { products: products});
       })
 
       .catch(function (error) {
