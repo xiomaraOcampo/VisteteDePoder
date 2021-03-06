@@ -53,6 +53,7 @@
             <div class="remera1"> Precio: $ <%= product.price %></div>
            
             <form class="añadirCarrito" action="/carrito/agregarProducto/<%= product.id %>" method="POST" >
+              <input type='number' placeholder ='cantidad' value ='1' name= 'quantity' min = '1'> <br>
 
              <button class="aCarrito"type="submit">Añadir a carrito</button>
             </form>

@@ -1,8 +1,48 @@
 let db = require("../database/models");
 const Cart_Product = require("../database/models/Cart_Product");
 let carritoUsuario = null;
-let productos = null;
 let currentUser = null;
+
+function agregarProductoACarrito(productoId, res) {
+  db.Cart_Product.findOne({
+    where: {
+      cart_id: carritoUsuario.id,
+      product_id: productoId
+    }
+  }).then(function (cartProduct) {
+    console.log(cartProduct);
+    // si no esta , creame ese producto dentro de ese carrrito
+    if (cartProduct == undefined) {
+      db.Cart_Product.create({
+        cart_id: carritoUsuario.id,
+        product_id: productoId,
+        quantity: 1,
+        safeprice: 0
+      }).then(function() {
+        res.redirect("/carrito" );
+      }).catch(function (error) {
+        console.log(error)
+        res.send("Error crear Producto")
+      });
+    } else {
+      db.Cart_Product.update({
+        quantity: cartProduct.quantity + 1
+      }, {
+        where: {
+          id: cartProduct.id
+        }
+      }).then(function() {
+        res.redirect("/carrito" );
+      }).catch(function (error) {
+        console.log(error)
+        res.send("Error agregar Producto")
+      });
+    }
+  }).catch(function (error) {
+    console.log(error)
+    res.send("Error Carrito")
+  });
+}
 
 const carritoController = {
 
@@ -53,6 +93,7 @@ const carritoController = {
   agregarProducto: function (req, res, next) {
     // ENCUENTRO EL CARRITO ABIERTO Y CON USUARIO
     currentUser = req.session.usuarioIngresado;
+    let prod_id = req.params.id;
     db.Cart.findOne({
       raw: true,
       nest: true,
@@ -64,88 +105,17 @@ const carritoController = {
       carritoUsuario = carrito;
       console.log (carrito)
       if (carritoUsuario == undefined) {
-        carritoUsuario = db.Cart.create({
+        db.Cart.create({
           "User_id": req.session.usuarioIngresado.id,
           "status": "open"
+        })
+        .then(function (newCart) {
+          carritoUsuario = newCart;
+          agregarProductoACarrito(prod_id, res);
         });
       }
 
-      db.Cart_Product.findOne({
-        where: {
-          cart_id: carritoUsuario.id,
-          product_id: req.params.id
-        }
-      }).then(function (cartProduct) {
-        console.log(cartProduct);
-        // si no esta , creame ese producto dentro de ese carrrito
-        if (cartProduct == undefined) {
-          db.Cart_Product.create({
-            cart_id: carritoUsuario.id,
-            product_id: req.params.id,
-            quantity: 1,
-            safeprice: 0
-          }).then(function() {
-            // me muestra todos los productos en la vista
-            db.Cart_Product.findAll({
-              where: {
-                cart_id: carritoUsuario.id
-                // ya vieene abierto de antes
-              },
-              raw: true,
-              nest: true,
-              include: [{ association: 'products' }]
-            }).then(function (products) {
-              items = products.map(function (producto) {
-                
-                return producto;
-              })
-              res.render('carritoViews/cart', { products: items, carrito: carrito, usuarioAIngresar: currentUser });
-            })
-            .catch(function (error) {
-              console.log(error)
-              res.send("Error items")
-            });
-          }).catch(function (error) {
-            console.log(error)
-            res.send("Error crear Producto")
-          });
-        } else {
-          db.Cart_Product.update({
-            quantity: cartProduct.quantity + 1
-          }, {
-            where: {
-              id: cartProduct.id
-            }
-          }).then(function() {
-            // me muestra todos los productos en la vista
-            db.Cart_Product.findAll({
-              where: {
-                cart_id: carritoUsuario.id
-                // ya vieene abierto de antes
-              },
-              raw: true,
-              nest: true,
-              include: [{ association: 'products' }]
-            }).then(function (products) {
-              items = products.map(function (producto) {
-                
-                return producto;
-              })
-              res.render('carritoViews/cart', { products: items, carrito: carrito, usuarioAIngresar: currentUser });
-            })
-            .catch(function (error) {
-              console.log(error)
-              res.send("Error items")
-            });
-          }).catch(function (error) {
-            console.log(error)
-            res.send("Error agregar Producto")
-          });
-        }
-      }).catch(function (error) {
-        console.log(error)
-        res.send("Error Carrito")
-      });
+      agregarProductoACarrito(prod_id, res);
     });
   },
 
@@ -159,7 +129,8 @@ const carritoController = {
     }
     
     });
-    res.send("Eliminaste el producto" + cartProductId);
+   // res.send("Eliminaste el producto" + cartProductId);
+    res.redirect("/carrito" );
   },
   vaciarCarrito: function (req, res, next) {
     db.Cart_Product.destroy({
@@ -168,11 +139,25 @@ const carritoController = {
       }
     });
  
-    res.send("Vaciaste el carrito");
+    //res.send("Vaciaste el carrito");
+    res.redirect("/carrito" );
+
+  },
+  finalizarCompra: function (req, res, next) {
+    db.Cart.update({
+      
+        status: "closed"
+    },{
+      where:{
+        id: carritoUsuario.id
+      }
+    });
+ 
+   res.send("finalizaste compra");
+   // res.redirect("/carrito" );
 
   }
 
 }
-
 
 module.exports = carritoController;

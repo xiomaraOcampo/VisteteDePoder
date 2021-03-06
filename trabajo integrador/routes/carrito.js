@@ -12,6 +12,7 @@ router.get('/',authMiddleware,carritoController.cargaCarrito );
 router.post('/agregarProducto/:id', carritoController.agregarProducto); 
 router.delete('/destroy/:id', carritoController.destroy); 
 router.post('/vaciar/:id', carritoController.vaciarCarrito);
+router.post('/finalizarCompra/:id', carritoController.finalizarCompra);
 
 
 module.exports = router;
