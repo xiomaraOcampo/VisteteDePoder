@@ -18,7 +18,7 @@
  
        
         <li>
-          <form class="borrar" action="/users/destroy/<%= user.id %>?_method=DELETE" method="POST">
+          
 
       
           <div class="registro1">
@@ -54,13 +54,24 @@
                     
           
           </div>
-        
+
+          <form  action="/users/perfil">
+            <button type='submit'>Ver Perfil</button>
+  
+            </form>
+
+         
+        <form  action="/users/edit/<%= user.id %>?_method=PUT" method=GET>
+          <button type='submit'>Editar</button>
+
+          </form>
+
+          <form class="borrar" action="/users/destroy/<%= user.id %>?_method=DELETE" method="POST">
          
             <button type='submit'>Borrar</button>
           
           </form>
   
-        
         
  
         </li>

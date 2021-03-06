@@ -42,19 +42,19 @@
        <% }%> 
   
         <section class="descripcion">
-          <div class="remera1"> Nombre: <%= product.name %></div> 
-          <div class="remera1"> SubCategoría: <%= subcategory.subcategory %></div> 
-          <div class="remera1"> Descripción: <%= product.description %></div> 
-          <!-- <div class="remera1"> Talle: <%= size.size %> </div>  -->
-          <!-- <div class="remera1"> Cantidad:  </div> -->
-          <div class="remera1"> Diseño: <%= design.disenio %></div> 
-          <div class="remera1"> Precio: $ <%= product.price %></div>
-  
-         
-           
+          <div class="remera1 nombre">  <%= product.name %></div>
+            <div class="remera1">  <%= product.description %></div> 
+            <div class="remera1"> Diseño inspirado en "<%= product.designs.design %>"</div> 
+             <!-- NO  ANDA EL TOSAN -->
+            <div class="remera1"> Precio: $ <%= product.price %></div>
+
           <a class="remera1" href="/products/edit/<%= product.id %>"><button type="button">Editar</button></a>
   
-  
+          <form class="borrar" action="/products/destroy/<%= product.id %>?_method=DELETE"
+            method="POST">
+            
+            <button type="submit">Borrar</button>
+            </form>
          <!--<a class="remera1" href="/products/destroy/<%= product.id %>"><button type="button" >Borrar</button></a>-->
   
           </section>

@@ -330,16 +330,17 @@ let productController = {
 
   listProductsAdm: function (req, res, next) {
   
-    db.Subcategory.findAll({
+    db.Product.findAll({
 
-      include: [{ association: "categorias" }],
+      // include: [{ association: "categorias", association: "subcategory", association: "size" }],
+      include: [{ association: "designs" }, { association: "sizes" }, { association: "subcat" }],
       raw: true,
       nest: true,
     })
 
-      .then(function (products) {
-        console.log(products)
-        res.render("productsViews/list", { products: products })
+      .then(function (product) {
+        console.log(product)
+        res.render("productsViews/list", { product: product })
          
           .catch(function (error) {
             console.log(error);
