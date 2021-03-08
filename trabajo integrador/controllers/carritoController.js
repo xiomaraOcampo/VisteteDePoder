@@ -3,7 +3,7 @@ const Cart_Product = require("../database/models/Cart_Product");
 let carritoUsuario = null;
 let currentUser = null;
 
-function agregarProductoACarrito(productoId, res) {
+function agregarProductoACarrito(productoId, res,quantity) {
   db.Cart_Product.findOne({
     where: {
       cart_id: carritoUsuario.id,
@@ -16,7 +16,7 @@ function agregarProductoACarrito(productoId, res) {
       db.Cart_Product.create({
         cart_id: carritoUsuario.id,
         product_id: productoId,
-        quantity: 1,
+        quantity: quantity,
         safeprice: 0
       }).then(function() {
         res.redirect("/carrito" );
@@ -26,7 +26,7 @@ function agregarProductoACarrito(productoId, res) {
       });
     } else {
       db.Cart_Product.update({
-        quantity: cartProduct.quantity + 1
+        quantity: cartProduct.quantity +quantity
       }, {
         where: {
           id: cartProduct.id
@@ -65,7 +65,13 @@ const carritoController = {
         User_id: currentUser.id
       }
     }).then(function (carrito) {
-
+      carritoUsuario=carrito;
+      if (carritoUsuario == undefined) {
+        carritoUsuario = db.Cart.create({
+          "User_id": req.session.usuarioIngresado.id,
+          "status": "open"
+        });
+      }
       db.Cart_Product.findAll({
         where: {
           cart_id: carrito.id
@@ -80,6 +86,9 @@ const carritoController = {
         })
         console.log(items);
         res.render('carritoViews/cart', { products: items, carrito: carrito, usuarioAIngresar: currentUser });
+        
+          
+          
       }).catch(function (error) {
         console.log(error)
         res.send("Error")
@@ -93,7 +102,8 @@ const carritoController = {
   agregarProducto: function (req, res, next) {
     // ENCUENTRO EL CARRITO ABIERTO Y CON USUARIO
     currentUser = req.session.usuarioIngresado;
-    let prod_id = req.params.id;
+    let prod_id = req.body.productId;
+    let quantity= req.body.quantity;
     db.Cart.findOne({
       raw: true,
       nest: true,
@@ -111,11 +121,12 @@ const carritoController = {
         })
         .then(function (newCart) {
           carritoUsuario = newCart;
-          agregarProductoACarrito(prod_id, res);
+          agregarProductoACarrito(prod_id, res,quantity);
         });
-      }
+      }else{
 
-      agregarProductoACarrito(prod_id, res);
+      agregarProductoACarrito(prod_id, res,quantity);
+      }
     });
   },
 
@@ -145,7 +156,6 @@ const carritoController = {
   },
   finalizarCompra: function (req, res, next) {
     db.Cart.update({
-      
         status: "closed"
     },{
       where:{
