@@ -19,7 +19,7 @@
                 <ul id="carrito" class="list-group">
                     <% for(let i=0;products!=undefined && i < products.length; i++){ %>
                         <li>
-                            
+                            ;
                             <%= products[i].quantity.toString() %> x
                             <%= products[i].products.name %>-
                             $<%= products[i].products.price %>
@@ -31,11 +31,15 @@
                 </ul>
 
                 <hr>
-                <!-- Precio total -->
-                <p class="text-right">Total: <span id="total"></span>&dollar;<%= products.reduce((accum,item) => accum + item.products.price, 0) %></p>
+                <!-- Precio total parse int covierte el precio en numero-->
+                <p class="text-right">Total: <span id="total"></span>&dollar;<%= products.reduce((accum,item) => accum + parseInt(item.products.price)
+                  , 0) %></p>
                 <form action="/carrito/vaciar/<%= carrito.id %>" method="POST" >
                     <button type="submit" class="btn btn-danger">Vaciar</button>
                 </form>
+                <form action="/carrito/finalizarCompra/<%= carrito.id %>" method="POST" >
+                  <button type="submit" class="btn btn-primary">Finalizar Compra</button>
+              </form>
                 <%}%>
         </main>
       </div>
