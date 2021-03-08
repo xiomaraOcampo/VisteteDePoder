@@ -9,7 +9,7 @@ router.get('/carrito2',authMiddleware, carritoController.carrito2 );
 //Empiezo el CRUD de carrito,vamos que se puede !!
 
 router.get('/',authMiddleware,carritoController.cargaCarrito );
-router.post('/agregarProducto/:id', carritoController.agregarProducto); 
+router.post('/agregarProducto', carritoController.agregarProducto); 
 router.delete('/destroy/:id', carritoController.destroy); 
 router.post('/vaciar/:id', carritoController.vaciarCarrito);
 router.post('/finalizarCompra/:id', carritoController.finalizarCompra);

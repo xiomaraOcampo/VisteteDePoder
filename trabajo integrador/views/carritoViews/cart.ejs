@@ -19,7 +19,8 @@
                 <ul id="carrito" class="list-group">
                     <% for(let i=0;products!=undefined && i < products.length; i++){ %>
                         <li>
-                            ;
+                          <img src="/images/imagesProducts/<%= products[i].products.image %>" alt="imagen producto">
+                            
                             <%= products[i].quantity.toString() %> x
                             <%= products[i].products.name %>-
                             $<%= products[i].products.price %>
@@ -40,7 +41,9 @@
                 <form action="/carrito/finalizarCompra/<%= carrito.id %>" method="POST" >
                   <button type="submit" class="btn btn-primary">Finalizar Compra</button>
               </form>
-                <%}%>
+              <% } else { %>
+                <h2>El carrito esta vacio</h2>
+              <% } %>
         </main>
       </div>
       <%-include("../partials/footer")%>
