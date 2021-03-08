@@ -205,8 +205,8 @@ let userController = {
 
    
       console.log(usuarioAIngresar)
-      res.send("Modificaste el usuario " + req.body.nombre);
-      // res.render('usersViews/perfil', {usuarioAIngresar});
+      // res.send("Modificaste el usuario " + req.body.nombre);
+      res.redirect('usersViews/perfil', {usuarioAIngresar});
       
     } else {
       db.User.findByPk(idUser)

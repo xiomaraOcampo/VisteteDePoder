@@ -2,24 +2,31 @@ const db = require("../../database/models");
 let salesAPIController = {
   
  list: function (req, res, next) {
-    /* db.Cart.count({
+     db.Cart.findAll({
         where:{
-            state:'closed'
+            status:'closed'
         }
     })
-     
-      let respuesta={
+     .then(function(carts){
+      let respuesta=
+      
+      {
         meta:{
           status:200,
-          total:users.length,
-          url:"/api/users"
+          total:carts.length,
+          url:"/api/sales"
         },
-        data:users
+        data:carts
       };
        res.json(respuesta);
-    }) */
+      
+      
+
+     }
+     )
+      
   
-  }
+    }
 
 };
 
