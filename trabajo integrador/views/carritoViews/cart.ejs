@@ -23,7 +23,7 @@
                             
                             <%= products[i].quantity.toString() %> x
                             <%= products[i].products.name %>-
-                            $<%= products[i].products.price %>
+                            $<%= products[i].products.price %>c/u
                             <form action="/carrito/destroy/<%= products[i].id %>?_method=DELETE" method="POST" >
                                 <button type="submit" style="margin-left: 1rem;">X</button>
                             </form>
@@ -33,8 +33,9 @@
 
                 <hr>
                 <!-- Precio total parse int covierte el precio en numero-->
-                <p class="text-right">Total: <span id="total"></span>&dollar;<%= products.reduce((accum,item) => accum + parseInt(item.products.price)
-                  , 0) %></p>
+                <p class="text-right">Total: <span id="total"></span>&dollar;
+                  <%= products.reduce((accum,item) => accum + (parseInt(item.quantity) * parseInt(item.products.price)), 0) %></p>
+                  
                 <form action="/carrito/vaciar/<%= carrito.id %>" method="POST" >
                     <button type="submit" class="btn btn-danger">Vaciar</button>
                 </form>
