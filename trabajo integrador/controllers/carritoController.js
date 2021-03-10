@@ -53,11 +53,11 @@ const carritoController = {
   //   // CRUD  de carrito
 
   cargaCarrito: function (req, res, next) {
-    //cargar productos desde la base
+    
     currentUser = req.session.usuarioIngresado;
-    //cargar carrito sin finalizar,que este abierto
+    
     db.Cart.findOne({
-      // include: [{association: 'products'}],
+      
       raw: true,
       nest: true,
       where: {
@@ -65,34 +65,37 @@ const carritoController = {
         User_id: currentUser.id
       }
     }).then(function (carrito) {
-      carritoUsuario=carrito;
-      if (carritoUsuario == undefined) {
-        carritoUsuario = db.Cart.create({
-          "User_id": req.session.usuarioIngresado.id,
+      if (carrito == undefined) {
+        db.Cart.create({
+          "User_id": currentUser.id,
           "status": "open"
+        }).then(function (newCart) {
+          carritoUsuario = newCart;
+          res.render('carritoViews/cart', { products: null, carrito: carritoUsuario, usuarioAIngresar: currentUser });  
+        });
+      } else {
+        db.Cart_Product.findAll({
+          where: {
+            cart_id: carrito.id
+          },
+          raw: true,
+          nest: true,
+          include: [{ association: 'products' }]
+        }).then(function (products) {
+          items = products.map(function (producto) {
+            
+            return producto;
+          })
+          console.log(items);
+          res.render('carritoViews/cart', { products: items, carrito: carrito, usuarioAIngresar: currentUser });
+          
+            
+            
+        }).catch(function (error) {
+          console.log(error)
+          res.send("Error")
         });
       }
-      db.Cart_Product.findAll({
-        where: {
-          cart_id: carrito.id
-        },
-        raw: true,
-        nest: true,
-        include: [{ association: 'products' }]
-      }).then(function (products) {
-        items = products.map(function (producto) {
-          
-          return producto;
-        })
-        console.log(items);
-        res.render('carritoViews/cart', { products: items, carrito: carrito, usuarioAIngresar: currentUser });
-        
-          
-          
-      }).catch(function (error) {
-        console.log(error)
-        res.send("Error")
-      });
     }).catch(function (error) {
       console.log(error)
       res.send("Error")
@@ -163,8 +166,8 @@ const carritoController = {
       }
     });
  
-   res.send("finalizaste compra");
-   // res.redirect("/carrito" );
+   
+   res.render("carritoViews/mensajeCompraFinal" );
 
   }
 
