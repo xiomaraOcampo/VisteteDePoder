@@ -74,25 +74,99 @@ button:focus{
     padding:0px;
 }
 
-/*Viewport*/
 
-    /*@media (max-width: 1680px)*/
+/*=========LISTADO USUARIOS=======*/
 
+.listUsers{
+    padding:0px;
+    margin:0px;
+}
+.listUsers .infoUser{
+    /* border:1px red solid; */
+    display: flex;
+    background-image:url("/images/fotosVisteteDePoder/fondoFormularios.jpg");
+    width: 55%;
+    border-radius: 5px;
+    border-radius: 5px;
+    margin: 30px auto;
+    color:#4c4c49;
+    font-weight: 600; 
+    font-size: 20px;
+    box-shadow: 1px 3px 5px grey;
+    justify-content: space-around;
+}
+.listUsers .infoUser .fotoListUsuario{
+    /* border: 1px solid violet; */
+    padding:0px;
+    box-shadow: 1px 3px 5px grey;
+    background: #efeff3;
+    display:flex;
+    justify-content: center;
+    width: 20%;
+    margin: 5px;
 
-    @media (max-width: 768px){
+}
 
+.listUsers .infoUser .fotoListUsuario img{
+    width: 90%;
+    margin: 10px 10px 30px 10px;
+}
+.listUsers .infoUser .datosUser{
+    /* border: 1px solid green; */
+    padding: 10px;
+    width: 40%;
+}
 
-        }
-    
-
-
-    /*@media (max-width: 360px ){
-
-    }*/
-
-
-
-/*inputs*/
-
-
-
+.listUsers .infoUser .usersButton{
+    display:flex;
+    flex-direction: column;
+    width: 20%;
+    /* border: 1px solid black; */
+    padding:0px;
+}
+.listUsers .infoUser .usersButton form{
+    background-image: none;
+    margin:0px;
+    width: 100%;
+}
+/* .listUsers .infoUser .usersButton button{
+   width: 100%;
+   border: 1px solid black;
+} */
+ @media (max-width: 1024px) {
+    /* .listUsers  {
+        background-color: red;
+    } */
+    .listUsers .infoUser{
+        width:70%;
+        font-size: 0.9rem;
+    }
+ } 
+ @media (max-width: 750px) {
+    /* .listUsers  {
+        background-color:green;
+    } */
+    .listUsers .infoUser{
+        width:80%;
+        font-size: 0.8rem;
+    }
+    .listUsers .infoUser .usersButton button{
+        font-size: 0.9rem;
+       /* border: 1px solid black; */
+       } 
+ } 
+ @media (max-width: 480px) {
+    /* .listUsers  {
+        background-color:violet;
+    } */
+    .listUsers .infoUser{
+        width:95%;
+        font-size: 0.7rem;
+    }
+     .listUsers .infoUser .usersButton button{
+    font-size: 0.8rem;
+   /* border: 1px solid black; */
+   } 
+ } 
+/* @media (max-width: 750px) {} */
+/* @media (max-width: 480px) {} */

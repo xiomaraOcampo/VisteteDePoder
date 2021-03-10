@@ -9,75 +9,54 @@
             
           </header>
 
-          <main>
-      
-      
-      
-            <ul>
-         <% usersFile.forEach(function(user){ %>
+      <main>
+         <ul class="listUsers">
+            <% usersFile.forEach(function(user){ %>
  
-       
-        <li>
-          
-
+          <li class="infoUser">
+                   
       
-          <div class="registro1">
-            <label for="id"><i class="fas fa-user"></i></label>
-            <label for="name"><i class="fas fa-user"></i></label>
-            <label for="email"><i class="fas fa-envelope"></i></label>
-       <% if(user.image){ %>
-
-    </div>
-        <section class="fotoProducto">
-          <article> <img src="/images/usersImages/<%= user.image %> " alt=" <%= user.image %> ">
-              
-          </article>
-      </section>
-
-    <% }else{ %>
  
-    </div>
-    <section class="fotoProducto">
-      <article> <img src="/images/usersImages/defaultImage.jpeg"  alt="defaultImage.jpeg">
-          <!--no lo muestra-->
-      </article>
-  </section>
-     <% }%> 
-        <div class="registro2">
-          <h3> </h3>
+           
+           <% if(user.image){ %>
+             <section class="fotoListUsuario">
+                 <img src="/images/usersImages/<%= user.image %> " alt=" <%= user.image %> ">
+               
+             </section>
+           <% }else{ %>
+             <section class="fotoListUsuario">
+               <img src="/images/usersImages/defaultImage.jpeg"  alt="defaultImage.jpeg">            
+             </section>
+           <% }%> 
 
-          <div class=inputsRegistro type="text" name="id"> Id: <%= user.id %> </div>
+        
 
-          <div class=inputsRegistro type="text"  id="nombre" name="nombre">Nombre: <%= user.name %>  </div>
-                  
-          <div class="inputsRegistro" type="email" id="email" name="email">Email: <%= user.email %> </div>
-                    
+
+          <div class="datosUser">
           
+             <div  type="text" name="id"> Id: <%= user.id %> </div>
+             <div type="text"  id="nombre" name="nombre">Nombre: <%= user.name %>  </div>
+             <div  type="email" id="email" name="email">Email: <%= user.email %> </div>
+                        
           </div>
 
-          <form  action="/users/perfil">
+          <!-- <form  action="/users/perfil">
             <button type='submit'>Ver Perfil</button>
-  
-            </form>
-
-         
-        <form  action="/users/edit/<%= user.id %>?_method=PUT" method=GET>
-          <button type='submit'>Editar</button>
-
+          </form> -->
+         <div class="usersButton">
+          <form  action="/users/edit/<%= user.id %>?_method=PUT" method=GET>
+            <button type='submit'>Editar</button>
           </form>
 
           <form class="borrar" action="/users/destroy/<%= user.id %>?_method=DELETE" method="POST">
-         
             <button type='submit'>Borrar</button>
-          
           </form>
-  
-        
- 
+        </div>
         </li>
+
          <% }); %>
       </ul>
-        </main>
+     </main>
  
     
  
