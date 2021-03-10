@@ -40,7 +40,7 @@ router.post('/ingreso', validations.usersUpload, userController.storeIngreso);
 
 router.get('/check',function (req,res,){
   if (req.session.usuarioIngresado== undefined){
-    res.send('No estas logueado');
+    res.render('usersViews/mensajeNoEncontrado');
   }else{
    res.send('El usuario logueado es '+ req.session.usuarioIngresado.email);
  } 

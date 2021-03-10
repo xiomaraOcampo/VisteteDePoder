@@ -207,7 +207,7 @@ let productController = {
     db.Product.destroy({
       where: { id: req.params.id }
     })
-    res.send("Eliminaste un producto")
+    res.render("productsViews/mensajeProdEliminado")
   },
 
   listIndumentaria: function (req, res) {

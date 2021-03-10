@@ -103,15 +103,9 @@ let userController = {
             usuarioAIngresar.email, { maxAge: 180000 })
         }
         // res.send(usuarioAIngresar.email)
-        // res.render("usersViews/detailUser", {usuarioAIngresar:usuarioAIngresar})
+        res.render("usersViews/detailUser", {usuarioAIngresar:usuarioAIngresar})
         
-        if(req.session.usuarioIngresado.type==1){
-          res.render('usersViews/perfilAdm', {usuarioAIngresar:usuarioAIngresar});
-        }else{
-          res.render('usersViews/perfil', {usuarioAIngresar:usuarioAIngresar});
-
-        }
-        
+ 
         
         
         
@@ -206,7 +200,15 @@ let userController = {
    
       console.log(usuarioAIngresar)
       // res.send("Modificaste el usuario " + req.body.nombre);
-      res.render('usersViews/perfil', {usuarioAIngresar});
+      // res.render('usersViews/perfil', {usuarioAIngresar});
+      if(req.session.usuarioIngresado.type==1){
+        res.render('usersViews/perfilAdm', {usuarioAIngresar:usuarioAIngresar});
+      }else{
+        res.render('usersViews/perfil', {usuarioAIngresar:usuarioAIngresar});
+
+      }
+      
+
       
     } else {
       db.User.findByPk(idUser)

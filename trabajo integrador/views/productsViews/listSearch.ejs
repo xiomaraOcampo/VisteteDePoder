@@ -46,6 +46,7 @@
 
 
             <section class="descripcion">
+
             <div class="remera1 nombre">  <%= product.name %></div>
             <div class="remera1">  <%= product.description %></div> 
             <div class="remera1"> Diseño inspirado en "<%= product.designs.design %>"</div> 
@@ -53,11 +54,12 @@
             <div class="remera1"> Precio: $ <%= product.price %></div>
            
             <form class="añadirCarrito" action='/carrito/agregarProducto' method="POST" >
-              <input type='number' placeholder ='cantidad' value ='1' name= 'quantity' min = '1'> <br>
+              <input class= number type='number' placeholder ='cantidad' value ='1' name= 'quantity' min = '1'> 
               <input type='hidden'  value ='<%= product.id %>' name= 'productId' > <br>
 
              <button class="aCarrito"type="submit">Añadir a carrito</button>
             </form>
+
             </section>
       
           </div>
