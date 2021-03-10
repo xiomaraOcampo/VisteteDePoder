@@ -243,9 +243,9 @@ ul li .fondo{
         padding:0px;
         margin:0px;
     }
-    /* .descripcion .añadirCarrito button{
+    .descripcion .añadirCarrito button{
         font-size: 0.8rem;
-    } */
+    }
 }
 @media (max-width: 480px){
      .mainProducto{
@@ -300,11 +300,11 @@ ul li .fondo{
     /* .descripcion .añadirCarrito button{
         font-size: 0.6rem;
     } */
-    .descripcion .añadirCarrito{
+    .tarjeta .descripcion .añadirCarrito{
         /* border: 1px solid red; */
         z-index: 1;
-        width: 180%;
-        margin-left: -80%;
+        width: 200%;
+        margin-left: -120%;
         font-size: 0.9rem; 
     }
 }
