@@ -74,7 +74,7 @@ main .fotoProducto{
 .descripcion{
     
     display: flex;
-    flex-wrap: wrap;
+    /* flex-wrap: wrap; */
     width: 45%; 
     height: 350px;   
     flex-direction: column;
@@ -151,6 +151,23 @@ ul li .fondo{
     width: 100%;
  
 }
+ .añadirCarrito{
+    display:flex;
+    /* border: 1px solid red; */
+    /* flex-direction: column; */
+}
+ .añadirCarrito input{
+   padding: 0px;
+   margin:0px;
+}
+ .añadirCarrito .number{
+    border-radius: 5px;
+    width: 20%;
+    margin:15px 10px 10px;
+    font-size: 0.9rem;
+}
+
+
 
 /* @media (max-width: 1024px) {} */
 /* @media (max-width: 750px) {} */
@@ -180,9 +197,9 @@ ul li .fondo{
     
 }
 @media (max-width: 800px){
-    /* .mainProducto{ */
-        /* background-color: violet; */
-    /* } */
+     .mainProducto{ 
+         background-color: violet; 
+     } 
     .descripcion .remera1{
         font-size: 1.2rem;
     }
@@ -226,11 +243,14 @@ ul li .fondo{
         padding:0px;
         margin:0px;
     }
+    /* .descripcion .añadirCarrito button{
+        font-size: 0.8rem;
+    } */
 }
 @media (max-width: 480px){
-    .mainProducto{
-        /* background-color:yellow; */
-    }
+     .mainProducto{
+         background-color:yellow; 
+    } 
     main .Nombre-Producto{
         width: 95%;
         font-size: 0.9rem;
@@ -271,6 +291,16 @@ ul li .fondo{
     }
    
     ul li .descripcion .añadirCarrito{
+        /* border: 1px solid red; */
+        z-index: 1;
+        width: 180%;
+        margin-left: -80%;
+        font-size: 0.9rem; 
+    }
+    /* .descripcion .añadirCarrito button{
+        font-size: 0.6rem;
+    } */
+    .descripcion .añadirCarrito{
         /* border: 1px solid red; */
         z-index: 1;
         width: 180%;

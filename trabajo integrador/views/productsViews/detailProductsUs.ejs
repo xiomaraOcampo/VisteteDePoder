@@ -11,7 +11,7 @@
       <main class="mainProducto">
         <section class="Nombre-Producto"><%= product.name %></section>
 
-        <form
+        <div
           class="tarjeta"
           action="/products/detailProduct/<%= product.id %>"
           method="GET"
@@ -56,13 +56,17 @@
                 <label for="">Subcategoría: <%= product.subcat.subcategory %> </label>
               </article> -->
 
-              <a class="remera1" href="/carrito"
-                ><button class="añadir" type="button">Añadir a carrito</button></a>
+              <form class="añadirCarrito" action='/carrito/agregarProducto' method="POST" >
+                <input class= number type='number' placeholder ='cantidad' value ='1' name= 'quantity' min = '1'> 
+                <input type='hidden'  value ='<%= product.id %>' name= 'productId' > <br>
+  
+               <button class="aCarrito"type="submit">Añadir a carrito</button>
+              </form>
 
             
             </section>
           </div>
-        </form>
+        </div>
     
       </main>
       <%-include("../partials/footer")%>
