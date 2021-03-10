@@ -103,9 +103,14 @@ let userController = {
             usuarioAIngresar.email, { maxAge: 180000 })
         }
         // res.send(usuarioAIngresar.email)
-        res.render("usersViews/detailUser", {usuarioAIngresar:usuarioAIngresar})
+        // res.render("usersViews/detailUser", {usuarioAIngresar:usuarioAIngresar})
         
- 
+        if(req.session.usuarioIngresado.type==1){
+          res.render('usersViews/perfilAdm', {usuarioAIngresar:usuarioAIngresar});
+        }else{
+          res.render('usersViews/perfil', {usuarioAIngresar:usuarioAIngresar});
+
+        }
         
         
         
