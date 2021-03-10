@@ -109,7 +109,6 @@ let userController = {
           res.render('usersViews/perfilAdm', {usuarioAIngresar:usuarioAIngresar});
         }else{
           res.render('usersViews/perfil', {usuarioAIngresar:usuarioAIngresar});
-
         }
         
         
@@ -206,14 +205,14 @@ let userController = {
       console.log(usuarioAIngresar)
       // res.send("Modificaste el usuario " + req.body.nombre);
       // res.render('usersViews/perfil', {usuarioAIngresar});
-      if(req.session.usuarioIngresado.type==1){
-        res.render('usersViews/perfilAdm', {usuarioAIngresar:usuarioAIngresar});
-      }else{
-        res.render('usersViews/perfil', {usuarioAIngresar:usuarioAIngresar});
+      // if(req.session.usuarioIngresado.type==1){
+      //   res.render('usersViews/perfilAdm', {usuarioAIngresar:usuarioAIngresar});
+      // }else{
+      //   res.render('usersViews/perfil', {usuarioAIngresar:usuarioAIngresar});
 
-      }
+      // }
       
-
+      res.render("usersViews/mensajeUserEdited")
       
     } else {
       db.User.findByPk(idUser)
@@ -234,8 +233,8 @@ destroy: function (req,res) {
    }
   
   });
-  res.send("Eliminaste el Usuario " + idUser);
-
+  // res.send("Eliminaste el Usuario " + idUser);
+  res.render("usersViews/mensajeUserEliminado")
   /* var userDeleteTrue = usersFile.map(function (user) {
     if (user.id == idUser) {
       user.delete = true;
