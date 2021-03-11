@@ -8,10 +8,14 @@
 .tituloMiCarrito{
     background-color: rgba(148, 211, 148, 0.8);
     font-size: 1.2rem;
-    margin:0px 5% 20px 5%;
+    /* margin:0px 5% 20px 5%; */
     padding: 3px 0px 3px 20px;
     border-radius: 5px;
-    box-shadow: 1px 3px 5px grey;   
+    /* box-shadow: 1px 3px 5px grey;    */
+    width: 52%;
+    margin: auto;
+    margin-bottom: 10px;
+
 }
 #items{
     /* border:solid 1px red; */
@@ -64,27 +68,55 @@
     color: #4c4c49;
 }
 #items li .datosProdCarrito .precioCarrito{
-    padding-left: 1rem;
-    padding-top: 5%;
+    /* padding-left: 1rem; */
+    /* padding-top: 5% 0% 5% 0; */
     font-weight: 500;
     color: #4c4c49;
+    margin: 10px 0px 10px 0px;
+}
+#items form{
+    background-image:none;
+    width: 100%;
+    margin:0px;
+    /* border:1px solid red; */
 }
 #items .borrarProducto{
-    width: 70%;
+    width: 85%;
     /* border:1px solid violet; */
     padding-left: 0px;
-    margin-left: 0px;
+    margin: 10px;
 }
 
 #items .botonTotal{
     background-color: rgba(148, 211, 148, 0.8);
+    border-radius: 5px;
+    font-size: 1.1rem;
+    font-weight: 600;
+    text-align: center;
+    color: #4c4c49;
+    padding-top:3px;
+    padding-bottom:3px;
+    margin-top: 18px;
 }
-
+#items .botonComprar{
+    /* border:1px solid red; */
+    margin:0px;
+    margin-bottom: 3px;
+    background-color: rgb(214, 79, 79);
+    color:#efeff3;
+    font-weight: 500;
+}
+#boton-vaciar{
+    margin-bottom: 18px;
+}
 /* @media (max-width: 1024px) {} */
 /* @media (max-width: 750px) {} */
 /* @media (max-width: 480px) {} */
 
 @media (max-width: 1024px) {
+    .tituloMiCarrito{
+        width: 72%;
+    }
     #items{
         /* background-color: red; */
         width: 70%;
@@ -92,6 +124,9 @@
 }
 
 @media (max-width: 750px) {
+    .tituloMiCarrito{
+        width: 90%;
+    }
     #items{
         /* background-color:yellow; */
         width: 85%;
@@ -111,6 +146,9 @@
      }
 }
 @media (max-width: 480px) {
+    .tituloMiCarrito{
+        width: 90%;
+    }
     #items{
         /* background-color:green; */
         width: 85%;
