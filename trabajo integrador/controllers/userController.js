@@ -66,7 +66,13 @@ let userController = {
         }
       })
         .then((resultado) => {
-
+          if (resultado == undefined) {
+            return res.render('usersViews/ingreso', {
+              errors: [
+                { msg: 'Credenciales invalidas' }
+              ]
+            });
+          }
           if (bcryptjs.compareSync(req.body.contrasenia, resultado.getDataValue('password'))) {
             usuarioAIngresar = {
               id: resultado.getDataValue('id'),
@@ -77,13 +83,7 @@ let userController = {
             };
 
           }
-          if (usuarioAIngresar == undefined) {
-            return res.render('usersViews/ingreso', {
-              errors: [
-                { msg: 'Credenciales invalidas' }
-              ]
-            });
-          }
+          
           req.session.usuarioIngresado = usuarioAIngresar;
 
           if (req.body.recordame != undefined) {
