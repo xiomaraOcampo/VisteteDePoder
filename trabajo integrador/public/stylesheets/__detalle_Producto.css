@@ -197,9 +197,9 @@ ul li .fondo{
     
 }
 @media (max-width: 800px){
-     .mainProducto{ 
+     /* .mainProducto{ 
          background-color: violet; 
-     } 
+     }  */
     .descripcion .remera1{
         font-size: 1.2rem;
     }
@@ -248,9 +248,9 @@ ul li .fondo{
     }
 }
 @media (max-width: 480px){
-     .mainProducto{
+     /* .mainProducto{
          background-color:yellow; 
-    } 
+    }  */
     main .Nombre-Producto{
         width: 95%;
         font-size: 0.9rem;

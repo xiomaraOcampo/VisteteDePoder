@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+  <%-include("../partials/head")%>
+  <body>
+    <div class="container-fluid">
+      <!--HEADER-->
+
+      <%-include("../partials/header")%>
+      <!-- fin del HEADER-->
+      <!--MAIN-->
+      <main class="mainProducto">
+    
+       <button class="enviar">Usuario Eliminado</button><br><br>
+
+
+
+                   
+<form action="/products/create">
+
+  <button class="enviar" type="submit">Seguir Creando Productos</button>
+  
+  </form>
+  
+  <form action="/products/listProductsAdm">
+  
+      <button class="enviar" type="submit">Ver Productos</button>
+      
+      </form>
+  
+      
+  <form action="/users/list">
+  
+      <button class="enviar" type="submit">Ver Usuarios</button>
+      
+      </form>
+
+       <!-- A DONDE REDIRIJE? -->
+      </main>
+      <%-include("../partials/footer")%>
+    </div>
+  </body>
+</html>
