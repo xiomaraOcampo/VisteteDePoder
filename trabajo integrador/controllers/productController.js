@@ -19,6 +19,9 @@ let db = require("../database/models");
 let productController = {
 
   detailAdm: function (req, res, next) {
+
+
+    let usuarioAIngresar= req.session.usuarioIngresado;
     db.Product.findByPk(req.params.id, {
       include: [{ association: "designs" }, { association: "sizes" }, { association: "subcat" }],
       raw: true,
@@ -28,7 +31,7 @@ let productController = {
         if (product) {
           console.log(product);
           return res.render("productsViews/detailProductAdm", {
-            product: product
+            product: product, usuarioAIngresar
           });
         } else {
           return res.render("productsViews/mensajeNoEncontrado");
@@ -42,6 +45,8 @@ let productController = {
  
   detailUs: function (req, res, next) {
 
+   
+
     // INCORPORAR LAS ASOCIACIONES DE CATEGORIA Y SUBCATEGIRIA
     db.Product.findByPk(req.params.id, {
       include: [{ association: "designs" }, { association: "sizes" }, { association: "subcat" }],
@@ -51,7 +56,7 @@ let productController = {
       .then(function (product) {
         if (product) {
           return res.render("productsViews/detailProductsUs", {
-            product: product,
+            product: product
           });
         } else {
           return res.render("productsViews/mensajeNoEncontrado");
@@ -328,6 +333,7 @@ let productController = {
 
   listProductsAdm: function (req, res, next) {
   
+    
     db.Product.findAll({
 
       // include: [{ association: "categorias", association: "subcategory", association: "size" }],

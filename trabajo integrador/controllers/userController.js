@@ -210,7 +210,15 @@ let userController = {
     db.User.findByPk(idUser)
       .then(function (usuarioAIngresar) {
         //     // console.log(usuarioAIngresar);
-        res.render('usersViews/perfil', { usuarioAIngresar: usuarioAIngresar });
+
+        if (req.session.usuarioIngresado.type == 1) {
+         
+          res.render('usersViews/perfilAdm', { usuarioAIngresar: usuarioAIngresar });
+        } else {
+          
+          res.render('usersViews/perfil', { usuarioAIngresar: usuarioAIngresar });
+
+        }
       })
       .catch(function (error) {
         console.log(error)

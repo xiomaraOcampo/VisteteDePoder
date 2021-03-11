@@ -38,6 +38,8 @@ router.post('/ingreso', validations.usersUpload, userController.storeIngreso);
 
 
 
+
+
 router.get('/check',function (req,res,){
   if (req.session.usuarioIngresado== undefined){
     res.render('usersViews/mensajeNoEncontrado');
