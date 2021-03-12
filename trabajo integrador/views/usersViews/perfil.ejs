@@ -37,7 +37,24 @@
         <h3>Mi cuenta</h3>
 
         <!--<input class=inputsRegistro type="text" placeholder="Id" name="id">-->
-        <img src="/images/usersImages/<%= usuarioAIngresar.image %> " alt=" <%= usuarioAIngresar.image %> ">
+        <% if(usuarioAIngresar.image){ %>
+
+        
+            <section class="fotoUsuario">
+              <article> <img src="/images/usersImages/<%= usuarioAIngresar.image %> " alt=" <%= usuarioAIngresar.image%> ">
+                  
+              </article>
+          </section>
+    
+        <% }else{ %>
+     
+
+        <section class="fotoUsuario">
+          <article> <img src="/images/usersImages/defaultImage.jpg"  alt="defaultImage.jpg">
+              <!--no lo muestra-->
+          </article>
+      </section>
+         <% }%> 
 
         <div class=inputsRegistro type="text" placeholder="Tu nombre" id="nombre" name="nombre" value="<%= usuarioAIngresar.name %>"> <%= usuarioAIngresar.name %></div> 
                  
@@ -48,8 +65,7 @@
         <button class="enviar" type="submit">Edita tu cuenta en Vistete de Poder</button>
     
        
-       
-   </div>
+    </div>
    
 </form>
 

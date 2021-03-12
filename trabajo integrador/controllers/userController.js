@@ -65,43 +65,56 @@ let userController = {
           email: req.body.email
         }
       })
-        .then((resultado) => {
-          if (resultado == undefined) {
-            return res.render('usersViews/ingreso', {
-              errors: [
-                { msg: 'Credenciales invalidas' }
-              ]
-            });
-          }
-          if (bcryptjs.compareSync(req.body.contrasenia, resultado.getDataValue('password'))) {
-            usuarioAIngresar = {
-              id: resultado.getDataValue('id'),
-              name: resultado.getDataValue('name'),
-              email: resultado.getDataValue('email'),
-              image: resultado.getDataValue('image'),
-              type: resultado.getDataValue('type')
-            };
+      .then((resultado) => {
+        //si el resultado es ind. o si no coincide con la contrase;a ingresada
+        let existe = resultado != undefined;
+        if (!existe) {
+          return res.render('usersViews/ingreso', {
+            errors: [
+              { msg: 'No existe el usuario' }
+            ]
+          });
+        }
 
-          }
-          
-          req.session.usuarioIngresado = usuarioAIngresar;
 
-          if (req.body.recordame != undefined) {
-            res.cookie('recordame',
-              usuarioAIngresar.email, { maxAge: 180000 })
-          }
+        console.log(resultado);
 
-          if (req.session.usuarioIngresado.type == 1) {
-            res.render('usersViews/perfilAdm', { usuarioAIngresar: usuarioAIngresar });
-          } else {
-            res.render('usersViews/perfil', { usuarioAIngresar: usuarioAIngresar });
+        let contraseniaValida = bcryptjs.compareSync(req.body.contrasenia, resultado.getDataValue('password'));
+        if (!contraseniaValida) {
+          return res.render('usersViews/ingreso', {
+            errors: [
+              { msg: 'Credenciales invalidas' }
+            ]
+          });
+        }
 
-          }
+        console.log(resultado);
 
-        }).catch(function (error) {
-          console.log(error)
-          res.send("Error")
-        });
+        usuarioAIngresar = {
+          id: resultado.getDataValue('id'),
+          name: resultado.getDataValue('name'),
+          email: resultado.getDataValue('email'),
+          image: resultado.getDataValue('image'),
+          type: resultado.getDataValue('type')
+        };
+        
+        req.session.usuarioIngresado = usuarioAIngresar;
+
+        if (req.body.recordame != undefined) {
+          res.cookie('recordame',
+            usuarioAIngresar.email, { maxAge: 180000 })
+        }
+
+        if (req.session.usuarioIngresado.type == 1) {
+          res.render('usersViews/perfilAdm', { usuarioAIngresar: usuarioAIngresar });
+        }
+
+        res.render('usersViews/perfil', { usuarioAIngresar: usuarioAIngresar });
+
+      }).catch(function (error) {
+        console.log(error)
+        res.send("Error")
+      });
 
     } else {
       return res.render('usersViews/ingreso', { errors: errors.errors });
@@ -114,7 +127,6 @@ let userController = {
   },
 
   edit: function (req, res, next) {
-    let usuarioAIngresar;
 
     db.User.findByPk(req.params.id)
       .then(function (usuarioAIngresar) {
@@ -138,30 +150,27 @@ let userController = {
     let errors = validationResult(req);
     let usuarioAIngresar;
 
-
     if (errors.isEmpty()) {
       db.User.update({
         "name": req.body.nombre,
         "email": req.body.email,
-        "password": bcryptjs.hashSync(req.body.contrasenia, 10),
-        "image": req.body.userAvatar
+      
       }, {
         where: {
           id: idUser
         }
       }).then(function (resultado) {
-          usuarioAIngresar = resultado;
 
-          req.session.usuarioIngresado = usuarioAIngresar;
+        db.User.findByPk(idUser)
+        .then(function (usuarioActualizado) {
+          req.session.usuarioIngresado = usuarioActualizado;
+            if (usuarioActualizado.type == 1) {
+              res.render('usersViews/perfilAdm', { usuarioAIngresar: usuarioActualizado });
+            } else {
+              res.render('usersViews/perfil', { usuarioAIngresar: usuarioActualizado });
 
-          if (req.session.usuarioIngresado.type == 1) {
-            console.log("dibuja perf adm");
-            res.render('usersViews/perfilAdm', { usuarioAIngresar: usuarioAIngresar });
-          } else {
-            console.log("dibuja perf");
-            res.render('usersViews/perfil', { usuarioAIngresar: usuarioAIngresar });
-
-          }
+            }
+          });
         }).catch(function (error) {
           console.log(error)
           res.send("Error en actualizar al usuario")
@@ -170,7 +179,7 @@ let userController = {
       db.User.findByPk(idUser)
         .then(function (user) {
           usuarioAIngresar=user;
-          res.render('usersViews/editU', { usuarioAIngresar, errors: errors.errors });
+          res.render('usersViews/editU', { usuarioAIngresar: usuarioAIngresar, errors: errors.errors });
         }).catch(function (error) {
           console.log(error)
           res.send("Error")

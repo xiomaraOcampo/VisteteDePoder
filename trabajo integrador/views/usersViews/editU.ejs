@@ -19,8 +19,7 @@
          <!-- <label for="id"><i class="fas fa-user"></i></label>-->
         <label for="nombre"><i class="fas fa-user"></i></label>
         <label for="email"><i class="fas fa-envelope"></i></label>
-        <label for="contrasenia"><i class="fas fa-lock"></i></i></label>
-        <label class="ultimoLabel" for="confirmacionContrasenia"><i class="fas fa-lock"></i></label>
+        
     </div>
     <% if (typeof errors!='undefined'){ %>
         <p style='color:red'>ERROR</p>
@@ -42,18 +41,11 @@
                  
         <input class="inputsRegistro" type="email" placeholder="Correo electrónico"id="email" name="email" value="<%= usuarioAIngresar.email %>">
                   
-        <input class="inputsRegistro" type="password" placeholder="Escribe una nueva contraseña" id="contrasenia" name="contrasenia"value="">
-         
-        <p class="textoContraseña">!La contraseña debe tener al menos seis caracteres</p> 
-         
-        <input class="inputsRegistro" type="password" placeholder="Vuelve a escribir la contraseña" id="confirmacionContrasenia" name="confirmacionContrasenia" value=""> </p>
-      
+        
                      <!--Envían al home-->
         <button class="enviar" type="submit">Edita tu cuenta en Vistete de Poder</button>
     
-        ¿Ya tenés una cuenta? 
-     
-        <a class="aIngreso"href="\ingreso">Iniciar sesión</a>
+      
    </div>
    
 </form>
