@@ -109,6 +109,11 @@
 #boton-vaciar{
     margin-bottom: 18px;
 }
+#items .carritoVacio{
+    color:red;
+    text-align: center;
+    margin-bottom: 18px;
+}
 /* @media (max-width: 1024px) {} */
 /* @media (max-width: 750px) {} */
 /* @media (max-width: 480px) {} */

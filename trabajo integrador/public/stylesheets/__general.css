@@ -129,6 +129,57 @@ button:focus{
     margin:0px;
     width: 100%;
 }
+
+.vistaAdm{
+    display:flex;
+    justify-content: space-around;
+}
+.vistaAdm .tajetaAdm{
+    /* border:1px solid black; */
+    width: 40%;
+    /* margin-left: 10%; */
+}
+.vistaAdm .tajetaAdm h4{
+    padding-left:8%;
+}
+
+.vistaAdm form .registro2 .infoAdm{
+    display:flex;
+    /* border: 1px solid red; */
+    justify-content: space-around;
+}
+.vistaAdm form .registro2 .fotoAdm{
+    /* border: 1px solid violet; */
+    padding:0px;
+    box-shadow: 1px 3px 5px grey;
+    background: #efeff3;
+    display:flex;
+    justify-content: center;
+    width: 30%;
+    margin: 5px;    
+}
+.vistaAdm form .registro2 .fotoAdm img{
+    width: 90%;
+    margin: 10px 10px 30px 10px;
+}
+.vistaAdm form .registro2 .infoAdm .datosAdm{
+    /* border:1px solid green; */
+    display:flex;
+    flex-direction: column;
+}
+.vistaAdm form .registro2 .infoAdm .datosAdm div{
+    padding:10px;
+}
+.vistaAdm .botonesAdm{
+    /* border:1px solid violet; */
+    width: 40%;
+  
+}
+.vistaAdm .botonesAdm form{
+    width: 70%;
+    background-image: none;
+    margin-left: 0px;
+}
 /* .listUsers .infoUser .usersButton button{
    width: 100%;
    border: 1px solid black;
@@ -140,6 +191,17 @@ button:focus{
     .listUsers .infoUser{
         width:70%;
         font-size: 0.9rem;
+    }
+    /* .vistaAdm {
+        background-color:red;
+    } */
+    .vistaAdm .tajetaAdm{
+        /* border:1px solid black; */
+        width: 50%;
+    }
+    .vistaAdm .botonesAdm form{
+        width: 90%;
+      
     }
  } 
  @media (max-width: 750px) {
@@ -154,6 +216,12 @@ button:focus{
         font-size: 0.9rem;
        /* border: 1px solid black; */
        } 
+       /* .vistaAdm {
+        background-color:green;
+    } */
+    .vistaAdm button{
+        font-size: 0.8rem;
+    }
  } 
  @media (max-width: 480px) {
     /* .listUsers  {
@@ -167,6 +235,19 @@ button:focus{
     font-size: 0.8rem;
    /* border: 1px solid black; */
    } 
+    /* .vistaAdm {
+    background-color:violet;
+    } */
+    .vistaAdm h4{
+      font-size: 0.8rem;
+    }
+    
+    .vistaAdm .datosAdm{
+        width: 60%;
+    }
+    .vistaAdm button{
+        font-size: 0.6rem;
+    }
  } 
 /* @media (max-width: 750px) {} */
 /* @media (max-width: 480px) {} */

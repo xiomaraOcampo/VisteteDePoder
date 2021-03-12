@@ -13,8 +13,9 @@
             <main>
 
                 <!--MAIN-->  
-                
-<form  action="/users/edit/<%= usuarioAIngresar.id %>" method=GET>
+<div class="vistaAdm">   
+               
+<form class="tajetaAdm" action="/users/edit/<%= usuarioAIngresar.id %>" method=GET>
     
     <% if (typeof errors!='undefined'){ %>
         <p style='color:red'>ERROR</p>
@@ -28,26 +29,28 @@
 
         <% } %>
     <div class="registro2">
-        <h3>Mi cuenta</h3>
-
+        <h4>Mi cuenta</h4>
+        <div class="infoAdm">
+        <section class="fotoAdm">
         <img src="/images/usersImages/<%= usuarioAIngresar.image %> " alt=" <%= usuarioAIngresar.image %> ">
-
-
-        
-        <div class=inputsRegistro type="text" placeholder="Tu nombre" id="nombre" name="nombre" value="<%= usuarioAIngresar.name %>"> <%= usuarioAIngresar.name %></div> 
+        </section>
+        <article class= "datosAdm">
+        <div class="nombreAdm" type="text" placeholder="Tu nombre" id="nombre" name="nombre" value="<%= usuarioAIngresar.name %>"> <%= usuarioAIngresar.name %></div> 
                  
-        <div class="inputsRegistro" type="email" placeholder="Correo electrónico"id="email" name="email" value="<%= usuarioAIngresar.email %>"><%= usuarioAIngresar.email %></div>
-                  
+        <div class="emailAdm" type="email" placeholder="Correo electrónico"id="email" name="email" value="<%= usuarioAIngresar.email %>"><%= usuarioAIngresar.email %></div>
+        </article>
+    
+        </div>         
         
                      <!--Envían al home-->
-        <button class="enviar" type="submit">Edita tu cuenta en Vistete de Poder</button>
+        <button class="enviarAdm" type="submit">Edita tu cuenta</button>
     
        
        
    </div>
    
 </form>
-
+<div class="botonesAdm">
 <form action="/products/create">
 
 <button class="enviar" type="submit">Crear Producto</button>
@@ -66,7 +69,8 @@
     <button class="enviar" type="submit">Ver Usuarios</button>
     
     </form>
-
+</div>
+</div> 
             </main>
 
             <%-include("../partials/footer")%>
