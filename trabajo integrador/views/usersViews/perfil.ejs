@@ -13,15 +13,9 @@
             <main>
 
                 <!--MAIN-->  
-                
-<form  action="/users/edit/<%= usuarioAIngresar.id %>?_method=PUT" method=GET>
-    <!-- <div class="registro1">
-     
-        <label for="nombre"><i class="fas fa-user"></i></label>
-        <label for="email"><i class="fas fa-envelope"></i></label>
-        <label for="contrasenia"><i class="fas fa-lock"></i></i></label>
-        <label class="ultimoLabel" for="confirmacionContrasenia"><i class="fas fa-lock"></i></label>
-    </div> -->
+<div class="vistaAdm">                   
+<form class="tajetaAdm" action="/users/edit/<%= usuarioAIngresar.id %>?_method=PUT" method=GET>
+   
     <% if (typeof errors!='undefined'){ %>
         <p style='color:red'>ERROR</p>
         <ul>
@@ -34,41 +28,38 @@
 
         <% } %>
     <div class="registro2">
-        <h3>Mi cuenta</h3>
 
+        <h4>Mi cuenta</h4>
+        <div class="infoAdm">
         <!--<input class=inputsRegistro type="text" placeholder="Id" name="id">-->
         <% if(usuarioAIngresar.image){ %>
 
         
-            <section class="fotoUsuario">
-              <article> <img src="/images/usersImages/<%= usuarioAIngresar.image %> " alt=" <%= usuarioAIngresar.image%> ">
-                  
-              </article>
-          </section>
+            <section class="fotoAdm">
+               <img src="/images/usersImages/<%= usuarioAIngresar.image %> " alt=" <%= usuarioAIngresar.image%> ">
+            </section>
     
         <% }else{ %>
      
 
-        <section class="fotoUsuario">
-          <article> <img src="/images/usersImages/defaultImage.jpg"  alt="defaultImage.jpg">
-              <!--no lo muestra-->
-          </article>
-      </section>
+        <section class="fotoAdm">
+           <img src="/images/usersImages/defaultImage.jpg"  alt="defaultImage.jpg">
+       </section>
          <% }%> 
-
-        <div class=inputsRegistro type="text" placeholder="Tu nombre" id="nombre" name="nombre" value="<%= usuarioAIngresar.name %>"> <%= usuarioAIngresar.name %></div> 
+         <article class= "datosAdm">
+        <div class="nombreAdm" type="text" placeholder="Tu nombre" id="nombre" name="nombre" value="<%= usuarioAIngresar.name %>"> <%= usuarioAIngresar.name %></div> 
                  
-        <div class="inputsRegistro" type="email" placeholder="Correo electrónico"id="email" name="email" value="<%= usuarioAIngresar.email %>"><%= usuarioAIngresar.email %></div>
-                  
-        
+        <div class="emailAdm"  type="email" placeholder="Correo electrónico"id="email" name="email" value="<%= usuarioAIngresar.email %>"><%= usuarioAIngresar.email %></div>
+        </article>          
+        </div>
                      <!--Envían al home-->
-        <button class="enviar" type="submit">Edita tu cuenta en Vistete de Poder</button>
+        <button class="enviarAdm" type="submit">Edita tu cuenta</button>
     
-       
+    
     </div>
    
 </form>
-
+</div>
             </main>
 
             <%-include("../partials/footer")%>
