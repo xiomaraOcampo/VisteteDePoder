@@ -40,7 +40,7 @@ let userController = {
         "image": registroUser.userAvatar,
         "type": 0
       });
-      res.render('home');
+      res.render("usersViews/ingreso");
     } else {
       return res.render('usersViews/registro', { errors: errors.errors });
     }

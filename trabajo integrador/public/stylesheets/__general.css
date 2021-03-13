@@ -180,6 +180,11 @@ button:focus{
     background-image: none;
     margin-left: 0px;
 }
+.botonCreated{
+    background-image: none;
+    margin-top: 0px;
+    margin-bottom: 10px;
+}
 /* .listUsers .infoUser .usersButton button{
    width: 100%;
    border: 1px solid black;

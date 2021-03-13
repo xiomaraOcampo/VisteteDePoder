@@ -42,7 +42,7 @@ router.post('/ingreso', validations.usersUpload, userController.storeIngreso);
 
 router.get('/check',function (req,res,){
   if (req.session.usuarioIngresado== undefined){
-    res.render('usersViews/mensajeNoEncontrado');
+    res.send('No estas logueado');
   }else{
    res.send('El usuario logueado es '+ req.session.usuarioIngresado.email);
  } 
@@ -53,7 +53,7 @@ router.get('/logout', userController.logout);
 
 //edicion de usuarios
 
-router.get('/edit/:id', userController.edit);
+router.get('/edit/:id', authMiddleware, userController.edit);
 router.put('/edit/:id', validations.usersEdit, userController.update);
 
 router.delete('/destroy/:id', userController.destroy); 
