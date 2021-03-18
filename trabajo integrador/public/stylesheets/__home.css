@@ -83,7 +83,7 @@ section .img-container-small .imagenMenu{
     width: 1000%;
     display:flex; 
     justify-content: space-between;
-    animation: cambio 80s infinite;
+    animation: cambio 180s infinite;
     /* border:1px solid red; */
 }
 section.slider article{
